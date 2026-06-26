@@ -1,4 +1,5 @@
 import os
+import gzip
 import re
 import sys
 import io
@@ -279,8 +280,13 @@ def merge_all_to_indihome():
     
     with open(indihome_path, 'w', encoding='utf-8') as f:
         f.write(final_output)
+
+    # Simpan versi terkompresi .gz
+    gz_path = indihome_path + ".gz"
+    with gzip.open(gz_path, 'wb') as f_gz:
+        f_gz.write(final_output.encode('utf-8'))
         
-    print(f"\n✅ Penggabungan dan Pembersihan Selesai! Berkas disimpan di {indihome_path}")
+    print(f"\n✅ Penggabungan dan Pembersihan Selesai! Berkas disimpan di {indihome_path} & {gz_path}")
     print(f"   Total Saluran Akhir yang Bersih: {len(deduped_channels)} (sebelumnya: {len(all_channels_to_dedup)})")
 
 

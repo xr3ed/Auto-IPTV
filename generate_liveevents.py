@@ -372,16 +372,23 @@ def main():
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     output_path = OUTPUT_DIR / "live_events.m3u"
-
+    
+    playlist_content = "\n".join(output_lines) + "\n"
     with open(output_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(output_lines) + "\n")
+        f.write(playlist_content)
+
+    # Simpan versi terkompresi .gz
+    import gzip
+    output_path_gz = OUTPUT_DIR / "live_events.m3u.gz"
+    with gzip.open(output_path_gz, 'wb') as f_gz:
+        f_gz.write(playlist_content.encode('utf-8'))
 
     print(f"\n{'=' * 60}")
     print("PROSES SELESAI")
     print(f"{'=' * 60}")
     print(f"  Total Saluran Piala Dunia Aktif  : {len(unique_wc)}")
     print(f"  Total Saluran Olahraga Umum Aktif: {len(unique_live)}")
-    print(f"  Saved -> {output_path}")
+    print(f"  Saved -> {output_path} & {output_path_gz}")
 
 
 if __name__ == "__main__":
