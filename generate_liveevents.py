@@ -1,3 +1,4 @@
+import os
 import sys
 import io
 import re
@@ -55,6 +56,13 @@ SOURCES = [
         "name": "live_events",
         "url": "https://github.com/doms9/iptv/raw/refs/heads/default/M3U8/events.m3u8",
         "is_wc": False
+    },
+    {
+        "name": "bittv_sports_local",
+        "url": "playlists/bittv_sports.m3u",
+        "filter_groups": {
+            "Sports": "live"
+        }
     },
     {
         "name": "dhanytv_sports",
@@ -290,6 +298,13 @@ def dedup_entries(entries: list[dict]) -> tuple[list[dict], int]:
 
 
 def fetch_playlist(url: str) -> list[str] | None:
+    if os.path.exists(url):
+        try:
+            with open(url, 'r', encoding='utf-8', errors='ignore') as f:
+                return [line.rstrip() for line in f.read().splitlines()]
+        except Exception as e:
+            print(f"  [ERROR] Gagal membaca file lokal: {e}")
+            return None
     try:
         response = requests.get(url, timeout=30, verify=False)
         response.raise_for_status()
