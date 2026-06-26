@@ -79,11 +79,13 @@ def parse_m3u_for_drm_keys(content: str) -> dict:
                 
                 # Jika ada license_key, masukkan ke database mapping
                 if license_key:
+                    from datetime import datetime
                     base_url = clean_manifest_url(url)
                     keys_db[base_url] = {
                         "license_type": license_type or "org.w3.clearkey",
                         "license_key": license_key,
-                        "referrer": referrer
+                        "referrer": referrer,
+                        "last_scanned": datetime.now().strftime("%Y-%m-%d")
                     }
         i += 1
     return keys_db
@@ -111,23 +113,53 @@ def harvest_keys():
             r = requests.get(src, timeout=15, verify=False)
             if r.status_code == 200:
                 keys = parse_m3u_for_drm_keys(r.text)
+                from datetime import datetime
+                today_str = datetime.now().strftime("%Y-%m-%d")
                 for k, v in keys.items():
                     if k not in updated_db or updated_db[k]["license_key"] != v["license_key"]:
                         if k not in updated_db:
                             new_keys_count += 1
                         updated_db[k] = v
+                    else:
+                        # Update stempel waktu scan jika kuncinya masih sama/valid
+                        updated_db[k]["last_scanned"] = today_str
                 print(f"   -> Ditemukan {len(keys)} kunci DRM di sumber ini.")
             else:
                 print(f"   [WARNING] Gagal mengunduh sumber: HTTP {r.status_code}")
         except Exception as e:
             print(f"   [WARNING] Error saat mengakses sumber: {e}")
             
+    # Lakukan pruning (pembersihan) kunci yang usianya > 14 hari
+    from datetime import datetime
+    final_db = {}
+    pruned_count = 0
+    today = datetime.now()
+    
+    for k, v in updated_db.items():
+        ls_str = v.get("last_scanned")
+        keep = True
+        if ls_str:
+            try:
+                ls_date = datetime.strptime(ls_str, "%Y-%m-%d")
+                if (today - ls_date).days > 14:
+                    keep = False
+            except Exception:
+                pass
+        
+        if keep:
+            final_db[k] = v
+        else:
+            pruned_count += 1
+            
+    if pruned_count > 0:
+        print(f"🧹 Membersihkan {pruned_count} kunci DRM usang (lebih dari 14 hari).")
+
     # Tulis hasil database terbaru
     try:
         with open(DRM_KEYS_FILE, 'w', encoding='utf-8') as f:
-            json.dump(updated_db, f, indent=2, ensure_ascii=False)
+            json.dump(final_db, f, indent=2, ensure_ascii=False)
         print(f"\n💾 Database kunci DRM berhasil disimpan di {DRM_KEYS_FILE}")
-        print(f"   Total Kunci Aktif: {len(updated_db)} (+{new_keys_count} baru)")
+        print(f"   Total Kunci Aktif: {len(final_db)} (+{new_keys_count} baru, {pruned_count} dibersihkan)")
     except Exception as e:
         print(f"❌ Gagal menyimpan database kunci: {e}")
 

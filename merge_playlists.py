@@ -122,6 +122,16 @@ def is_drm_protected_content(preview: str, url: str) -> bool:
 def ping_stream(url: str, headers: dict = None, opts: list = None) -> tuple[str, bool, float]:
     """Melakukan pengujian HTTP HEAD/GET untuk mengecek status, DRM, dan response time stream."""
     from contextlib import closing
+    from utils import should_bypass_ping
+    import time
+    import random
+    
+    if should_bypass_ping(url):
+        return url, True, 0.05
+        
+    # Jeda acak (jitter) untuk menghindari pembatasan rate limit 429
+    time.sleep(random.uniform(0.1, 0.5))
+    
     headers = headers or {'User-Agent': 'Mozilla/5.0'}
     url = sanitize_url_protocol(url)
     url_lower = url.lower()

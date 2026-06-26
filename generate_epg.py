@@ -33,7 +33,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 TITLE_REWRITE_RULES = {"NHL Hockey", "Live: NFL Football"}
 REMOTE_EPG_URLS = [
-    "https://github.com/BuddyChewChew/tcl-playlist-generator/raw/refs/heads/main/tcl_epg.xml",
+    "https://github.com/apistech/project/raw/refs/heads/main/playlists/tcl_epg.xml",
     "https://github.com/BuddyChewChew/xumo-playlist-generator/raw/refs/heads/main/playlists/xumo_epg.xml.gz",
     "https://github.com/matthuisman/i.mjh.nz/raw/refs/heads/master/PlutoTV/all.xml.gz",
     "https://github.com/matthuisman/i.mjh.nz/raw/refs/heads/master/Roku/all.xml.gz",

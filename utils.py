@@ -106,3 +106,17 @@ def enrich_stream_with_drm_keys(url: str, opts: list) -> list:
         return new_opts
         
     return opts
+
+
+def should_bypass_ping(url: str) -> bool:
+    """Mengecek apakah URL stream menggunakan domain lokal Indihome/Telkom yang wajib dibypass ping."""
+    url_lower = url.lower()
+    bypass_keywords = [
+        "indihometv.com",
+        "telkom",
+        "useetv",
+        "10.0.",
+        "192.168.",
+        "172.16."
+    ]
+    return any(kw in url_lower for kw in bypass_keywords)
