@@ -586,6 +586,8 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
     title_lower = title.lower()
     
     resolution = entry.get("resolution", "")
+    if not resolution:
+        resolution = "HD"  # Fallback default agar format nama di IPTV player selalu seragam
     res_label = f"[{resolution}] " if resolution else ""
     
     # Klasifikasi World Cup vs Live Events
@@ -1181,6 +1183,8 @@ def main():
             title = attrs["display_name"]
             
             resolution = entry.get("resolution", "")
+            if not resolution:
+                resolution = "HD"
             res_label = f"[{resolution}] " if resolution else ""
             
             source_name = entry.get("source_name", "SM-TV")
