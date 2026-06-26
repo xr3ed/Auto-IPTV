@@ -1442,8 +1442,8 @@ https://d3f4oii5n0oeqi.cloudfront.net/11701/88814575/hls/master.m3u8?ads._fw_app
 https://dbrb49pjoymg4.cloudfront.net/10001/99991709/hls/master.m3u8?includeAssetTags=true&ads.xumo_channelId=99991709&ads._fw_ifa_type=[IFA_TYPE]&ads._fw_did=[IFA]&ads.amznappId=[AMZN_APP_ID]&ads.lat=[LAT]&ads.lon=[LON]&ads.os=[OS]&ads.osv=[OS_VERSION]&ads.asnw=&ads.caid=CrownMediaHallmarkMoviesNew&ads.csid=xumo_[PLATFORM]_CrownMediaHallmarkMoviesNew_ssai&ads._fw_is_lat=[IS_LAT]&ads._fw_us_privacy=[CCPA_Value]&ads._fw_coppa=0&ads.genre=Movie,Movies,Romance,FF,Entertainment,GV,Drama,GD&ads._fw_content_category=[IAB_content_category]&ads._fw_content_language=[content_language]&ads._fw_content_genre=Movie,Movies,Romance,FF,Entertainment,GV,Drama,GD&ads._fw_content_rating=[content_rating]&ads.xumo_contentId=2777&ads.xumo_contentName=CrownMediaHallmarkMoviesNew&ads.xumo_providerId=2777&ads.xumo_providerName=CrownMediaHallmarkMoviesNew&ads._fw_deviceMake=[device_make]&ads._fw_device_model=[device_model]&ads.channelId=99991709&ads.xumo_platform=[PLATFORM]&ads.site_id=[publica_site_id]&ads.appName=xumo&ads.appVersion=[APP_VERSION]&ads._fw_app_bundle=[app_bundle]&ads._fw_app_store_url=[app_store_url]
 
 # === TCL SECTION ===
-# Updated: 2026-06-26 08:09:08
-# Total Saluran: 26
+# Updated: 2026-06-26 01:11:56
+# Total Saluran: 30
 
 #EXTINF:-1 tvg-id="FU999236" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/FU999236/1721067395933041728-logo_color.png" group-title="Family & Kids",Baby Joy Joy
 https://stream-us-east-1.getpublica.com/playlist.m3u8?app_bundle=%5BFT_APP_STORE_ID%5D&app_category=%5BAPP_CATEGORY%5D&app_domain=%5BAPP_DOMAIN%5D&app_id=%5BAPP_ID%5D&app_name=%5BFT_APP_NAME%5D&app_store_url=%5BAPP_STORE_URL%5D&app_version=%5BAPP_VERSION%5D&avod=1&cb=1782434631&channelname=Baby+Joy+Joy&content_cat=&content_channel=Baby+Joy+Joy&content_genre=&content_id=1331&content_language=en&content_length=86400&content_network=TCL&content_prodqual=1&content_producer=babyjoyjoy&content_rating=TV-Y&content_series=%5BContent+Series%5D&content_title=%5BContent+Title%5D&coppa=%5BFT_COPPA%5D&device_make=%5BDEVICE_MAKE%5D&device_model=%5BDEVICE_MODEL%5D&device_type=%5BDEVICE_TYPE%5D&did=%5BFT_SYNTHETIC_AD_ID%5D&genre=&hls_marker=1&ifa_type=%5BFT_IFA_TYPE%5D&ifatype=%5BFT_IFA_TYPE%5D&is_lat=%5BFT_TRACKING_ENABLED%5D&live=1&max_ad_duration=65&min_ad_duration=2&network_id=11111&player_height=1080&player_width=1920&publisher=babyjoyjoy&ssai_enabled=1&ssai_vendor=Publica&ua=%5BFT_USER_AGENT%5D&us_privacy=1YN-
@@ -1481,6 +1481,12 @@ https://wurlcandlelight.global.transmit.live/hls/68714b21d9fb5876ff167933/playli
 #EXTINF:-1 tvg-id="XU953848" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/XU953848/8550720424489423-20260623-200941.jpg" group-title="Movies",TCL Action
 https://d3f4oii5n0oeqi.cloudfront.net/11701/88884652/hls/master.m3u8?ads._fw_app_bundle=%5BTCL_APP_BUNDLE%5D&ads._fw_app_store_url=%5BTCL_APP_STORE_URL%5D&ads._fw_content_category=IAB1-5&ads._fw_content_genre=television&ads._fw_content_language=en&ads._fw_content_rating=tv-14&ads._fw_coppa=0&ads._fw_deviceMake=%5BDEVICE_MAKE%5D&ads._fw_device_model=%5BDEVICE_MODEL%5D&ads._fw_devicetype=3-Connected_TV&ads._fw_h_x_country=US&ads._fw_is_lat=%5BLMT%5D&ads._fw_player_height=1080&ads._fw_player_width=1920&ads._fw_us_privacy=1YN-&ads.appName=%5BAPP_NAME%5D&ads.appVersion=%5BAPP_VERSION%5D&ads.caid=tclaction&ads.channelId=88884652&ads.channelName=tclaction_us&ads.csid=tcl2_us_tclaction_ssai&ads.genre=Action&ads.xumo_channelId=88884652&ads.xumo_channelName=TCLAction&ads.xumo_contentId=5&ads.xumo_contentName=TCLHoliday2&ads.xumo_ifa=%5BIFA%5D&ads.xumo_ifaType=%5BIFA_TYPE%5D&ads.xumo_providerId=5&ads.xumo_providerName=TCLHoliday2&ads.xumo_streamId=88884652&declaredCC1Language=en&includeAssetTags=true
 
+#EXTINF:-1 tvg-id="XU132409" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/XU132409/12531341656995521-FilmRiseAnimeRebrand_SC_logo_color.png" group-title="Anime",Filmrise Anime
+https://d3f4oii5n0oeqi.cloudfront.net/11701/88814508/hls/master.m3u8?ads._fw_app_bundle=%5BTCL_APP_BUNDLE%5D&ads._fw_app_store_url=%5BTCL_APP_STORE_URL%5D&ads._fw_content_category=IAB1-7&ads._fw_content_genre=television&ads._fw_content_language=en&ads._fw_content_rating=tv-14&ads._fw_coppa=0&ads._fw_deviceMake=%5BDEVICE_MAKE%5D&ads._fw_device_model=%5BDEVICE_MODEL%5D&ads._fw_devicetype=3-Connected_TV&ads._fw_h_x_country=US&ads._fw_is_lat=%5BLMT%5D&ads._fw_player_height=1080&ads._fw_player_width=1920&ads._fw_us_privacy=1YN-&ads.appName=%5BAPP_NAME%5D&ads.appVersion=%5BAPP_VERSION%5D&ads.caid=FilmriseAnime&ads.csid=tcl2_us_filmriseanime_ssai&ads.genre=Action%252CAdventure%252CComedy%252CCrime%252CDrama%252CFamily%252CFantasy%252CHorror%252CMystery%252CRomance%252CSci-Fi%252CThriller%252CWar%252CWestern%252CSuperhero&ads.xumo_channelId=88814508&ads.xumo_channelName=FilmriseAnime&ads.xumo_contentId=260&ads.xumo_contentName=FilmriseAnime&ads.xumo_ifa=%5BIFA%5D&ads.xumo_ifaType=%5BIFA_TYPE%5D&ads.xumo_providerId=260&ads.xumo_providerName=FilmRise&ads.xumo_streamId=88814508&declaredCC1Language=en&includeAssetTags=true
+
+#EXTINF:-1 tvg-id="XU380235" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/XU380235/14490481290402556-Inuyasha_SC_logo_color.png" group-title="Anime",Inuyasha
+https://d3f4oii5n0oeqi.cloudfront.net/11701/88884640/hls/master.m3u8?ads._fw_app_bundle=%5BTCL_APP_BUNDLE%5D&ads._fw_app_store_url=%5BTCL_APP_STORE_URL%5D&ads._fw_content_category=IAB1-5&ads._fw_content_genre=television&ads._fw_content_language=en&ads._fw_content_rating=tv-pg&ads._fw_coppa=0&ads._fw_deviceMake=%5BDEVICE_MAKE%5D&ads._fw_device_model=%5BDEVICE_MODEL%5D&ads._fw_devicetype=3-Connected_TV&ads._fw_h_x_country=US&ads._fw_is_lat=%5BLMT%5D&ads._fw_player_height=1080&ads._fw_player_width=1920&ads._fw_us_privacy=1YN-&ads.appName=%5BAPP_NAME%5D&ads.appVersion=%5BAPP_VERSION%5D&ads.caid=tclinuyasha&ads.channelId=88884640&ads.channelName=inuyasha_us&ads.csid=tcl2_us_tclinuyasha_ssai&ads.genre=Anime&ads.xumo_channelId=88884640&ads.xumo_channelName=TCLInuyasha&ads.xumo_contentId=4388&ads.xumo_contentName=TCLInuyasha&ads.xumo_ifa=%5BIFA%5D&ads.xumo_ifaType=%5BIFA_TYPE%5D&ads.xumo_providerId=4388&ads.xumo_providerName=TCLInuyasha&ads.xumo_streamId=88884640&declaredCC1Language=en&includeAssetTags=true
+
 #EXTINF:-1 tvg-id="XU580950" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/XU580950/18091690681766852-9105170490570505-Naruto__SC_logo_color.png" group-title="Anime",Naruto
 https://d3f4oii5n0oeqi.cloudfront.net/11701/88884645/hls/master.m3u8?ads._fw_app_bundle=%5BTCL_APP_BUNDLE%5D&ads._fw_app_store_url=%5BTCL_APP_STORE_URL%5D&ads._fw_content_category=IAB1-5&ads._fw_content_genre=television&ads._fw_content_language=en&ads._fw_content_rating=tv-pg&ads._fw_coppa=0&ads._fw_deviceMake=%5BDEVICE_MAKE%5D&ads._fw_device_model=%5BDEVICE_MODEL%5D&ads._fw_devicetype=3-Connected_TV&ads._fw_h_x_country=US&ads._fw_is_lat=%5BLMT%5D&ads._fw_player_height=1080&ads._fw_player_width=1920&ads._fw_us_privacy=1YN-&ads.appName=%5BAPP_NAME%5D&ads.appVersion=%5BAPP_VERSION%5D&ads.caid=tclnaruto&ads.channelId=88884645&ads.channelName=naruto_us&ads.csid=tcl2_us_tclnaruto_ssai&ads.genre=Anime&ads.xumo_channelId=88884645&ads.xumo_channelName=TCLNaruto&ads.xumo_contentId=4400&ads.xumo_contentName=TCLNaruto&ads.xumo_ifa=%5BIFA%5D&ads.xumo_ifaType=%5BIFA_TYPE%5D&ads.xumo_providerId=4400&ads.xumo_providerName=TCLNaruto&ads.xumo_streamId=88884645&declaredCC1Language=en&includeAssetTags=true
 
@@ -1489,6 +1495,9 @@ https://d3f4oii5n0oeqi.cloudfront.net/11701/88884641/hls/master.m3u8?ads._fw_app
 
 #EXTINF:-1 tvg-id="FU793789" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/FU793789/1721067395932949082-logo_color.png" group-title="Family & Kids",Like Nastya
 https://stream-us-east-1.getpublica.com/playlist.m3u8?app_bundle=%5BFT_APP_STORE_ID%5D&app_category=%5BAPP_CATEGORY%5D&app_domain=%5BAPP_DOMAIN%5D&app_id=%5BAPP_ID%5D&app_name=%5BFT_APP_NAME%5D&app_store_url=%5BAPP_STORE_URL%5D&app_version=%5BAPP_VERSION%5D&avod=1&cb=1782434631&channelname=Like+Nastya&content_cat=&content_channel=Like+Nastya&content_genre=Kids&content_id=1397&content_language=en&content_length=86400&content_network=TCL&content_prodqual=1&content_producer=likenastya&content_rating=TV-Y&content_series=%5BContent+Series%5D&content_title=%5BContent+Title%5D&coppa=%5BFT_COPPA%5D&device_make=%5BDEVICE_MAKE%5D&device_model=%5BDEVICE_MODEL%5D&device_type=%5BDEVICE_TYPE%5D&did=%5BFT_SYNTHETIC_AD_ID%5D&genre=&hls_marker=1&ifa_type=%5BFT_IFA_TYPE%5D&ifatype=%5BFT_IFA_TYPE%5D&is_lat=%5BFT_TRACKING_ENABLED%5D&live=1&max_ad_duration=65&min_ad_duration=2&network_id=11110&player_height=1080&player_width=1920&publisher=likenastya&ssai_enabled=1&ssai_vendor=Publica&ua=%5BFT_USER_AGENT%5D&us_privacy=1YN-
+
+#EXTINF:-1 tvg-id="FA919798" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/FA919798/1753490890611648705-MyLittlePonySC_logo_color.png" group-title="Family & Kids",My Little Pony
+https://amg00461-eone-amg00461c7-tcl-us-6770.playouts.now.amagi.tv/playlist/amg00461-entertainmentone-mylittlepony-tclus/playlist.m3u8?GdprConsent=0&app_bundle=&app_name=&app_store_url=&device_make=&device_model=&did=&dnt=&gdpr=0&network_name=tinykernel&us_privacy=1YN-
 
 #EXTINF:-1 tvg-id="XU054446" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/XU054446/1703056491113943573-logo_color.png" group-title="Family & Kids",Sonic The Hedgehog
 https://d3f4oii5n0oeqi.cloudfront.net/11701/88814632/hls/master.m3u8?ads._fw_app_bundle=%5BTCL_APP_BUNDLE%5D&ads._fw_app_store_url=%5BTCL_APP_STORE_URL%5D&ads._fw_content_category=IAB1-7&ads._fw_content_genre=television&ads._fw_content_language=en&ads._fw_content_rating=tv-g&ads._fw_coppa=1&ads._fw_deviceMake=%5BDEVICE_MAKE%5D&ads._fw_device_model=%5BDEVICE_MODEL%5D&ads._fw_devicetype=3-Connected_TV&ads._fw_h_x_country=US&ads._fw_is_lat=%5BLMT%5D&ads._fw_player_height=1080&ads._fw_player_width=1920&ads._fw_us_privacy=1YN-&ads.appName=%5BAPP_NAME%5D&ads.appVersion=%5BAPP_VERSION%5D&ads.caid=Sonic&ads.csid=tcl2_us_sonic_ssai&ads.genre=Family&ads.xumo_channelId=88814632&ads.xumo_channelName=Sonic&ads.xumo_contentId=1854&ads.xumo_contentName=Sonic&ads.xumo_ifa=%5BIFA%5D&ads.xumo_ifaType=%5BIFA_TYPE%5D&ads.xumo_providerId=1854&ads.xumo_providerName=Wildbrain&ads.xumo_streamId=88814632&declaredCC1Language=en&includeAssetTags=true
@@ -1499,11 +1508,8 @@ https://d3f4oii5n0oeqi.cloudfront.net/11701/88814630/hls/master.m3u8?ads._fw_app
 #EXTINF:-1 tvg-id="XU156802" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/XU156802/1703056491114009257-logo_color.png" group-title="Family & Kids",Teletubbies
 https://d3f4oii5n0oeqi.cloudfront.net/11701/88814631/hls/master.m3u8?ads._fw_app_bundle=%5BTCL_APP_BUNDLE%5D&ads._fw_app_store_url=%5BTCL_APP_STORE_URL%5D&ads._fw_content_category=IAB1-7&ads._fw_content_genre=television&ads._fw_content_language=en&ads._fw_content_rating=tv-g&ads._fw_coppa=1&ads._fw_deviceMake=%5BDEVICE_MAKE%5D&ads._fw_device_model=%5BDEVICE_MODEL%5D&ads._fw_devicetype=3-Connected_TV&ads._fw_h_x_country=US&ads._fw_is_lat=%5BLMT%5D&ads._fw_player_height=1080&ads._fw_player_width=1920&ads._fw_us_privacy=1YN-&ads.appName=%5BAPP_NAME%5D&ads.appVersion=%5BAPP_VERSION%5D&ads.caid=Teletubbies&ads.csid=tcl2_us_teletubbies_ssai&ads.genre=Family&ads.xumo_channelId=88814631&ads.xumo_channelName=Teletubbies&ads.xumo_contentId=1854&ads.xumo_contentName=Teletubbies&ads.xumo_ifa=%5BIFA%5D&ads.xumo_ifaType=%5BIFA_TYPE%5D&ads.xumo_providerId=1854&ads.xumo_providerName=Wildbrain&ads.xumo_streamId=88814631&declaredCC1Language=en&includeAssetTags=true
 
-#EXTINF:-1 tvg-id="OT471200" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/OT471200/1719006968721931063-logo_color.png" group-title="Family & Kids",TG Junior
-https://api.toongoggles.com/loggingmediaurlpassthrough/a.m3u8?app_bundle=%7B%7BappPackage%7D%7D&app_name=%7B%7BappName%7D%7D&app_store_url=%7B%7BAppStoreUrl%7D%7D&app_version=%7B%7BAppVersion%7D%7D&avod=1&cb=API_randomCB&connection=wifi&content_cat=%7B%7BAppCat%7D%7D&coppa=0&device_height=1080&device_make=%7B%7BDeviceMake%7D%7D&device_model=%7B%7BDeviceModel%7D%7D&device_os=%7B%7BoperatingSystem%7D%7D&device_type=tv&device_width=1920&did=%7B%7BDID%7D%7D&dnt=%7B%7BDNT%7D%7D&gdpr=0&gdpr_consent=0&id=263528&language=%7B%7Blanguage%7D%7D&livestream=1&partner=tcl_tv_plus&platform=html5&slated_vod=0&streaming_format=hls&tld=%7B%7BAppDomain%7D%7D&us_privacy=1YN-&version=12.5&vid=a.m3u8
-
-#EXTINF:-1 tvg-id="OT654980" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/OT654980/1719006968721996245-logo_color.png" group-title="Family & Kids",Toon Goggles
-https://api.toongoggles.com/loggingmediaurlpassthrough/a.m3u8?app_bundle=%7B%7BappPackage%7D%7D&app_name=%7B%7BappName%7D%7D&app_store_url=%7B%7BAppStoreUrl%7D%7D&app_version=%7B%7BAppVersion%7D%7D&avod=1&cb=API_randomCB&connection=wifi&content_cat=%7B%7BAppCat%7D%7D&coppa=0&device_height=1080&device_make=%7B%7BDeviceMake%7D%7D&device_model=%7B%7BDeviceModel%7D%7D&device_os=%7B%7BoperatingSystem%7D%7D&device_type=tv&device_width=1920&did=%7B%7BDID%7D%7D&dnt=%7B%7BDNT%7D%7D&gdpr=0&gdpr_consent=0&id=263519&language=%7B%7Blanguage%7D%7D&livestream=1&partner=tcl_tv_plus&platform=html5&slated_vod=0&streaming_format=hls&tld=%7B%7BAppDomain%7D%7D&us_privacy=1YN-&version=12.5&vid=a.m3u8
+#EXTINF:-1 tvg-id="FA048168" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/FA048168/1743448687926360158-logo_color.png" group-title="Family & Kids",Transformers
+https://amg00461-eone-amg00461c1-tcl-us-6771.playouts.now.amagi.tv/playlist/amg00461-entertainmentone-transformers-tclus/playlist.m3u8?GdprConsent=0&app_bundle=&app_name=&app_store_url=&device_make=&device_model=&did=&dnt=&gdpr=0&network_name=tinykernel&us_privacy=1YN-
 
 #EXTINF:-1 tvg-id="RK436342" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/RK436342/7909906937139544-ACTION_SC_logo_color.jpg" group-title="Movies",Action Movies - Rakuten TV
 https://action-rakuten-tv-us.fast.rakuten.tv/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-7860/master.m3u8?ads.app_bundle=&ads.app_name=&ads.app_store_url=&ads.brand_name=&ads.content_livestream=0&ads.device_lmt=&ads.device_model=&ads.did=&ads.gdpr_consent=0&ads.ifa_type=aaid&ads.inv_partner_domain=rakuten.tv&ads.market=us&ads.platform=tcl_channels&ads.pod_type=playerpage_midroll&ads.rtv_channel_name=action-rakuten-tv_us&ads.rtv_content_id=7860&ads.rtv_language=en&channel_id=7860&publishing_platform_id=9&tenant_identifier=rtv
@@ -1520,14 +1526,20 @@ https://d3f4oii5n0oeqi.cloudfront.net/11701/88814500/hls/master.m3u8?ads._fw_app
 #EXTINF:-1 tvg-id="FE688274" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/FE688274/10795515506203094-MGMPresents__SC_logo_color.png" group-title="Movies",MGM Presents
 https://linear-1071.frequency.stream/dist/tcltv/1071/hls/master/playlist.m3u8?ads.app_bundle=APP_BUNDLE&ads.app_name=APP_NAME&ads.app_store_url=APP_STORE_URL&ads.brand_name=TCL&ads.coppa=0&ads.csid=CSID&ads.device_id=DID&ads.device_make=DEVICE_MAKE&ads.device_model=DEVICE_MODEL&ads.dnt=DNT&ads.duration=DURATION&ads.gdpr=0&ads.gdpr_consent=GDPR_CONSENT&ads.gpp=GPP&ads.gpp_sid=GPP_SID&ads.ic=IC&ads.ifa_type=IFA_TYPE&ads.lmt=LMT&ads.us_privacy=1YN-
 
+#EXTINF:-1 tvg-id="AM141350" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/AM141350/1706158989436723741-logo_color.png" group-title="Movies",Moviesphere
+https://amg00353-lionsgatestudios-amg00353c2-tclideo-na-2304.playouts.now.amagi.tv/playlist/amg00353-lionsgatetvfast-moviesphere-tclideona/playlist.m3u8?ap=1&app_bundle=REPLACE_ME&app_name=REPLACE_ME&app_store_url=REPLACE_ME&brand_name=TCL&cb=1782434630&channel_name=Moviesphere&coppa=0&device%5Bdid%5D=REPLACE_ME&device%5Bdnt%5D=REPLACE_ME&device_make=REPLACE_ME&device_model=REPLACE_ME&gdpr=0&gdpr_consent=0&gender=REPLACE_ME&genre=REPLACE_ME&ic=IAB1-5&ifa_type=REPLACEME&mute=0&network_name=TCL&placement=1&schain=REPLACE_ME&skip=0&url=REPLACE_ME&us_privacy=1YN-
+
 #EXTINF:-1 tvg-id="AM952925" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/AM952925/1698125790427118417-logo_color.png" group-title="Movies",MyTime Movie Network
 https://amg00500-studiocity-amg00500c1-tclideo-northamerica-958.playouts.now.amagi.tv/playlist/amg00500-studiocitypicturesfast-mytimemovienetworkus-tclideonorthamerica/playlist.m3u8?ap=1&app_bundle=REPLACE_ME&app_name=REPLACE_ME&app_store_url=REPLACE_ME&brand_name=TCL&cb=1782434630&channel_name=MyTime+Movie+Network&coppa=0&device%5Bdid%5D=REPLACE_ME&device%5Bdnt%5D=REPLACE_ME&device_make=REPLACE_ME&device_model=REPLACE_ME&gdpr=0&gdpr_consent=0&gender=REPLACE_ME&genre=REPLACE_ME&ic=IAB1-5&ifa_type=REPLACEME&mute=0&network_name=TCL&placement=1&schain=REPLACE_ME&skip=0&url=REPLACE_ME&us_privacy=1YN-
+
+#EXTINF:-1 tvg-id="FM150165" tvg-logo="https://tcl-channel-cdn.ideonow.com/static/channel/FM150165/17488811294592322-OUTFLIX_MOVIES_SC_logo_color.jpg" group-title="Movies",OUTFLIX MOVIES
+https://amg00375-fusemedia-amg00375c3-tclideo-northamerica-721.playouts.now.amagi.tv/playlist/amg00375-fusemediafast-outtvproud-tclideonorthamerica/playlist.m3u8?ap=1&app_bundle=REPLACE_ME&app_name=REPLACE_ME&app_store_url=REPLACE_ME&brand_name=TCL&cb=1782434630&channel_name=OUTFLIX+MOVIES&coppa=0&device%5Bdid%5D=REPLACE_ME&device%5Bdnt%5D=REPLACE_ME&device_make=REPLACE_ME&device_model=REPLACE_ME&gdpr=0&gdpr_consent=0&gender=REPLACE_ME&genre=REPLACE_ME&ic=IAB1%2CIAB14-3&ifa_type=REPLACEME&mute=0&network_name=TCL&placement=1&schain=REPLACE_ME&skip=0&url=REPLACE_ME&us_privacy=1YN-
 
 # === END TCL SECTION ===
 
 # === ROKU SECTION ===
-# Updated: 2026-06-26 08:09:08
-# Total Saluran: 4
+# Updated: 2026-06-26 01:11:56
+# Total Saluran: 3
 
 #EXTINF:-1 channel-id="9dd23031622757d1944e4782b2a192ef" tvg-id="9dd23031622757d1944e4782b2a192ef" tvg-chno="436" tvg-name="Ninja Kidz TV" tvg-logo="https://images.sr.roku.com/idType/roku-trc/context/trc/id/9dd23031622757d1944e4782b2a192ef/https%3A%2F%2Fimage.roku.com%2Fbh-uploads%2Fproduction%2FinfoHUDLogo%2F1689296014024_NKTV_Roku_260x147_ImageHUD2_David_Preisman.png" group-title="Kids",Ninja Kidz TV
 https://jmp2.uk/rok-9dd23031622757d1944e4782b2a192ef.m3u8
@@ -1538,41 +1550,20 @@ https://jmp2.uk/rok-2b54188672a6acb8d3e4c6b9e71a3a7c.m3u8
 #EXTINF:-1 channel-id="2deae9b4e83550f88f6776c45df08315" tvg-id="2deae9b4e83550f88f6776c45df08315" tvg-chno="290" tvg-name="Hi-YAH!" tvg-logo="https://images.sr.roku.com/idType/roku-trc/context/trc/id/2deae9b4e83550f88f6776c45df08315/https%3A%2F%2Fimage.roku.com%2Fbh-uploads%2Fproduction%2FinfoHUDLogo%2F1669078606058_Hi-YAH_260x147.png" group-title="Movies",Hi-YAH!
 https://jmp2.uk/rok-2deae9b4e83550f88f6776c45df08315.m3u8
 
-#EXTINF:-1 channel-id="c5cbd4129753f5732d7160596440404f" tvg-id="c5cbd4129753f5732d7160596440404f" tvg-chno="282" tvg-name="Movie Hub Action" tvg-logo="https://images.sr.roku.com/idType/roku-trc/context/trc/id/c5cbd4129753f5732d7160596440404f/https%3A%2F%2Fimage.roku.com%2Fbh-uploads%2Fproduction%2FinfoHUDLogo%2F1741793611093_Movie_Hub_Action_260x147.png" group-title="Movies",Movie Hub Action
-https://jmp2.uk/rok-c5cbd4129753f5732d7160596440404f.m3u8
-
 # === END ROKU SECTION ===
 
 # === PLUTO SECTION ===
-# Updated: 2026-06-26 08:09:08
-# Total Saluran: 25
+# Updated: 2026-06-26 01:11:56
+# Total Saluran: 18
 
 #EXTINF:-1 channel-id="5ca673e0d0bd6c2689c94ce3" tvg-id="5ca673e0d0bd6c2689c94ce3" tvg-chno="3770" tvg-name="Nickelodeon Pluto TV" tvg-logo="https://images.pluto.tv/channels/5ca673e0d0bd6c2689c94ce3/colorLogoPNG.png" group-title="Kids",Nickelodeon Pluto TV
 https://jmp2.uk/plu-5ca673e0d0bd6c2689c94ce3.m3u8
 
-#EXTINF:-1 channel-id="67c63b90a20c0399a381b816" tvg-id="67c63b90a20c0399a381b816" tvg-chno="4025" tvg-name="Inuyasha" tvg-logo="https://images.pluto.tv/channels/67c63b90a20c0399a381b816/colorLogoPNG_1745441127472.png" group-title="Anime",Inuyasha
-https://jmp2.uk/plu-67c63b90a20c0399a381b816.m3u8
-
 #EXTINF:-1 channel-id="60faffc3fbbc120007fc4376" tvg-id="60faffc3fbbc120007fc4376" tvg-chno="3760" tvg-name="Baby Shark TV" tvg-logo="https://images.pluto.tv/channels/60faffc3fbbc120007fc4376/colorLogoPNG_1754073070812.png" group-title="Kids",Baby Shark TV
 https://jmp2.uk/plu-60faffc3fbbc120007fc4376.m3u8
 
-#EXTINF:-1 channel-id="63da36dea995710008727d4d" tvg-id="63da36dea995710008727d4d" tvg-chno="1240" tvg-name="Transformers" tvg-logo="https://images.pluto.tv/channels/63da36dea995710008727d4d/colorLogoPNG.png" group-title="Kids",Transformers
-https://jmp2.uk/plu-63da36dea995710008727d4d.m3u8
-
-#EXTINF:-1 channel-id="6401d85a49839300087b116c" tvg-id="6401d85a49839300087b116c" tvg-chno="111" tvg-name="Moviesphere" tvg-logo="https://images.pluto.tv/channels/6401d85a49839300087b116c/colorLogoPNG.png" group-title="Movies",Moviesphere
-https://jmp2.uk/plu-6401d85a49839300087b116c.m3u8
-
-#EXTINF:-1 channel-id="6368e15a51e9560007c592ed" tvg-id="6368e15a51e9560007c592ed" tvg-chno="75" tvg-name="OUTflix Movies" tvg-logo="https://images.pluto.tv/channels/6368e15a51e9560007c592ed/colorLogoPNG_1770024035875.png" group-title="Movies",OUTflix Movies
-https://jmp2.uk/plu-6368e15a51e9560007c592ed.m3u8
-
-#EXTINF:-1 channel-id="65652f7fc0fc88000883537a" tvg-id="65652f7fc0fc88000883537a" tvg-chno="3990" tvg-name="Crunchyroll" tvg-logo="https://images.pluto.tv/channels/65652f7fc0fc88000883537a/colorLogoPNG.png" group-title="Anime",Crunchyroll
-https://jmp2.uk/plu-65652f7fc0fc88000883537a.m3u8
-
 #EXTINF:-1 channel-id="6793eaa4bc03978b9bc63db1" tvg-id="6793eaa4bc03978b9bc63db1" tvg-chno="3992" tvg-name="ANIME x HIDIVE" tvg-logo="https://images.pluto.tv/channels/6793eaa4bc03978b9bc63db1/colorLogoPNG_1746815871603.png" group-title="Anime",ANIME x HIDIVE
 https://jmp2.uk/plu-6793eaa4bc03978b9bc63db1.m3u8
-
-#EXTINF:-1 channel-id="5fb584b7613a31000789de5a" tvg-id="5fb584b7613a31000789de5a" tvg-chno="3880" tvg-name="Ryan and Friends" tvg-logo="https://images.pluto.tv/channels/5fb584b7613a31000789de5a/colorLogoPNG.png" group-title="Kids",Ryan and Friends
-https://jmp2.uk/plu-5fb584b7613a31000789de5a.m3u8
 
 #EXTINF:-1 channel-id="5f4ec10ed9636f00089b8c89" tvg-id="5f4ec10ed9636f00089b8c89" tvg-chno="4030" tvg-name="Yu-Gi-Oh!" tvg-logo="https://images.pluto.tv/channels/5f4ec10ed9636f00089b8c89/colorLogoPNG.png" group-title="Anime",Yu-Gi-Oh!
 https://jmp2.uk/plu-5f4ec10ed9636f00089b8c89.m3u8
@@ -1580,14 +1571,11 @@ https://jmp2.uk/plu-5f4ec10ed9636f00089b8c89.m3u8
 #EXTINF:-1 channel-id="6482f27c17f5e10008c10ff0" tvg-id="6482f27c17f5e10008c10ff0" tvg-chno="1220" tvg-name="Arthur" tvg-logo="https://images.pluto.tv/channels/6482f27c17f5e10008c10ff0/colorLogoPNG.png" group-title="Kids",Arthur
 https://jmp2.uk/plu-6482f27c17f5e10008c10ff0.m3u8
 
-#EXTINF:-1 channel-id="677f927554f43dad4b3258aa" tvg-id="677f927554f43dad4b3258aa" tvg-chno="1250" tvg-name="Garfield and Friends" tvg-logo="https://images.pluto.tv/channels/677f927554f43dad4b3258aa/colorLogoPNG.png" group-title="Kids",Garfield and Friends
-https://jmp2.uk/plu-677f927554f43dad4b3258aa.m3u8
+#EXTINF:-1 channel-id="60faf9ddfcc1f200070a5932" tvg-id="60faf9ddfcc1f200070a5932" tvg-chno="3910" tvg-name="Garfield and Friends" tvg-logo="https://images.pluto.tv/channels/60faf9ddfcc1f200070a5932/colorLogoPNG.png" group-title="Kids",Garfield and Friends
+https://jmp2.uk/plu-60faf9ddfcc1f200070a5932.m3u8
 
-#EXTINF:-1 channel-id="60fb040d4795a6000762fe8f" tvg-id="60fb040d4795a6000762fe8f" tvg-chno="3860" tvg-name="Kartoon Channel!" tvg-logo="https://images.pluto.tv/channels/60fb040d4795a6000762fe8f/colorLogoPNG.png" group-title="Kids",Kartoon Channel!
-https://jmp2.uk/plu-60fb040d4795a6000762fe8f.m3u8
-
-#EXTINF:-1 channel-id="62bdb75c3afd1200079146a6" tvg-id="62bdb75c3afd1200079146a6" tvg-chno="1205" tvg-name="Nick Jr. Pluto TV" tvg-logo="https://images.pluto.tv/channels/62bdb75c3afd1200079146a6/colorLogoPNG.png" group-title="Kids",Nick Jr. Pluto TV
-https://jmp2.uk/plu-62bdb75c3afd1200079146a6.m3u8
+#EXTINF:-1 channel-id="5ca6748a37b88b269472dad9" tvg-id="5ca6748a37b88b269472dad9" tvg-chno="3700" tvg-name="Nick Jr. Pluto TV" tvg-logo="https://images.pluto.tv/channels/5ca6748a37b88b269472dad9/colorLogoPNG.png" group-title="Kids",Nick Jr. Pluto TV
+https://jmp2.uk/plu-5ca6748a37b88b269472dad9.m3u8
 
 #EXTINF:-1 channel-id="66ebf4a88131f10008b74739" tvg-id="66ebf4a88131f10008b74739" tvg-chno="1245" tvg-name="Pokémon" tvg-logo="https://images.pluto.tv/channels/66ebf4a88131f10008b74739/colorLogoPNG.png" group-title="Kids",Pokémon
 https://jmp2.uk/plu-66ebf4a88131f10008b74739.m3u8
@@ -1601,32 +1589,32 @@ https://jmp2.uk/plu-645e7828e1979c00087b75b4.m3u8
 #EXTINF:-1 channel-id="5cb0cae7a461406ffe3f5213" tvg-id="5cb0cae7a461406ffe3f5213" tvg-chno="200" tvg-name="Paramount Movie Channel" tvg-logo="https://images.pluto.tv/channels/5cb0cae7a461406ffe3f5213/colorLogoPNG.png" group-title="Movies",Paramount Movie Channel
 https://jmp2.uk/plu-5cb0cae7a461406ffe3f5213.m3u8
 
+#EXTINF:-1 channel-id="561d7d484dc7c8770484914a" tvg-id="561d7d484dc7c8770484914a" tvg-chno="30" tvg-name="Pluto TV Action" tvg-logo="https://images.pluto.tv/channels/561d7d484dc7c8770484914a/colorLogoPNG.png" group-title="Movies",Pluto TV Action
+https://jmp2.uk/plu-561d7d484dc7c8770484914a.m3u8
+
 #EXTINF:-1 channel-id="62ea3d24b8e02600071fa296" tvg-id="62ea3d24b8e02600071fa296" tvg-chno="50" tvg-name="Pluto TV Comedy Movies" tvg-logo="https://images.pluto.tv/channels/62ea3d24b8e02600071fa296/colorLogoPNG.png" group-title="Movies",Pluto TV Comedy Movies
 https://jmp2.uk/plu-62ea3d24b8e02600071fa296.m3u8
 
-#EXTINF:-1 channel-id="5c5c31f2f21b553c1f673fb0" tvg-id="5c5c31f2f21b553c1f673fb0" tvg-chno="103" tvg-name="Pluto TV Cult Films" tvg-logo="https://images.pluto.tv/channels/5c5c31f2f21b553c1f673fb0/colorLogoPNG.png" group-title="Movies",Pluto TV Cult Films
-https://jmp2.uk/plu-5c5c31f2f21b553c1f673fb0.m3u8
+#EXTINF:-1 channel-id="5c665db3e6c01b72c4977bc2" tvg-id="5c665db3e6c01b72c4977bc2" tvg-chno="250" tvg-name="Pluto TV Cult Films" tvg-logo="https://images.pluto.tv/channels/5c665db3e6c01b72c4977bc2/colorLogoPNG.png" group-title="Movies",Pluto TV Cult Films
+https://jmp2.uk/plu-5c665db3e6c01b72c4977bc2.m3u8
 
 #EXTINF:-1 channel-id="5b64a245a202b3337f09e51d" tvg-id="5b64a245a202b3337f09e51d" tvg-chno="45" tvg-name="Pluto TV Fantastic" tvg-logo="https://images.pluto.tv/channels/5b64a245a202b3337f09e51d/colorLogoPNG_1756834917957.png" group-title="Movies",Pluto TV Fantastic
 https://jmp2.uk/plu-5b64a245a202b3337f09e51d.m3u8
 
-#EXTINF:-1 channel-id="569546031a619b8f07ce6e25" tvg-id="569546031a619b8f07ce6e25" tvg-chno="140" tvg-name="Pluto TV Horror" tvg-logo="https://images.pluto.tv/channels/569546031a619b8f07ce6e25/colorLogoPNG.png" group-title="Movies",Pluto TV Horror
-https://jmp2.uk/plu-569546031a619b8f07ce6e25.m3u8
-
-#EXTINF:-1 channel-id="5a66795ef91fef2c7031c599" tvg-id="5a66795ef91fef2c7031c599" tvg-chno="80" tvg-name="Pluto TV Romance" tvg-logo="https://images.pluto.tv/channels/5a66795ef91fef2c7031c599/colorLogoPNG.png" group-title="Movies",Pluto TV Romance
-https://jmp2.uk/plu-5a66795ef91fef2c7031c599.m3u8
+#EXTINF:-1 channel-id="612cda102f5f18000705e0bf" tvg-id="612cda102f5f18000705e0bf" tvg-chno="104" tvg-name="Pluto TV Horror" tvg-logo="https://images.pluto.tv/channels/612cda102f5f18000705e0bf/colorLogoPNG.png" group-title="Movies",Pluto TV Horror
+https://jmp2.uk/plu-612cda102f5f18000705e0bf.m3u8
 
 #EXTINF:-1 channel-id="5b4e69e08291147bd04a9fd7" tvg-id="5b4e69e08291147bd04a9fd7" tvg-chno="130" tvg-name="Pluto TV Thrillers" tvg-logo="https://images.pluto.tv/channels/5b4e69e08291147bd04a9fd7/colorLogoPNG.png" group-title="Movies",Pluto TV Thrillers
 https://jmp2.uk/plu-5b4e69e08291147bd04a9fd7.m3u8
 
-#EXTINF:-1 channel-id="5b4e94282d4ec87bdcbb87cd" tvg-id="5b4e94282d4ec87bdcbb87cd" tvg-chno="210" tvg-name="Pluto TV Westerns" tvg-logo="https://images.pluto.tv/channels/5b4e94282d4ec87bdcbb87cd/colorLogoPNG.png" group-title="Movies",Pluto TV Westerns
-https://jmp2.uk/plu-5b4e94282d4ec87bdcbb87cd.m3u8
+#EXTINF:-1 channel-id="5d4bdb635ce813b38639e6a3" tvg-id="5d4bdb635ce813b38639e6a3" tvg-chno="113" tvg-name="Pluto TV Westerns" tvg-logo="https://images.pluto.tv/channels/5d4bdb635ce813b38639e6a3/colorLogoPNG.png" group-title="Movies",Pluto TV Westerns
+https://jmp2.uk/plu-5d4bdb635ce813b38639e6a3.m3u8
 
 # === END PLUTO SECTION ===
 
 # === SAMSUNGTV+ SECTION ===
-# Updated: 2026-06-26 08:09:08
-# Total Saluran: 58
+# Updated: 2026-06-26 01:11:56
+# Total Saluran: 62
 
 #EXTINF:-1 channel-id="USBD3300019OU" tvg-id="USBD3300019OU" tvg-chno="3698" tvg-name="All Babies Channel" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD3300019OU_20260414T005500SQUARE.png" group-title="Kids",All Babies Channel
 https://jmp2.uk/stvp-USBD3300019OU
@@ -1712,26 +1700,35 @@ https://jmp2.uk/stvp-GB300003UI
 #EXTINF:-1 channel-id="GBBA3300050RG" tvg-id="GBBA3300050RG" tvg-chno="4872" tvg-name="wedo movies" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBA3300050RG_20250107T022808SQUARE.png" group-title="Movies",wedo movies
 https://jmp2.uk/stvp-GBBA3300050RG
 
-#EXTINF:-1 channel-id="US3500004M7" tvg-id="US3500004M7" tvg-chno="3210" tvg-name="FilmRise Anime" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US3500004M7_20260421T142034SQUARE.png" group-title="Anime & Gaming",FilmRise Anime
-https://jmp2.uk/stvp-US3500004M7
-
 #EXTINF:-1 channel-id="US2900013AY" tvg-id="US2900013AY" tvg-chno="3657" tvg-name="Hot Wheels Action" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US2900013AY_20260421T142012SQUARE.png" group-title="Kids",Hot Wheels Action
 https://jmp2.uk/stvp-US2900013AY
 
 #EXTINF:-1 channel-id="US4500002UB" tvg-id="US4500002UB" tvg-chno="3623" tvg-name="Mattel Jr." tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US4500002UB_20260421T141738SQUARE.png" group-title="Kids",Mattel Jr.
 https://jmp2.uk/stvp-US4500002UB
 
-#EXTINF:-1 channel-id="CA47000081Z" tvg-id="CA47000081Z" tvg-chno="3653" tvg-name="My Little Pony" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/CA47000081Z_20260421T140832SQUARE.png" group-title="Kids",My Little Pony
-https://jmp2.uk/stvp-CA47000081Z
-
 #EXTINF:-1 channel-id="US2900012T8" tvg-id="US2900012T8" tvg-chno="3654" tvg-name="Power Rangers" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US2900012T8_20260421T142220SQUARE.png" group-title="Kids",Power Rangers
 https://jmp2.uk/stvp-US2900012T8
 
-#EXTINF:-1 channel-id="GBBC4300005AL" tvg-id="GBBC4300005AL" tvg-chno="4802" tvg-name="The LEGO Channel" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBC4300005AL_20250107T025817SQUARE.png" group-title="Kids",The LEGO Channel
-https://jmp2.uk/stvp-GBBC4300005AL
+#EXTINF:-1 channel-id="USBB3600001R6" tvg-id="USBB3600001R6" tvg-chno="3696" tvg-name="TG Junior" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBB3600001R6_20260414T005428SQUARE.png" group-title="Kids",TG Junior
+https://jmp2.uk/stvp-USBB3600001R6
+
+#EXTINF:-1 channel-id="USBA2300001S8" tvg-id="USBA2300001S8" tvg-chno="3660" tvg-name="The LEGO Channel" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBA2300001S8_20260414T005632SQUARE.png" group-title="Kids",The LEGO Channel
+https://jmp2.uk/stvp-USBA2300001S8
+
+#EXTINF:-1 channel-id="USBB1900004J9" tvg-id="USBB1900004J9" tvg-chno="3708" tvg-name="Toon Goggles" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBB1900004J9_20260414T005441SQUARE.png" group-title="Kids",Toon Goggles
+https://jmp2.uk/stvp-USBB1900004J9
+
+#EXTINF:-1 channel-id="CA2000009WX" tvg-id="CA2000009WX" tvg-chno="3203" tvg-name="Crunchyroll" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/CA2000009WX_20260421T140345SQUARE.png" group-title="Anime & Gaming",Crunchyroll
+https://jmp2.uk/stvp-CA2000009WX
+
+#EXTINF:-1 channel-id="USBD12000239N" tvg-id="USBD12000239N" tvg-chno="3672" tvg-name="Ryan and Friends" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD12000239N_20260414T005610SQUARE.png" group-title="Kids",Ryan and Friends
+https://jmp2.uk/stvp-USBD12000239N
 
 #EXTINF:-1 channel-id="USBD12000153A" tvg-id="USBD12000153A" tvg-chno="3694" tvg-name="pocket.watch Game-On" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD12000153A_20260414T005645SQUARE.png" group-title="Kids",pocket.watch Game-On
 https://jmp2.uk/stvp-USBD12000153A
+
+#EXTINF:-1 channel-id="USBD3500032H0" tvg-id="USBD3500032H0" tvg-chno="1204" tvg-name="Movie Hub Action" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD3500032H0_20260616T032118SQUARE.png" group-title="Movies",Movie Hub Action
+https://jmp2.uk/stvp-USBD3500032H0
 
 #EXTINF:-1 channel-id="USBA3000041ZP" tvg-id="USBA3000041ZP" tvg-chno="1200" tvg-name="Movie Hub" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBA3000041ZP_20260622T055642SQUARE.png" group-title="Movies",Movie Hub
 https://jmp2.uk/stvp-USBA3000041ZP
@@ -1739,17 +1736,20 @@ https://jmp2.uk/stvp-USBA3000041ZP
 #EXTINF:-1 channel-id="USAJ3000007MT" tvg-id="USAJ3000007MT" tvg-chno="1285" tvg-name="Maverick Black Cinema" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USAJ3000007MT_20260609T214517SQUARE.png" group-title="Movies",Maverick Black Cinema
 https://jmp2.uk/stvp-USAJ3000007MT
 
-#EXTINF:-1 channel-id="GBAK3504503A" tvg-id="GBAK3504503A" tvg-chno="4995" tvg-name="Pluto TV Action" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBAK3504503A_20250107T022859SQUARE.png" group-title="Movies",Pluto TV Action
-https://jmp2.uk/stvp-GBAK3504503A
+#EXTINF:-1 channel-id="US2900015RO" tvg-id="US2900015RO" tvg-chno="3702" tvg-name="Kartoon Channel!" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US2900015RO_20260421T142016SQUARE.png" group-title="Kids",Kartoon Channel!
+https://jmp2.uk/stvp-US2900015RO
 
 #EXTINF:-1 channel-id="GBAK3504504A" tvg-id="GBAK3504504A" tvg-chno="4874" tvg-name="Pluto TV Movies" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBAK3504504A_20250107T022647SQUARE.png" group-title="Movies",Pluto TV Movies
 https://jmp2.uk/stvp-GBAK3504504A
 
-#EXTINF:-1 channel-id="CA1700006FC" tvg-id="CA1700006FC" tvg-chno="3208" tvg-name="BizaarTV" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/CA1700006FC_20251028T011222SQUARE.png" group-title="Anime & Gaming",BizaarTV
-https://jmp2.uk/stvp-CA1700006FC
+#EXTINF:-1 channel-id="GBAK3504522A" tvg-id="GBAK3504522A" tvg-chno="4890" tvg-name="Pluto TV Romance" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBAK3504522A_20250107T022653SQUARE.png" group-title="Movies",Pluto TV Romance
+https://jmp2.uk/stvp-GBAK3504522A
 
-#EXTINF:-1 channel-id="CA34000054K" tvg-id="CA34000054K" tvg-chno="3220" tvg-name="Dungeons & Dragons: Adventures" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/CA34000054K_20260421T141204SQUARE.png" group-title="Anime & Gaming",Dungeons & Dragons: Adventures
-https://jmp2.uk/stvp-CA34000054K
+#EXTINF:-1 channel-id="US1700027JI" tvg-id="US1700027JI" tvg-chno="3208" tvg-name="BizaarTV" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US1700027JI_20251013T235657SQUARE.png" group-title="Anime & Gaming",BizaarTV
+https://jmp2.uk/stvp-US1700027JI
+
+#EXTINF:-1 channel-id="US3400005I4" tvg-id="US3400005I4" tvg-chno="3220" tvg-name="Dungeons & Dragons: Adventures" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US3400005I4_20260421T142148SQUARE.png" group-title="Anime & Gaming",Dungeons & Dragons: Adventures
+https://jmp2.uk/stvp-US3400005I4
 
 #EXTINF:-1 channel-id="US11000020V" tvg-id="US11000020V" tvg-chno="3202" tvg-name="It’s Anime" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US11000020V_20260609T035031SQUARE.png" group-title="Anime & Gaming",It’s Anime
 https://jmp2.uk/stvp-US11000020V
@@ -1766,14 +1766,14 @@ https://jmp2.uk/stvp-US240000434
 #EXTINF:-1 channel-id="USBD350002338" tvg-id="USBD350002338" tvg-chno="3630" tvg-name="Baby Einstein" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD350002338_20260414T005514SQUARE.png" group-title="Kids",Baby Einstein
 https://jmp2.uk/stvp-USBD350002338
 
-#EXTINF:-1 channel-id="CABD12000247O" tvg-id="CABD12000247O" tvg-chno="3724" tvg-name="batteryPOP" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/CABD12000247O_20260421T141137SQUARE.png" group-title="Kids",batteryPOP
-https://jmp2.uk/stvp-CABD12000247O
+#EXTINF:-1 channel-id="USBD3300012VX" tvg-id="USBD3300012VX" tvg-chno="3714" tvg-name="batteryPOP" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD3300012VX_20250211T021653SQUARE.png" group-title="Kids",batteryPOP
+https://jmp2.uk/stvp-USBD3300012VX
 
 #EXTINF:-1 channel-id="CA210000188" tvg-id="CA210000188" tvg-chno="3630" tvg-name="Blippi" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/CA210000188_20260421T140349SQUARE.png" group-title="Kids",Blippi
 https://jmp2.uk/stvp-CA210000188
 
-#EXTINF:-1 channel-id="CA3400004MA" tvg-id="CA3400004MA" tvg-chno="3714" tvg-name="ducktv" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/CA3400004MA_20260421T140719SQUARE.png" group-title="Kids",ducktv
-https://jmp2.uk/stvp-CA3400004MA
+#EXTINF:-1 channel-id="US3400003HI" tvg-id="US3400003HI" tvg-chno="3705" tvg-name="ducktv" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/US3400003HI_20260421T142031SQUARE.png" group-title="Kids",ducktv
+https://jmp2.uk/stvp-US3400003HI
 
 #EXTINF:-1 channel-id="USBC44000072I" tvg-id="USBC44000072I" tvg-chno="3699" tvg-name="HappyKids" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBC44000072I_20260414T005527SQUARE.png" group-title="Kids",HappyKids
 https://jmp2.uk/stvp-USBC44000072I
