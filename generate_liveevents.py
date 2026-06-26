@@ -772,9 +772,66 @@ def is_drm_protected_content(preview: str, url: str) -> bool:
     return False
 
 
+def fetch_live_wc_matches_from_espn() -> list[str]:
+    """Mengambil pertandingan Piala Dunia yang sedang live/in-progress dari API ESPN."""
+    url = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard"
+    live_matches = []
+    
+    ENG_TO_IDN_MAP = {
+        "japan": "Jepang", "sweden": "Swedia", "germany": "Jerman", 
+        "ecuador": "Ekuador", "tunisia": "Tunisia", "netherlands": "Belanda",
+        "paraguay": "Paraguay", "australia": "Australia", "turkey": "Turki",
+        "türkiye": "Turki", "united states": "AS", "usa": "AS",
+        "ivory coast": "Pantai Gading", "curacao": "Curacao", "curaçao": "Curacao",
+        "spain": "Spanyol", "france": "Prancis", "england": "Inggris",
+        "italy": "Italia", "portugal": "Portugal", "croatia": "Kroasia",
+        "mexico": "Meksiko", "canada": "Kanada", "senegal": "Senegal",
+        "morocco": "Maroko", "ghana": "Ghana", "cameroon": "Kamerun",
+        "south korea": "Korsel", "korea": "Korsel", "saudi arabia": "Arab Saudi",
+        "poland": "Polandia", "belgium": "Belgia", "denmark": "Denmark",
+        "switzerland": "Swiss", "uruguay": "Uruguay", "argentina": "Argentina",
+        "brazil": "Brasil", "colombia": "Kolombia"
+    }
+
+    try:
+        print("⏳ Menghubungi API ESPN Scoreboard untuk mencari laga live...")
+        r = requests.get(url, timeout=10)
+        if r.status_code == 200:
+            data = r.json()
+            events = data.get("events", [])
+            for event in events:
+                status_state = event.get("status", {}).get("type", {}).get("state", "").lower()
+                # Status state "in" berarti in-progress / sedang live
+                if status_state == "in":
+                    competitors = event.get("competitions", [{}])[0].get("competitors", [])
+                    if len(competitors) >= 2:
+                        teams = []
+                        for comp in competitors:
+                            t_name = comp.get("team", {}).get("displayName", "")
+                            t_name_idn = ENG_TO_IDN_MAP.get(t_name.lower(), t_name)
+                            teams.append(t_name_idn)
+                        
+                        laga_live = f"{teams[0]} vs {teams[1]}"
+                        live_matches.append(laga_live)
+                        print(f"  [ESPN LIVE] Terdeteksi sedang berlangsung: {laga_live}")
+        else:
+            print(f"  [WARNING] API ESPN mengembalikan HTTP {r.status_code}")
+    except Exception as e:
+        print(f"  [WARNING] Gagal mengambil laga live dari ESPN: {e}")
+        
+    return live_matches
+
+
 def get_active_wc_matches(epg_active_progs: dict, stream_match_map: dict) -> list[str]:
-    """Mengumpulkan daftar laga Piala Dunia aktif berdasarkan EPG dan events.m3u8."""
+    """Mengumpulkan daftar laga Piala Dunia aktif berdasarkan API ESPN dan EPG stasiun TV nasional."""
     matches = set()
+    
+    # 1. Ambil laga live secara real-time dari API ESPN Internasional
+    espn_live = fetch_live_wc_matches_from_espn()
+    for match in espn_live:
+        matches.add(match)
+        
+    # 2. Ambil laga live sebagai cadangan dari EPG stasiun TV nasional Indonesia
     main_channels = ["TVRI.id", "SCTV.id", "Indosiar.id", "Moji.id", "RCTI.id"]
     for cid, title in epg_active_progs.items():
         is_main = any(mc.lower() in cid.lower() for mc in main_channels)
@@ -782,9 +839,10 @@ def get_active_wc_matches(epg_active_progs: dict, stream_match_map: dict) -> lis
             cleaned = clean_match_name(title)
             if cleaned and cleaned != title and "vs" in cleaned.lower():
                 matches.add(cleaned)
-    for match_name in stream_match_map.values():
-        if match_name and "vs" in match_name.lower():
-            matches.add(match_name)
+                
+    # CATATAN: JANGAN gunakan stream_match_map secara mentah untuk active matches global
+    # karena stream_match_map memuat seluruh jadwal harian events.m3u8 (bukan yang sedang live saja).
+    
     return list(matches)
 
 

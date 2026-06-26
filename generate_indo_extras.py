@@ -23,6 +23,7 @@ OUTPUT_DIR = "playlists"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "indo_extras.m3u")
 
 SOURCES = {
+    "apistech": "https://raw.githubusercontent.com/apistech/project/refs/heads/main/IndihomeTV.m3u",
     "dhanytv": "https://raw.githubusercontent.com/dhasap/dhanytv/main/dhanytv.m3u",
     "windozalmi": "https://raw.githubusercontent.com/windozalmi/Playlist-IPTV-Indonesia-online-Aktif-2025/refs/heads/m3u/IPTV%20Indonesia%20by%20WINDO%20ZALMI",
     "basictv": "https://gist.githubusercontent.com/R03nDL03n1/6361525c226ccc713f48e7fea5399df4/raw/d4443e16c36c8b73cfb028e5b771b870d5695f55/BasicTVStandar"
@@ -204,11 +205,12 @@ def is_drm_protected_content(preview: str, url: str) -> bool:
     return False
 
 
-def ping_stream(url: str, headers: dict = None) -> bool:
+def ping_stream(url: str, headers: dict = None, opts: list = None) -> bool:
     from contextlib import closing
     headers = headers or {'User-Agent': 'Mozilla/5.0'}
     url = sanitize_url_protocol(url)
     url_lower = url.lower()
+    opts = opts or []
     
     # Jika URL berupa manifest, lakukan GET untuk sniff DRM
     is_manifest = any(ext in url_lower for ext in [".mpd", ".m3u8", "cenc", "manifest"])
@@ -219,11 +221,13 @@ def ping_stream(url: str, headers: dict = None) -> bool:
                     chunk = next(r.iter_content(chunk_size=10240), b"")
                     preview = chunk.decode("utf-8", errors="ignore")
                     if is_drm_protected_content(preview, url):
-                        return False
+                        has_license = any("license_key" in opt.lower() or "license_type" in opt.lower() for opt in opts)
+                        if not has_license:
+                            return False
                     return True
         except requests.exceptions.SSLError:
             if url.startswith("https://"):
-                return ping_stream(url.replace("https://", "http://", 1), headers)
+                return ping_stream(url.replace("https://", "http://", 1), headers, opts)
         except Exception:
             pass
         return False
@@ -267,8 +271,8 @@ def parse_m3u_to_streams(content: str, source_name: str) -> list[dict]:
             extinf = line
             opts = []
             i += 1
-            while i < len(lines) and (lines[i].startswith('#EXTVLCOPT') or lines[i].startswith('#EXTGRP')):
-                opts.append(lines[i])
+            while i < len(lines) and lines[i].startswith('#') and not lines[i].startswith('#EXTINF'):
+                opts.append(lines[i].strip())
                 i += 1
             if i < len(lines) and lines[i].strip() and not lines[i].startswith('#'):
                 url = sanitize_url_protocol(lines[i].strip())
@@ -364,7 +368,7 @@ def main():
 
     with ThreadPoolExecutor(max_workers=16) as executor:
         future_to_ch = {
-            executor.submit(ping_stream, ch["url"], get_vlc_headers(ch["opts"])): ch
+            executor.submit(ping_stream, ch["url"], get_vlc_headers(ch["opts"]), ch["opts"]): ch
             for ch in unique_streams
         }
         

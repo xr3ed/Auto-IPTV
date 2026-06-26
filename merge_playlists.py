@@ -55,8 +55,8 @@ def extract_streams_from_content(content: str, source_name: str) -> list[dict]:
             opts = []
             i += 1
             # Kumpulkan opsi VLC
-            while i < len(lines) and (lines[i].startswith('#EXTVLCOPT') or lines[i].startswith('#EXTGRP')):
-                opts.append(lines[i])
+            while i < len(lines) and lines[i].startswith('#') and not lines[i].startswith('#EXTINF'):
+                opts.append(lines[i].strip())
                 i += 1
             # Kumpulkan URL
             if i < len(lines) and lines[i].strip() and not lines[i].startswith('#'):
