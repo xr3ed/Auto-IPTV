@@ -230,6 +230,22 @@ def parse_m3u(lines: list[str]) -> list[dict]:
         elif stripped and not stripped.startswith("#"):
             url = sanitize_url_protocol(stripped)
 
+            # Lakukan enrichment dengan kunci DRM otomatis
+            from utils import enrich_stream_with_drm_keys
+            combined_opts = buffer_vlcopt + buffer_other
+            enriched_opts = enrich_stream_with_drm_keys(url, combined_opts)
+            
+            new_vlcopt = []
+            new_other = []
+            for opt in enriched_opts:
+                if opt.startswith("#EXTVLCOPT"):
+                    new_vlcopt.append(opt)
+                else:
+                    new_other.append(opt)
+                    
+            buffer_vlcopt = new_vlcopt
+            buffer_other = new_other
+
             headers = {}
             for opt in buffer_vlcopt:
                 if opt.startswith("#EXTVLCOPT:"):
@@ -908,6 +924,15 @@ def check_and_enrich_entry(entry: dict, is_wc: bool) -> dict:
 
 def main():
     print("🚀 Memulai proses penggabungan & penyaringan saluran...")
+    
+    # Jalankan harvester kunci DRM otomatis sebelum memproses playlist
+    try:
+        import sys
+        import subprocess
+        print("🌾 Menjalankan Auto DRM Key Harvester...")
+        subprocess.run([sys.executable, "discover_keys.py"], check=True)
+    except Exception as e:
+        print(f"⚠️ Gagal memanggil harvester kunci DRM: {e}")
     
     # Pre-pass EPG: Load EPG data to build the active programmes database
     print("⏳ Menyiapkan database EPG dari guide.xml...")

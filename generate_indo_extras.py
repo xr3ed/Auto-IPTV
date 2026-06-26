@@ -299,6 +299,8 @@ def parse_m3u_to_streams(content: str, source_name: str) -> list[dict]:
                 
                 # Jika masuk kategori target, simpan
                 if mapped_group:
+                    from utils import enrich_stream_with_drm_keys
+                    opts = enrich_stream_with_drm_keys(url, opts)
                     streams.append({
                         "display_name": display_name,
                         "extinf": extinf,
@@ -313,6 +315,14 @@ def parse_m3u_to_streams(content: str, source_name: str) -> list[dict]:
 
 def main():
     print("🚀 Memulai proses pengumpulan Saluran TV Tambahan Indonesia...")
+    
+    # Jalankan harvester kunci DRM otomatis sebelum memproses playlist
+    try:
+        print("🌾 Menjalankan Auto DRM Key Harvester...")
+        import subprocess
+        subprocess.run([sys.executable, "discover_keys.py"], check=True)
+    except Exception as e:
+        print(f"⚠️ Gagal memanggil harvester kunci DRM: {e}")
     
     # 1. Unduh dan parse playlist eksternal
     all_raw_streams = []

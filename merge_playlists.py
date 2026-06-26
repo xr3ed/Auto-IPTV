@@ -76,6 +76,9 @@ def extract_streams_from_content(content: str, source_name: str) -> list[dict]:
                 if group_match:
                     group = group_match.group(1)
 
+                from utils import enrich_stream_with_drm_keys
+                opts = enrich_stream_with_drm_keys(url, opts)
+
                 streams.append({
                     "display_name": display_name,
                     "clean_name": clean_channel_name(display_name),
@@ -231,6 +234,14 @@ def deduplicate_channels_smart(channels: list[dict]) -> list[dict]:
 
 def merge_all_to_indihome():
     print("🔗 Memulai penggabungan dan pembersihan terpadu ke IndihomeTV.m3u...")
+    
+    # Jalankan harvester kunci DRM otomatis sebelum memproses playlist
+    try:
+        import subprocess
+        print("🌾 Menjalankan Auto DRM Key Harvester...")
+        subprocess.run([sys.executable, "discover_keys.py"], check=True)
+    except Exception as e:
+        print(f"⚠️ Gagal memanggil harvester kunci DRM: {e}")
     
     # 1. Muat playlist master bawaan yang ada (original)
     indihome_path = INDIHOME_FILE

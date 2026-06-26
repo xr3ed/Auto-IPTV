@@ -60,3 +60,49 @@ def sanitize_xml_text(text: str) -> str:
     if not text:
         return ""
     return re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]', '', text)
+
+
+def load_drm_keys_db() -> dict:
+    """Memuat database kunci DRM hasil harvester."""
+    import json
+    path = os.path.join("playlists", "drm_keys.json")
+    if os.path.exists(path):
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {}
+
+
+def enrich_stream_with_drm_keys(url: str, opts: list) -> list:
+    """Menyuntikkan lisensi ClearKey DRM dari database ke dalam opsi jika ada kecocokan manifest URL."""
+    base_url = url.split("?")[0].strip()
+    db = load_drm_keys_db()
+    
+    if base_url in db:
+        info = db[base_url]
+        license_type = info.get("license_type", "org.w3.clearkey")
+        license_key = info.get("license_key", "")
+        referrer = info.get("referrer", "")
+        
+        # Saring opsi yang lama
+        new_opts = []
+        for opt in opts:
+            opt_lower = opt.lower()
+            if "license_type" in opt_lower or "license_key" in opt_lower:
+                continue
+            if referrer and "http-referrer" in opt_lower:
+                continue
+            new_opts.append(opt)
+            
+        # Suntikkan opsi baru
+        if license_key:
+            new_opts.append(f"#KODIPROP:inputstream.adaptive.license_type={license_type}")
+            new_opts.append(f"#KODIPROP:inputstream.adaptive.license_key={license_key}")
+        if referrer:
+            new_opts.append(f"#EXTVLCOPT:http-referrer={referrer}")
+            
+        return new_opts
+        
+    return opts
