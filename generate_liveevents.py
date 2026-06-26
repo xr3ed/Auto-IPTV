@@ -37,6 +37,11 @@ EPG_CHANNEL_NAMES = {}
 # ====================================================================
 SOURCES = [
     {
+        "name": "apistech_wc",
+        "url": "https://raw.githubusercontent.com/apistech/project/refs/heads/main/playlists/wc2026.m3u",
+        "is_wc": True
+    },
+    {
         "name": "wc2026",
         "url": "https://github.com/sm-monirulislam/SM-Live-TV/raw/refs/heads/main/World_Cup.m3u",
         "is_wc": True
@@ -599,6 +604,8 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
         epg_match = get_epg_match_for_channel(attrs)
         
         has_actual_match = bool(match_name) or bool(epg_match) or (cleaned_title_match != title)
+        entry["has_actual_match"] = has_actual_match
+        entry["source_name"] = source_name
         
         if has_actual_match:
             if match_name:
@@ -622,13 +629,8 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
             
             display_name = f"{res_label}{actual_match} - {channel_suffix}"
         else:
-            if active_wc_matches:
-                actual_match = active_wc_matches[0]
-                channel_suffix = extract_channel_suffix(title, source_name)
-                display_name = f"{res_label}{actual_match} - {channel_suffix}"
-            else:
-                clean_title = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
-                display_name = f"{res_label}World Cup 2026 - {clean_title}"
+            clean_title = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
+            display_name = f"{res_label}World Cup 2026 - {clean_title}"
     else:
         group = "Live Events"
         logo = None
@@ -805,7 +807,9 @@ def check_and_enrich_entry(entry: dict, is_wc: bool) -> dict:
                     preview = chunk.decode("utf-8", errors="ignore")
                     
                     if is_drm_protected_content(preview, url):
-                        playable = False
+                        has_license = any("license_key" in line.lower() or "license_type" in line.lower() for line in entry.get("other", []) + entry.get("vlcopt", []))
+                        if not has_license:
+                            playable = False
                     elif is_hevc_stream(preview):
                         playable = False
         except Exception:
@@ -1041,6 +1045,32 @@ def main():
                 all_wc_entries.append(enriched)
             else:
                 all_live_entries.append(enriched)
+
+    # Distribusikan laga aktif ke entri Piala Dunia yang generik (round-robin)
+    generics = [entry for entry in all_wc_entries if not entry.get("has_actual_match")]
+    if generics and active_wc_matches:
+        print(f"\nDistributing {len(active_wc_matches)} active matches to {len(generics)} generic World Cup channels (round-robin)...")
+        for idx, entry in enumerate(generics):
+            actual_match = active_wc_matches[idx % len(active_wc_matches)]
+            
+            extinf_line = entry["extinf"][0]
+            attrs = parse_extinf_attributes(extinf_line)
+            title = attrs["display_name"]
+            
+            resolution = entry.get("resolution", "")
+            res_label = f"[{resolution}] " if resolution else ""
+            
+            source_name = entry.get("source_name", "SM-TV")
+            channel_suffix = extract_channel_suffix(title, source_name)
+            
+            # Update display name
+            display_name = f"{res_label}{actual_match} - {channel_suffix}"
+            attrs["display_name"] = display_name
+            attrs["tvg-name"] = display_name
+            attrs["group-title"] = "World Cup 2026"
+            attrs["tvg-logo"] = "https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png"
+            
+            entry["extinf"] = [build_extinf_line(attrs)]
 
     # Dedup antar source jika ada nama/url ganda secara pintar
     unique_wc, wc_dup_removed = dedup_entries_by_name(all_wc_entries)
