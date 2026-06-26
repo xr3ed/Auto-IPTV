@@ -1,14 +1,10 @@
-import requests
-import gzip
-import json
 import os
 import logging
 import re
-import time
-import random
 import xml.etree.ElementTree as ET
-from io import BytesIO
 from datetime import datetime, timezone, timedelta
+from utils import fetch_url, write_m3u_file, format_extinf, sanitize_xml_text, logger
+
 
 # --- Configuration ---
 OUTPUT_DIR = "playlists"
@@ -49,53 +45,8 @@ TCL_IMAGE_BASE = "https://tcl-channel-cdn.ideonow.com"
 TCL_ORIGIN = "https://tcltv.plus"
 TCL_EPG_URL = "https://github.com/apistech/project/raw/refs/heads/main/playlists/tcl_epg.xml"
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
-
-session = requests.Session()
-session.headers.update({
-    "Accept": "application/json, text/plain, */*",
-    "Origin": TCL_ORIGIN,
-    "Referer": f"{TCL_ORIGIN}/",
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
-})
-
-# --- Helper Functions ---
-def fetch_url(url, is_json=True, is_gzipped=False, headers=None, stream=False, retries=3):
-    headers = headers or {'User-Agent': USER_AGENT}
-    for i in range(retries):
-        try:
-            response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT, stream=stream)
-            if response.status_code == 429:
-                time.sleep((i + 1) * 10 + random.uniform(0, 5))
-                continue
-            response.raise_for_status()
-            content = response.content
-            if is_gzipped:
-                try:
-                    with gzip.GzipFile(fileobj=BytesIO(content), mode='rb') as f:
-                        content = f.read()
-                    content = content.decode('utf-8')
-                except:
-                    content = content.decode('utf-8')
-            else:
-                content = content.decode('utf-8')
-            return json.loads(content) if is_json else content
-        except Exception as e:
-            logger.warning(f"Fetch failed (attempt {i+1}): {e}")
-            if i < retries - 1: time.sleep(5)
-    return None
-
-def write_m3u_file(filename, content):
-    filepath = os.path.join(OUTPUT_DIR, filename)
-    with open(filepath, 'w', encoding='utf-8') as f:
-        f.write(content)
-
-def format_extinf(channel_id, tvg_id, tvg_chno, tvg_name, tvg_logo, group_title, display_name):
-    chno_str = str(tvg_chno) if tvg_chno and str(tvg_chno).isdigit() else ""
-    return (f'#EXTINF:-1 channel-id="{channel_id}" tvg-id="{tvg_id}" tvg-chno="{chno_str}" '
-            f'tvg-name="{tvg_name.replace(chr(34), chr(39))}" tvg-logo="{tvg_logo}" '
-            f'group-title="{group_title.replace(chr(34), chr(39))}",{display_name.replace(",", "")}\n')
+# Logger didefinisikan di utils.py, tapi kita bisa konfigurasi level log jika diperlukan
+logging.getLogger("utils").setLevel(logging.INFO)
 
 # --- Roku ---
 def generate_roku_m3u():
@@ -355,17 +306,35 @@ def parse_tcl_title(raw, api_season, api_episode):
 def get_tcl_common_params():
     return {"userId": TCL_DEVICE_ID, "device_type": "web", "device_model": "web", "device_id": TCL_DEVICE_ID, "app_version": "1.0", "country_code": TCL_COUNTRY_CODE, "state_code": TCL_STATE_CODE}
 
-def resolve_tcl_stream(bundle_id, source, media):
+TCL_HEADERS = {
+    "Accept": "application/json, text/plain, */*",
+    "Origin": TCL_ORIGIN,
+    "Referer": f"{TCL_ORIGIN}/",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+}
+
+def resolve_tcl_stream(bundle_id, source, media, session=None):
+    import requests
     payload = {"type": "channel", "bundle_id": bundle_id, "device_id": TCL_DEVICE_ID, "source": source, "stream_url": media}
     params = {"country_code": TCL_COUNTRY_CODE, "app_version": "3.2.7"}
     try:
-        resp = session.post(f"{TCL_BASE_URL}/api/metadata/v1/format-stream-url", params=params, json=payload, timeout=20)
+        if session:
+            resp = session.post(f"{TCL_BASE_URL}/api/metadata/v1/format-stream-url", params=params, json=payload, timeout=20)
+        else:
+            resp = requests.post(f"{TCL_BASE_URL}/api/metadata/v1/format-stream-url", params=params, headers=TCL_HEADERS, json=payload, timeout=20)
         return resp.json().get("stream_url") or media
-    except: return media
+    except Exception as e:
+        logger.warning(f"Failed to resolve TCL stream for bundle {bundle_id}: {e}")
+        return media
 
 def generate_tcl_m3u():
     logger.info("=== Starting TCL API scrape ===")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+    import requests
+    
+    session = requests.Session()
+    session.headers.update(TCL_HEADERS)
+    
     try:
         livetab = session.get(f"{TCL_BASE_URL}/api/metadata/v2/livetab", params=get_tcl_common_params(), timeout=20).json()
     except Exception as e:
@@ -378,6 +347,11 @@ def generate_tcl_m3u():
 
     for line in livetab.get("lines", []):
         cat_id, cat_name = line["id"], line.get("name", "General")
+        
+        # FILTER KATEGORI DI AWAL (Menghemat puluhan request tidak perlu)
+        if TCL_GROUP_FILTER != 'all' and cat_name not in TCL_GROUP_FILTER:
+            continue
+            
         params = get_tcl_common_params()
         params.update({"category_id": cat_id, **range_params})
         try:
@@ -385,7 +359,7 @@ def generate_tcl_m3u():
             for ch in data.get("channels", []):
                 bid = str(ch.get("bundle_id") or ch.get("id"))
                 if bid not in channels_map:
-                    stream = resolve_tcl_stream(bid, ch.get("source"), ch.get("media", ""))
+                    stream = resolve_tcl_stream(bid, ch.get("source"), ch.get("media", ""), session=session)
                     channels_map[bid] = {
                         "id": bid, "name": ch.get("name"),
                         "logo": f"{TCL_IMAGE_BASE}{ch.get('logo_color')}" if ch.get('logo_color') else "",
@@ -394,7 +368,7 @@ def generate_tcl_m3u():
                 for prog in ch.get("programs", []):
                     if prog.get("id"): stubs.append((bid, prog))
         except Exception as e: 
-            logger.warning(f"TCL Category {cat_id} failed: {e}")
+            logger.warning(f"TCL Category {cat_name} ({cat_id}) failed: {e}")
 
     if stubs:
         unique_ids = set()
@@ -450,7 +424,7 @@ def generate_tcl_m3u():
     root = ET.Element("tv")
     for ch in channels_map.values():  # pake full channels_map, bukan filtered
         channel_el = ET.SubElement(root, "channel", id=ch["id"])
-        ET.SubElement(channel_el, "display-name").text = ch["name"]
+        ET.SubElement(channel_el, "display-name").text = sanitize_xml_text(ch["name"])
         if ch["logo"]: 
             ET.SubElement(channel_el, "icon", src=ch["logo"])
 
@@ -471,9 +445,11 @@ def generate_tcl_m3u():
         
         title = p.get("title", "No Title")
         clean_title, season, episode, subtitle = parse_tcl_title(title, p.get("season"), p.get("episode"))
-        ET.SubElement(prog_el, "title").text = clean_title
-        if subtitle or p.get("subtitle"): 
-            ET.SubElement(prog_el, "sub-title").text = subtitle or p.get("subtitle")
+        ET.SubElement(prog_el, "title").text = sanitize_xml_text(clean_title)
+        
+        sub_t = subtitle or p.get("subtitle")
+        if sub_t: 
+            ET.SubElement(prog_el, "sub-title").text = sanitize_xml_text(sub_t)
         
         desc = ""
         if detail and isinstance(detail.get("desc"), str) and detail["desc"].strip(): 
@@ -485,7 +461,7 @@ def generate_tcl_m3u():
         
         if desc:
             try: 
-                ET.SubElement(prog_el, "desc").text = desc
+                ET.SubElement(prog_el, "desc").text = sanitize_xml_text(desc)
             except: 
                 pass
         if season or episode:

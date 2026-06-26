@@ -1,29 +1,46 @@
 import sys
+import io
+import re
 from contextlib import closing
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
+import urllib3
 
-TIMEOUT = 10
+# Pastikan stdout/stderr menggunakan UTF-8 di terminal Windows untuk menghindari UnicodeEncodeError
+if sys.platform.startswith('win'):
+    try:
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+    except Exception:
+        pass
+
+# Nonaktifkan peringatan SSL tidak aman untuk bypass
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+TIMEOUT = 15
 MAX_WORKERS = 16
 OUTPUT_DIR = Path("playlists")
-
 EPG_URL = "https://epgshare01.online/epgshare01/epg_ripper_DUMMY_CHANNELS.xml.gz"
 
 # ====================================================================
 # DAFTAR SUMBER PLAYLIST
-# Tambah/ubah entry di sini untuk custom source.
-#   name   -> nama file output (tanpa ekstensi), hasil: playlists/<name>.m3u
-#   url    -> link raw M3U/M3U8 source
 # ====================================================================
 SOURCES = [
     {
-        "name": "live_events",
-        "url": "https://github.com/doms9/iptv/raw/refs/heads/default/M3U8/events.m3u8",
-    },
-    {
         "name": "wc2026",
         "url": "https://github.com/sm-monirulislam/SM-Live-TV/raw/refs/heads/main/World_Cup.m3u",
+        "is_wc": True
+    },
+    {
+        "name": "buddy_sport",
+        "url": "https://github.com/BuddyChewChew/storage/raw/main/sport.m3u",
+        "is_wc": True
+    },
+    {
+        "name": "live_events",
+        "url": "https://github.com/doms9/iptv/raw/refs/heads/default/M3U8/events.m3u8",
+        "is_wc": False
     },
 ]
 
@@ -45,10 +62,10 @@ VALID_CONTENT_TYPES = {
 def is_stream_playable(url: str, headers: dict = None) -> bool:
     headers = headers or {}
 
-    # 1. Coba HEAD request dulu (efisien)
+    # 1. Coba HEAD request dulu (efisien) - bypass SSL verify
     try:
         response = requests.head(
-            url, headers=headers, timeout=TIMEOUT, allow_redirects=True
+            url, headers=headers, timeout=TIMEOUT, allow_redirects=True, verify=False
         )
         if response.status_code < 400:
             content_type = response.headers.get("Content-Type", "").split(";")[0].strip().lower()
@@ -57,11 +74,11 @@ def is_stream_playable(url: str, headers: dict = None) -> bool:
     except requests.RequestException:
         pass
 
-    # 2. Fallback ke GET stream, body-sniff untuk validasi konten
+    # 2. Fallback ke GET stream, body-sniff untuk validasi konten - bypass SSL verify
     try:
         with closing(
             requests.get(
-                url, headers=headers, timeout=TIMEOUT, stream=True, allow_redirects=True
+                url, headers=headers, timeout=TIMEOUT, stream=True, allow_redirects=True, verify=False
             )
         ) as response:
             if response.status_code >= 400:
@@ -96,13 +113,38 @@ def is_stream_playable(url: str, headers: dict = None) -> bool:
                 return True
             if b"ftyp" in chunk[:32]:  # MP4 container
                 return True
-            if chunk[:3] == b"ID3" or chunk[:2] == b"\xff\xfb":  # MP3/ID3
+            if chunk[:3] == b"ID3" or chunk[:2] == b"\xff\xff" or chunk[:2] == b"\xff\xfb":  # MP3/ID3
                 return True
 
             return False
 
     except requests.RequestException:
         return False
+
+
+def detect_stream_resolution(url: str, headers: dict = None) -> str:
+    """Mengunduh chunk awal manifest .m3u8 untuk menganalisis resolusi stream secara dinamis."""
+    headers = headers or {}
+    try:
+        with closing(requests.get(url, headers=headers, timeout=5, stream=True, verify=False)) as r:
+            if r.status_code >= 400:
+                return ""
+            chunk = next(r.iter_content(chunk_size=4096), b"")
+            preview = chunk.decode("utf-8", errors="ignore")
+            
+            # Deteksi resolusi (misal: RESOLUTION=1920x1080)
+            resolutions = re.findall(r'RESOLUTION=(\d+x\d+)', preview)
+            if resolutions:
+                highest = sorted(resolutions, key=lambda x: int(x.split('x')[0]))[-1]
+                width = int(highest.split('x')[0])
+                if width >= 1920:
+                    return "FHD"
+                elif width >= 1280:
+                    return "HD"
+                return "SD"
+    except Exception:
+        pass
+    return ""
 
 
 def parse_m3u(lines: list[str]) -> list[dict]:
@@ -150,13 +192,11 @@ def parse_m3u(lines: list[str]) -> list[dict]:
             buffer_extinf = []
             buffer_other = []
             buffer_vlcopt = []
-        # baris kosong: skip, buffer tetap (handle case kosong di antara tags)
 
     return entries
 
 
 def dedup_entries(entries: list[dict]) -> tuple[list[dict], int]:
-    """Remove entries with duplicate URL, keep first occurrence."""
     seen_urls = set()
     unique_entries = []
 
@@ -171,9 +211,8 @@ def dedup_entries(entries: list[dict]) -> tuple[list[dict], int]:
 
 
 def fetch_playlist(url: str) -> list[str] | None:
-    """Download playlist source, return list of lines or None on failure."""
     try:
-        response = requests.get(url, timeout=30)
+        response = requests.get(url, timeout=30, verify=False)
         response.raise_for_status()
         return [line.rstrip() for line in response.text.splitlines()]
     except requests.RequestException as e:
@@ -181,95 +220,168 @@ def fetch_playlist(url: str) -> list[str] | None:
         return None
 
 
-def process_source(name: str, url: str) -> bool:
-    """Process single source: fetch -> dedup -> check -> write output. Return True if success."""
-    print(f"\n{'=' * 60}")
-    print(f"Source: {name}")
-    print(f"URL   : {url}")
-    print(f"{'=' * 60}")
+def enrich_extinf(extinf_line: str, resolution: str, is_wc: bool) -> str:
+    """Mengubah group-title dan menambahkan resolusi ke dalam baris #EXTINF."""
+    group = "World Cup 2026" if is_wc else "Live Events"
+    
+    # Ganti group-title
+    if 'group-title="' in extinf_line:
+        extinf_line = re.sub(r'group-title="[^"]+"', f'group-title="{group}"', extinf_line)
+    else:
+        extinf_line = extinf_line.replace('#EXTINF:-1 ', f'#EXTINF:-1 group-title="{group}" ')
+        
+    # Sisipkan label resolusi
+    if resolution in ("FHD", "HD"):
+        label = f"[{resolution}] "
+        extinf_line = re.sub(r'tvg-name="([^"]+)"', r'tvg-name="' + label + r'\1"', extinf_line)
+        parts = extinf_line.rsplit(',', 1)
+        if len(parts) == 2:
+            extinf_line = f"{parts[0]},{label}{parts[1]}"
+            
+    return extinf_line
 
-    lines = fetch_playlist(url)
-    if lines is None:
-        print(f"[SKIP] {name}: source tidak bisa di-fetch")
-        return False
 
-    entries = parse_m3u(lines)
-    print(f"Total entries: {len(entries)}")
+def calculate_wc_score(entry: dict) -> int:
+    """Menghitung skor prioritas untuk saluran Piala Dunia (Bahasa Indonesia/Inggris dan Resolusi)."""
+    score = 0
+    title = ""
+    for line in entry["extinf"]:
+        if line.startswith("#EXTINF"):
+            parts = line.rsplit(',', 1)
+            if len(parts) == 2:
+                title = parts[1].lower()
+                
+    # Prioritas Bahasa Indonesia (SCTV, Vidio, Indo, dll.)
+    if any(kw in title for kw in ["indo", "indonesia", "sctv", "vidio", "rcti", "mnc"]):
+        score += 100
+    # Prioritas Bahasa Inggris
+    elif any(kw in title for kw in ["english", " en ", "[en]", "tsn", "espn", "fox", "astro", "supersport"]):
+        score += 50
+        
+    # Skor tambahan untuk resolusi tinggi
+    res = entry.get("resolution", "")
+    if res == "FHD":
+        score += 20
+    elif res == "HD":
+        score += 10
+        
+    return score
 
-    if not entries:
-        print(f"[SKIP] {name}: tidak ada entry valid")
-        return False
 
-    # Dedup by URL sebelum check (hemat request)
-    entries, dup_removed = dedup_entries(entries)
-    if dup_removed > 0:
-        print(f"Duplikat      : {dup_removed} dihapus (berdasarkan URL)")
-    print(f"Unique entries: {len(entries)}")
+def check_and_enrich_entry(entry: dict, is_wc: bool) -> dict:
+    playable = is_stream_playable(entry["url"], entry["headers"])
+    entry["playable"] = playable
+    entry["is_wc"] = is_wc
+    
+    if playable:
+        # Deteksi resolusi jika playable
+        res = detect_stream_resolution(entry["url"], entry["headers"])
+        entry["resolution"] = res
+    else:
+        entry["resolution"] = ""
+        
+    return entry
 
-    print(f"Checking with {MAX_WORKERS} parallel workers...\n")
 
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        future_to_entry = {
-            executor.submit(is_stream_playable, entry["url"], entry["headers"]): entry
-            for entry in entries
-        }
+def main():
+    print("🚀 Memulai proses penggabungan & penyaringan saluran...")
+    all_wc_entries = []
+    all_live_entries = []
 
-        done = 0
-        total = len(entries)
-        for future in as_completed(future_to_entry):
-            entry = future_to_entry[future]
-            try:
-                entry["playable"] = future.result()
-            except Exception:
-                entry["playable"] = False
+    for source in SOURCES:
+        name = source["name"]
+        url = source["url"]
+        is_wc = source["is_wc"]
 
-            done += 1
-            status = "OK " if entry["playable"] else "DEAD"
-            print(f"[{done}/{total}] {status} {entry['url']}")
+        print(f"\n{'=' * 60}")
+        print(f"Source: {name} (Kategori: {'World Cup' if is_wc else 'Live Events'})")
+        print(f"URL   : {url}")
+        print(f"{'=' * 60}")
 
+        lines = fetch_playlist(url)
+        if lines is None:
+            print(f"[SKIP] {name}: tidak bisa diunduh")
+            continue
+
+        entries = parse_m3u(lines)
+        print(f"Total entri awal: {len(entries)}")
+
+        if not entries:
+            continue
+
+        entries, dup_removed = dedup_entries(entries)
+        if dup_removed > 0:
+            print(f"Duplikat dihapus: {dup_removed} entri")
+        print(f"Entri unik      : {len(entries)}")
+
+        print(f"Memeriksa {len(entries)} saluran secara paralel...")
+        
+        playable_entries = []
+        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+            future_to_entry = {
+                executor.submit(check_and_enrich_entry, entry, is_wc): entry
+                for entry in entries
+            }
+
+            done = 0
+            total = len(entries)
+            for future in as_completed(future_to_entry):
+                try:
+                    res_entry = future.result()
+                    done += 1
+                    status = "OK " if res_entry["playable"] else "DEAD"
+                    res_lbl = f"[{res_entry['resolution']}]" if res_entry["resolution"] else ""
+                    print(f"[{done}/{total}] {status} {res_lbl} {res_entry['url']}")
+                    
+                    if res_entry["playable"]:
+                        playable_entries.append(res_entry)
+                except Exception as e:
+                    print(f"Error checking entry: {e}")
+
+        if is_wc:
+            all_wc_entries.extend(playable_entries)
+        else:
+            all_live_entries.extend(playable_entries)
+
+    # Dedup antar source jika ada url ganda
+    unique_wc, _ = dedup_entries(all_wc_entries)
+    unique_live, _ = dedup_entries(all_live_entries)
+
+    # Lakukan pengurutan prioritas untuk saluran Piala Dunia
+    print("\nSorting World Cup channels by language priority (Indo/English) and resolution...")
+    unique_wc = sorted(unique_wc, key=calculate_wc_score, reverse=True)
+
+    # Gabungkan semua ke dalam satu playlist master
     output_lines = [f'#EXTM3U url-tvg="{EPG_URL}"']
-    playable_count = 0
-    for entry in entries:
-        if entry["playable"]:
-            output_lines.extend(entry["extinf"])
-            output_lines.extend(entry["other"])
-            output_lines.extend(entry["vlcopt"])
-            output_lines.append(entry["url"])
-            playable_count += 1
+
+    # 1. World Cup di posisi paling atas
+    for entry in unique_wc:
+        enriched_extinf = [enrich_extinf(line, entry["resolution"], is_wc=True) for line in entry["extinf"]]
+        output_lines.extend(enriched_extinf)
+        output_lines.extend(entry["other"])
+        output_lines.extend(entry["vlcopt"])
+        output_lines.append(entry["url"])
+
+    # 2. Live Events di bawahnya
+    for entry in unique_live:
+        enriched_extinf = [enrich_extinf(line, entry["resolution"], is_wc=False) for line in entry["extinf"]]
+        output_lines.extend(enriched_extinf)
+        output_lines.extend(entry["other"])
+        output_lines.extend(entry["vlcopt"])
+        output_lines.append(entry["url"])
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    output_path = OUTPUT_DIR / f"{name}.m3u"
+    output_path = OUTPUT_DIR / "live_events.m3u"
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(output_lines) + "\n")
 
-    print(f"\nPlayable: {playable_count}/{len(entries)}")
-    print(f"Saved -> {output_path}")
-    return True
-
-
-def main():
-    if not SOURCES:
-        print("[ERROR] SOURCES kosong. Tambahkan minimal satu source di SOURCES.")
-        sys.exit(1)
-
-    results = {}
-    for source in SOURCES:
-        name = source["name"]
-        url = source["url"]
-        results[name] = process_source(name, url)
-
     print(f"\n{'=' * 60}")
-    print("SUMMARY")
+    print("PROSES SELESAI")
     print(f"{'=' * 60}")
-    for name, success in results.items():
-        status = "OK" if success else "FAILED/SKIPPED"
-        print(f"  {name}: {status}")
-
-    # Exit 1 hanya kalau SEMUA source gagal
-    if not any(results.values()):
-        print("\n[ERROR] Semua source gagal diproses.")
-        sys.exit(1)
+    print(f"  Total Saluran Piala Dunia Aktif  : {len(unique_wc)}")
+    print(f"  Total Saluran Olahraga Umum Aktif: {len(unique_live)}")
+    print(f"  Saved -> {output_path}")
 
 
 if __name__ == "__main__":

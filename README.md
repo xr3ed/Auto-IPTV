@@ -1,35 +1,40 @@
-> **DISCLAIMER:** Script dan link yang tersedia di repo ini hanya untuk keperluan informasi dan edukasi pribadi. Tidak ada jaminan ketersediaan, akurasi, atau kesesuaian untuk tujuan tertentu. Gunakan dengan risiko sendiri.
+# 📺 Auto-IPTV & EPG Streamer Pipeline
+
+Otomasi penyaringan, deduplikasi cerdas, dan generator EPG terpadu untuk playlist IPTV FAST Channels, RCTI+, and Live Sports (Piala Dunia) secara berkala menggunakan GitHub Actions.
+
+> [!IMPORTANT]
+> **DISCLAIMER:** Proyek ini ditujukan untuk keperluan informasi dan edukasi pribadi. Tidak ada jaminan ketersediaan, akurasi, atau kesesuaian untuk tujuan tertentu. Gunakan dengan risiko Anda sendiri.
 
 ---
 
-# 📺 ApisTECH Personal Project
+## 🔗 Daftar Playlist & EPG Utama
 
-Koleksi playlist IPTV, EPG guide, dan script otomasi untuk keperluan pribadi.
+Untuk memutar saluran, salin tautan raw di bawah ini dan tempelkan langsung ke aplikasi IPTV Player favorit Anda (seperti **TiviMate, Kodi, OTT Navigator, Televizo, atau Perfect Player**).
+
+| Jenis Playlist / EPG | Deskripsi | Tautan URL Raw |
+| :--- | :--- | :--- |
+| **Master Playlist** | Saluran TV Indonesia, Regional, dan Hiburan umum (bebas duplikat & aktif). | `https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/IndihomeTV.m3u` |
+| **Sports & Live Events** | Khusus siaran olahraga langsung dengan prioritas Piala Dunia 2026 di baris paling atas. | `https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/playlists/live_events.m3u` |
+| **EPG Guide (Jadwal TV)** | EPG XML TV terintegrasi dan dikompresi agar loading lebih cepat. | `https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/epgs/guide.xml.gz` |
 
 ---
 
-## 🔗 Master Playlist & EPG
+## 🌟 Fitur Unggulan
 
-| Jenis | URL |
-|---|---|
-| **Playlist** | `https://github.com/apistech/project/raw/refs/heads/main/IndihomeTV.m3u` |
-| **Shortlink** | `https://bit.ly/IndihomeTV` |
-
-> Paste URL di atas langsung ke aplikasi IPTV Player (TiviMate, Kodi, OTT Navigator, dll).
+* **Deduplikasi Pintar (Smart Deduplication)**: Skrip secara otomatis mendeteksi saluran dengan nama yang sama, menguji latensi server stream secara real-time via ping paralel, dan hanya memilih saluran dengan respons tercepat dan teraktif.
+* **World Cup & Sports Priority**: Mengurutkan saluran olahraga berdasarkan ketersediaan bahasa (Bahasa Indonesia & Inggris diutamakan) serta resolusi video (HD/FHD).
+* **Paralel EPG Builder**: Generator EPG menggabungkan data dari berbagai sumber penyedia jadwal acara secara paralel serta melakukan pembersihan (pruning) program kedaluwarsa secara otomatis.
+* **Bebas Konflik Push (Concurrency Lock)**: Dikonfigurasi menggunakan kunci concurrency GitHub Actions agar proses update otomatis terjadwal berjalan berurutan tanpa risiko bentrok commit.
 
 ---
 
 ## 📡 Sumber Playlist & EPG
 
-- [CubMu](https://www.cubmu.com/live-tv)
-- [DENS TV](https://www.dens.tv/tv-local)
-- [MaxStream](https://maxstream.tv/tv-channels)
-- [Vidio](https://www.vidio.com/live)
-- [VisionPlus](https://www.visionplus.id/webclient/)
-- [iptv-org](https://github.com/iptv-org)
-- [matthuisman/i.mjh.nz](https://github.com/matthuisman/i.mjh.nz)
-- [BuddyChewChew](https://github.com/BuddyChewChew)
+Saluran dan jadwal acara TV di dalam proyek ini didapatkan dari berbagai sumber publik:
+- **Layanan Lokal**: Indihome TV (DASH Stream), RCTI+
+- **FAST Channels**: TCL Channel, Pluto TV, Roku Channel, Samsung TV Plus
+- **Penyedia EPG**: i.mjh.nz, BuddyChewChew, iptv-org
 
 ---
 
-Kalau repo ini berguna, kasih ⭐ ya!
+Jika repositori ini membantu Anda, jangan lupa berikan ⭐ ya!

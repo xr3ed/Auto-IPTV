@@ -2,11 +2,20 @@ import os
 import gzip
 import re
 import sys
+import io
 import time
 import xml.etree.ElementTree as ET
 import requests
 from datetime import datetime, timezone, timedelta
 from typing import Optional
+
+# Pastikan stdout/stderr menggunakan UTF-8 di terminal Windows untuk menghindari UnicodeEncodeError
+if sys.platform.startswith('win'):
+    try:
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+    except Exception:
+        pass
 
 try:
     from lxml import etree as lxml_etree
@@ -37,7 +46,17 @@ MIN_PROGRAMME_SANITY_THRESHOLD = 50
 
 def get_tvg_ids_from_m3u() -> Optional[set[str]]:
     if not M3U_URL:
-        print("CRITICAL: M3U_URL secret not set.")
+        print("CRITICAL: M3U_URL secret not set. Trying to read local IndihomeTV.m3u...")
+        local_path = os.path.join(BASE_DIR, "IndihomeTV.m3u")
+        if os.path.exists(local_path):
+            try:
+                with open(local_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                ids = set(re.findall(r'tvg-id="([^"]+)"', content))
+                print(f"  -> {len(ids)} unique tvg-ids found from local IndihomeTV.m3u.")
+                return ids
+            except Exception as e:
+                print(f"  ! Failed to read local IndihomeTV.m3u: {e}")
         return None
     print("Downloading M3U playlist...")
     try:
@@ -48,6 +67,18 @@ def get_tvg_ids_from_m3u() -> Optional[set[str]]:
         return ids
     except Exception as e:
         print(f"  ! Failed to fetch M3U: {e}")
+        # Jika gagal fetch remote, coba fallback lokal juga
+        local_path = os.path.join(BASE_DIR, "IndihomeTV.m3u")
+        if os.path.exists(local_path):
+            print("Trying to read local IndihomeTV.m3u as fallback...")
+            try:
+                with open(local_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                ids = set(re.findall(r'tvg-id="([^"]+)"', content))
+                print(f"  -> {len(ids)} unique tvg-ids found from local IndihomeTV.m3u.")
+                return ids
+            except Exception as le:
+                print(f"  ! Failed to read local IndihomeTV.m3u: {le}")
         return None
 
 
@@ -121,23 +152,45 @@ def parse_xml(content: bytes, label: str) -> Optional[ET.Element]:
         return None
 
 
-def fetch_epg_elements(url: str, valid_ids: set[str]) -> tuple[list[ET.Element], list[ET.Element]]:
-    filename = url.split("/")[-1]
-    print(f"Processing: {filename}")
+def fetch_epg_elements(url_or_path: str, valid_ids: set[str]) -> tuple[list[ET.Element], list[ET.Element]]:
+    # Deteksi jika itu EPG TCL, coba gunakan berkas lokal yang sudah kita hasilkan sendiri
+    is_local = False
+    content = b""
+    label = ""
+    
+    if "tcl_epg.xml" in url_or_path:
+        local_tcl = os.path.join(BASE_DIR, "playlists", "tcl_epg.xml")
+        if os.path.exists(local_tcl):
+            print("Processing EPG: tcl_epg.xml (Lokal)")
+            try:
+                with open(local_tcl, "rb") as f:
+                    content = f.read()
+                is_local = True
+                label = "tcl_epg.xml"
+            except Exception as le:
+                print(f"  ! Gagal membaca tcl_epg.xml lokal: {le}. Mencoba remote...")
+                
+    if not is_local:
+        filename = url_or_path.split("/")[-1]
+        print(f"Processing EPG: {filename} (Remote)")
+        label = filename
+        try:
+            r = requests.get(url_or_path, timeout=60)
+            r.raise_for_status()
+            content = r.content
+            if url_or_path.endswith(".gz"):
+                content = gzip.decompress(content)
+        except Exception as e:
+            print(f"  ! Error mengunduh {filename}: {e}")
+            return [], []
 
     channels: list[ET.Element] = []
     programmes: list[ET.Element] = []
 
     try:
-        r = requests.get(url, timeout=60)
-        r.raise_for_status()
-        content = r.content
-        if url.endswith(".gz"):
-            content = gzip.decompress(content)
-
-        epg_root = parse_xml(content, filename)
+        epg_root = parse_xml(content, label)
         if epg_root is None:
-            print(f"  ! Skipping {filename}: unparseable after all fallbacks.")
+            print(f"  ! Skipping {label}: unparseable after all fallbacks.")
             return channels, programmes
 
         for channel in epg_root.findall("channel"):
@@ -151,9 +204,9 @@ def fetch_epg_elements(url: str, valid_ids: set[str]) -> tuple[list[ET.Element],
                 _apply_title_rewrite(prog)
                 programmes.append(prog)
 
-        print(f"  -> +{len(channels)} channels, +{len(programmes)} programmes")
+        print(f"  -> +{len(channels)} channels, +{len(programmes)} programmes ({label})")
     except Exception as e:
-        print(f"  ! Error processing {filename}: {e}")
+        print(f"  ! Error memproses {label}: {e}")
 
     return channels, programmes
 
@@ -216,11 +269,26 @@ def main() -> None:
     print(f"Base channel IDs tracked: {len(seen_channel_ids)}")
     print(f"Base programme keys tracked: {len(seen_programme_keys)}")
 
-    print("\nInjecting remote EPG sources...")
-    for url in REMOTE_EPG_URLS:
-        channels, programmes = fetch_epg_elements(url, valid_ids)
+    print("\nInjecting EPG sources in parallel...")
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    
+    results = []
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        future_to_url = {
+            executor.submit(fetch_epg_elements, url, valid_ids): url
+            for url in REMOTE_EPG_URLS
+        }
+        for future in as_completed(future_to_url):
+            url = future_to_url[future]
+            try:
+                channels, programmes = future.result()
+                results.append((channels, programmes))
+            except Exception as e:
+                print(f"  ! Gagal mengunduh EPG dari {url}: {e}")
+                
+    print("\nMerging parallel EPG data into master tree...")
+    for channels, programmes in results:
         merge_into_root(master_root, channels, programmes, seen_channel_ids, seen_programme_keys)
-        time.sleep(1)
 
     final_channels = len(master_root.findall("channel"))
     final_programmes = len(master_root.findall("programme"))
