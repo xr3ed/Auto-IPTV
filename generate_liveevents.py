@@ -593,7 +593,9 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
     is_other_sport = any(kw in title_lower for kw in [
         "vnl", "volleyball", "baseball", "mlb", "motogp", "wnba", "nba", "basketball", 
         "f1", "formula 1", "tennis", "badminton", "ufc", "wwe", "nhl", "hockey", 
-        "rugby", "cricket", "golf", "darts", "snooker", "nascar", "indycar", "superbike"
+        "rugby", "cricket", "golf", "darts", "snooker", "nascar", "indycar", "superbike",
+        "cfl", "nfl", "afl", "american football", "ncaa", "athletics", "boxing", "mma",
+        "billiard", "pool", "snooker", "darts"
     ])
     
     # 1. Deteksi pencocokan nama laga dinamis dari URL
@@ -616,7 +618,20 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
         if any(kw in title_lower for kw in ["world cup", "worldcup", "piala dunia", "fifa"]) or "wc" in source_name.lower():
             is_wc = True
         elif has_match_separator:
-            is_wc = True
+            # Set is_wc hanya jika laga tersebut cocok dengan laga aktif World Cup dari ESPN/EPG
+            is_match_wc = False
+            cleaned_title_match = clean_match_name(title_lower)
+            if active_wc_matches:
+                for match in active_wc_matches:
+                    match_lower = match.lower()
+                    teams = match_lower.split(" vs ")
+                    if len(teams) == 2:
+                        # Cek apakah kedua nama tim terdeteksi di judul saluran
+                        if (teams[0] in cleaned_title_match and teams[1] in cleaned_title_match) or \
+                           (teams[0] in title_lower and teams[1] in title_lower):
+                            is_match_wc = True
+                            break
+            is_wc = is_match_wc
             
     # FORCE OVERRIDE: Jika olahraga lain, tidak boleh masuk World Cup
     if is_other_sport:

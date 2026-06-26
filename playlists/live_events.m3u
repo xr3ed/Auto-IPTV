@@ -9,8 +9,6 @@ http://ubuntu.moonplex.net:8080/Somoy_TV/index.m3u8
 #EXTINF:-1 tvg-name="[FHD] s Cup 2026 - New Zealand vs Kazakhstan - Unite8 Sports 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] s Cup 2026 - New Zealand vs Kazakhstan - Unite8 Sports 2
 http://212.102.34.8:9080/AndFlixHD/video.m3u8
 #EXTINF:-1 tvg-name="[FHD] Equador vs Jerman - Rerun - Bioscope" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Equador vs Jerman - Rerun - Bioscope
-http://sm-monirul.top/ott/bioscope1/index.m3u8
-#EXTINF:-1 tvg-name="[FHD] s Cup 2026 - New Zealand vs Kazakhstan - Bioscope" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] s Cup 2026 - New Zealand vs Kazakhstan - Bioscope
 #====== Bioscope World Cup ============
 http://sm-monirul.top/ott/bioscope/index.m3u8
 #EXTINF:-1 tvg-name="[FHD] Equador vs Jerman - Rerun - Caze TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Equador vs Jerman - Rerun - Caze TV
@@ -19,35 +17,26 @@ http://sm-monirul.top/ott/bioscope/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1223d5105392cabf1bb9c2c1fdf6539a:340b409f4b8f78a343e0363a7938df38
 https://otte-qw.live.pv-cdn.net/lhr-nitro/live/clients/dash/enc/iayg0kyrof/out/v1/91dc04907f56415b897faccfa9d252da/cenc.mpd
+#EXTINF:-1 tvg-name="[FHD] s Cup 2026 - New Zealand vs Kazakhstan - Bioscope" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] s Cup 2026 - New Zealand vs Kazakhstan - Bioscope
+http://sm-monirul.top/ott/bioscope1/index.m3u8
+#EXTINF:-1 tvg-name="[FHD] Equador vs Jerman - Rerun - Unite8 Sports 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Equador vs Jerman - Rerun - Unite8 Sports 2
+http://212.102.34.8:9080/AndFlixHD/video.m3u8
 #EXTINF:-1 tvg-id="t sports" tvg-name="[HD] Equador vs Jerman - Rerun - APISTECH_WC" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Equador vs Jerman - Rerun - APISTECH_WC
 http://114.130.57.233:8080/BTV/video.m3u8?token=SkQuhAXZxgBan1
-#EXTINF:-1 tvg-name="[HD] s Cup 2026 - New Zealand vs Kazakhstan - TELEMUNDO" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] s Cup 2026 - New Zealand vs Kazakhstan - TELEMUNDO
-#======  World Cup 1 ============
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-#EXTVLCOPT:http-referrer=https://streamcenter.xyz
-https://edge2caster.pro/hls/eJmauBDCIf.m3u8
-#EXTINF:-1 tvg-name="[HD] s Cup 2026 - New Zealand vs Kazakhstan - APISTECH_WC" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] s Cup 2026 - New Zealand vs Kazakhstan - APISTECH_WC
-https://a62dad94.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZJRkFQbHVzRW5nbGlzaF9ITFM/playlist.m3u8
-#EXTINF:-1 tvg-name="[HD] Equador vs Jerman - Rerun - M6 Direct TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Equador vs Jerman - Rerun - M6 Direct TV
+#EXTINF:-1 tvg-name="[HD] s Cup 2026 - New Zealand vs Kazakhstan - M6 Direct TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] s Cup 2026 - New Zealand vs Kazakhstan - M6 Direct TV
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=433ffba670963e70857859a9dff4be04:51ede3a821229fe81e71282c8eff80e3
 https://origin-m6web.live.6cloud.fr/out/v1/6play/6play-m6/cmaf_cenc00/dash-short-hd.mpd
-#EXTINF:-1 tvg-id="t sports" tvg-name="[HD] Equador vs Jerman - Rerun - SM-TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Equador vs Jerman - Rerun - SM-TV
-http://114.130.57.233:8080/BTV/video.m3u8?token=SkQuhAXZxgBan1
-#EXTINF:-1 tvg-name="[HD] s Cup 2026 - New Zealand vs Kazakhstan - Caze TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] s Cup 2026 - New Zealand vs Kazakhstan - Caze TV
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=34475edab991ad5e92548aebd710410a:501b209cccd323ac00bf5ac15b406cb4
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3ynrpdanq2/out/v1/81fd4c26584044d2b1a1cc5b32fa9af0/cenc.mpd
-#EXTINF:-1 tvg-name="[HD] Equador vs Jerman - Rerun - TELEMUNDO" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Equador vs Jerman - Rerun - TELEMUNDO
+#EXTINF:-1 tvg-name="[HD] s Cup 2026 - New Zealand vs Kazakhstan - TELEMUNDO" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] s Cup 2026 - New Zealand vs Kazakhstan - TELEMUNDO
 #======  World Cup 1 ============
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 #EXTVLCOPT:http-referrer=https://streamcenter.xyz
 https://edge2caster.pro/hls/eJmauBDCIf.m3u8
-#EXTINF:-1 tvg-name="[HD] s Cup 2026 - New Zealand vs Kazakhstan - M6 Direct TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] s Cup 2026 - New Zealand vs Kazakhstan - M6 Direct TV
+#EXTINF:-1 tvg-id="t sports" tvg-name="[HD] Equador vs Jerman - Rerun - SM-TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Equador vs Jerman - Rerun - SM-TV
+http://114.130.57.233:8080/BTV/video.m3u8?token=SkQuhAXZxgBan1
+#EXTINF:-1 tvg-name="[HD] Equador vs Jerman - Rerun - M6 Direct TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Equador vs Jerman - Rerun - M6 Direct TV
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -58,11 +47,11 @@ https://origin-m6web.live.6cloud.fr/out/v1/6play/6play-m6/cmaf_cenc00/dash-short
 #EXTVLCOPT:http-origin=https://instream.click/jwp-eu.php?stream=HDWC3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://instreams.pro/EU/HDWC3/index.m3u8
-#EXTINF:-1 tvg-chno="8" tvg-id="Live.Event.us" tvg-name="[HD] Winnipeg Blue Bombers vs Edmonton Elks - [CFL] Winnipeg Blue Bombers vs Edmonton Elks (iSTRMEAST)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Winnipeg Blue Bombers vs Edmonton Elks - [CFL] Winnipeg Blue Bombers vs Edmonton Elks (iSTRMEAST)
-#EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/52538?ad=111
-#EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/52538?ad=111
+#EXTINF:-1 tvg-chno="35" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Pantai Gading vs Curacao - [FIFA World Cup] Ivory Coast vs Curaçao (STRMSGATE)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Pantai Gading vs Curacao - [FIFA World Cup] Ivory Coast vs Curaçao (STRMSGATE)
+#EXTVLCOPT:http-referrer=https://instream.click/jwp-us.php?stream=NFLHD4
+#EXTVLCOPT:http-origin=https://instream.click/jwp-us.php?stream=NFLHD4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://chatgpt.hereisman.net/playlist/52538/load-playlist
+https://instreams.pro/US/NFLHD4/index.m3u8
 #EXTINF:-1 tvg-chno="33" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Jerman vs Ekuador - [FIFA World Cup] Germany vs Ecuador (STRMSGATE)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Jerman vs Ekuador - [FIFA World Cup] Germany vs Ecuador (STRMSGATE)
 #EXTVLCOPT:http-referrer=https://instream.click/jwp-us.php?stream=NFLHD3
 #EXTVLCOPT:http-origin=https://instream.click/jwp-us.php?stream=NFLHD3
@@ -73,11 +62,6 @@ https://instreams.pro/US/NFLHD3/index.m3u8
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://pullsgp.yyzb456.top/live/stream-956896_lhd.m3u8
-#EXTINF:-1 tvg-chno="35" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Pantai Gading vs Curacao - [FIFA World Cup] Ivory Coast vs Curaçao (STRMSGATE)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Pantai Gading vs Curacao - [FIFA World Cup] Ivory Coast vs Curaçao (STRMSGATE)
-#EXTVLCOPT:http-referrer=https://instream.click/jwp-us.php?stream=NFLHD4
-#EXTVLCOPT:http-origin=https://instream.click/jwp-us.php?stream=NFLHD4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://instreams.pro/US/NFLHD4/index.m3u8
 #EXTINF:-1 tvg-chno="38" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Belanda vs Tunisia - STRMSGATE" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Belanda vs Tunisia - STRMSGATE
 #EXTVLCOPT:http-referrer=https://instream.click/jwp-eu.php?stream=HDWC1
 #EXTVLCOPT:http-origin=https://instream.click/jwp-eu.php?stream=HDWC1
@@ -102,26 +86,10 @@ https://chatgpt.hereisman.net/playlist/52547/load-playlist
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 #EXTVLCOPT:http-referrer=https://streamcenter.xyz
 https://mainstreams.pro/hls/24SDAZFcsqnj24.m3u8
-#EXTINF:-1 tvg-chno="69" tvg-id="Soccer.Dummy.us" tvg-name="Australia vs Paraguay - English 1 (STRMCNTR)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Australia vs Paraguay - English 1 (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streams.center
-#EXTVLCOPT:http-origin=https://streams.center
+#EXTINF:-1 tvg-name="s Cup 2026 - New Zealand vs Kazakhstan - FOX ONE" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",s Cup 2026 - New Zealand vs Kazakhstan - FOX ONE
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+#EXTVLCOPT:http-referrer=https://streamcenter.xyz
 https://mainstreams.pro/hls/24SDAZFcsqnj24.m3u8
-#EXTINF:-1 tvg-chno="71" tvg-id="Soccer.Dummy.us" tvg-name="Jerman vs Ekuador - English 1 (STRMCNTR)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Jerman vs Ekuador - English 1 (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streams.center
-#EXTVLCOPT:http-origin=https://streams.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edge2caster.pro/hls/b0h5fNwDKH.m3u8
-#EXTINF:-1 tvg-chno="74" tvg-id="Soccer.Dummy.us" tvg-name="Pantai Gading vs Curacao - English 1 (STRMCNTR)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Pantai Gading vs Curacao - English 1 (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streams.center
-#EXTVLCOPT:http-origin=https://streams.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edge2caster.pro/hls/24SDAZFcsqnj24.m3u8
-#EXTINF:-1 tvg-chno="76" tvg-id="Soccer.Dummy.us" tvg-name="Belanda vs Tunisia - English 1 (STRMCNTR)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Belanda vs Tunisia - English 1 (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streams.center
-#EXTVLCOPT:http-origin=https://streams.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edgestreams.pro/hls/b0h5fNwDKH.m3u8
 #EXTINF:-1 tvg-id="auto.fox.sports.1" tvg-name="s Cup 2026 - New Zealand vs Kazakhstan - Fox Sports 1" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",s Cup 2026 - New Zealand vs Kazakhstan - Fox Sports 1
 # <============================================== WorldCup 2026 ===========================================================>
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -136,11 +104,13 @@ https://cors-everywhere-wc8b4.ondigitalocean.app/https://otte.live.fly.ww.aiv-cd
 https://c9851ec-rbm-hilv-fsly.cdn.redbee.live/L26/6b640fa2/a765d074.isml/dash/.mpd
 #EXTINF:-1 tvg-name="Ekuador vs Curacao - Toffee 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Ekuador vs Curacao - Toffee 2
 http://sm-monirul.top/tof/live/ecuvscur/index.m3u8
-#EXTINF:-1 tvg-name="Tunisia vs Jepang - Toffee 3" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Tunisia vs Jepang - Toffee 3
-http://sm-monirul.top/tof/live/tunvsjap/index.m3u8
 #EXTINF:-1 tvg-name="Jerman vs Pantai Gading - Toffee 1" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Jerman vs Pantai Gading - Toffee 1
 #====== Toffee World Cup ============
 http://sm-monirul.top/tof/live/gervsivo/index.m3u8
+#EXTINF:-1 tvg-name="Tunisia vs Jepang - Toffee 3" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Tunisia vs Jepang - Toffee 3
+http://sm-monirul.top/tof/live/tunvsjap/index.m3u8
+#EXTINF:-1 tvg-name="s Cup 2026 - New Zealand vs Kazakhstan - Toffee 4" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",s Cup 2026 - New Zealand vs Kazakhstan - Toffee 4
+https://sm-monirul.top/tof/live/toffee4/index.m3u8
 #EXTINF:-1 tvg-name="s Cup 2026 - New Zealand vs Kazakhstan - SPORT 1 🇸🇰" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",s Cup 2026 - New Zealand vs Kazakhstan - SPORT 1 🇸🇰
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -157,34 +127,41 @@ https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://webtv.sk/tv/
 https://dash2.antik.sk/stream/nvidia_sport2/playlist_cenc.mpd
+#EXTINF:-1 tvg-name="s Cup 2026 - New Zealand vs Kazakhstan - Toffee 5" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",s Cup 2026 - New Zealand vs Kazakhstan - Toffee 5
+https://sm-monirul.top/tof/live/toffee5/index.m3u8
 #EXTINF:-1 tvg-name="s Cup 2026 - New Zealand vs Kazakhstan - i screen" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",s Cup 2026 - New Zealand vs Kazakhstan - i screen
 http://sm-monirul.top/ott/iscreen/index.m3u8
-#EXTINF:-1 tvg-name="Equador vs Jerman - Rerun - Toffee 5" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Equador vs Jerman - Rerun - Toffee 5
-https://sm-monirul.top/tof/live/toffee5/index.m3u8
-#EXTINF:-1 tvg-name="Equador vs Jerman - Rerun - Toffee 4" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Equador vs Jerman - Rerun - Toffee 4
-https://sm-monirul.top/tof/live/toffee4/index.m3u8
-#EXTINF:-1 tvg-name="s Cup 2026 - New Zealand vs Kazakhstan - Toffee 4" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",s Cup 2026 - New Zealand vs Kazakhstan - Toffee 4
-https://sm-monirul.top/tof/live/toffee4/index.m3u8
-#EXTINF:-1 tvg-chno="25" tvg-id="Soccer.Dummy.us" tvg-name="s Cup 2026 - New Zealand vs Kazakhstan - XYZSTRM" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",s Cup 2026 - New Zealand vs Kazakhstan - XYZSTRM
-#EXTVLCOPT:http-referrer=https://xyzstreams.st
-#EXTVLCOPT:http-origin=https://xyzstreams.st
+#EXTINF:-1 tvg-name="s Cup 2026 - New Zealand vs Kazakhstan - Tipik Direct" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",s Cup 2026 - New Zealand vs Kazakhstan - Tipik Direct
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=adca25b8779e4168a0cd710f59f61ccf:be5383ed3cd8079f4ffe78ad067f476a
+https://c9851ec-rbm-hilv-fsly.cdn.redbee.live/L26/6b640fa2/a765d074.isml/dash/.mpd
+#EXTINF:-1 tvg-chno="23" tvg-id="Soccer.Dummy.us" tvg-name="Equador vs Jerman - Rerun - STRMHUB" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Equador vs Jerman - Rerun - STRMHUB
+#EXTVLCOPT:http-referrer=https://getembed.live/embed-player?stream=erl37sx1pg
+#EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=erl37sx1pg
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://lb.xyzcloud3.xyz/FOX/index.m3u8
-#EXTINF:-1 tvg-chno="22" tvg-id="Soccer.Dummy.us" tvg-name="Equador vs Jerman - Rerun - STRMHUB" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Equador vs Jerman - Rerun - STRMHUB
-#EXTVLCOPT:http-referrer=https://getembed.live/embed-player?stream=hcicvcycw2
-#EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=hcicvcycw2
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://obstreamx.click/live/hcicvcycw2.m3u8
+https://obstreamx.click/live/erl37sx1pg.m3u8
 #EXTINF:-1 tvg-chno="36" tvg-id="Soccer.Dummy.us" tvg-name="Jepang vs Swedia - [FIFA World Cup] Japan vs Sweden (FAWA)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Jepang vs Swedia - [FIFA World Cup] Japan vs Sweden (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 http://193.47.62.47/hls/TKKKQ.m3u8
-#EXTINF:-1 tvg-chno="23" tvg-id="Soccer.Dummy.us" tvg-name="s Cup 2026 - New Zealand vs Kazakhstan - STRMHUB" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",s Cup 2026 - New Zealand vs Kazakhstan - STRMHUB
-#EXTVLCOPT:http-referrer=https://getembed.live/embed-player?stream=erl37sx1pg
-#EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=erl37sx1pg
+#EXTINF:-1 tvg-chno="27" tvg-id="Soccer.Dummy.us" tvg-name="s Cup 2026 - New Zealand vs Kazakhstan - XYZSTRM" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",s Cup 2026 - New Zealand vs Kazakhstan - XYZSTRM
+#EXTVLCOPT:http-referrer=https://xyzstreams.st
+#EXTVLCOPT:http-origin=https://xyzstreams.st
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://obstreamx.click/live/erl37sx1pg.m3u8
+https://lb.xyzcloud3.xyz/FS1/index.m3u8
+#EXTINF:-1 tvg-chno="29" tvg-id="Soccer.Dummy.us" tvg-name="Equador vs Jerman - Rerun - XYZSTRM" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Equador vs Jerman - Rerun - XYZSTRM
+#EXTVLCOPT:http-referrer=https://xyzstreams.st
+#EXTVLCOPT:http-origin=https://xyzstreams.st
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://lb.xyzcloud3.xyz/BBC/index.m3u8
+#EXTINF:-1 tvg-chno="26" tvg-id="Soccer.Dummy.us" tvg-name="s Cup 2026 - New Zealand vs Kazakhstan - STRMHUB" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",s Cup 2026 - New Zealand vs Kazakhstan - STRMHUB
+#EXTVLCOPT:http-referrer=https://getembed.live/embed-player?stream=yq97gcrutx
+#EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=yq97gcrutx
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://obstreamx.click/live/yq97gcrutx.m3u8
 #EXTINF:-1 tvg-chno="43" tvg-id="Soccer.Dummy.us" tvg-name="Paraguay vs Australia 1 - [FIFA World Cup] Paraguay vs Australia 1 (FAWA)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Paraguay vs Australia 1 - [FIFA World Cup] Paraguay vs Australia 1 (FAWA)
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
@@ -210,56 +187,26 @@ http://193.47.62.47/hls/QTKKKQ.m3u8
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 http://193.47.62.47/hls/TKKKQQ.m3u8
-#EXTINF:-1 tvg-chno="68" tvg-id="Soccer.Dummy.us" tvg-name="Australia vs Paraguay - Arabic 1 (STRMCNTR)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Australia vs Paraguay - Arabic 1 (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streams.center
-#EXTVLCOPT:http-origin=https://streams.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://mainstreams.pro/hls/eJmauBDCIf.m3u8
-#EXTINF:-1 tvg-chno="70" tvg-id="Soccer.Dummy.us" tvg-name="Jerman vs Ekuador - Arabic 1 (STRMCNTR)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Jerman vs Ekuador - Arabic 1 (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streams.center
-#EXTVLCOPT:http-origin=https://streams.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edge2caster.pro/hls/sqdahach1ax.m3u8
-#EXTINF:-1 tvg-chno="72" tvg-id="Soccer.Dummy.us" tvg-name="Jerman vs Ekuador - Spanish 1 (STRMCNTR)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Jerman vs Ekuador - Spanish 1 (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streams.center
-#EXTVLCOPT:http-origin=https://streams.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edgestreams.pro/hls/griogoehvn2.m3u8
-#EXTINF:-1 tvg-chno="73" tvg-id="Soccer.Dummy.us" tvg-name="Pantai Gading vs Curacao - Arabic 1 (STRMCNTR)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Pantai Gading vs Curacao - Arabic 1 (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streams.center
-#EXTVLCOPT:http-origin=https://streams.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edge2caster.pro/hls/eJmauBDCIf.m3u8
-#EXTINF:-1 tvg-chno="79" tvg-id="Soccer.Dummy.us" tvg-name="AS vs Turki - Arabic 1 (STRMCNTR)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",AS vs Turki - Arabic 1 (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streams.center
-#EXTVLCOPT:http-origin=https://streams.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://mainstreams.pro/hls/sqdahach1ax.m3u8
-#EXTINF:-1 tvg-chno="81" tvg-id="Soccer.Dummy.us" tvg-name="AS vs Turki - Spanish 1 (STRMCNTR)" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",AS vs Turki - Spanish 1 (STRMCNTR)
-#EXTVLCOPT:http-referrer=https://streams.center
-#EXTVLCOPT:http-origin=https://streams.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edge2caster.pro/hls/griogoehvn2.m3u8
-#EXTINF:-1 tvg-chno="151" tvg-id="Soccer.Dummy.us" tvg-name="Curacao vs Ivory Coast 2 - FUTBOLX" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Curacao vs Ivory Coast 2 - FUTBOLX
-#EXTVLCOPT:http-referrer=https://futbol-x.xyz
-#EXTVLCOPT:http-origin=https://futbol-x.xyz
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://futbolx-live.hf.space/live/fs1.m3u8
-#EXTINF:-1 tvg-chno="153" tvg-id="Soccer.Dummy.us" tvg-name="Ekuador vs Germany 2 - FUTBOLX" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Ekuador vs Germany 2 - FUTBOLX
-#EXTVLCOPT:http-referrer=https://futbol-x.xyz
-#EXTVLCOPT:http-origin=https://futbol-x.xyz
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://futbolx-live.hf.space/live/m6.m3u8
 #EXTINF:-1 tvg-chno="152" tvg-id="Soccer.Dummy.us" tvg-name="Ekuador vs Germany 1 - FUTBOLX" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Ekuador vs Germany 1 - FUTBOLX
 #EXTVLCOPT:http-referrer=https://futbol-x.xyz
 #EXTVLCOPT:http-origin=https://futbol-x.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://futbolx-live.hf.space/live/tsn1.m3u8
+#EXTINF:-1 tvg-chno="151" tvg-id="Soccer.Dummy.us" tvg-name="Curacao vs Ivory Coast 2 - FUTBOLX" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Curacao vs Ivory Coast 2 - FUTBOLX
+#EXTVLCOPT:http-referrer=https://futbol-x.xyz
+#EXTVLCOPT:http-origin=https://futbol-x.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://futbolx-live.hf.space/live/fs1.m3u8
 #EXTINF:-1 tvg-chno="154" tvg-id="Soccer.Dummy.us" tvg-name="Jepang vs Sweden 1 - FUTBOLX" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Jepang vs Sweden 1 - FUTBOLX
 #EXTVLCOPT:http-referrer=https://futbol-x.xyz
 #EXTVLCOPT:http-origin=https://futbol-x.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://futbolx-live.hf.space/live/tsn2.m3u8
+#EXTINF:-1 tvg-chno="153" tvg-id="Soccer.Dummy.us" tvg-name="Ekuador vs Germany 2 - FUTBOLX" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Ekuador vs Germany 2 - FUTBOLX
+#EXTVLCOPT:http-referrer=https://futbol-x.xyz
+#EXTVLCOPT:http-origin=https://futbol-x.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://futbolx-live.hf.space/live/m6.m3u8
 #EXTINF:-1 tvg-id="TVP Sport.cz" tvg-name="Equador vs Jerman - Rerun - TVP Sport" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Equador vs Jerman - Rerun - TVP Sport
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={"95620bdd974041409d4674ab629e22d4":"c6c226ca1689f528a6f91e86da618f64","181c091002d04c5481c3faab18752843":"b081b6169351e0f4bfc40212dfeeed10","1163925b6b37434198130f773bc62841":"e2bdd2b87e1ddb502eb7898daece857f"}
@@ -275,72 +222,131 @@ https://dash2.antik.sk/stream/nvidia_ct_sport/playlist_cbcs.mpd
 #EXTINF:-1 tvg-name="Equador vs Jerman - Rerun - ALB" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",Equador vs Jerman - Rerun - ALB
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36 http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://93.93.113.95:25461/TV-Berati/XtreamCodes/495
-#EXTINF:-1 tvg-chno="13" tvg-id="Live.Event.us" tvg-name="[Darts] Darts World Series US (FAWA)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[Darts] Darts World Series US (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-http://193.47.62.42/hls/ELLLQ.m3u8
 #EXTINF:-1 tvg-chno="2" tvg-id="Baseball.Dummy.us" tvg-name="Athletics Athletics vs San Francisco Giants" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="Live Events",Athletics Athletics vs San Francisco Giants
 #EXTVLCOPT:http-referrer=https://streams.center
 #EXTVLCOPT:http-origin=https://streams.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://mainstreams.pro/hls/ihfazugfyjcazich17.m3u8
-#EXTINF:-1 tvg-chno="113" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[HD] Chicago Cubs vs New York Mets" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="Live Events",[HD] Chicago Cubs vs New York Mets
-#EXTVLCOPT:http-referrer=https://sportspass.cfd/mlb/cubs.html
-#EXTVLCOPT:http-origin=https://sportspass.cfd/mlb/cubs.html
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://storage.googleapis.com/mxyankees/cubs/manifest.m3u8
-#EXTINF:-1 tvg-chno="4" tvg-id="MLB.Baseball.Dummy.us" tvg-name="Houston Astros vs Detroit Tigers" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="Live Events",Houston Astros vs Detroit Tigers
-#EXTVLCOPT:http-referrer=https://streams.center
-#EXTVLCOPT:http-origin=https://streams.center
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edgestreams.pro/hls/Czajafjihafch18.m3u8
-#EXTINF:-1 tvg-chno="123" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[HD] Philadelphia Phillies vs Washington Nationals" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="Live Events",[HD] Philadelphia Phillies vs Washington Nationals
-#EXTVLCOPT:http-referrer=https://sportspass.cfd/mlb/phillies.html
-#EXTVLCOPT:http-origin=https://sportspass.cfd/mlb/phillies.html
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://storage.googleapis.com/mxyankees/giants/manifest.m3u8
 #EXTINF:-1 tvg-chno="1" tvg-id="MLB.Baseball.Dummy.us" tvg-name="Arizona Diamondbacks vs St. Louis Cardinals" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="Live Events",Arizona Diamondbacks vs St. Louis Cardinals
 #EXTVLCOPT:http-referrer=https://streams.center
 #EXTVLCOPT:http-origin=https://streams.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://mainstreams.pro/hls/jnzkdzjfanch23.m3u8
-#EXTINF:-1 tvg-chno="121" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[HD] New York Yankees vs Boston Red Sox" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="Live Events",[HD] New York Yankees vs Boston Red Sox
-#EXTVLCOPT:http-referrer=https://sportspass.cfd/mlb/yankees.html
-#EXTVLCOPT:http-origin=https://sportspass.cfd/mlb/yankees.html
+#EXTINF:-1 tvg-chno="123" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[HD] Philadelphia Phillies vs Washington Nationals" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="Live Events",[HD] Philadelphia Phillies vs Washington Nationals
+#EXTVLCOPT:http-referrer=https://sportspass.cfd/mlb/phillies.html
+#EXTVLCOPT:http-origin=https://sportspass.cfd/mlb/phillies.html
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://storage.googleapis.com/mxyankees/yankees/manifest.m3u8
+https://storage.googleapis.com/mxyankees/giants/manifest.m3u8
+#EXTINF:-1 tvg-chno="113" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[HD] Chicago Cubs vs New York Mets" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="Live Events",[HD] Chicago Cubs vs New York Mets
+#EXTVLCOPT:http-referrer=https://sportspass.cfd/mlb/cubs.html
+#EXTVLCOPT:http-origin=https://sportspass.cfd/mlb/cubs.html
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://storage.googleapis.com/mxyankees/cubs/manifest.m3u8
 #EXTINF:-1 tvg-chno="130" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[HD] Texas Rangers vs Toronto Blue Jays" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="Live Events",[HD] Texas Rangers vs Toronto Blue Jays
 #EXTVLCOPT:http-referrer=https://sportspass.cfd/mlb/bluejays.html
 #EXTVLCOPT:http-origin=https://sportspass.cfd/mlb/bluejays.html
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://storage.googleapis.com/mxyankees/bluejays/manifest.m3u8
-#EXTINF:-1 tvg-chno="139" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Group Stage (SPRTSPASS)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[HD] Group Stage (SPRTSPASS)
-#EXTVLCOPT:http-referrer=https://sportspass.cfd/soccer/fifawc.html
-#EXTVLCOPT:http-origin=https://sportspass.cfd/soccer/fifawc.html
+#EXTINF:-1 tvg-chno="4" tvg-id="MLB.Baseball.Dummy.us" tvg-name="Houston Astros vs Detroit Tigers" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="Live Events",Houston Astros vs Detroit Tigers
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://storage.googleapis.com/mxyankees/btsport/manifest.m3u8
+https://edgestreams.pro/hls/Czajafjihafch18.m3u8
+#EXTINF:-1 tvg-chno="121" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[HD] New York Yankees vs Boston Red Sox" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="Live Events",[HD] New York Yankees vs Boston Red Sox
+#EXTVLCOPT:http-referrer=https://sportspass.cfd/mlb/yankees.html
+#EXTVLCOPT:http-origin=https://sportspass.cfd/mlb/yankees.html
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://storage.googleapis.com/mxyankees/yankees/manifest.m3u8
+#EXTINF:-1 tvg-chno="8" tvg-id="Live.Event.us" tvg-name="[HD] Winnipeg Blue Bombers vs Edmonton Elks" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[HD] Winnipeg Blue Bombers vs Edmonton Elks
+#EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/52538?ad=111
+#EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/52538?ad=111
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://chatgpt.hereisman.net/playlist/52538/load-playlist
+#EXTINF:-1 tvg-chno="68" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Australia at Paraguay | Arabic 1 (STRMCNTR)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[Football] Australia at Paraguay | Arabic 1 (STRMCNTR)
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://mainstreams.pro/hls/eJmauBDCIf.m3u8
+#EXTINF:-1 tvg-chno="69" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Australia at Paraguay | English 1 (STRMCNTR)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[Football] Australia at Paraguay | English 1 (STRMCNTR)
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://mainstreams.pro/hls/24SDAZFcsqnj24.m3u8
+#EXTINF:-1 tvg-chno="70" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Germany at Ecuador | Arabic 1 (STRMCNTR)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[Football] Germany at Ecuador | Arabic 1 (STRMCNTR)
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://edge2caster.pro/hls/sqdahach1ax.m3u8
+#EXTINF:-1 tvg-chno="72" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Germany at Ecuador | Spanish 1 (STRMCNTR)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[Football] Germany at Ecuador | Spanish 1 (STRMCNTR)
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://edgestreams.pro/hls/griogoehvn2.m3u8
+#EXTINF:-1 tvg-chno="71" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Germany at Ecuador | English 1 (STRMCNTR)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[Football] Germany at Ecuador | English 1 (STRMCNTR)
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://edge2caster.pro/hls/b0h5fNwDKH.m3u8
+#EXTINF:-1 tvg-chno="73" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Ivory Coast at Curaçao | Arabic 1 (STRMCNTR)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[Football] Ivory Coast at Curaçao | Arabic 1 (STRMCNTR)
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://edge2caster.pro/hls/eJmauBDCIf.m3u8
+#EXTINF:-1 tvg-chno="74" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Ivory Coast at Curaçao | English 1 (STRMCNTR)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[Football] Ivory Coast at Curaçao | English 1 (STRMCNTR)
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://edge2caster.pro/hls/24SDAZFcsqnj24.m3u8
+#EXTINF:-1 tvg-chno="76" tvg-id="Soccer.Dummy.us" tvg-name="[Football] Netherlands at Tunisia | English 1 (STRMCNTR)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[Football] Netherlands at Tunisia | English 1 (STRMCNTR)
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://edgestreams.pro/hls/b0h5fNwDKH.m3u8
+#EXTINF:-1 tvg-chno="79" tvg-id="Soccer.Dummy.us" tvg-name="[Football] United States at Türkiye | Arabic 1 (STRMCNTR)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[Football] United States at Türkiye | Arabic 1 (STRMCNTR)
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://mainstreams.pro/hls/sqdahach1ax.m3u8
+#EXTINF:-1 tvg-chno="81" tvg-id="Soccer.Dummy.us" tvg-name="[Football] United States at Türkiye | Spanish 1 (STRMCNTR)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[Football] United States at Türkiye | Spanish 1 (STRMCNTR)
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://edge2caster.pro/hls/griogoehvn2.m3u8
 #EXTINF:-1 tvg-chno="120" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[HD] New York Mets vs Chicago Cubs" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="Live Events",[HD] New York Mets vs Chicago Cubs
 #EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/52531?ad=111
 #EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/52531?ad=111
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://chatgpt.hereisman.net/playlist/52531/load-playlist
-#EXTINF:-1 tvg-chno="147" tvg-id="WNBA.dummy.us" tvg-name="[HD] Las Vegas Aces vs Dallas Wings" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[HD] Las Vegas Aces vs Dallas Wings
-#EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/52541?ad=111
-#EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/52541?ad=111
+#EXTINF:-1 tvg-chno="139" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Group Stage (SPRTSPASS)" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[HD] Group Stage (SPRTSPASS)
+#EXTVLCOPT:http-referrer=https://sportspass.cfd/soccer/fifawc.html
+#EXTVLCOPT:http-origin=https://sportspass.cfd/soccer/fifawc.html
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://chatgpt.hereisman.net/playlist/52541/load-playlist
+https://storage.googleapis.com/mxyankees/btsport/manifest.m3u8
 #EXTINF:-1 tvg-chno="149" tvg-id="WNBA.dummy.us" tvg-name="[HD] Seattle Storm vs New York Liberty" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[HD] Seattle Storm vs New York Liberty
 #EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/52540?ad=111
 #EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/52540?ad=111
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://chatgpt.hereisman.net/playlist/52540/load-playlist
+#EXTINF:-1 tvg-chno="147" tvg-id="WNBA.dummy.us" tvg-name="[HD] Las Vegas Aces vs Dallas Wings" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",[HD] Las Vegas Aces vs Dallas Wings
+#EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/52541?ad=111
+#EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/52541?ad=111
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://chatgpt.hereisman.net/playlist/52541/load-playlist
 #EXTINF:-1 tvg-name="[FHD] Sports Stream" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",[FHD] Sports Stream
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0
 #EXTVLCOPT:http-referrer=https://veda30wz.superargo77.cfd/
 https://kwtspta.cdn.mangomolo.com/sp/smil:sp.stream.smil/index.m3u8
 #EXTINF:-1 tvg-name="BeeTV 000003038" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png" group-title="Live Events",BeeTV 000003038
 https://fo03-bkm.beetv.kz/bpk-tv/000003038/tve/index.mpd
+#EXTINF:-1 tvg-id="beInSports1.id" tvg-name="beIN Sports 1 Indonesia" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Logo_bein_sports_1.png" group-title="Live Events",beIN Sports 1 Indonesia
+# <============================================================== Sports =================================================================================================>
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
 #EXTINF:-1 tvg-id="MetroTV.id" tvg-name="[HD] Metro TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b2/Metro_TV_2010.svg" group-title="Live Events",[HD] Metro TV
 https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="beInSports3.id" tvg-name="beIN Sports 3 Indonesia" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/c4/Logo_bein_sports_3.png" group-title="Live Events",beIN Sports 3 Indonesia
@@ -359,15 +365,14 @@ https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/ind
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
-#EXTINF:-1 tvg-id="beInSports1.id" tvg-name="beIN Sports 1 Indonesia" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/Logo_bein_sports_1.png" group-title="Live Events",beIN Sports 1 Indonesia
-# <============================================================== Sports =================================================================================================>
+#EXTINF:-1 tvg-id="SPOTV2.id" tvg-name="SpoTV 2 (V+)" tvg-logo="https://www.visionplus.id/images/repository/960/49960-SNAPSHOT-l.png" group-title="Live Events",SpoTV 2 (V+)
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=3ae6a430c1b8420ea280e317143d8d3a:142473ee925db0db0083c74a178c8298
+#KODIPROP:inputstream.adaptive.license_key=1539f043249e413d91906036f305831e:671e24fd8d234c7f38d85055815f902a
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
-https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+https://d2tjypxxy769fn.cloudfront.net/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
 #EXTINF:-1 tvg-id="SPOTV.id" tvg-name="SpoTV (V+)" tvg-logo="https://www.visionplus.id/images/repository/957/49957-SNAPSHOT-l.png" group-title="Live Events",SpoTV (V+)
 ####EXTINF:-1  tvg-logo="https://i.ibb.co.com/7Md2qy9/fubosp.png" group-title="Sports", FUBO SPORTS 2
 ####EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
@@ -379,47 +384,12 @@ https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/ind
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
-#EXTINF:-1 tvg-id="SPOTV2.id" tvg-name="SpoTV 2 (V+)" tvg-logo="https://www.visionplus.id/images/repository/960/49960-SNAPSHOT-l.png" group-title="Live Events",SpoTV 2 (V+)
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=1539f043249e413d91906036f305831e:671e24fd8d234c7f38d85055815f902a
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-https://d2tjypxxy769fn.cloudfront.net/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
-#EXTINF:-1 tvg-id="auto.hbo.boxing" tvg-name="HBO Boxing" tvg-logo="https://www.thefightcity.com/wp-content/uploads/2019/10/HBO-logo-image-1.jpg" group-title="Live Events",HBO Boxing
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=a4b2fe10c9d62d32220e8ea2dceda6f9:e6e1173c892f7fbd60a37a76a78935cb
-https://otte.live.fly.ww.aiv-cdn.net/dub-nitro/live/clients/dash/enc/cmtyd9kpfe/out/v1/813bba04214e4f4dab57f0129365635a/cenc.mpd
-#EXTINF:-1 tvg-id="Sportstars 2" tvg-name="Sportstars 2ᴴᴰ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d7/Sportstars_2.png" group-title="Live Events",Sportstars 2ᴴᴰ
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=911e72adf36946afbdbb4f80782a8394:08aec548a851ba64b7172ae7f05cb91c
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-https://d3b0v7fggu5zwm.cloudfront.net/out/v1/d2c68a3dfb644808b416bd90dcc92d5f/index.mpd
 #EXTINF:-1 tvg-id="FightSports.id" tvg-name="Fight Sports" tvg-logo="https://www.mncvision.id/userfiles/image/channel/150x150fightsport.jpg" group-title="Live Events",Fight Sports
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=aa00f320f06247dcaf8e3cea1fb07f44:6169dd042bb5e59d709272b614011bbb
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 https://d2tjypxxy769fn.cloudfront.net/out/v1/73b7057c72da4615888a11b02a6cbb3c/index.mpd
-#EXTINF:-1 tvg-id="SPOTV.id" tvg-name="[HD] SpoTV" tvg-logo="https://www.visionplus.id/images/repository/957/49957-SNAPSHOT-l.png" group-title="Live Events",[HD] SpoTV
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
-https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/cg_spotvhd/default/index.mpd
-#EXTINF:-1 tvg-id="auto.spotv.now" tvg-name="SPOTV NOW" tvg-logo="https://shorter.me/lfBd1" group-title="Live Events",SPOTV NOW
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3dd653fc7aa1e3075b7f0233620df68f:8573791fa55bff03a3094ff559fc1407
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
-#EXTVLCOPT:http-referrer=https://www.mana2.my/
-https://slive.mana2.my/SpotvNow/index.mpd
 #EXTINF:-1 tvg-id="Sportstars" tvg-name="Sportstarsᴴᴰ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3f/Sportstars.png" group-title="Live Events",Sportstarsᴴᴰ
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -438,6 +408,18 @@ https://d2tjypxxy769fn.cloudfront.net/out/v1/89a6e4261cd7470f83e5869e90440cff/in
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/index.mpd
+#EXTINF:-1 tvg-id="auto.spotv.now" tvg-name="SPOTV NOW" tvg-logo="https://shorter.me/lfBd1" group-title="Live Events",SPOTV NOW
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3dd653fc7aa1e3075b7f0233620df68f:8573791fa55bff03a3094ff559fc1407
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+#EXTVLCOPT:http-referrer=https://www.mana2.my/
+https://slive.mana2.my/SpotvNow/index.mpd
+#EXTINF:-1 tvg-id="auto.hbo.boxing" tvg-name="HBO Boxing" tvg-logo="https://www.thefightcity.com/wp-content/uploads/2019/10/HBO-logo-image-1.jpg" group-title="Live Events",HBO Boxing
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a4b2fe10c9d62d32220e8ea2dceda6f9:e6e1173c892f7fbd60a37a76a78935cb
+https://otte.live.fly.ww.aiv-cdn.net/dub-nitro/live/clients/dash/enc/cmtyd9kpfe/out/v1/813bba04214e4f4dab57f0129365635a/cenc.mpd
 #EXTINF:-1 tvg-id="Sportstars4.id" tvg-name="Sportstars 4 ᴴᴰ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a4/Sportstars_4.png" group-title="Live Events",Sportstars 4 ᴴᴰ
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -446,14 +428,48 @@ https://d2xz2v5wuvgur6.cloudfront.net/out/v1/63c0da12bb4d48afbaf053f51dff2353/in
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 https://d2xz2v5wuvgur6.cloudfront.net/out/v1/2fcc58ccec8c45e9aa094fb980eb642d/index.mpd
-#EXTINF:-1 tvg-id="auto.eurosport.2" tvg-name="EuroSport 2" tvg-logo="https://cdn.broadbandtvnews.com/wp-content/uploads/2025/02/24171333/Eurosport-image.jpg" group-title="Live Events",EuroSport 2
+#EXTINF:-1 tvg-id="Sportstars 2" tvg-name="Sportstars 2ᴴᴰ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d7/Sportstars_2.png" group-title="Live Events",Sportstars 2ᴴᴰ
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=911e72adf36946afbdbb4f80782a8394:08aec548a851ba64b7172ae7f05cb91c
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/d2c68a3dfb644808b416bd90dcc92d5f/index.mpd
+#EXTINF:-1 tvg-id="SPOTV.id" tvg-name="[HD] SpoTV" tvg-logo="https://www.visionplus.id/images/repository/957/49957-SNAPSHOT-l.png" group-title="Live Events",[HD] SpoTV
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referer=https://webtv.sk/tv/
-https://dash2.antik.sk/stream/nvidia_eurosport2/playlist_cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/cg_spotvhd/default/index.mpd
+#EXTINF:-1 tvg-id="auto.tnt.1" tvg-name="TNT-1" tvg-logo="https://www.freepnglogos.com/uploads/tnt-logo-png-9.jpg" group-title="Live Events",TNT-1
+# <== Special Thanks to Apistech for the EPG Source ===>
+# <=================================== Trial Channel ===================================>
+##EXTINF:-1 tvg-id="TSN1 HD.ca" tvg-logo="https://mimipipi22.github.io/logo/png/tsn1.png" group-title="Sports", TSN 1
+##EXTINF:-1 tvg-id="TSN2 HD.ca" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/TSN2_New_Logo.svg/1280px-TSN2_New_Logo.svg.png" group-title="Sports", TSN 2
+##EXTINF:-1 tvg-id="TSN3 HD.ca" tvg-logo="https://mimipipi22.github.io/logo/png/tsn3.png" group-title="Sports", TSN 3
+##EXTINF:-1 tvg-id="TSN4 HD.ca" tvg-logo="https://mimipipi22.github.io/logo/png/tsn4.png" group-title="Sports", TSN 4
+##EXTINF:-1 tvg-id="TSN5 HD.ca" tvg-logo="https://mimipipi22.github.io/logo/png/tsn5.png" group-title="Sports", TSN 5
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d14658a0ede94debcb4013b2056ba6d1:60838a3176127fed0eaf038a5575de11
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/140.0
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/vaplpo3app/out/v1/49b4d538ec854efa90d45084866cf7f9/cenc.mpd
+#EXTINF:-1 tvg-id="auto.tnt.3" tvg-name="TNT-3" tvg-logo="https://www.freepnglogos.com/uploads/tnt-logo-png-9.jpg" group-title="Live Events",TNT-3
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=12413e2c2855cfc59ce0fe6b20cc71ca:08d55a8f5fc93a9375f9b0cb2e1739ca
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/140.0
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/2szrn2y3ep/out/v1/eacd8a4207dc4f0d9661a4b085b8fdd9/cenc.mpd
+#EXTINF:-1 tvg-id="auto.tnt.2" tvg-name="TNT-2" tvg-logo="https://www.freepnglogos.com/uploads/tnt-logo-png-9.jpg" group-title="Live Events",TNT-2
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0b59ce06de74ed84f2eda5e81dadba13:48e4ba4ad6c2a60d2bda5d71a0050844
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/140.0
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3j04z3pbit/out/v1/042ee0757ed348bf8c26f75895cae871/cenc.mpd
+#EXTINF:-1 tvg-id="auto.tnt.4" tvg-name="TNT-4" tvg-logo="https://www.freepnglogos.com/uploads/tnt-logo-png-9.jpg" group-title="Live Events",TNT-4
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=570c19f1be3410e4e409be4dc7923f2b:9a4dea8af2a2a703dffa8a477e9edc50
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/140.0
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/65ldy4ejuu/out/v1/69bc6b64f1c14e36bb21e0075a71d8ca/cenc.mpd
 #EXTINF:-1 tvg-id="auto.eurosport.1" tvg-name="EuroSport 1" tvg-logo="https://cdn.broadbandtvnews.com/wp-content/uploads/2025/02/24171333/Eurosport-image.jpg" group-title="Live Events",EuroSport 1
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -462,6 +478,14 @@ https://dash2.antik.sk/stream/nvidia_eurosport2/playlist_cenc.mpd
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://webtv.sk/tv/
 https://dash2.antik.sk/stream/nvidia_eurosport1/playlist_cenc.mpd
+#EXTINF:-1 tvg-id="auto.eurosport.2" tvg-name="EuroSport 2" tvg-logo="https://cdn.broadbandtvnews.com/wp-content/uploads/2025/02/24171333/Eurosport-image.jpg" group-title="Live Events",EuroSport 2
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referer=https://webtv.sk/tv/
+https://dash2.antik.sk/stream/nvidia_eurosport2/playlist_cenc.mpd
 #EXTINF:-1 tvg-id="auto.j.sports.1" tvg-name="J SPORTS 1" tvg-logo="https://www.lyngsat-logo.com/logo/tv/jj/j_sports_jp.png" group-title="Live Events",J SPORTS 1
 http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs18
 #EXTINF:-1 tvg-id="auto.j.sports.2" tvg-name="J SPORTS 2" tvg-logo="https://www.lyngsat-logo.com/logo/tv/jj/j_sports_jp.png" group-title="Live Events",J SPORTS 2
@@ -482,26 +506,22 @@ https://arwen1.panaka1.cfd/puk2/usergenrnd0clv03fyt.m3u8
 #EXTVLCOPT:http-referrer=https://iron1.jarvisx1.cfd/000/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36
 https://iron1.jarvisx1.cfd/puk3/usergenrx4t0l8sybkr.m3u8
-#EXTINF:-1 tvg-id="auto.one.sports" tvg-name="[HD] ONE SPORTS" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/One_Sports_logo.svg/1200px-One_Sports_logo.svg.png" group-title="Live Events",[HD] ONE SPORTS
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
-https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesports_hd/default/index.mpd
 #EXTINF:-1 tvg-id="auto.premier.sports" tvg-name="[HD] PREMIER SPORTS" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/cb/PremierSports-ph.png" group-title="Live Events",[HD] PREMIER SPORTS
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=b8b595299fdf41c1a3481fddeb0b55e4:cd2b4ad0eb286239a4a022e6ca5fd007
 https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_ps_hd1/default/index.mpd
 #EXTINF:-1 tvg-id="auto.dazn.ringside" tvg-name="[FHD] DAZN RINGSIDE" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKVJVdXD6NTy8nMOIOb_mqewV8NZMUjHdPog&s" group-title="Live Events",[FHD] DAZN RINGSIDE
 https://aegis-cloudfront-1.tubi.video/bfad29e2-5bee-44f3-8256-127324e8b106/playlist.m3u8
+#EXTINF:-1 tvg-id="auto.one.sports" tvg-name="[HD] ONE SPORTS" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/One_Sports_logo.svg/1200px-One_Sports_logo.svg.png" group-title="Live Events",[HD] ONE SPORTS
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=53c3bf2eba574f639aa21f2d4409ff11:3de28411cf08a64ea935b9578f6d0edd
+https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cg_onesports_hd/default/index.mpd
 #EXTINF:-1 tvg-id="auto.nba.philippines" tvg-name="NBA PHILIPPINES" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png" group-title="Live Events",NBA PHILIPPINES
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=c5e51f41ceac48709d0bdcd9c13a4d88:20b91609967e472c27040716ef6a8b9a
 https://qp-pldt-live-bpk-02-prod.akamaized.net/bpk-tv/cgnl_nba/default/index.mpd
-#EXTINF:-1 tvg-id="auto.cbs.sports.hq" tvg-name="CBS Sports HQ" tvg-logo="https://wwwimage-tve.cbsstatic.com/base/files/seo/cbs_seo_1200x627_1.jpg" group-title="Live Events",CBS Sports HQ
-https://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/5e9f2c05172a0f0007db4786/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&deviceMake=github.com/inspirationlinks&deviceDNT=1
-#EXTINF:-1 tvg-id="auto.cbs.champions" tvg-name="CBS Champions" tvg-logo="https://wwwimage-tve.cbsstatic.com/base/files/seo/cbs_seo_1200x627_1.jpg" group-title="Live Events",CBS Champions
-https://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/65ea8b928145cb0008509426/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&servertSideAds=false&&deviceMake=github.com/inspirationlinks&deviceDNT=1
 #EXTINF:-1 tvg-id="auto.slovakia.nova.sport.1" tvg-name="SLOVAKIA: Nova Sport 1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/c9/Nova_Sport_1_2024.png" group-title="Live Events",SLOVAKIA: Nova Sport 1
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -510,8 +530,6 @@ https://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/65ea8b928145cb0008509
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://webtv.sk/tv/
 https://dash2.antik.sk/stream/nvidia_nova_sport1/playlist_cenc.mpd
-#EXTINF:-1 tvg-id="auto.cbs.golazo.network" tvg-name="CBS Golazo Network" tvg-logo="https://wwwimage-tve.cbsstatic.com/base/files/seo/cbs_seo_1200x627_1.jpg" group-title="Live Events",CBS Golazo Network
-https://stitcher.pluto.tv/stitch/hls/channel/63a0e33a45264d000850ed7e/master.m3u8?deviceType=web&servertSideAds=false&deviceMake=safari&deviceVersion=1&deviceId=spencer&appVersion=1&deviceDNT=0&deviceModel=web&sid=cb5874fc-6948-11ef-b8e3-ea3db3d97a96
 #EXTINF:-1 tvg-id="auto.slovakia.nova.sport.2" tvg-name="SLOVAKIA: Nova Sport 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/6d/Nova_Sport_2_2024.png" group-title="Live Events",SLOVAKIA: Nova Sport 2
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -528,6 +546,10 @@ https://dash2.antik.sk/stream/nvidia_nova_sport2/playlist_cenc.mpd
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://webtv.sk/tv/
 https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
+#EXTINF:-1 tvg-id="auto.cbs.champions" tvg-name="CBS Champions" tvg-logo="https://wwwimage-tve.cbsstatic.com/base/files/seo/cbs_seo_1200x627_1.jpg" group-title="Live Events",CBS Champions
+https://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/65ea8b928145cb0008509426/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&servertSideAds=false&&deviceMake=github.com/inspirationlinks&deviceDNT=1
+#EXTINF:-1 tvg-id="auto.cbs.sports.hq" tvg-name="CBS Sports HQ" tvg-logo="https://wwwimage-tve.cbsstatic.com/base/files/seo/cbs_seo_1200x627_1.jpg" group-title="Live Events",CBS Sports HQ
+https://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/5e9f2c05172a0f0007db4786/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&deviceMake=github.com/inspirationlinks&deviceDNT=1
 #EXTINF:-1 tvg-id="auto.slovakia.sport.2" tvg-name="SLOVAKIA: SPORT 2" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVs9bk5KPd125dbp0JMpaqTBmZSlkVjl-2-0DVNnvNCWevrQcdFOOSlcfAUALlhMPwxfo&usqp=CAU" group-title="Live Events",SLOVAKIA: SPORT 2
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -536,6 +558,8 @@ https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://webtv.sk/tv/
 https://dash2.antik.sk/stream/nvidia_sport2/playlist_cenc.mpd
+#EXTINF:-1 tvg-id="auto.cbs.golazo.network" tvg-name="CBS Golazo Network" tvg-logo="https://wwwimage-tve.cbsstatic.com/base/files/seo/cbs_seo_1200x627_1.jpg" group-title="Live Events",CBS Golazo Network
+https://stitcher.pluto.tv/stitch/hls/channel/63a0e33a45264d000850ed7e/master.m3u8?deviceType=web&servertSideAds=false&deviceMake=safari&deviceVersion=1&deviceId=spencer&appVersion=1&deviceDNT=0&deviceModel=web&sid=cb5874fc-6948-11ef-b8e3-ea3db3d97a96
 #EXTINF:-1 tvg-id="auto.sony.ten.1.hd" tvg-name="SONY TEN 1 ᴴᴰ" tvg-logo="https://i.imgur.com/SxeYwsn.jpg" group-title="Live Events",SONY TEN 1 ᴴᴰ
 http://tv.cloudcdn.me:80/live.ts?channelId=289&uid=15301&deviceMac=00:1A:79:1D:53:3F
 #EXTINF:-1 tvg-id="auto.sony.ten.5.hd" tvg-name="SONY TEN 5 ᴴᴰ" tvg-logo="https://i.imgur.com/FPe9fhB.jpg" group-title="Live Events",SONY TEN 5 ᴴᴰ
@@ -550,6 +574,29 @@ https://tfqv3gr5dgmttgha1hcto8yzdncbafisg17ufgrz8yhuxgjtse5ucpf5gk.100ycdn.com/l
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 https://d2tjypxxy769fn.cloudfront.net/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
+#EXTINF:-1 tvg-name="[HD] 18:15 WIB MotoGP Race: Monster Energy Grand Prix of Czechia - MotoGP 2026 Round 9" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/motogp.png" group-title="Live Events",[HD] 18:15 WIB MotoGP Race: Monster Energy Grand Prix of Czechia - MotoGP 2026 Round 9
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=7eea72d6075245a99ee3255603d58853:6848ef60575579bf4d415db1032153ed
+https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/dr_spotv2hd/default/index.mpd
+#EXTINF:-1 tvg-name="Fancode TV 2" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8Op4v7to2xSwIwTKsXoPsGdeodNhKqPqTEldhQHb7zh503hG_zcKZtGs8Z7Io3UxQxyHSJ5QvNrbTVEPYwXPEourj9GZvtjDI0oJOF-bLTD4BXlOK5nwzebwFobfEYiydfllddmLZrf0V5ArdwxbA0JG9tJKtkWftuu3nXqo9L78Z6XG9NdxhlCFoW9o/s700/Fancode2.png" group-title="Live Events",Fancode TV 2
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=5689304538fa9f3bb3da99c939a2ad4f:6907c88ed8ebdd35a2fa80b9684715e1
+https://otte.live.fly.ww.aiv-cdn.net/sin-nitro/live/clients/dash-sd/enc/v8g0dlo4z8/out/v1/946019f85dc64ae99ff9ce64a9727a62/cenc-sd.mpd
+#EXTINF:-1 tvg-id="beINSports2.id" tvg-name="BEIN Sports 2" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgahDG-8ujdjU4Upmr1-Rm2vpBRja8R_QYArcb0soySV6R88pBTWDc8Q0Oqj-r0gkyC2DxDX4faFT-mFvqgrW6UYuz4q_6v4a07cIXfOUHbZl6PrAfa5KquptKyQFPU3seXDwp9G-E8dyazTTKSzVypuEK01JOtcwro0DVS_9m6qLNdWp-rlW627oyUXpU/s700/BeinSports2.png" group-title="Live Events",BEIN Sports 2
+#http://ktpremium.online:2095/live/akm33333/900820/932502.ts
+#https://raw.githubusercontent.com/DonzCompIndonesia/donztelevision/refs/heads/main/v1/BS1.m3u8
+#http://tv.8dott.xyz:80/live/samuel/samuel123456/837115.ts
+#https://a166aivottlinear-a.akamaihd.net/OTTB/dub-nitro/live/clients/dash/enc/k0duzgfejg/out/v1/70a50b1bda944628b8e7e66ab4069419/cenc.mpd
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
 #EXTINF:-1 tvg-id="beInSports1.id" tvg-name="BEIN Sports 1" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHvk2SQYoDIVLmAuh7t7dlchZLk7c6zmUU9CWXFBipv39lbUisQ5YpgAf_cvIq9ZTwQG4DFA3JCDee0xDBzsBiDSQ3dpWDkvZ2UckmBoDu2EypgHvpNRfACYtZjAulNR_WFRyBVxm4glF5ajqfHmPc8BYRuA67QjtYRhs3tl0sgP4-R4Dx_lMPei2h1Z8/s700/BeinSports1.png" group-title="Live Events",BEIN Sports 1
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
@@ -566,23 +613,6 @@ https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/ind
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
-#EXTINF:-1 tvg-id="beINSports2.id" tvg-name="BEIN Sports 2" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgahDG-8ujdjU4Upmr1-Rm2vpBRja8R_QYArcb0soySV6R88pBTWDc8Q0Oqj-r0gkyC2DxDX4faFT-mFvqgrW6UYuz4q_6v4a07cIXfOUHbZl6PrAfa5KquptKyQFPU3seXDwp9G-E8dyazTTKSzVypuEK01JOtcwro0DVS_9m6qLNdWp-rlW627oyUXpU/s700/BeinSports2.png" group-title="Live Events",BEIN Sports 2
-#http://ktpremium.online:2095/live/akm33333/900820/932502.ts
-#https://raw.githubusercontent.com/DonzCompIndonesia/donztelevision/refs/heads/main/v1/BS1.m3u8
-#http://tv.8dott.xyz:80/live/samuel/samuel123456/837115.ts
-#https://a166aivottlinear-a.akamaihd.net/OTTB/dub-nitro/live/clients/dash/enc/k0duzgfejg/out/v1/70a50b1bda944628b8e7e66ab4069419/cenc.mpd
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=3d756d566ca94e6499518ffb1474d5d0:dbe4ad6803e74739b8f954d23cc58e7b
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
-#EXTINF:-1 tvg-name="Fancode TV 2" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8Op4v7to2xSwIwTKsXoPsGdeodNhKqPqTEldhQHb7zh503hG_zcKZtGs8Z7Io3UxQxyHSJ5QvNrbTVEPYwXPEourj9GZvtjDI0oJOF-bLTD4BXlOK5nwzebwFobfEYiydfllddmLZrf0V5ArdwxbA0JG9tJKtkWftuu3nXqo9L78Z6XG9NdxhlCFoW9o/s700/Fancode2.png" group-title="Live Events",Fancode TV 2
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=5689304538fa9f3bb3da99c939a2ad4f:6907c88ed8ebdd35a2fa80b9684715e1
-https://otte.live.fly.ww.aiv-cdn.net/sin-nitro/live/clients/dash-sd/enc/v8g0dlo4z8/out/v1/946019f85dc64ae99ff9ce64a9727a62/cenc-sd.mpd
 #EXTINF:-1 tvg-id="beINSports4" tvg-name="Bein Sports 4" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQygjEQ0AeVeCdX_Fxu4UDTzMD5YPPl-vHspDrI0u8x5Mot-inZc8f5nV5il9GjivU4BPfcBZMbxK1UKWRkjTqey2YzwIzwcaNMdUzQMk4tlyZTrsT5L8oZ84Xrw4YaWENVDKVQBGp3xQeGHTtI6-8zB7W-yWN2CZfq-KIHHsmlDmVdMt8_sXunY3fju8/s700/BeinSports4HD.png" group-title="Live Events",Bein Sports 4
 #http://185.160.192.64:80/mangin15/85784/13678
 #https://raw.githubusercontent.com/DonzCompIndonesia/donztelevision/refs/heads/main/v1/BS3.m3u8
@@ -591,46 +621,17 @@ https://otte.live.fly.ww.aiv-cdn.net/sin-nitro/live/clients/dash-sd/enc/v8g0dlo4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 https://d6m3sfa7e58z5.cloudfront.net/out/v1/2e55bc8199044c27b1dbb827af65a04f/index.mpd
-#EXTINF:-1 tvg-name="[HD] 18:15 WIB MotoGP Race: Monster Energy Grand Prix of Czechia - MotoGP 2026 Round 9" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/motogp.png" group-title="Live Events",[HD] 18:15 WIB MotoGP Race: Monster Energy Grand Prix of Czechia - MotoGP 2026 Round 9
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=7eea72d6075245a99ee3255603d58853:6848ef60575579bf4d415db1032153ed
-https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/dr_spotv2hd/default/index.mpd
 #EXTINF:-1 tvg-id="beINSports5" tvg-name="Bein Sports 5" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVyEgyELSuWsPOEO9Q5-kccYKoqYjIo7XOsfbYTr4Ptle8fza2kRQg2WyfTMLRiFfao_IhDNC7MjcOEyKmGBrSeF4rjdPA_hSBF4HGsf4u8gLuQ6tnMKKVxIXc08gIbPNAVmb8aX0mVKABzsyJfyWhJ-1LQcJXQWTzayEntlQ1tq2ZbAQKS0i9la2UwYU/s700/BeinSports5HD.png" group-title="Live Events",Bein Sports 5
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=c48c8e48dba24420b5dcef9f5b847b12:daad0aeb165b9a26b706f2a261b8fafe
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 #EXTVLCOPT:http-referrer=https://www.visionplus.id/
 https://d6m3sfa7e58z5.cloudfront.net/out/v1/fe4d00f07e2f43b789102b84b4d243a9/index.mpd
-#EXTINF:-1 tvg-name="Fox Sports 2" tvg-logo="https://iili.io/KYJC4V9.png" group-title="Live Events",Fox Sports 2
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=09453ce820d65fbc675de3185f9e454c:98cff9600995fa381c76fdacf3c7edae
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36
-https://cors-everywhere-wc8b4.ondigitalocean.app/https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/awxnrqkbo5/out/v1/716529a4091947b0877e6cb80dbd6ccb/cenc.mpd
-#EXTINF:-1 tvg-name="Sportstars 1" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ4eO-71_NgkCYIk_uWOtjpWrySYTWH8cma2aM1LlXfoeA4cIVaJ2QggTZ-4UDxYx0BtG660HCbMqbNzdrs_oFkB95F-FRsEBF7iTdgaD5qmxPITmiIbc4a1va3nY0Aw5ZWnqPlfJNjsrXB49sarLPFXFy04xz8pdJMWFmlMESb1BHZI2xuaPsUg5pBGQ/s700/Sportstars.png" group-title="Live Events",Sportstars 1
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
-#EXTVLCOPT:http-referrer=https://www.visionplus.id/
-https://d2tjypxxy769fn.cloudfront.net/out/v1/89a6e4261cd7470f83e5869e90440cff/index.mpd
 #EXTINF:-1 tvg-name="Fox Sports 1" tvg-logo="https://iili.io/KYJqv0G.png" group-title="Live Events",Fox Sports 1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=5466ebd70704bdeb657f0abf3c5ca4ef:bdd79b72d8e48ed483aa623cc38a8a16
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36
 https://cors-everywhere-wc8b4.ondigitalocean.app/https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/tmpzbbdj9y/out/v1/962736723a534ba294e7592fef49827b/cenc.mpd
-#EXTINF:-1 tvg-name="[FHD] Bein Sports Extra" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsGWTAQviyRh0f1b7TusT7uGtq8IclovbNiXfHrc4YjfwlzuROp5mQniRRsu4citQR1enyfJFoLtIRp7MTt35-6EyUYiLV3yVnaJAm89vArCN_1DXRhI-65YGaiy1-lXRKR-YHhYc2ge0-B6dsG8QTIGP8j5bgfT5i1xrJCXvfMxjYqx-3iibwYcsNQIU/s700/BeinSportsExtra.png" group-title="Live Events",[FHD] Bein Sports Extra
-https://amg01334-beinsportsllc-beinxtra-localnow-kcy6r.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-name="[HD] SkySportMotoGP" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/motogp.png" group-title="Live Events",[HD] SkySportMotoGP
-https://wahyu1ptv.pages.dev/SkySportMotoGP-HD.m3u8
-#EXTINF:-1 tvg-name="[HD] SkySportF1" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/f1.png" group-title="Live Events",[HD] SkySportF1
-https://wahyu1ptv.pages.dev/SkySportF1-HD.m3u8
-#EXTINF:-1 tvg-name="[HD] Bundesliga" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMMMerXRiBgNs8aMV-cFGN8PBxImKG8O4v1xNlJ2I56XEQrbE0eM7eHx8tHWZWq6UG-Kourlc_lPuz3E9gkaGuFjR0XdyXJDZx0-7aHZ87TzXUs-oOtHMPWmHBa8wehcKRUCXevqrl78KMfQ8It_F33VC0Vfv-ArLw1Cm-E1Sk8Pe256dkchsl_qrLs4U/s700/Bundesliga.png" group-title="Live Events",[HD] Bundesliga
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=8bcec6b31cc9edcb6768ab26548e22c3:e3c5b07328894c33734a4de6ae55a87f
-https://ac-003.live.p7s1video.net/63f8995e/t_003/dazn-fast-hd/cenc-default.mpd
-#EXTINF:-1 tvg-name="Golf Channel" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfwMgH4rfr3jzWO7EQaPQy0W8WJTK6luGsZ-29B-thnHmaAiT7HaP72xs__Ahfqnuc8Yq8BdHVrixzf_Fb3yzejj8bMIvKuxUZsmYBtg9TFadlZ46aUUFZBLdCY9DcC1aUrfkyc0p84KzwjRyxjj4gdCcQMtOdiAvyHZPLZO4tYVuDqOszGL6dK31Jz4/s700/GolfChannel.png" group-title="Live Events",Golf Channel
-http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/65493029ab052400089e9d2f/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c291881-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=fc355a72-e401-4038-a2fd-7378aedc3a6f&serverSideAds=false&checkedby:iptvcat.com
 #EXTINF:-1 tvg-id="MOJI.id" tvg-name="Moji TV Sports" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPxthxgBvk3n_VY0UiOb8HpEwZEtqWUmdIeU8TW0PRDWi3nGIWjzUa93x5QZv_aAfcQ-PFWGgyInQcOTGrf1octgHs2pyjpyKKIRZPRfaJLpTG2bMHqgfdnRE7kww4AyAh6HNADTGifc3Cpv3-XbD8p_mD0Ph_Efp-cz2X7lkX_TJnUL_wt6Kcau2Zb_A/s700/MojiSportsTV.jpg" group-title="Live Events",Moji TV Sports
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
@@ -638,20 +639,49 @@ http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/65
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 14; Google TV Streamer Build/UTT3.240625.001.K5; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.60 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://m.vidio.com/
 https://tvratu.my.id/vid/index.mpd?id=206&type=dash
-#EXTINF:-1 tvg-name="[FHD] UFC TV" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9kiAIfaEOE8IogfS79HFPt1XlZZ1Fv9wKIoVTqt6FVYoSbyUbcInMw40n5DnmVz5Ly1whmAbkZBgBIOvY0twASXQ641GdaUmX4DdtNMMufeFf_M6wPsxhq3gLYDCVlA0VEAuKY6l_cSc3Izv1g2DcHQMBf3jJJrNEy2x68ncGMmG5HuaVqYNLxnwpZvo/s700/UFC.png" group-title="Live Events",[FHD] UFC TV
-https://dbrb49pjoymg4.cloudfront.net/10001/99951134/hls/playlist.m3u8?ads.xumo_channelId=99951134
-#EXTINF:-1 tvg-name="Real Madrid" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3vtUqkCfJSNFiHX-G14aydGYbrfG4jF5F4O8fPMdbG0y39_76xcXgEUKE-WDJJLg2n-KzpF45PyQsjq5TDZGDLHfJpFnm0X4vI-tAJZ6pl4PqeASoXGf6pLSEU9gVXhADRQ08effU0b1Tl1Hqee46JwCLHZknCqcUkvN6gBFanXjEk9lsFCdQd_0Txv4/s700/RealMadrid.png" group-title="Live Events",Real Madrid
-https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/bitrate_3.m3u8
+#EXTINF:-1 tvg-name="Fox Sports 2" tvg-logo="https://iili.io/KYJC4V9.png" group-title="Live Events",Fox Sports 2
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=09453ce820d65fbc675de3185f9e454c:98cff9600995fa381c76fdacf3c7edae
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36
+https://cors-everywhere-wc8b4.ondigitalocean.app/https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/awxnrqkbo5/out/v1/716529a4091947b0877e6cb80dbd6ccb/cenc.mpd
+#EXTINF:-1 tvg-name="[FHD] Bein Sports Extra" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsGWTAQviyRh0f1b7TusT7uGtq8IclovbNiXfHrc4YjfwlzuROp5mQniRRsu4citQR1enyfJFoLtIRp7MTt35-6EyUYiLV3yVnaJAm89vArCN_1DXRhI-65YGaiy1-lXRKR-YHhYc2ge0-B6dsG8QTIGP8j5bgfT5i1xrJCXvfMxjYqx-3iibwYcsNQIU/s700/BeinSportsExtra.png" group-title="Live Events",[FHD] Bein Sports Extra
+https://amg01334-beinsportsllc-beinxtra-localnow-kcy6r.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-name="Sportstars 1" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQ4eO-71_NgkCYIk_uWOtjpWrySYTWH8cma2aM1LlXfoeA4cIVaJ2QggTZ-4UDxYx0BtG660HCbMqbNzdrs_oFkB95F-FRsEBF7iTdgaD5qmxPITmiIbc4a1va3nY0Aw5ZWnqPlfJNjsrXB49sarLPFXFy04xz8pdJMWFmlMESb1BHZI2xuaPsUg5pBGQ/s700/Sportstars.png" group-title="Live Events",Sportstars 1
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea
+#EXTVLCOPT:http-user-agent=Dalvik/2.1.0 (Linux; U; Android 9; SM-A730F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2tjypxxy769fn.cloudfront.net/out/v1/89a6e4261cd7470f83e5869e90440cff/index.mpd
+#EXTINF:-1 tvg-name="Fancode TV 1" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCSI3hOe6pp8rc2H1nG85f4J0je2YaIr7pEYKbVGOv8V000HLFQiqxxdMctQpf4qKHv0s-S03Lkp5tX-DjpqPltTDuw6L5kWmSiBL5L1eDXkOFYJiPDxH7JWTcrE4wY3NVdpY8RITv1QngyYobNY1sTyZV-KVCcFt9O_sobQlE88qSkCIv6L7ExzZoVmk/s700/Fancode1.png" group-title="Live Events",Fancode TV 1
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7e9239c1982d984a002df3ed049d0756:1b8a17598129a3618535c8fb05f103fe
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/fdb3pubmek/out/v1/aefca6420f944a9482e117f315de535f/cenc.mpd
+#EXTINF:-1 tvg-name="[HD] SkySportF1" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/f1.png" group-title="Live Events",[HD] SkySportF1
+https://wahyu1ptv.pages.dev/SkySportF1-HD.m3u8
+#EXTINF:-1 tvg-name="[HD] SkySportMotoGP" tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/motogp.png" group-title="Live Events",[HD] SkySportMotoGP
+https://wahyu1ptv.pages.dev/SkySportMotoGP-HD.m3u8
+#EXTINF:-1 tvg-name="[HD] Bundesliga" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMMMerXRiBgNs8aMV-cFGN8PBxImKG8O4v1xNlJ2I56XEQrbE0eM7eHx8tHWZWq6UG-Kourlc_lPuz3E9gkaGuFjR0XdyXJDZx0-7aHZ87TzXUs-oOtHMPWmHBa8wehcKRUCXevqrl78KMfQ8It_F33VC0Vfv-ArLw1Cm-E1Sk8Pe256dkchsl_qrLs4U/s700/Bundesliga.png" group-title="Live Events",[HD] Bundesliga
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=8bcec6b31cc9edcb6768ab26548e22c3:e3c5b07328894c33734a4de6ae55a87f
+https://ac-003.live.p7s1video.net/63f8995e/t_003/dazn-fast-hd/cenc-default.mpd
+#EXTINF:-1 tvg-name="Golf Channel" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfwMgH4rfr3jzWO7EQaPQy0W8WJTK6luGsZ-29B-thnHmaAiT7HaP72xs__Ahfqnuc8Yq8BdHVrixzf_Fb3yzejj8bMIvKuxUZsmYBtg9TFadlZ46aUUFZBLdCY9DcC1aUrfkyc0p84KzwjRyxjj4gdCcQMtOdiAvyHZPLZO4tYVuDqOszGL6dK31Jz4/s700/GolfChannel.png" group-title="Live Events",Golf Channel
+http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/65493029ab052400089e9d2f/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c291881-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=fc355a72-e401-4038-a2fd-7378aedc3a6f&serverSideAds=false&checkedby:iptvcat.com
 #EXTINF:-1 tvg-name="[FHD] Billiard TV" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFsvbL2P4cOgL0fcaem_hE-Gmx3R8Th9fXEBE3HZgOkbwCntkCpsj9emI8Sc1a2d_jFfUKZijnRnnbbrnxgaK58Ib_PHyKOTbjmQbhwsuzI9F4J9LPd0xb3euFEd32XZnc4rYBpm1cBKhZG-Ux7O5TQRcoK1Fj83g8G9UzAgPwcbt6eMXW9K47-9_4wFA/s700/BilliardTV.png" group-title="Live Events",[FHD] Billiard TV
 https://newidco-billiardstv-1-eu.xiaomi.wurl.tv/playlist.m3u8
+#EXTINF:-1 tvg-name="[FHD] UFC TV" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9kiAIfaEOE8IogfS79HFPt1XlZZ1Fv9wKIoVTqt6FVYoSbyUbcInMw40n5DnmVz5Ly1whmAbkZBgBIOvY0twASXQ641GdaUmX4DdtNMMufeFf_M6wPsxhq3gLYDCVlA0VEAuKY6l_cSc3Izv1g2DcHQMBf3jJJrNEy2x68ncGMmG5HuaVqYNLxnwpZvo/s700/UFC.png" group-title="Live Events",[FHD] UFC TV
+https://dbrb49pjoymg4.cloudfront.net/10001/99951134/hls/playlist.m3u8?ads.xumo_channelId=99951134
 #EXTINF:-1 tvg-name="[FHD] Barca TV" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4sArN9j1ia267S8AJoygBJvaah5g8x9Cr5UuqMtppqNsbyFEKDFJDMp-Lhu-3NMdFc62CdcKL6JPYuXfMDc-HuWTxJcsPHLBvVX6pRuUdB9I9NJEr0babOspCTb-b-QVlKLN3zAzVSRSsIpyyeqO3_T03s9tdbXbM5FvFYZy2RIqjT1MnuUB8usluOu8/s700/BarcaTV.png" group-title="Live Events",[FHD] Barca TV
 https://amg17560-fcb-amg17560c1-rakuten-uk-4891.playouts.now.amagi.tv/playlist/amg17560-fcbarcelona-topbarcaenglish-rakutenuk/playlist.m3u8
-#EXTINF:-1 tvg-name="[SD] Inter TV" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUhsyLVUOfDPYmgCJbVollP6eB9aV7b7Biu_u2wkf2O_lEDvaqp1IPDOSpA74w_olY04vVqzSS-YhLtIpwqyckN8Y5nHNf_AmCd3x9tK0tXhwdlUWNeSDhYcMZTf0P86Upj27cbDVP9mG2FQeY0Xz7ZK5wnqm9MmuLRlPjVe092oGJQtQmO0GBBQxOZRA/s700/20251223_232656.png" group-title="Live Events",[SD] Inter TV
-https://ilglobotv-live.akamaized.net/channels/InterTV/Live.m3u8
-#EXTINF:-1 tvg-name="MUTV" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDcvOQrgnKl9kY9I7Bc94FGVUA8FQQG0nMKkVv2HdECWLYpTERkWpxtlRcy6XkvUUfe2aXn12wOHcPOca837Y1KKRQ72S7YzwVI9apDTOI7-I-4XjYjl569VI50OAimcPJiySBP4vnWYjjTnPYvxmEy6HkHaRv8-jkvcwz7FkOf3stMqVKFxAIm0vjUms/s700/MUTV.png" group-title="Live Events",MUTV
-https://get.perfecttv.net/mutv.mpd
+#EXTINF:-1 tvg-name="Real Madrid" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3vtUqkCfJSNFiHX-G14aydGYbrfG4jF5F4O8fPMdbG0y39_76xcXgEUKE-WDJJLg2n-KzpF45PyQsjq5TDZGDLHfJpFnm0X4vI-tAJZ6pl4PqeASoXGf6pLSEU9gVXhADRQ08effU0b1Tl1Hqee46JwCLHZknCqcUkvN6gBFanXjEk9lsFCdQd_0Txv4/s700/RealMadrid.png" group-title="Live Events",Real Madrid
+https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/bitrate_3.m3u8
 #EXTINF:-1 tvg-name="[FHD] Fishing TV" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7Yeu2lxE4OwL1sbaFJ8l1dTtSiyIaechscm9P3mZSGZpFttnSTzfeIPzOj7PUV3xQqF11v5KSm1Y6mdMO4sv4_NrE1rbl3LpFbn1_9eYG7SYta3jqiosnUfmEft2l4e9eolU_i180VZfiT1R1wg2Y0BKfUl26bDNq-N2RMC2c77UB1LcJMCOIvViLDyk/s700/FishingTV.png" group-title="Live Events",[FHD] Fishing TV
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/eea68b79-bfe2-451e-a227-d637a5b9548a/manifest.m3u8
+#EXTINF:-1 tvg-name="MUTV" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDcvOQrgnKl9kY9I7Bc94FGVUA8FQQG0nMKkVv2HdECWLYpTERkWpxtlRcy6XkvUUfe2aXn12wOHcPOca837Y1KKRQ72S7YzwVI9apDTOI7-I-4XjYjl569VI50OAimcPJiySBP4vnWYjjTnPYvxmEy6HkHaRv8-jkvcwz7FkOf3stMqVKFxAIm0vjUms/s700/MUTV.png" group-title="Live Events",MUTV
+https://get.perfecttv.net/mutv.mpd
+#EXTINF:-1 tvg-name="[SD] Inter TV" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUhsyLVUOfDPYmgCJbVollP6eB9aV7b7Biu_u2wkf2O_lEDvaqp1IPDOSpA74w_olY04vVqzSS-YhLtIpwqyckN8Y5nHNf_AmCd3x9tK0tXhwdlUWNeSDhYcMZTf0P86Upj27cbDVP9mG2FQeY0Xz7ZK5wnqm9MmuLRlPjVe092oGJQtQmO0GBBQxOZRA/s700/20251223_232656.png" group-title="Live Events",[SD] Inter TV
+https://ilglobotv-live.akamaized.net/channels/InterTV/Live.m3u8
 #EXTINF:-1 tvg-name="[FHD] Motorvision TV" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkQBYZhsmNjRUst4_jWdDHW87ckUrjSOwwzcgxktN8jC6aGHAJQSy5olgfqyK5woBocIhFZXjf1mnJ5B1-XBmfaVJPAM3oJHJSHm8istNLoDdzp6_LzM9HrxdRvbC9purDoO05s1l4uavKGq74WmXL2qCTaNNj0LkYQwwhwopwUpdcHlbhgLwZhEP62AE/s700/MotorVision.png" group-title="Live Events",[FHD] Motorvision TV
 #EXTVLCOPT:http-user-agent=OTTNavigator/1.7.1.6 (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=535
