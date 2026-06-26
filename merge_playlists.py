@@ -232,7 +232,7 @@ def merge_all_to_indihome():
     # Pisahkan saluran yang lolos filter kembali ke kelompoknya semula
     deduped_original = [ch for ch in deduped_channels if ch["source"] == "IndihomeTV (Bawaan)"]
     
-    output_content = ["#EXTM3U\n"]
+    output_content = [f'#EXTM3U url-tvg="https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/epgs/guide.xml.gz"\n']
     
     # Tulis saluran bawaan asli terlebih dahulu
     for ch in deduped_original:

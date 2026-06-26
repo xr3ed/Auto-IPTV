@@ -21,7 +21,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 TIMEOUT = 15
 MAX_WORKERS = 16
 OUTPUT_DIR = Path("playlists")
-EPG_URL = "https://epgshare01.online/epgshare01/epg_ripper_DUMMY_CHANNELS.xml.gz"
+EPG_URL = "https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/epgs/guide.xml.gz"
 
 # ====================================================================
 # DAFTAR SUMBER PLAYLIST
