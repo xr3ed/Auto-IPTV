@@ -348,13 +348,13 @@ def clean_match_name(title: str) -> str:
     # 2. Hapus VNL, Week, dll.
     title_clean = re.sub(r'\|\s*Week\s*\d+\s*\|.*', '', title_clean, flags=re.IGNORECASE)
     
-    # 3. Cari match "vs" atau "v" atau "at"
-    match = re.search(r'([A-Za-z\s\-\.]+)\s+(vs|v|at)\s+([A-Za-z\s\-\.]+)', title_clean, re.IGNORECASE)
+    # 3. Cari match "vs" atau "v" atau "at" (mendukung huruf Unicode seperti ü, ç, dll.)
+    match = re.search(r'([\w\s\-\.]+)\s+(vs|v|at)\s+([\w\s\-\.]+)', title_clean, re.IGNORECASE | re.UNICODE)
     if match:
         team1 = match.group(1).strip()
         team2 = match.group(3).strip()
         # Bersihkan kata-kata sampah
-        team1 = re.sub(r'^[\[\s]*[A-Za-z\s]+\s*\]', '', team1).strip() # [WNBA], [Baseball]
+        team1 = re.sub(r'^[\[\s]*[\w\s]+\s*\]', '', team1).strip() # [WNBA], [Baseball], [Football]
         team2 = re.sub(r'\(.*?\)', '', team2).strip() # (CDNTV)
         team2 = re.sub(r'\|.*', '', team2).strip()
         team1 = re.sub(r'\s+', ' ', team1)
@@ -540,19 +540,20 @@ def calculate_wc_score(entry: dict) -> int:
             if len(parts) == 2:
                 title = parts[1].lower()
                 
-    # Prioritas Bahasa Indonesia (SCTV, Vidio, TVRI, Indosiar, Moji, dll.)
+    # Prioritas 1: Bahasa Indonesia (SCTV, Vidio, TVRI, Indosiar, Moji, dll.) selalu di atas
     if any(kw in title for kw in ["indo", "indonesia", "sctv", "vidio", "rcti", "mnc", "tvri", "indosiar", "moji", "piala dunia", "trans7", "transtv"]):
-        score += 100
-    # Prioritas Bahasa Inggris
-    elif any(kw in title for kw in ["english", " en ", "[en]", "tsn", "espn", "fox", "astro", "supersport"]):
-        score += 50
+        score += 1000
         
-    # Skor tambahan untuk resolusi tinggi
+    # Prioritas 2: Kualitas/Resolusi (FHD > HD > SD/unknown)
     res = entry.get("resolution", "")
     if res == "FHD":
-        score += 20
+        score += 300
     elif res == "HD":
-        score += 10
+        score += 200
+        
+    # Prioritas 3: Bahasa Inggris (dibandingkan bahasa asing lain di resolusi yang sama)
+    if any(kw in title for kw in ["english", " en ", "[en]", "tsn", "espn", "fox", "astro", "supersport"]):
+        score += 50
         
     return score
 
@@ -601,6 +602,8 @@ def main():
     events_lines = fetch_playlist(events_url)
     if events_lines:
         temp_entries = parse_m3u(events_lines)
+        url_to_matches_list = {}
+        url_to_res_list = {}
         for entry in temp_entries:
             title = ""
             for line in entry["extinf"]:
@@ -612,8 +615,9 @@ def main():
             # Pastikan clean_match_name berhasil mendeteksi laga (artinya hasil bersih berbeda dari aslinya)
             if match_name and match_name != title:
                 url_key = get_url_path_key(entry["url"])
-                STREAM_MATCH_MAP[url_key] = match_name
-                # Simpan resolusi dari title/URL jika terindikasi FHD/HD
+                url_to_matches_list.setdefault(url_key, set()).add(match_name)
+                
+                # Deteksi resolusi
                 res = ""
                 title_lower = title.lower()
                 url_lower = entry["url"].lower()
@@ -621,8 +625,25 @@ def main():
                     res = "FHD"
                 elif "hd" in title_lower or "720p" in url_lower:
                     res = "HD"
-                STREAM_RES_MAP[url_key] = res
-        print(f"✅ Berhasil memetakan {len(STREAM_MATCH_MAP)} laga aktif untuk penamaan otomatis.")
+                if res:
+                    url_to_res_list.setdefault(url_key, set()).add(res)
+                    
+        # Filter keluar HLS URL yang ambigu (dipakai oleh lebih dari 1 laga berbeda)
+        valid_matches = 0
+        for url_key, matches in url_to_matches_list.items():
+            if len(matches) == 1:
+                match_val = list(matches)[0]
+                STREAM_MATCH_MAP[url_key] = match_val
+                valid_matches += 1
+                
+                # Ambil resolusi jika konsisten
+                res_set = url_to_res_list.get(url_key, set())
+                if len(res_set) == 1:
+                    STREAM_RES_MAP[url_key] = list(res_set)[0]
+            else:
+                print(f"  [INFO] Mengabaikan URL ambigu {url_key} karena dipakai bersama oleh laga: {matches}")
+                
+        print(f"✅ Berhasil memetakan {valid_matches} laga aktif unik untuk penamaan otomatis.")
     else:
         print("⚠️ Gagal mengunduh events.m3u8 untuk database laga.")
 
