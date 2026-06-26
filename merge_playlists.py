@@ -198,9 +198,10 @@ def merge_all_to_indihome():
                 pattern = rf'{re.escape(marker_start)}.*?{re.escape(marker_end)}'
                 content = re.sub(pattern, '', content, flags=re.DOTALL)
 
-        # Urai saluran bawaan asli yang tersisa (misalnya saluran lokal/nasional)
-        original_channels = extract_streams_from_content(content, "IndihomeTV (Bawaan)")
-        print(f"  -> Memuat {len(original_channels)} saluran bawaan asli.")
+        raw_original = extract_streams_from_content(content, "IndihomeTV (Bawaan)")
+        # Saring agar saluran olahraga (World Cup & Live Events) tidak ikut masuk ke master playlist
+        original_channels = [ch for ch in raw_original if ch["group"] not in ("World Cup 2026", "Live Events")]
+        print(f"  -> Memuat {len(original_channels)} saluran bawaan asli (disaring dari {len(raw_original)}).")
     
     # 2. Muat saluran dari seluruh playlist pendukung di folder playlists/
     merged_sections = {}
