@@ -269,6 +269,52 @@ def fetch_playlist(url: str) -> list[str] | None:
         return None
 
 
+# ====================================================================
+# SINKRONISASI STREAM & NEGARA DILUAR PLAYLIST
+# ====================================================================
+COUNTRY_MAP = {
+    "ger": "Jerman", "ivo": "Pantai Gading",
+    "ecu": "Ekuador", "cur": "Curacao",
+    "tun": "Tunisia", "jap": "Jepang",
+    "swe": "Swedia", "aus": "Australia",
+    "par": "Paraguay", "usa": "AS",
+    "tur": "Turki", "ned": "Belanda",
+    "col": "Kolombia", "bra": "Brasil",
+    "arg": "Argentina", "fra": "Prancis",
+    "esp": "Spanyol", "eng": "Inggris",
+    "ita": "Italia", "por": "Portugal",
+    "cro": "Kroasia", "mex": "Meksiko",
+    "can": "Kanada", "sen": "Senegal",
+    "mar": "Maroko", "gha": "Ghana",
+    "cmr": "Kamerun", "kor": "Korsel",
+    "ksa": "Arab Saudi", "pol": "Polandia",
+    "bel": "Belgia", "den": "Denmark",
+    "sui": "Swiss", "uru": "Uruguay"
+}
+
+STREAM_MATCH_MAP = {}
+STREAM_RES_MAP = {}
+
+def get_url_path_key(url: str) -> str:
+    """Mengambil bagian path unik dari URL HLS (mengabaikan domain dan query params) untuk matching silang."""
+    match = re.search(r'https?://[^/]+(/.*)', url)
+    if match:
+        path = match.group(1).split('?')[0]
+        return path
+    return url
+
+def parse_url_code(url: str) -> str:
+    """Mendeteksi kode laga di dalam URL path (misal: /live/gervsivo/ -> Jerman vs Pantai Gading)."""
+    match = re.search(r'/live/([a-z]{3})vs([a-z]{3})/', url.lower())
+    if match:
+        c1 = match.group(1)
+        c2 = match.group(2)
+        team1 = COUNTRY_MAP.get(c1, c1.upper())
+        team2 = COUNTRY_MAP.get(c2, c2.upper())
+        return f"{team1} vs {team2}"
+    return ""
+
+
 SPORT_POSTER_MAP = {
     "baseball": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png",
     "mlb": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png",
@@ -281,8 +327,6 @@ SPORT_POSTER_MAP = {
     "formula 1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/f1.png",
     "volleyball": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Volleyball_pictogram.svg",
     "vnl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Volleyball_pictogram.svg",
-    "soccer": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png",
-    "football": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png",
 }
 
 
@@ -355,13 +399,37 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str) -> dict:
     
     # Klasifikasi World Cup vs Live Events
     is_wc = entry.get("is_wc", False)
-    is_other_sport = any(kw in title_lower for kw in ["vnl", "volleyball", "baseball", "mlb", "motogp", "wnba", "basketball", "f1", "formula 1", "serie b"])
+    is_other_sport = any(kw in title_lower for kw in [
+        "vnl", "volleyball", "baseball", "mlb", "motogp", "wnba", "nba", "basketball", 
+        "f1", "formula 1", "tennis", "badminton", "ufc", "wwe", "nhl", "hockey", 
+        "rugby", "cricket", "golf", "darts", "snooker", "nascar", "indycar", "superbike"
+    ])
+    
+    # 1. Deteksi pencocokan nama laga dinamis dari URL
+    url_key = get_url_path_key(entry["url"])
+    match_name = STREAM_MATCH_MAP.get(url_key, "")
+    if not match_name:
+        match_name = parse_url_code(entry["url"])
+        
+    if match_name:
+        if not resolution and STREAM_RES_MAP.get(url_key):
+            resolution = STREAM_RES_MAP[url_key]
+            res_label = f"[{resolution}] " if resolution else ""
+        if not is_other_sport:
+            is_wc = True
+            
+    # 2. Deteksi berdasarkan judul dan separator
+    has_match_separator = any(sep in title_lower for sep in [" vs ", " v ", " at ", " - "])
     
     if not is_other_sport:
         if any(kw in title_lower for kw in ["world cup", "worldcup", "piala dunia", "fifa"]) or "wc" in source_name.lower():
             is_wc = True
-        elif "vs" in title_lower or " v " in title_lower:
+        elif has_match_separator:
             is_wc = True
+            
+    # FORCE OVERRIDE: Jika olahraga lain, tidak boleh masuk World Cup
+    if is_other_sport:
+        is_wc = False
             
     FIFA_LOGO = "https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png"
     
@@ -370,10 +438,30 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str) -> dict:
         logo = FIFA_LOGO
         
         # Format nama: [Kualitas] Team A vs Team B - Channel/Source
-        if "vs" in title_lower or " v " in title_lower:
-            match_name = clean_match_name(title)
-            clean_source = source_name.replace("_sports", "").replace("buddy_", "").replace("wc2026", "SM-TV").upper()
-            display_name = f"{res_label}{match_name} - {clean_source}"
+        has_actual_match = bool(match_name) or any(sep in title_lower for sep in [" vs ", " v ", " at "])
+        
+        if has_actual_match:
+            actual_match = match_name if match_name else clean_match_name(title)
+            
+            if match_name:
+                # Jika di-rename dinamis, suffix-nya adalah judul saluran asli (misal: "Toffee 1" atau "FOX ONE")
+                channel_suffix = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
+            else:
+                # Jika judul asli sudah mengandung laga, ekstrak bagian channel di kanan "|" atau "-"
+                channel_suffix = ""
+                if "|" in title:
+                    channel_suffix = title.split("|", 1)[1].strip()
+                elif " - " in title:
+                    parts = title.split(" - ")
+                    if len(parts) > 1 and not any(kw in parts[-1].lower() for kw in ["world cup", "piala dunia"]):
+                        channel_suffix = parts[-1].strip()
+                
+                if channel_suffix:
+                    channel_suffix = re.sub(r'\[?(fhd|hd|sd)\]?', '', channel_suffix, flags=re.IGNORECASE).strip()
+                else:
+                    channel_suffix = source_name.replace("_sports", "").replace("buddy_", "").replace("wc2026", "SM-TV").upper()
+            
+            display_name = f"{res_label}{actual_match} - {channel_suffix}"
         else:
             clean_title = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
             display_name = f"{res_label}World Cup 2026 - {clean_title}"
@@ -391,8 +479,11 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str) -> dict:
             else:
                 logo = "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png"
                 
-        clean_title = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
-        display_name = f"{res_label}{clean_title}"
+        if match_name:
+            display_name = f"{res_label}{match_name}"
+        else:
+            clean_title = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
+            display_name = f"{res_label}{clean_title}"
         
     attrs["group-title"] = group
     attrs["tvg-logo"] = logo
@@ -449,8 +540,8 @@ def calculate_wc_score(entry: dict) -> int:
             if len(parts) == 2:
                 title = parts[1].lower()
                 
-    # Prioritas Bahasa Indonesia (SCTV, Vidio, Indo, dll.)
-    if any(kw in title for kw in ["indo", "indonesia", "sctv", "vidio", "rcti", "mnc"]):
+    # Prioritas Bahasa Indonesia (SCTV, Vidio, TVRI, Indosiar, Moji, dll.)
+    if any(kw in title for kw in ["indo", "indonesia", "sctv", "vidio", "rcti", "mnc", "tvri", "indosiar", "moji", "piala dunia", "trans7", "transtv"]):
         score += 100
     # Prioritas Bahasa Inggris
     elif any(kw in title for kw in ["english", " en ", "[en]", "tsn", "espn", "fox", "astro", "supersport"]):
@@ -473,6 +564,27 @@ def check_and_enrich_entry(entry: dict, is_wc: bool) -> dict:
     
     if playable:
         res = detect_stream_resolution(entry["url"], entry["headers"])
+        if not res:
+            # Fallback 1: Ekstrak dari URL
+            url_lower = entry["url"].lower()
+            if "fhd" in url_lower or "1080p" in url_lower:
+                res = "FHD"
+            elif "hd" in url_lower or "720p" in url_lower:
+                res = "HD"
+            else:
+                # Fallback 2: Ekstrak dari display-name asli di extinf
+                title = ""
+                for line in entry["extinf"]:
+                    if line.startswith("#EXTINF"):
+                        parts = line.rsplit(',', 1)
+                        if len(parts) == 2:
+                            title = parts[1].lower()
+                if "fhd" in title or "1080" in title or "4k" in title:
+                    res = "FHD"
+                elif "hd" in title or "720" in title:
+                    res = "HD"
+                elif "sd" in title or "480" in title:
+                    res = "SD"
         entry["resolution"] = res
     else:
         entry["resolution"] = ""
@@ -482,6 +594,38 @@ def check_and_enrich_entry(entry: dict, is_wc: bool) -> dict:
 
 def main():
     print("🚀 Memulai proses penggabungan & penyaringan saluran...")
+    
+    # Pre-pass: Unduh events.m3u8 untuk membangun database laga aktif secara real-time
+    print("⏳ Menyiapkan database laga aktif dari events.m3u8...")
+    events_url = "https://github.com/doms9/iptv/raw/refs/heads/default/M3U8/events.m3u8"
+    events_lines = fetch_playlist(events_url)
+    if events_lines:
+        temp_entries = parse_m3u(events_lines)
+        for entry in temp_entries:
+            title = ""
+            for line in entry["extinf"]:
+                if line.startswith("#EXTINF"):
+                    parts = line.rsplit(',', 1)
+                    if len(parts) == 2:
+                        title = parts[1].strip()
+            match_name = clean_match_name(title)
+            # Pastikan clean_match_name berhasil mendeteksi laga (artinya hasil bersih berbeda dari aslinya)
+            if match_name and match_name != title:
+                url_key = get_url_path_key(entry["url"])
+                STREAM_MATCH_MAP[url_key] = match_name
+                # Simpan resolusi dari title/URL jika terindikasi FHD/HD
+                res = ""
+                title_lower = title.lower()
+                url_lower = entry["url"].lower()
+                if "fhd" in title_lower or "1080p" in url_lower:
+                    res = "FHD"
+                elif "hd" in title_lower or "720p" in url_lower:
+                    res = "HD"
+                STREAM_RES_MAP[url_key] = res
+        print(f"✅ Berhasil memetakan {len(STREAM_MATCH_MAP)} laga aktif untuk penamaan otomatis.")
+    else:
+        print("⚠️ Gagal mengunduh events.m3u8 untuk database laga.")
+
     all_wc_entries = []
     all_live_entries = []
 
