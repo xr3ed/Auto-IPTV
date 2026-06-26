@@ -1,6 +1,9 @@
 import sys
 import io
 import re
+import gzip
+import xml.etree.ElementTree as ET
+from datetime import datetime, timezone, timedelta
 from contextlib import closing
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -22,6 +25,12 @@ TIMEOUT = 15
 MAX_WORKERS = 16
 OUTPUT_DIR = Path("playlists")
 EPG_URL = "https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/epgs/guide.xml.gz"
+
+# Database EPG global untuk penamaan dinamis
+EPG_ACTIVE_PROGS = {}
+EPG_NAME_TO_ID = {}
+EPG_CHANNEL_NAMES = {}
+
 
 # ====================================================================
 # DAFTAR SUMBER PLAYLIST
@@ -345,7 +354,10 @@ def clean_match_name(title: str) -> str:
     title_clean = re.sub(r'\d+\s*[A-Za-z]+\s*\d+:\d+\s*(WIB|WITA|WIT)?', '', title_clean, flags=re.IGNORECASE)
     title_clean = re.sub(r'\d+\s*[A-Za-z]+', '', title_clean, flags=re.IGNORECASE)
     
-    # 2. Hapus VNL, Week, dll.
+    # 2. Hapus turnamen/prefix sampah dan VNL, Week, dll.
+    title_clean = re.sub(r'^.*?world\s*cup[^:]*:\s*', '', title_clean, flags=re.IGNORECASE)
+    title_clean = re.sub(r'^.*?piala\s*dunia[^:]*:\s*', '', title_clean, flags=re.IGNORECASE)
+    title_clean = re.sub(r'^.*?live\s*:\s*', '', title_clean, flags=re.IGNORECASE)
     title_clean = re.sub(r'\|\s*Week\s*\d+\s*\|.*', '', title_clean, flags=re.IGNORECASE)
     
     # 3. Cari match "vs" atau "v" atau "at" (mendukung huruf Unicode seperti ü, ç, dll.)
@@ -353,15 +365,134 @@ def clean_match_name(title: str) -> str:
     if match:
         team1 = match.group(1).strip()
         team2 = match.group(3).strip()
-        # Bersihkan kata-kata sampah
-        team1 = re.sub(r'^[\[\s]*[\w\s]+\s*\]', '', team1).strip() # [WNBA], [Baseball], [Football]
-        team2 = re.sub(r'\(.*?\)', '', team2).strip() # (CDNTV)
-        team2 = re.sub(r'\|.*', '', team2).strip()
-        team1 = re.sub(r'\s+', ' ', team1)
-        team2 = re.sub(r'\s+', ' ', team2)
-        return f"{team1} vs {team2}"
+    else:
+        # Fallback 4: Jika mengandung " - " dan di judulnya berkaitan dengan World Cup / Soccer, parse " - " sebagai separator laga
+        # Contoh: "[Fifa World Cup] Japan - Sweden (EMBEDHD)"
+        title_lower = title.lower()
+        is_football_related = any(kw in title_lower for kw in ["world cup", "worldcup", "piala dunia", "fifa", "soccer", "football"])
+        if is_football_related and " - " in title_clean:
+            # Bersihkan title_clean dari kata-kata turnamen/sampah
+            temp = re.sub(r'\[?(fifa|world|cup|2026|soccer|football)\]?', '', title_clean, flags=re.IGNORECASE).strip()
+            # Hapus kurung bracket di awal jika ada
+            temp = re.sub(r'^\[.*?\]', '', temp).strip()
+            parts = temp.split(" - ")
+            if len(parts) >= 2:
+                team1 = parts[0].strip()
+                team2 = parts[1].strip()
+            else:
+                return title.strip()
+        else:
+            return title.strip()
+            
+    # Bersihkan kata-kata sampah dari team1 & team2
+    team1 = re.sub(r'^[\[\s]*[\w\s]+\s*\]', '', team1).strip() # [WNBA], [Baseball], [Football]
+    team1 = re.sub(r'^[\[\s]*(fifa|world|cup|2026|soccer|football)\s*\]?', '', team1, flags=re.IGNORECASE).strip()
+    team2 = re.sub(r'\(.*?\)', '', team2).strip() # (CDNTV)
+    team2 = re.sub(r'\|.*', '', team2).strip()
+    team1 = re.sub(r'\s+', ' ', team1)
+    team2 = re.sub(r'\s+', ' ', team2)
     
-    return title.strip()
+    # Terjemahkan nama negara English -> Indonesia
+    team1_lower = team1.lower()
+    team2_lower = team2.lower()
+    
+    ENG_TO_IDN_MAP = {
+        "japan": "Jepang", "sweden": "Swedia", "germany": "Jerman", 
+        "ecuador": "Ekuador", "tunisia": "Tunisia", "netherlands": "Belanda",
+        "paraguay": "Paraguay", "australia": "Australia", "turkey": "Turki",
+        "türkiye": "Turki", "united states": "AS", "usa": "AS",
+        "ivory coast": "Pantai Gading", "curacao": "Curacao", "curaçao": "Curacao",
+        "spain": "Spanyol", "france": "Prancis", "england": "Inggris",
+        "italy": "Italia", "portugal": "Portugal", "croatia": "Kroasia",
+        "mexico": "Meksiko", "canada": "Kanada", "senegal": "Senegal",
+        "morocco": "Maroko", "ghana": "Ghana", "cameroon": "Kamerun",
+        "south korea": "Korsel", "korea": "Korsel", "saudi arabia": "Arab Saudi",
+        "poland": "Polandia", "belgium": "Belgia", "denmark": "Denmark",
+        "switzerland": "Swiss", "uruguay": "Uruguay", "argentina": "Argentina",
+        "brazil": "Brasil", "colombia": "Kolombia"
+    }
+    
+    t1_clean = ENG_TO_IDN_MAP.get(team1_lower, team1)
+    t2_clean = ENG_TO_IDN_MAP.get(team2_lower, team2)
+    
+    return f"{t1_clean} vs {t2_clean}"
+
+
+def parse_xmltv_time(value: str) -> datetime | None:
+    if not value:
+        return None
+    try:
+        value = value.strip()
+        dt_part, _, tz_part = value.partition(" ")
+        dt = datetime.strptime(dt_part, "%Y%m%d%H%M%S")
+        if tz_part:
+            sign = 1 if tz_part[0] == "+" else -1
+            hours = int(tz_part[1:3])
+            minutes = int(tz_part[3:5])
+            offset = sign * (hours * 3600 + minutes * 60)
+            dt = dt - timedelta(seconds=offset)
+        return dt.replace(tzinfo=timezone.utc)
+    except Exception:
+        return None
+
+
+def score_epg_title(title: str) -> int:
+    score = 0
+    title_lower = title.lower()
+    if "vs" in title_lower or " v " in title_lower or " at " in title_lower or " - " in title_lower:
+        score += 10
+    if "world cup" in title_lower or "worldcup" in title_lower or "piala dunia" in title_lower or "fifa" in title_lower:
+        score += 5
+    if len(title) > 30:
+        score += 2
+    if title_lower in ["tvri", "sctv", "indosiar", "rcti", "mnc tv", "trans 7", "trans tv", "global tv", "antv"]:
+        score -= 20
+    return score
+
+
+def get_epg_match_for_channel(attrs: dict) -> str:
+    tid = attrs.get("tvg-id")
+    matched_prog = None
+    
+    # 1. Direct tvg-id match
+    if tid:
+        for possible_id in [tid, tid + "@SD", tid + "@HD"]:
+            if possible_id in EPG_ACTIVE_PROGS:
+                matched_prog = EPG_ACTIVE_PROGS[possible_id]
+                break
+                
+    # 2. Name-based fuzzy match
+    if not matched_prog:
+        for name_val in [attrs.get("tvg-id"), attrs.get("tvg-name"), attrs.get("display_name")]:
+            if not name_val:
+                continue
+            norm_val = re.sub(r'[^a-z0-9]', '', name_val.lower())
+            
+            # Try stripping standard suffixes
+            for suffix in ["hd", "fhd", "sd", "indonesia"]:
+                if norm_val.endswith(suffix) and len(norm_val) > len(suffix):
+                    norm_val_strip = norm_val[:-len(suffix)]
+                    if norm_val_strip in EPG_NAME_TO_ID:
+                        cid = EPG_NAME_TO_ID[norm_val_strip]
+                        if cid in EPG_ACTIVE_PROGS:
+                            matched_prog = EPG_ACTIVE_PROGS[cid]
+                            break
+            if matched_prog:
+                break
+                
+            if norm_val in EPG_NAME_TO_ID:
+                cid = EPG_NAME_TO_ID[norm_val]
+                if cid in EPG_ACTIVE_PROGS:
+                    matched_prog = EPG_ACTIVE_PROGS[cid]
+                    break
+                    
+    if matched_prog:
+        # Clean it using clean_match_name
+        cleaned = clean_match_name(matched_prog)
+        if cleaned and cleaned != matched_prog and "vs" in cleaned.lower():
+            return cleaned
+            
+    return ""
 
 
 def parse_extinf_attributes(extinf_line: str) -> dict:
@@ -386,6 +517,30 @@ def build_extinf_line(attrs: dict) -> str:
         if attrs.get(key):
             parts.append(f'{key}="{attrs[key]}"')
     return " ".join(parts) + f",{attrs.get('display_name', 'Unknown')}"
+
+
+def extract_channel_suffix(title: str, source_name: str) -> str:
+    # 1. Jika ada "|" (pipe), ambil bagian kanannya
+    if "|" in title:
+        suffix = title.split("|", 1)[1].strip()
+        return re.sub(r'\[?(fhd|hd|sd)\]?', '', suffix, flags=re.IGNORECASE).strip()
+        
+    # 2. Jika ada kurung di akhir, ambil isi kurungnya (misal: (EMBEDHD) -> EMBED)
+    match_paren = re.search(r'\(([^)]+)\)\s*$', title)
+    if match_paren:
+        suffix = match_paren.group(1).strip()
+        suffix = re.sub(r'(fhd|hd|sd)', '', suffix, flags=re.IGNORECASE).strip()
+        if suffix:
+            return suffix
+            
+    # 3. Jika ada " - " di akhir
+    parts = title.split(" - ")
+    if len(parts) > 1 and not any(kw in parts[-1].lower() for kw in ["world cup", "piala dunia", "fifa"]):
+        suffix = parts[-1].strip()
+        return re.sub(r'\[?(fhd|hd|sd)\]?', '', suffix, flags=re.IGNORECASE).strip()
+        
+    # Default: gunakan nama source
+    return source_name.replace("_sports", "").replace("buddy_", "").replace("wc2026", "SM-TV").upper()
 
 
 def format_and_enrich_sports_entry(entry: dict, source_name: str) -> dict:
@@ -438,28 +593,32 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str) -> dict:
         logo = FIFA_LOGO
         
         # Format nama: [Kualitas] Team A vs Team B - Channel/Source
-        has_actual_match = bool(match_name) or any(sep in title_lower for sep in [" vs ", " v ", " at "])
+        cleaned_title_match = clean_match_name(title)
+        
+        # Coba EPG match untuk penamaan otomatis dinamis
+        epg_match = get_epg_match_for_channel(attrs)
+        
+        has_actual_match = bool(match_name) or bool(epg_match) or (cleaned_title_match != title)
         
         if has_actual_match:
-            actual_match = match_name if match_name else clean_match_name(title)
-            
             if match_name:
+                actual_match = match_name
+            elif epg_match:
+                actual_match = epg_match
+            else:
+                actual_match = cleaned_title_match
+            
+            if match_name or epg_match:
                 # Jika di-rename dinamis, suffix-nya adalah judul saluran asli (misal: "Toffee 1" atau "FOX ONE")
                 channel_suffix = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
+                # Bersihkan channel suffix agar tidak terlalu panjang di TV
+                for clean_kw in ["TVRI", "SCTV", "Indosiar", "Moji", "Vidio", "Trans7", "Trans TV", "RCTI", "MNC TV"]:
+                    if clean_kw.lower() in channel_suffix.lower():
+                        channel_suffix = clean_kw
+                        break
             else:
-                # Jika judul asli sudah mengandung laga, ekstrak bagian channel di kanan "|" atau "-"
-                channel_suffix = ""
-                if "|" in title:
-                    channel_suffix = title.split("|", 1)[1].strip()
-                elif " - " in title:
-                    parts = title.split(" - ")
-                    if len(parts) > 1 and not any(kw in parts[-1].lower() for kw in ["world cup", "piala dunia"]):
-                        channel_suffix = parts[-1].strip()
-                
-                if channel_suffix:
-                    channel_suffix = re.sub(r'\[?(fhd|hd|sd)\]?', '', channel_suffix, flags=re.IGNORECASE).strip()
-                else:
-                    channel_suffix = source_name.replace("_sports", "").replace("buddy_", "").replace("wc2026", "SM-TV").upper()
+                # Jika judul asli sudah mengandung laga, gunakan ekstraksi cerdas
+                channel_suffix = extract_channel_suffix(title, source_name)
             
             display_name = f"{res_label}{actual_match} - {channel_suffix}"
         else:
@@ -595,6 +754,69 @@ def check_and_enrich_entry(entry: dict, is_wc: bool) -> dict:
 
 def main():
     print("🚀 Memulai proses penggabungan & penyaringan saluran...")
+    
+    # Pre-pass EPG: Load EPG data to build the active programmes database
+    print("⏳ Menyiapkan database EPG dari guide.xml...")
+    local_xml = Path("epgs/guide.xml")
+    local_gz = Path("epgs/guide.xml.gz")
+    xml_data = None
+    
+    try:
+        if local_gz.exists():
+            print(f"  [EPG] Membaca EPG lokal {local_gz}...")
+            with gzip.open(local_gz, "rb") as f:
+                xml_data = f.read()
+        elif local_xml.exists():
+            print(f"  [EPG] Membaca EPG lokal {local_xml}...")
+            with open(local_xml, "rb") as f:
+                xml_data = f.read()
+        else:
+            # Fallback download remote EPG
+            print(f"  [EPG] Mengunduh EPG remote dari {EPG_URL}...")
+            r_epg = requests.get(EPG_URL, timeout=30, verify=False)
+            if r_epg.status_code == 200:
+                content = r_epg.content
+                if EPG_URL.endswith(".gz"):
+                    content = gzip.decompress(content)
+                xml_data = content
+    except Exception as e:
+        print(f"  [WARNING] Gagal memuat EPG: {e}")
+        
+    if xml_data:
+        try:
+            epg_root = ET.fromstring(xml_data)
+            now_utc = datetime.now(timezone.utc)
+            
+            for ch in epg_root.findall("channel"):
+                cid = ch.get("id")
+                dn = ch.find("display-name")
+                EPG_CHANNEL_NAMES[cid] = dn.text if dn is not None else cid
+                
+            for prog in epg_root.findall("programme"):
+                cid = prog.get("channel")
+                start_val = prog.get("start")
+                stop_val = prog.get("stop")
+                if cid and start_val and stop_val:
+                    start = parse_xmltv_time(start_val)
+                    stop = parse_xmltv_time(stop_val)
+                    if start and stop and start <= now_utc < stop:
+                        title = prog.find("title").text if prog.find("title") is not None else ""
+                        if cid in EPG_ACTIVE_PROGS:
+                            if score_epg_title(title) > score_epg_title(EPG_ACTIVE_PROGS[cid]):
+                                EPG_ACTIVE_PROGS[cid] = title
+                        else:
+                            EPG_ACTIVE_PROGS[cid] = title
+                            
+            # Bangun lookup name EPG
+            for cid, epg_name in EPG_CHANNEL_NAMES.items():
+                norm_name = re.sub(r'[^a-z0-9]', '', epg_name.lower())
+                EPG_NAME_TO_ID[norm_name] = cid
+                norm_id = re.sub(r'[^a-z0-9]', '', cid.lower())
+                EPG_NAME_TO_ID[norm_id] = cid
+                
+            print(f"  [EPG] Berhasil memuat {len(EPG_CHANNEL_NAMES)} saluran dan {len(EPG_ACTIVE_PROGS)} program aktif.")
+        except Exception as e:
+            print(f"  [WARNING] Gagal mengurai EPG XML: {e}")
     
     # Pre-pass: Unduh events.m3u8 untuk membangun database laga aktif secara real-time
     print("⏳ Menyiapkan database laga aktif dari events.m3u8...")
@@ -759,7 +981,6 @@ def main():
         f.write(playlist_content)
 
     # Simpan versi terkompresi .gz
-    import gzip
     output_path_gz = OUTPUT_DIR / "live_events.m3u.gz"
     with gzip.open(output_path_gz, 'wb') as f_gz:
         f_gz.write(playlist_content.encode('utf-8'))
