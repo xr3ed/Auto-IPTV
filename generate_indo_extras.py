@@ -177,8 +177,19 @@ def standardize_extinf(extinf_line: str, display_name: str, mapped_group: str) -
     return extinf_line
 
 
+def sanitize_url_protocol(url: str) -> str:
+    """Mengubah https ke http untuk port non-standar untuk menghindari jabat tangan SSL gagal."""
+    match = re.search(r'https://([^:/]+):(\d+)', url)
+    if match:
+        port = int(match.group(2))
+        if port in (8080, 8000, 8070, 25461, 9080, 9090, 80, 3000, 19360):
+            url = url.replace("https://", "http://", 1)
+    return url
+
+
 def ping_stream(url: str, headers: dict = None) -> bool:
     headers = headers or {'User-Agent': 'Mozilla/5.0'}
+    url = sanitize_url_protocol(url)
     
     # 1. Coba HEAD request
     try:
@@ -187,6 +198,9 @@ def ping_stream(url: str, headers: dict = None) -> bool:
             content_type = r.headers.get("Content-Type", "").split(";")[0].strip().lower()
             if content_type in VALID_CONTENT_TYPES or not content_type:
                 return True
+    except requests.exceptions.SSLError:
+        if url.startswith("https://"):
+            return ping_stream(url.replace("https://", "http://", 1), headers)
     except Exception:
         pass
         
@@ -197,6 +211,9 @@ def ping_stream(url: str, headers: dict = None) -> bool:
             content_type = r.headers.get("Content-Type", "").split(";")[0].strip().lower()
             if content_type in VALID_CONTENT_TYPES or not content_type:
                 return True
+    except requests.exceptions.SSLError:
+        if url.startswith("https://"):
+            return ping_stream(url.replace("https://", "http://", 1), headers)
     except Exception:
         pass
         
@@ -217,7 +234,7 @@ def parse_m3u_to_streams(content: str, source_name: str) -> list[dict]:
                 opts.append(lines[i])
                 i += 1
             if i < len(lines) and lines[i].strip() and not lines[i].startswith('#'):
-                url = lines[i].strip()
+                url = sanitize_url_protocol(lines[i].strip())
                 
                 # Ekstrak display name
                 display_name = "Unknown"

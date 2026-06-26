@@ -87,8 +87,19 @@ VALID_CONTENT_TYPES = {
 }
 
 
+def sanitize_url_protocol(url: str) -> str:
+    """Mengubah https ke http untuk port non-standar untuk menghindari jabat tangan SSL gagal."""
+    match = re.search(r'https://([^:/]+):(\d+)', url)
+    if match:
+        port = int(match.group(2))
+        if port in (8080, 8000, 8070, 25461, 9080, 9090, 80, 3000, 19360):
+            url = url.replace("https://", "http://", 1)
+    return url
+
+
 def is_stream_playable(url: str, headers: dict = None) -> bool:
     headers = headers or {}
+    url = sanitize_url_protocol(url)
 
     # 1. Coba HEAD request dulu (efisien) - bypass SSL verify
     try:
@@ -97,8 +108,11 @@ def is_stream_playable(url: str, headers: dict = None) -> bool:
         )
         if response.status_code < 400:
             content_type = response.headers.get("Content-Type", "").split(";")[0].strip().lower()
-            if content_type in VALID_CONTENT_TYPES:
+            if content_type in VALID_CONTENT_TYPES or not content_type:
                 return True
+    except requests.exceptions.SSLError:
+        if url.startswith("https://"):
+            return is_stream_playable(url.replace("https://", "http://", 1), headers)
     except requests.RequestException:
         pass
 
@@ -146,6 +160,9 @@ def is_stream_playable(url: str, headers: dict = None) -> bool:
 
             return False
 
+    except requests.exceptions.SSLError:
+        if url.startswith("https://"):
+            return is_stream_playable(url.replace("https://", "http://", 1), headers)
     except requests.RequestException:
         return False
 
@@ -153,6 +170,7 @@ def is_stream_playable(url: str, headers: dict = None) -> bool:
 def detect_stream_resolution(url: str, headers: dict = None) -> str:
     """Mengunduh chunk awal manifest .m3u8 untuk menganalisis resolusi stream secara dinamis."""
     headers = headers or {}
+    url = sanitize_url_protocol(url)
     try:
         with closing(requests.get(url, headers=headers, timeout=5, stream=True, verify=False)) as r:
             if r.status_code >= 400:
@@ -170,6 +188,9 @@ def detect_stream_resolution(url: str, headers: dict = None) -> str:
                 elif width >= 1280:
                     return "HD"
                 return "SD"
+    except requests.exceptions.SSLError:
+        if url.startswith("https://"):
+            return detect_stream_resolution(url.replace("https://", "http://", 1), headers)
     except Exception:
         pass
     return ""
@@ -193,7 +214,7 @@ def parse_m3u(lines: list[str]) -> list[dict]:
         elif stripped.startswith("#"):
             buffer_other.append(line)
         elif stripped and not stripped.startswith("#"):
-            url = stripped
+            url = sanitize_url_protocol(stripped)
 
             headers = {}
             for opt in buffer_vlcopt:
@@ -248,25 +269,174 @@ def fetch_playlist(url: str) -> list[str] | None:
         return None
 
 
-def enrich_extinf(extinf_line: str, resolution: str, is_wc: bool) -> str:
-    """Mengubah group-title dan menambahkan resolusi ke dalam baris #EXTINF."""
-    group = "World Cup 2026" if is_wc else "Live Events"
+SPORT_POSTER_MAP = {
+    "baseball": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png",
+    "mlb": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png",
+    "basketball": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png",
+    "nba": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png",
+    "wnba": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/wnba.png",
+    "motogp": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/motogp.png",
+    "moto gp": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/motogp.png",
+    "f1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/f1.png",
+    "formula 1": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/f1.png",
+    "volleyball": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Volleyball_pictogram.svg",
+    "vnl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Volleyball_pictogram.svg",
+    "soccer": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png",
+    "football": "https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png",
+}
+
+
+def clean_channel_name(display_name: str) -> str:
+    name = display_name.strip().lower()
+    # Hapus label resolusi
+    name = re.sub(r'\[?(fhd|hd|sd)\]?', '', name)
+    # Hapus spasi dan karakter non-alphanumeric dasar
+    name = re.sub(r'[^a-z0-9]', '', name)
+    return name
+
+
+def clean_match_name(title: str) -> str:
+    # 1. Hapus WIB, tanggal, dll.
+    title_clean = re.sub(r'\d+:\d+\s*(WIB|WITA|WIT)?', '', title, flags=re.IGNORECASE)
+    title_clean = re.sub(r'\d+\s*[A-Za-z]+\s*\d+:\d+\s*(WIB|WITA|WIT)?', '', title_clean, flags=re.IGNORECASE)
+    title_clean = re.sub(r'\d+\s*[A-Za-z]+', '', title_clean, flags=re.IGNORECASE)
     
-    # Ganti group-title
-    if 'group-title="' in extinf_line:
-        extinf_line = re.sub(r'group-title="[^"]+"', f'group-title="{group}"', extinf_line)
-    else:
-        extinf_line = extinf_line.replace('#EXTINF:-1 ', f'#EXTINF:-1 group-title="{group}" ')
-        
-    # Sisipkan label resolusi
-    if resolution in ("FHD", "HD"):
-        label = f"[{resolution}] "
-        extinf_line = re.sub(r'tvg-name="([^"]+)"', r'tvg-name="' + label + r'\1"', extinf_line)
-        parts = extinf_line.rsplit(',', 1)
-        if len(parts) == 2:
-            extinf_line = f"{parts[0]},{label}{parts[1]}"
+    # 2. Hapus VNL, Week, dll.
+    title_clean = re.sub(r'\|\s*Week\s*\d+\s*\|.*', '', title_clean, flags=re.IGNORECASE)
+    
+    # 3. Cari match "vs" atau "v" atau "at"
+    match = re.search(r'([A-Za-z\s\-\.]+)\s+(vs|v|at)\s+([A-Za-z\s\-\.]+)', title_clean, re.IGNORECASE)
+    if match:
+        team1 = match.group(1).strip()
+        team2 = match.group(3).strip()
+        # Bersihkan kata-kata sampah
+        team1 = re.sub(r'^[\[\s]*[A-Za-z\s]+\s*\]', '', team1).strip() # [WNBA], [Baseball]
+        team2 = re.sub(r'\(.*?\)', '', team2).strip() # (CDNTV)
+        team2 = re.sub(r'\|.*', '', team2).strip()
+        team1 = re.sub(r'\s+', ' ', team1)
+        team2 = re.sub(r'\s+', ' ', team2)
+        return f"{team1} vs {team2}"
+    
+    return title.strip()
+
+
+def parse_extinf_attributes(extinf_line: str) -> dict:
+    attrs = {}
+    for key in ["tvg-chno", "tvg-id", "tvg-name", "tvg-logo", "group-title"]:
+        match = re.search(rf'{key}="([^"]*)"', extinf_line)
+        if match:
+            attrs[key] = match.group(1)
+        else:
+            attrs[key] = ""
+    display_name = ""
+    parts = extinf_line.rsplit(',', 1)
+    if len(parts) == 2:
+        display_name = parts[1].strip()
+    attrs["display_name"] = display_name
+    return attrs
+
+
+def build_extinf_line(attrs: dict) -> str:
+    parts = ["#EXTINF:-1"]
+    for key in ["tvg-chno", "tvg-id", "tvg-name", "tvg-logo", "group-title"]:
+        if attrs.get(key):
+            parts.append(f'{key}="{attrs[key]}"')
+    return " ".join(parts) + f",{attrs.get('display_name', 'Unknown')}"
+
+
+def format_and_enrich_sports_entry(entry: dict, source_name: str) -> dict:
+    extinf_line = entry["extinf"][0]
+    attrs = parse_extinf_attributes(extinf_line)
+    title = attrs["display_name"]
+    title_lower = title.lower()
+    
+    resolution = entry.get("resolution", "")
+    res_label = f"[{resolution}] " if resolution else ""
+    
+    # Klasifikasi World Cup vs Live Events
+    is_wc = entry.get("is_wc", False)
+    is_other_sport = any(kw in title_lower for kw in ["vnl", "volleyball", "baseball", "mlb", "motogp", "wnba", "basketball", "f1", "formula 1", "serie b"])
+    
+    if not is_other_sport:
+        if any(kw in title_lower for kw in ["world cup", "worldcup", "piala dunia", "fifa"]) or "wc" in source_name.lower():
+            is_wc = True
+        elif "vs" in title_lower or " v " in title_lower:
+            is_wc = True
             
-    return extinf_line
+    FIFA_LOGO = "https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png"
+    
+    if is_wc:
+        group = "World Cup 2026"
+        logo = FIFA_LOGO
+        
+        # Format nama: [Kualitas] Team A vs Team B - Channel/Source
+        if "vs" in title_lower or " v " in title_lower:
+            match_name = clean_match_name(title)
+            clean_source = source_name.replace("_sports", "").replace("buddy_", "").replace("wc2026", "SM-TV").upper()
+            display_name = f"{res_label}{match_name} - {clean_source}"
+        else:
+            clean_title = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
+            display_name = f"{res_label}World Cup 2026 - {clean_title}"
+    else:
+        group = "Live Events"
+        logo = None
+        for sport_key, sport_img in SPORT_POSTER_MAP.items():
+            if sport_key in title_lower:
+                logo = sport_img
+                break
+        if not logo:
+            orig_logo = attrs.get("tvg-logo", "")
+            if orig_logo and "gyazo" not in orig_logo and "world_cup" not in orig_logo:
+                logo = orig_logo
+            else:
+                logo = "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png"
+                
+        clean_title = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
+        display_name = f"{res_label}{clean_title}"
+        
+    attrs["group-title"] = group
+    attrs["tvg-logo"] = logo
+    attrs["display_name"] = display_name
+    attrs["tvg-name"] = display_name
+    
+    entry["extinf"] = [build_extinf_line(attrs)]
+    entry["is_wc"] = is_wc
+    return entry
+
+
+def dedup_entries_by_name(entries: list[dict]) -> tuple[list[dict], int]:
+    grouped = {}
+    for entry in entries:
+        extinf_line = entry["extinf"][0]
+        attrs = parse_extinf_attributes(extinf_line)
+        name = clean_channel_name(attrs["display_name"])
+        if not name:
+            name = "unknown"
+        grouped.setdefault(name, []).append(entry)
+
+    unique_entries = []
+    removed = 0
+
+    for name, group in grouped.items():
+        if len(group) == 1:
+            unique_entries.append(group[0])
+        else:
+            # Urutkan duplikat: prioritas non-DRM, lalu resolusi tertinggi
+            def sort_key(x):
+                is_drm = 1 if ".mpd" in x["url"].lower() or any("clearkey" in line.lower() or "widevine" in line.lower() for line in x["other"]) else 0
+                res = x.get("resolution", "")
+                res_val = 0
+                if res == "FHD":
+                    res_val = 2
+                elif res == "HD":
+                    res_val = 1
+                return (is_drm, -res_val)
+
+            sorted_group = sorted(group, key=sort_key)
+            unique_entries.append(sorted_group[0])
+            removed += len(group) - 1
+
+    return unique_entries, removed
 
 
 def calculate_wc_score(entry: dict) -> int:
@@ -302,7 +472,6 @@ def check_and_enrich_entry(entry: dict, is_wc: bool) -> dict:
     entry["is_wc"] = is_wc
     
     if playable:
-        # Deteksi resolusi jika playable
         res = detect_stream_resolution(entry["url"], entry["headers"])
         entry["resolution"] = res
     else:
@@ -385,14 +554,16 @@ def main():
                     print(f"Error checking entry: {e}")
 
         for res_entry in playable_entries:
-            if res_entry.get("is_wc_override", is_wc):
-                all_wc_entries.append(res_entry)
+            enriched = format_and_enrich_sports_entry(res_entry, name)
+            if enriched["is_wc"]:
+                all_wc_entries.append(enriched)
             else:
-                all_live_entries.append(res_entry)
+                all_live_entries.append(enriched)
 
-    # Dedup antar source jika ada url ganda
-    unique_wc, _ = dedup_entries(all_wc_entries)
-    unique_live, _ = dedup_entries(all_live_entries)
+    # Dedup antar source jika ada nama/url ganda secara pintar
+    unique_wc, wc_dup_removed = dedup_entries_by_name(all_wc_entries)
+    unique_live, live_dup_removed = dedup_entries_by_name(all_live_entries)
+    print(f"\nDeduplikasi nama selesai: {wc_dup_removed} duplikat World Cup dibersihkan, {live_dup_removed} duplikat Live Events dibersihkan.")
 
     # Lakukan pengurutan prioritas untuk saluran Piala Dunia
     print("\nSorting World Cup channels by language priority (Indo/English) and resolution...")
@@ -403,16 +574,14 @@ def main():
 
     # 1. World Cup di posisi paling atas
     for entry in unique_wc:
-        enriched_extinf = [enrich_extinf(line, entry["resolution"], is_wc=True) for line in entry["extinf"]]
-        output_lines.extend(enriched_extinf)
+        output_lines.extend(entry["extinf"])
         output_lines.extend(entry["other"])
         output_lines.extend(entry["vlcopt"])
         output_lines.append(entry["url"])
 
     # 2. Live Events di bawahnya
     for entry in unique_live:
-        enriched_extinf = [enrich_extinf(line, entry["resolution"], is_wc=False) for line in entry["extinf"]]
-        output_lines.extend(enriched_extinf)
+        output_lines.extend(entry["extinf"])
         output_lines.extend(entry["other"])
         output_lines.extend(entry["vlcopt"])
         output_lines.append(entry["url"])
