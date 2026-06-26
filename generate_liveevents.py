@@ -543,7 +543,7 @@ def extract_channel_suffix(title: str, source_name: str) -> str:
     return source_name.replace("_sports", "").replace("buddy_", "").replace("wc2026", "SM-TV").upper()
 
 
-def format_and_enrich_sports_entry(entry: dict, source_name: str) -> dict:
+def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matches: list[str] = None) -> dict:
     extinf_line = entry["extinf"][0]
     attrs = parse_extinf_attributes(extinf_line)
     title = attrs["display_name"]
@@ -622,8 +622,13 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str) -> dict:
             
             display_name = f"{res_label}{actual_match} - {channel_suffix}"
         else:
-            clean_title = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
-            display_name = f"{res_label}World Cup 2026 - {clean_title}"
+            if active_wc_matches:
+                actual_match = active_wc_matches[0]
+                channel_suffix = extract_channel_suffix(title, source_name)
+                display_name = f"{res_label}{actual_match} - {channel_suffix}"
+            else:
+                clean_title = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
+                display_name = f"{res_label}World Cup 2026 - {clean_title}"
     else:
         group = "Live Events"
         logo = None
@@ -717,8 +722,95 @@ def calculate_wc_score(entry: dict) -> int:
     return score
 
 
+import urllib.parse as urlparse
+
+def is_token_expired(url: str) -> bool:
+    """Mendeteksi apakah URL memiliki token expires yang berumur sangat pendek (< 6 jam)."""
+    try:
+        parsed = urlparse.urlparse(url)
+        query = urlparse.parse_qs(parsed.query)
+        for expires_key in ["expires", "exp", "expiration"]:
+            if expires_key in query:
+                val = query[expires_key][0]
+                if val.isdigit():
+                    ts = int(val)
+                    now_ts = int(datetime.now(timezone.utc).timestamp())
+                    if ts - now_ts < 21600:  # 6 jam
+                        return True
+    except Exception:
+        pass
+    return False
+
+
+def is_hevc_stream(preview: str) -> bool:
+    """Mendeteksi apakah stream menggunakan codec HEVC (H.265) yang tidak didukung universal."""
+    preview_lower = preview.lower()
+    if 'codecs="' in preview_lower:
+        codecs_matches = re.findall(r'codecs="([^"]+)"', preview_lower)
+        for codecs in codecs_matches:
+            if any(c.strip().startswith(("hvc", "hev")) for c in codecs.split(",")):
+                return True
+    return False
+
+
+def is_drm_protected_content(preview: str, url: str) -> bool:
+    """Mendeteksi apakah konten manifest terproteksi DRM."""
+    preview_lower = preview.lower()
+    url_lower = url.lower()
+    
+    # Check DASH ContentProtection
+    if "<contentprotection" in preview_lower or "cenc:default_kid" in preview_lower:
+        if not any(k in url_lower for k in ["key=", "token="]):
+            return True
+            
+    # Check HLS DRM (SAMPLE-AES or urn:uuid)
+    if "method=sample-aes" in preview_lower or "keyformat=\"urn:uuid" in preview_lower:
+        return True
+        
+    return False
+
+
+def get_active_wc_matches(epg_active_progs: dict, stream_match_map: dict) -> list[str]:
+    """Mengumpulkan daftar laga Piala Dunia aktif berdasarkan EPG dan events.m3u8."""
+    matches = set()
+    main_channels = ["TVRI.id", "SCTV.id", "Indosiar.id", "Moji.id", "RCTI.id"]
+    for cid, title in epg_active_progs.items():
+        is_main = any(mc.lower() in cid.lower() for mc in main_channels)
+        if is_main and title:
+            cleaned = clean_match_name(title)
+            if cleaned and cleaned != title and "vs" in cleaned.lower():
+                matches.add(cleaned)
+    for match_name in stream_match_map.values():
+        if match_name and "vs" in match_name.lower():
+            matches.add(match_name)
+    return list(matches)
+
+
 def check_and_enrich_entry(entry: dict, is_wc: bool) -> dict:
+    # 1. Cek token kedaluwarsa terlebih dahulu
+    if is_token_expired(entry["url"]):
+        entry["playable"] = False
+        entry["is_wc"] = is_wc
+        entry["resolution"] = ""
+        return entry
+
     playable = is_stream_playable(entry["url"], entry["headers"])
+    if playable:
+        # Lakukan body-sniffing tunggal untuk DRM dan HEVC
+        url = sanitize_url_protocol(entry["url"])
+        try:
+            with closing(requests.get(url, headers=entry["headers"], timeout=5, stream=True, verify=False)) as r:
+                if r.status_code == 200:
+                    chunk = next(r.iter_content(chunk_size=10240), b"")
+                    preview = chunk.decode("utf-8", errors="ignore")
+                    
+                    if is_drm_protected_content(preview, url):
+                        playable = False
+                    elif is_hevc_stream(preview):
+                        playable = False
+        except Exception:
+            playable = False
+            
     entry["playable"] = playable
     entry["is_wc"] = is_wc
     
@@ -869,6 +961,9 @@ def main():
     else:
         print("⚠️ Gagal mengunduh events.m3u8 untuk database laga.")
 
+    active_wc_matches = get_active_wc_matches(EPG_ACTIVE_PROGS, STREAM_MATCH_MAP)
+    print(f"📊 Laga World Cup aktif global terdeteksi saat generate: {active_wc_matches}")
+
     all_wc_entries = []
     all_live_entries = []
 
@@ -941,7 +1036,7 @@ def main():
                     print(f"Error checking entry: {e}")
 
         for res_entry in playable_entries:
-            enriched = format_and_enrich_sports_entry(res_entry, name)
+            enriched = format_and_enrich_sports_entry(res_entry, name, active_wc_matches)
             if enriched["is_wc"]:
                 all_wc_entries.append(enriched)
             else:
