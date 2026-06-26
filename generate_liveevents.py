@@ -397,7 +397,7 @@ def clean_match_name(title: str) -> str:
     title_clean = re.sub(r'\|\s*Week\s*\d+\s*\|.*', '', title_clean, flags=re.IGNORECASE)
     
     # 3. Cari match "vs" atau "v" atau "at" (mendukung huruf Unicode seperti ü, ç, dll.)
-    match = re.search(r'([\w\s\-\.]+)\s+(vs|v|at)\s+([\w\s\-\.]+)', title_clean, re.IGNORECASE | re.UNICODE)
+    match = re.search(r"([\w\s\-\.']+)\s+(vs|v|at)\s+([\w\s\-\.']+)", title_clean, re.IGNORECASE | re.UNICODE)
     if match:
         team1 = match.group(1).strip()
         team2 = match.group(3).strip()
@@ -882,9 +882,19 @@ def get_active_wc_matches(epg_active_progs: dict, stream_match_map: dict) -> lis
     for cid, title in epg_active_progs.items():
         is_main = any(mc.lower() in cid.lower() for mc in main_channels)
         if is_main and title:
-            cleaned = clean_match_name(title)
-            if cleaned and cleaned != title and "vs" in cleaned.lower():
-                matches.add(cleaned)
+            title_lower = title.lower()
+            # Hanya saring jika berkaitan dengan Piala Dunia/FIFA/Sepak Bola
+            is_wc_related = any(kw in title_lower for kw in ["world cup", "worldcup", "piala dunia", "fifa", "kualifikasi pd"])
+            # Dan abaikan olahraga non-sepakbola yang sering disiarkan Moji/TVRI
+            is_other = any(kw in title_lower for kw in [
+                "voli", "volleyball", "avc", "vnl", "proliga", "basket", "basketball", 
+                "badminton", "bulutangkis", "tennis", "tenis", "f1", "motogp"
+            ])
+            
+            if is_wc_related and not is_other:
+                cleaned = clean_match_name(title)
+                if cleaned and cleaned != title and "vs" in cleaned.lower():
+                    matches.add(cleaned)
                 
     # CATATAN: JANGAN gunakan stream_match_map secara mentah untuk active matches global
     # karena stream_match_map memuat seluruh jadwal harian events.m3u8 (bukan yang sedang live saja).
