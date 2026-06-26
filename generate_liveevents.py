@@ -42,6 +42,34 @@ SOURCES = [
         "url": "https://github.com/doms9/iptv/raw/refs/heads/default/M3U8/events.m3u8",
         "is_wc": False
     },
+    {
+        "name": "dhanytv_sports",
+        "url": "https://raw.githubusercontent.com/dhasap/dhanytv/main/dhanytv.m3u",
+        "filter_groups": {
+            "WorldCup 2026": "wc",
+            "Sports": "live",
+            "bEIN SPORTS": "live",
+            "⚽ Bola Indonesia": "live"
+        }
+    },
+    {
+        "name": "basictv_sports",
+        "url": "https://gist.githubusercontent.com/R03nDL03n1/6361525c226ccc713f48e7fea5399df4/raw/d4443e16c36c8b73cfb028e5b771b870d5695f55/BasicTVStandar",
+        "filter_groups": {
+            "Live Event": "live",
+            "Sports TV": "live",
+            "Bein Sports": "live"
+        }
+    },
+    {
+        "name": "windozalmi_sports",
+        "url": "https://raw.githubusercontent.com/windozalmi/Playlist-IPTV-Indonesia-online-Aktif-2025/refs/heads/m3u/IPTV%20Indonesia%20by%20WINDO%20ZALMI",
+        "filter_groups": {
+            "SPORTS": "live",
+            "WORLD SPORTS": "live",
+            "PIALA DUNIA": "wc"
+        }
+    }
 ]
 
 VALID_CONTENT_TYPES = {
@@ -291,10 +319,10 @@ def main():
     for source in SOURCES:
         name = source["name"]
         url = source["url"]
-        is_wc = source["is_wc"]
+        is_wc = source.get("is_wc", False)
 
         print(f"\n{'=' * 60}")
-        print(f"Source: {name} (Kategori: {'World Cup' if is_wc else 'Live Events'})")
+        print(f"Source: {name} (Kategori: {'World Cup/Filtered' if 'filter_groups' in source else ('World Cup' if is_wc else 'Live Events')})")
         print(f"URL   : {url}")
         print(f"{'=' * 60}")
 
@@ -305,6 +333,24 @@ def main():
 
         entries = parse_m3u(lines)
         print(f"Total entri awal: {len(entries)}")
+
+        # Jika ada filter_groups, saring hanya kategori olahraga/world cup yang diinginkan
+        if "filter_groups" in source:
+            filtered_entries = []
+            filter_map = source["filter_groups"]
+            for entry in entries:
+                group = "No Group"
+                for line in entry["extinf"]:
+                    group_match = re.search(r'group-title="([^"]+)"', line)
+                    if group_match:
+                        group = group_match.group(1)
+                        break
+                if group in filter_map:
+                    entry_copy = dict(entry)
+                    entry_copy["is_wc_override"] = (filter_map[group] == "wc")
+                    filtered_entries.append(entry_copy)
+            entries = filtered_entries
+            print(f"Entri setelah difilter kategori olahraga: {len(entries)}")
 
         if not entries:
             continue
@@ -319,7 +365,7 @@ def main():
         playable_entries = []
         with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
             future_to_entry = {
-                executor.submit(check_and_enrich_entry, entry, is_wc): entry
+                executor.submit(check_and_enrich_entry, entry, entry.get("is_wc_override", is_wc)): entry
                 for entry in entries
             }
 
@@ -338,10 +384,11 @@ def main():
                 except Exception as e:
                     print(f"Error checking entry: {e}")
 
-        if is_wc:
-            all_wc_entries.extend(playable_entries)
-        else:
-            all_live_entries.extend(playable_entries)
+        for res_entry in playable_entries:
+            if res_entry.get("is_wc_override", is_wc):
+                all_wc_entries.append(res_entry)
+            else:
+                all_live_entries.append(res_entry)
 
     # Dedup antar source jika ada url ganda
     unique_wc, _ = dedup_entries(all_wc_entries)

@@ -24,6 +24,7 @@ INDIHOME_FILE = "IndihomeTV.m3u"
 
 # Daftar playlist target dan kelompok platformnya (tanpa live_events.m3u)
 PLAYLISTS_TO_MERGE = [
+    {"file": "indo_extras.m3u", "section": "INDO_EXTRAS"},
     {"file": "rctiplus.m3u", "section": "RCTI+"},
     {"file": "tcl.m3u", "section": "TCL"},
     {"file": "roku.m3u", "section": "ROKU"},

@@ -45,6 +45,9 @@ jobs:
       - name: Generate FAST Service Playlists
         run: python generate_playlists.py
 
+      - name: Generate Indonesian Extra Playlists
+        run: python generate_indo_extras.py
+
       - name: Merge to IndihomeTV.m3u
         run: python merge_playlists.py
 
