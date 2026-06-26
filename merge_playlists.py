@@ -89,10 +89,64 @@ def extract_streams_from_content(content: str, source_name: str) -> list[dict]:
     return streams
 
 
-def ping_stream(url: str, headers: dict = None) -> tuple[str, bool, float]:
-    """Melakukan pengujian HTTP HEAD untuk mengecek status dan response time stream."""
+def sanitize_url_protocol(url: str) -> str:
+    """Mengubah https ke http untuk port non-standar untuk menghindari jabat tangan SSL gagal."""
+    match = re.search(r'https://([^:/]+):(\d+)', url)
+    if match:
+        port = int(match.group(2))
+        if port in (8080, 8000, 8070, 25461, 9080, 9090, 80, 3000, 19360):
+            url = url.replace("https://", "http://", 1)
+    return url
+
+
+def is_drm_protected_content(preview: str, url: str) -> bool:
+    """Mendeteksi apakah konten manifest terproteksi DRM."""
+    preview_lower = preview.lower()
+    url_lower = url.lower()
+    
+    # Check DASH ContentProtection
+    if "<contentprotection" in preview_lower or "cenc:default_kid" in preview_lower:
+        if not any(k in url_lower for k in ["key=", "token="]):
+            return True
+            
+    # Check HLS DRM (SAMPLE-AES or urn:uuid)
+    if "method=sample-aes" in preview_lower or "keyformat=\"urn:uuid" in preview_lower:
+        return True
+        
+    return False
+
+
+def ping_stream(url: str, headers: dict = None, opts: list = None) -> tuple[str, bool, float]:
+    """Melakukan pengujian HTTP HEAD/GET untuk mengecek status, DRM, dan response time stream."""
+    from contextlib import closing
     headers = headers or {'User-Agent': 'Mozilla/5.0'}
+    url = sanitize_url_protocol(url)
+    url_lower = url.lower()
+    opts = opts or []
+    
     start_time = datetime.now()
+    is_manifest = any(ext in url_lower for ext in [".mpd", ".m3u8", "cenc", "manifest"])
+    
+    if is_manifest:
+        try:
+            with closing(requests.get(url, headers=headers, timeout=5, stream=True, verify=False, allow_redirects=True)) as r:
+                if r.status_code == 200:
+                    chunk = next(r.iter_content(chunk_size=10240), b"")
+                    preview = chunk.decode("utf-8", errors="ignore")
+                    
+                    if is_drm_protected_content(preview, url):
+                        # Cek apakah ada opsi lisensi DRM di opts
+                        has_license = any("license_key" in opt.lower() or "license_type" in opt.lower() for opt in opts)
+                        if not has_license:
+                            return url, False, 999.0
+                            
+                    latency = (datetime.now() - start_time).total_seconds()
+                    return url, True, latency
+        except Exception:
+            pass
+        return url, False, 999.0
+
+    # 1. Coba HEAD request (untuk non-manifest)
     try:
         r = requests.head(url, headers=headers, timeout=5, verify=False, allow_redirects=True)
         if r.status_code < 400:
@@ -101,13 +155,12 @@ def ping_stream(url: str, headers: dict = None) -> tuple[str, bool, float]:
     except Exception:
         pass
     
-    # Fallback ke GET minimal jika HEAD diblokir
+    # 2. Fallback ke GET minimal
     try:
-        start_time = datetime.now()
-        r = requests.get(url, headers=headers, timeout=5, verify=False, stream=True, allow_redirects=True)
-        if r.status_code < 400:
-            latency = (datetime.now() - start_time).total_seconds()
-            return url, True, latency
+        with closing(requests.get(url, headers=headers, timeout=5, verify=False, stream=True, allow_redirects=True)) as r:
+            if r.status_code < 400:
+                latency = (datetime.now() - start_time).total_seconds()
+                return url, True, latency
     except Exception:
         pass
         
@@ -115,68 +168,65 @@ def ping_stream(url: str, headers: dict = None) -> tuple[str, bool, float]:
 
 
 def deduplicate_channels_smart(channels: list[dict]) -> list[dict]:
-    """Mendeduplikasi saluran dengan nama yang sama berdasarkan ping respons tercepat."""
-    print("🧠 Memulai proses Deduplikasi Pintar...")
+    """Menguji seluruh saluran secara paralel, menyaring yang mati/DRM, dan memilih alternatif tercepat untuk duplikat."""
+    print("🧠 Memulai pembersihan DRM dan Deduplikasi Pintar...")
     
-    # Kelompokkan saluran berdasarkan nama bersih (clean_name)
-    grouped = {}
+    if not channels:
+        return []
+        
+    # Kumpulkan semua URL unik beserta opsi mereka untuk diuji secara paralel
+    url_to_opts = {}
     for ch in channels:
-        name = ch["clean_name"]
-        if not name:
-            name = "unknown"
-        grouped.setdefault(name, []).append(ch)
-
-    unique_channels = []
-    dups_groups = []
-
-    for name, group in grouped.items():
-        if len(group) == 1:
-            unique_channels.append(group[0])
-        else:
-            dups_groups.append(group)
-
-    if not dups_groups:
-        print("  -> Tidak ditemukan saluran dobel.")
-        return unique_channels
-
-    print(f"  -> Ditemukan {len(dups_groups)} grup saluran dobel. Menguji respons server secara paralel...")
-
-    # Kumpulkan semua URL dari grup duplikat untuk diuji paralel
-    url_to_ch = {}
-    for group in dups_groups:
-        for ch in group:
-            url_to_ch[ch["url"]] = ch
-
+        url_to_opts[ch["url"]] = ch["opts"]
+        
+    print(f"  -> Menguji {len(url_to_opts)} URL unik secara paralel...")
+    
     # Jalankan pengujian ping secara paralel
     url_results = {}
-    with ThreadPoolExecutor(max_workers=16) as executor:
-        futures = {executor.submit(ping_stream, url): url for url in url_to_ch.keys()}
+    with ThreadPoolExecutor(max_workers=32) as executor:
+        futures = {
+            executor.submit(ping_stream, url, opts=opts): url 
+            for url, opts in url_to_opts.items()
+        }
         for future in as_completed(futures):
             url = futures[future]
             try:
                 res_url, playable, latency = future.result()
                 url_results[res_url] = {"playable": playable, "latency": latency}
-            except Exception:
+            except Exception as e:
+                print(f"Error testing URL {url}: {e}")
                 url_results[url] = {"playable": False, "latency": 999.0}
 
-    # Pilih satu saluran terbaik dari setiap grup duplikat
-    for group in dups_groups:
-        # Urutkan: playable=True dahulu, lalu latency terkecil
-        sorted_group = sorted(
-            group,
-            key=lambda x: (
-                0 if url_results.get(x["url"], {}).get("playable", False) else 1,
-                url_results.get(x["url"], {}).get("latency", 999.0)
-            )
-        )
-        best_channel = sorted_group[0]
-        status_str = "OK" if url_results.get(best_channel["url"], {}).get("playable", False) else "DEAD"
-        latency_str = f"{url_results.get(best_channel['url'], {}).get('latency', 0.0):.2f}s" if status_str == "OK" else "N/A"
-        
-        print(f"  [PILIH] {best_channel['display_name']} ({best_channel['source']}) - Status: {status_str} | Latency: {latency_str}")
-        unique_channels.append(best_channel)
+    # Saring hanya saluran yang playable
+    playable_channels = []
+    for ch in channels:
+        res = url_results.get(ch["url"], {"playable": False, "latency": 999.0})
+        if res["playable"]:
+            ch["latency"] = res["latency"]
+            playable_channels.append(ch)
+            
+    print(f"  -> Penyaringan selesai. Saluran aktif: {len(playable_channels)} dari {len(channels)}")
 
-    return unique_channels
+    # Kelompokkan saluran yang playable berdasarkan clean_name untuk deduplikasi
+    grouped = {}
+    for ch in playable_channels:
+        name = ch["clean_name"]
+        if not name:
+            name = "unknown"
+        grouped.setdefault(name, []).append(ch)
+
+    final_channels = []
+    for name, group in grouped.items():
+        if len(group) == 1:
+            final_channels.append(group[0])
+        else:
+            # Urutkan: prioritas latency terkecil
+            sorted_group = sorted(group, key=lambda x: x["latency"])
+            best_channel = sorted_group[0]
+            print(f"  [PILIH DUP] {best_channel['display_name']} ({best_channel['source']}) - Latency: {best_channel['latency']:.2f}s")
+            final_channels.append(best_channel)
+
+    return final_channels
 
 
 def merge_all_to_indihome():

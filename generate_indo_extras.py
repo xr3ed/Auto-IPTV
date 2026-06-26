@@ -187,11 +187,48 @@ def sanitize_url_protocol(url: str) -> str:
     return url
 
 
+def is_drm_protected_content(preview: str, url: str) -> bool:
+    """Mendeteksi apakah konten manifest terproteksi DRM."""
+    preview_lower = preview.lower()
+    url_lower = url.lower()
+    
+    # Check DASH ContentProtection
+    if "<contentprotection" in preview_lower or "cenc:default_kid" in preview_lower:
+        if not any(k in url_lower for k in ["key=", "token="]):
+            return True
+            
+    # Check HLS DRM (SAMPLE-AES or urn:uuid)
+    if "method=sample-aes" in preview_lower or "keyformat=\"urn:uuid" in preview_lower:
+        return True
+        
+    return False
+
+
 def ping_stream(url: str, headers: dict = None) -> bool:
+    from contextlib import closing
     headers = headers or {'User-Agent': 'Mozilla/5.0'}
     url = sanitize_url_protocol(url)
+    url_lower = url.lower()
     
-    # 1. Coba HEAD request
+    # Jika URL berupa manifest, lakukan GET untuk sniff DRM
+    is_manifest = any(ext in url_lower for ext in [".mpd", ".m3u8", "cenc", "manifest"])
+    if is_manifest:
+        try:
+            with closing(requests.get(url, headers=headers, timeout=5, stream=True, verify=False, allow_redirects=True)) as r:
+                if r.status_code == 200:
+                    chunk = next(r.iter_content(chunk_size=10240), b"")
+                    preview = chunk.decode("utf-8", errors="ignore")
+                    if is_drm_protected_content(preview, url):
+                        return False
+                    return True
+        except requests.exceptions.SSLError:
+            if url.startswith("https://"):
+                return ping_stream(url.replace("https://", "http://", 1), headers)
+        except Exception:
+            pass
+        return False
+        
+    # 1. Coba HEAD request (untuk berkas video/stream langsung biasa)
     try:
         r = requests.head(url, headers=headers, timeout=5, verify=False, allow_redirects=True)
         if r.status_code < 400:
@@ -206,11 +243,11 @@ def ping_stream(url: str, headers: dict = None) -> bool:
         
     # 2. Fallback ke GET minimal
     try:
-        r = requests.get(url, headers=headers, timeout=5, verify=False, stream=True, allow_redirects=True)
-        if r.status_code < 400:
-            content_type = r.headers.get("Content-Type", "").split(";")[0].strip().lower()
-            if content_type in VALID_CONTENT_TYPES or not content_type:
-                return True
+        with closing(requests.get(url, headers=headers, timeout=5, verify=False, stream=True, allow_redirects=True)) as r:
+            if r.status_code < 400:
+                content_type = r.headers.get("Content-Type", "").split(";")[0].strip().lower()
+                if content_type in VALID_CONTENT_TYPES or not content_type:
+                    return True
     except requests.exceptions.SSLError:
         if url.startswith("https://"):
             return ping_stream(url.replace("https://", "http://", 1), headers)
