@@ -35,6 +35,9 @@ EPG_CHANNEL_NAMES = {}
 # Daftar laga World Cup yang sudah selesai hari ini agar disaring keluar
 FINISHED_WC_MATCHES = set()
 
+# Konfigurasi sembunyikan kategori Live Events (hanya sisakan World Cup)
+HIDE_LIVE_EVENTS = True
+
 
 # ====================================================================
 # DAFTAR SUMBER PLAYLIST
@@ -1254,12 +1257,13 @@ def main():
         output_lines.extend(entry["vlcopt"])
         output_lines.append(entry["url"])
 
-    # 2. Live Events di bawahnya
-    for entry in unique_live:
-        output_lines.extend(entry["extinf"])
-        output_lines.extend(entry["other"])
-        output_lines.extend(entry["vlcopt"])
-        output_lines.append(entry["url"])
+    # 2. Live Events di bawahnya (hanya jika tidak disembunyikan)
+    if not HIDE_LIVE_EVENTS:
+        for entry in unique_live:
+            output_lines.extend(entry["extinf"])
+            output_lines.extend(entry["other"])
+            output_lines.extend(entry["vlcopt"])
+            output_lines.append(entry["url"])
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     output_path = OUTPUT_DIR / "live_events.m3u"
