@@ -129,6 +129,10 @@ def ping_stream(url: str, headers: dict = None, opts: list = None) -> tuple[str,
     import random
     
     opts = opts or []
+    # Otomatis buang saluran Samsung TV Plus karena geoblock di Indonesia
+    if "samsungcloud.tv" in url.lower() or "jmp2.uk/stvp-" in url.lower() or "stvp-" in url.lower():
+        return url, False, 999.0
+
     # Jika stream adalah DASH (.mpd) tapi tidak memiliki license_key di opts, maka otomatis DEAD
     is_dash = ".mpd" in url.lower()
     has_license = any("license_key" in opt.lower() for opt in opts) if opts else False
