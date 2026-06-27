@@ -129,6 +129,18 @@ def is_stream_playable(url: str, headers: dict = None) -> bool:
     headers = headers or {}
     url = sanitize_url_protocol(url)
 
+    # Cek blocklist geo-block dinamis
+    import json
+    blocklist_path = Path("playlists/geoblock_list.json")
+    if blocklist_path.exists():
+        try:
+            with open(blocklist_path, 'r', encoding='utf-8') as f:
+                blocklist = json.load(f)
+                if url in blocklist:
+                    return False
+        except Exception:
+            pass
+
     # 1. Coba HEAD request dulu (efisien) - bypass SSL verify
     try:
         response = requests.head(
