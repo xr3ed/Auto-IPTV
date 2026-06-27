@@ -235,6 +235,62 @@ def ping_stream(url: str, headers: dict = None, opts: list = None) -> tuple[str,
     return url, False, 999.0
 
 
+TARGET_NATIONAL_CHANNELS = {
+    "RCTI": ["rcti", "rctihd", "rctifhd"],
+    "SCTV": ["sctv", "sctvhd", "sctvfhd"],
+    "Indosiar": ["indosiar", "indosiarhd", "indosiarfhd"],
+    "Trans TV": ["transtv", "trans tv", "transtvhd"],
+    "Trans 7": ["trans7", "trans 7", "trans7hd"],
+    "Metro TV": ["metrotv", "metro tv"],
+    "tvOne": ["tvone", "tv one"],
+    "iNews": ["inews", "inewshd"],
+    "MNCTV": ["mnctv", "mnc tv"],
+    "GTV": ["gtv", "globaltv"],
+    "RTV": ["rtv", "rajawalitv"],
+    "NET TV": ["nettv", "net tv", "nethd"],
+    "Kompas TV": ["kompastv", "kompas tv"],
+    "TVRI Nasional": ["tvri", "tvrinasional", "tvri1"],
+    "Moji": ["moji", "mojitv", "mojihd"],
+    "CNBC Indonesia": ["cnbcindonesia", "cnbc"],
+    "CNN Indonesia": ["cnnindonesia", "cnn"],
+    "BTV": ["btv", "beritasatu", "beritasatuhd", "beritasatu"],
+    "BN Channel": ["bnchannel", "bntv"]
+}
+
+def get_canonical_national_name(clean_name: str) -> str | None:
+    for canonical, aliases in TARGET_NATIONAL_CHANNELS.items():
+        if clean_name in aliases:
+            return canonical
+    return None
+
+def score_national_candidate(ch: dict) -> float:
+    """
+    Menghitung skor untuk kandidat saluran nasional.
+    Skor lebih rendah = LEBIH BAIK/PRIORITAS.
+    """
+    score = 0.0
+    url_lower = ch["url"].lower()
+    opts = ch.get("opts", [])
+    
+    # 1. Cek DRM (Widevine/ClearKey)
+    has_license = any("license_key" in opt.lower() or "license_type" in opt.lower() for opt in opts) if opts else False
+    if has_license or ".mpd" in url_lower:
+        score += 100.0  # Penalti karena DRM lebih rentan expired dibanding non-DRM
+        
+    # 2. Cek apakah ini tautan bypass ping lokal (seperti Indihome jtedge)
+    from utils import should_bypass_ping
+    if should_bypass_ping(ch["url"]):
+        score += 50.0  # Penalti kecil karena hanya jalan di jaringan Indihome
+        
+    # 3. Cek domain reputasi buruk/token pendek
+    if "toutatis.rctiplus.com" in url_lower or "rctiplus" in ch["source"].lower():
+        score += 200.0  # Penalti besar karena token sangat cepat mati
+        
+    # 4. Tambahkan latency uji ping
+    score += ch.get("latency", 999.0)
+    return score
+
+
 def deduplicate_channels_smart(channels: list[dict]) -> list[dict]:
     """Menguji seluruh saluran secara paralel, menyaring yang mati/DRM, dan memilih alternatif tercepat untuk duplikat."""
     print("🧠 Memulai pembersihan DRM dan Deduplikasi Pintar...")
@@ -271,6 +327,12 @@ def deduplicate_channels_smart(channels: list[dict]) -> list[dict]:
         res = url_results.get(ch["url"], {"playable": False, "latency": 999.0})
         if res["playable"]:
             ch["latency"] = res["latency"]
+            
+            # Map canonical name untuk memperlancar deduplikasi TV Nasional
+            canonical_name = get_canonical_national_name(ch["clean_name"])
+            if canonical_name:
+                ch["clean_name"] = canonical_name.lower().replace(" ", "")
+                
             playable_channels.append(ch)
             
     print(f"  -> Penyaringan selesai. Saluran aktif: {len(playable_channels)} dari {len(channels)}")
@@ -285,14 +347,42 @@ def deduplicate_channels_smart(channels: list[dict]) -> list[dict]:
 
     final_channels = []
     for name, group in grouped.items():
-        if len(group) == 1:
-            final_channels.append(group[0])
-        else:
-            # Urutkan: prioritas latency terkecil
-            sorted_group = sorted(group, key=lambda x: x["latency"])
+        canonical_name = get_canonical_national_name(name)
+        if canonical_name:
+            # Urutkan berdasarkan skor pintar TV Nasional
+            sorted_group = sorted(group, key=score_national_candidate)
+            
+            # Tautan utama terbaik
             best_channel = sorted_group[0]
-            print(f"  [PILIH DUP] {best_channel['display_name']} ({best_channel['source']}) - Latency: {best_channel['latency']:.2f}s")
+            best_channel["display_name"] = canonical_name
+            best_channel["group"] = "Nasional"
+            extinf = best_channel["extinf"]
+            extinf = re.sub(r'group-title="[^"]+"', 'group-title="Nasional"', extinf)
+            extinf = re.sub(r',([^\n]+)$', f',{canonical_name}', extinf)
+            best_channel["extinf"] = extinf
             final_channels.append(best_channel)
+            print(f"  [PILIH NASIONAL] {canonical_name} ({best_channel['source']}) - Latency: {best_channel['latency']:.2f}s - Skor: {score_national_candidate(best_channel):.2f}")
+            
+            # Tautan cadangan jika tersedia candidate aktif lainnya
+            for idx, backup_ch in enumerate(sorted_group[1:3]):
+                backup_name = f"{canonical_name} (Backup {idx+1})"
+                backup_ch["display_name"] = backup_name
+                backup_ch["group"] = "Nasional"
+                b_extinf = backup_ch["extinf"]
+                b_extinf = re.sub(r'group-title="[^"]+"', 'group-title="Nasional"', b_extinf)
+                b_extinf = re.sub(r',([^\n]+)$', f',{backup_name}', b_extinf)
+                backup_ch["extinf"] = b_extinf
+                final_channels.append(backup_ch)
+                print(f"  [PILIH NASIONAL BACKUP] {backup_name} ({backup_ch['source']}) - Latency: {backup_ch['latency']:.2f}s - Skor: {score_national_candidate(backup_ch):.2f}")
+        else:
+            if len(group) == 1:
+                final_channels.append(group[0])
+            else:
+                # Urutkan: prioritas latency terkecil
+                sorted_group = sorted(group, key=lambda x: x["latency"])
+                best_channel = sorted_group[0]
+                print(f"  [PILIH DUP] {best_channel['display_name']} ({best_channel['source']}) - Latency: {best_channel['latency']:.2f}s")
+                final_channels.append(best_channel)
 
     return final_channels
 
