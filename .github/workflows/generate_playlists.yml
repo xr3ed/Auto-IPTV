@@ -1,4 +1,4 @@
-name: Generate FAST Service Playlists
+name: Generate Master Playlists Pipeline
 
 on:
   schedule:
@@ -11,6 +11,7 @@ on:
       - '.github/workflows/generate_playlists.yml'
       - 'generate_playlists.py'
       - 'generate_indo_extras.py'
+      - 'generate_rctiplus.py'
       - 'merge_playlists.py'
       - 'check_posters.py'
       - 'utils.py'
@@ -53,6 +54,9 @@ jobs:
 
       - name: Generate Indonesian Extra Playlists
         run: python generate_indo_extras.py
+
+      - name: Generate RCTI+ Playlists
+        run: python generate_rctiplus.py
 
       - name: Merge to IndihomeTV.m3u
         run: python merge_playlists.py

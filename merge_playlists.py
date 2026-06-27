@@ -128,16 +128,40 @@ def ping_stream(url: str, headers: dict = None, opts: list = None) -> tuple[str,
     import time
     import random
     
+    opts = opts or []
+    # Jika stream adalah DASH (.mpd) tapi tidak memiliki license_key di opts, maka otomatis DEAD
+    is_dash = ".mpd" in url.lower()
+    has_license = any("license_key" in opt.lower() for opt in opts) if opts else False
+    if is_dash and not has_license:
+        return url, False, 999.0
+
     if should_bypass_ping(url):
         return url, True, 0.05
         
     # Jeda acak (jitter) untuk menghindari pembatasan rate limit 429
     time.sleep(random.uniform(0.1, 0.5))
     
-    headers = headers or {'User-Agent': 'Mozilla/5.0'}
+    req_headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
+    if headers:
+        req_headers.update(headers)
+    
+    opts = opts or []
+    for opt in opts:
+        opt_lower = opt.lower()
+        if "http-user-agent=" in opt_lower:
+            req_headers['User-Agent'] = opt.split("http-user-agent=", 1)[1].strip()
+        elif "user-agent=" in opt_lower:
+            req_headers['User-Agent'] = opt.split("user-agent=", 1)[1].strip()
+        elif "http-referrer=" in opt_lower:
+            req_headers['Referer'] = opt.split("http-referrer=", 1)[1].strip()
+        elif "referrer=" in opt_lower:
+            req_headers['Referer'] = opt.split("referrer=", 1)[1].strip()
+        elif "referer=" in opt_lower:
+            req_headers['Referer'] = opt.split("referer=", 1)[1].strip()
+
+    headers = req_headers
     url = sanitize_url_protocol(url)
     url_lower = url.lower()
-    opts = opts or []
     
     start_time = datetime.now()
     is_manifest = any(ext in url_lower for ext in [".mpd", ".m3u8", "cenc", "manifest"])
@@ -275,6 +299,43 @@ def fix_missing_local_logo(extinf_line: str) -> str:
     return extinf_line
 
 
+def format_url_with_headers(url: str, opts: list) -> str:
+    """Format URL by appending headers as a pipe suffix for maximum player compatibility (e.g. url|User-Agent=...&Referer=...)."""
+    if not opts:
+        return url
+    
+    ua = ""
+    ref = ""
+    for opt in opts:
+        opt_lower = opt.lower()
+        if "http-user-agent=" in opt_lower:
+            ua = opt.split("http-user-agent=", 1)[1].strip()
+        elif "user-agent=" in opt_lower:
+            ua = opt.split("user-agent=", 1)[1].strip()
+        elif "http-referrer=" in opt_lower:
+            ref = opt.split("http-referrer=", 1)[1].strip()
+        elif "referrer=" in opt_lower:
+            ref = opt.split("referrer=", 1)[1].strip()
+        elif "referer=" in opt_lower:
+            ref = opt.split("referer=", 1)[1].strip()
+            
+    suffix_parts = []
+    if ua:
+        suffix_parts.append(f"User-Agent={ua}")
+    if ref:
+        suffix_parts.append(f"Referer={ref}")
+        
+    if suffix_parts:
+        # Don't duplicate if already in the URL
+        suffix = "|".join(suffix_parts) if "|" not in url else ""
+        if suffix and not url.endswith(suffix):
+            if "|" in url:
+                return url + "&" + "&".join(suffix_parts)
+            else:
+                return url + "|" + "&".join(suffix_parts)
+    return url
+
+
 def merge_all_to_indihome():
     print("🔗 Memulai penggabungan dan pembersihan terpadu ke IndihomeTV.m3u...")
     
@@ -386,7 +447,7 @@ def merge_all_to_indihome():
         extinf_line = fix_missing_local_logo(extinf_line)
         output_content.append(extinf_line)
         output_content.extend(ch["opts"])
-        output_content.append(ch["url"])
+        output_content.append(format_url_with_headers(ch["url"], ch["opts"]))
         output_content.append("")
 
     # Tulis setiap kelompok platform secara terpisah dengan section marker
@@ -423,7 +484,7 @@ def merge_all_to_indihome():
             extinf_line = fix_missing_local_logo(extinf_line)
             section_lines.append(extinf_line)
             section_lines.extend(ch["opts"])
-            section_lines.append(ch["url"])
+            section_lines.append(format_url_with_headers(ch["url"], ch["opts"]))
             section_lines.append("")
             
         section_lines.append(marker_end)
