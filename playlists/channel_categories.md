@@ -14,7 +14,7 @@ Dokumen ini memuat data kurasi kategorisasi saluran TV olahraga dan pertandingan
 | Basketball (Bola Basket) | 2 |
 | Cue Sports (Biliar/Snooker) | 1 |
 | Tennis (Tenis) | 0 |
-| General Sports / TV Olahraga | 132 |
+| General Sports / TV Olahraga | 0 |
 
 ## Daftar Saluran per Kategori
 
@@ -54,50 +54,22 @@ Dokumen ini memuat data kurasi kategorisasi saluran TV olahraga dan pertandingan
 | 31 | [HD] World Cup 2026 - FIFA World Cup 2026 4 | World Cup 2026 |
 
 ### Football (Sepak Bola)
-| No | Nama Saluran | Kelompok Asal |
-| :--- | :--- | :--- |
-| 1 | [FHD] [World Rally] World Rally Championship Greece (FAWA) | Sports |
-| 2 | [HD] [WWE] WWE Night of Champions (iSTRMEAST) | Sports |
-| 3 | [HD] Real Madrid | Sports |
-| 4 | [FHD] Barca TV | Sports |
+*Tidak ada saluran aktif saat ini.*
 
 ### Volleyball (Bola Voli)
-| No | Nama Saluran | Kelompok Asal |
-| :--- | :--- | :--- |
-| 1 | [HD] 20:00 WIB Germany v Brazil | Week 2 | Women's VNL 2026 | Live Events |
-| 2 | [HD] 20:30 WIB Thailand v Netherlands | Week 2 | Women's VNL 2026 | Live Events |
+*Tidak ada saluran aktif saat ini.*
 
 ### Motorsports (Balap Motor/Mobil)
-| No | Nama Saluran | Kelompok Asal |
-| :--- | :--- | :--- |
-| 1 | [HD] Vision+ 9f14895b | Sports |
-| 2 | [HD] SkySportF1 | Sports |
-| 3 | [HD] SkySportMotoGP | Sports |
-| 4 | [FHD] Motorvision TV | Sports |
-| 5 | [HD] [Formula 1] Formula 1 2026 - Austria GP (iSTRMEAST) | Live Events |
-| 6 | [HD] [Racing] NASCAR O'Reilly Auto Parts - Race (ROXIE) | Live Events |
-| 7 | [HD] [Racing] MotoGP - Coverage (ROXIE) | Live Events |
-| 8 | [HD] 18:15 WIB MotoGP Race: Monster Energy Grand Prix of Czechia - MotoGP 2026 Round 9 | Live Events |
+*Tidak ada saluran aktif saat ini.*
 
 ### Combat Sports (Beladiri/WWE)
-| No | Nama Saluran | Kelompok Asal |
-| :--- | :--- | :--- |
-| 1 | [HD] [Fighting] UFC Fight Night: Fiziev vs. Torres (ROXIE) | Sports |
-| 2 | [HD] [UFC] UFC Fight Night: Fiziev vs. Torres (iSTRMEAST) | Sports |
-| 3 | [HD] HBO Boxing | Sports |
-| 4 | [HD] Fight Sports | Sports |
-| 5 | [FHD] DAZN RINGSIDE | Sports |
+*Tidak ada saluran aktif saat ini.*
 
 ### Basketball (Bola Basket)
-| No | Nama Saluran | Kelompok Asal |
-| :--- | :--- | :--- |
-| 1 | [HD] NBA TV | Sports |
-| 2 | [HD] NBA PHILIPPINES | Sports |
+*Tidak ada saluran aktif saat ini.*
 
 ### Cue Sports (Biliar/Snooker)
-| No | Nama Saluran | Kelompok Asal |
-| :--- | :--- | :--- |
-| 1 | [FHD] Billiard TV | Sports |
+*Tidak ada saluran aktif saat ini.*
 
 ### Tennis (Tenis)
 *Tidak ada saluran aktif saat ini.*

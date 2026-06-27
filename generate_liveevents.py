@@ -35,8 +35,9 @@ EPG_CHANNEL_NAMES = {}
 # Daftar laga World Cup yang sudah selesai hari ini agar disaring keluar
 FINISHED_WC_MATCHES = set()
 
-# Konfigurasi sembunyikan kategori Live Events (hanya sisakan World Cup)
-HIDE_LIVE_EVENTS = False
+# Konfigurasi sembunyikan kategori Live Events & Sports (hanya sisakan World Cup)
+HIDE_LIVE_EVENTS = True
+HIDE_SPORTS = True
 
 
 # ====================================================================
@@ -988,8 +989,19 @@ def check_and_enrich_entry(entry: dict, is_wc: bool) -> dict:
         try:
             with closing(requests.get(url, headers=entry["headers"], timeout=5, stream=True, verify=False)) as r:
                 if r.status_code == 200:
-                    # Lupakan optimasi/filter DRM dan HEVC, ambil apa adanya dari penyedia
-                    pass
+                    is_manifest = any(ext in url.lower() for ext in [".mpd", "mpd", ".m3u8", "m3u8", "cenc", "manifest"])
+                    chunk_sz = 102400 if is_manifest else 10240
+                    chunk = next(r.iter_content(chunk_size=chunk_sz), b"")
+                    preview = chunk.decode("utf-8", errors="ignore")
+                    
+                    if is_drm_protected_content(preview, url):
+                        has_license = any("license_key" in line.lower() or "license_type" in line.lower() for line in entry.get("other", []) + entry.get("vlcopt", []))
+                        if not has_license:
+                            playable = False
+                            reason = "DRM Protected (No License Key)"
+                    elif is_hevc_stream(preview):
+                        playable = False
+                        reason = "HEVC Stream (Filtered)"
                 else:
                     playable = False
                     reason = f"HTTP Error {r.status_code}"
@@ -1300,12 +1312,13 @@ def main():
         output_lines.extend(entry["vlcopt"])
         output_lines.append(entry["url"])
 
-    # 2. Sports (Permanent Channels) di bawah World Cup
-    for entry in unique_perm:
-        output_lines.extend(entry["extinf"])
-        output_lines.extend(entry["other"])
-        output_lines.extend(entry["vlcopt"])
-        output_lines.append(entry["url"])
+    # 2. Sports (Permanent Channels) di bawah World Cup (jika tidak disembunyikan)
+    if not HIDE_SPORTS:
+        for entry in unique_perm:
+            output_lines.extend(entry["extinf"])
+            output_lines.extend(entry["other"])
+            output_lines.extend(entry["vlcopt"])
+            output_lines.append(entry["url"])
 
     # 3. Live Events di bawahnya (hanya jika tidak disembunyikan)
     if not HIDE_LIVE_EVENTS:
