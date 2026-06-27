@@ -145,7 +145,8 @@ def ping_stream(url: str, headers: dict = None, opts: list = None) -> tuple[str,
         try:
             with closing(requests.get(url, headers=headers, timeout=5, stream=True, verify=False, allow_redirects=True)) as r:
                 if r.status_code == 200:
-                    chunk = next(r.iter_content(chunk_size=10240), b"")
+                    chunk_sz = 102400 if is_manifest else 10240
+                    chunk = next(r.iter_content(chunk_size=chunk_sz), b"")
                     preview = chunk.decode("utf-8", errors="ignore")
                     
                     if is_drm_protected_content(preview, url):

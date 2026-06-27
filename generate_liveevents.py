@@ -956,7 +956,9 @@ def check_and_enrich_entry(entry: dict, is_wc: bool) -> dict:
         try:
             with closing(requests.get(url, headers=entry["headers"], timeout=5, stream=True, verify=False)) as r:
                 if r.status_code == 200:
-                    chunk = next(r.iter_content(chunk_size=10240), b"")
+                    is_manifest = any(ext in url.lower() for ext in [".mpd", "mpd", ".m3u8", "m3u8", "cenc", "manifest"])
+                    chunk_sz = 102400 if is_manifest else 10240
+                    chunk = next(r.iter_content(chunk_size=chunk_sz), b"")
                     preview = chunk.decode("utf-8", errors="ignore")
                     
                     if is_drm_protected_content(preview, url):
