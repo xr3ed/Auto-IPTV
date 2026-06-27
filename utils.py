@@ -143,6 +143,65 @@ def should_bypass_ping(url: str) -> bool:
     return any(kw in url_lower for kw in bypass_keywords)
 
 
+_iptv_org_logo_cache = None
+
+def get_iptv_org_logo_map() -> dict:
+    global _iptv_org_logo_cache
+    if _iptv_org_logo_cache is not None:
+        return _iptv_org_logo_cache
+        
+    cache_path = os.path.join("playlists", "iptv_org_logos.json")
+    # Cek jika cache file ada dan berumur kurang dari 1 hari (86400 detik)
+    if os.path.exists(cache_path):
+        import time
+        if time.time() - os.path.getmtime(cache_path) < 86400:
+            try:
+                with open(cache_path, 'r', encoding='utf-8') as f:
+                    _iptv_org_logo_cache = json.load(f)
+                    return _iptv_org_logo_cache
+            except Exception:
+                pass
+                
+    logo_map = {}
+    # Fetch from iptv-org Indonesia playlist
+    try:
+        logger.info("Downloading iptv-org Indonesia channel list for logo mapping...")
+        url = "https://iptv-org.github.io/iptv/countries/id.m3u"
+        resp = requests.get(url, timeout=10)
+        if resp.status_code == 200:
+            lines = resp.text.splitlines()
+            for line in lines:
+                if line.startswith("#EXTINF:"):
+                    # Extract logo
+                    logo_match = re.search(r'tvg-logo="([^"]+)"', line)
+                    if logo_match:
+                        logo_url = logo_match.group(1).strip()
+                        # Extract channel name after last comma
+                        parts = line.rsplit(',', 1)
+                        if len(parts) == 2:
+                            display_name = parts[1].strip()
+                            # Clean up name for indexing
+                            clean_name = re.sub(r'\[?(fhd|hd|sd)\]?', '', display_name, flags=re.IGNORECASE).strip()
+                            # Remove non-alphanumeric and lowercase
+                            key = re.sub(r'[^a-z0-9]', '', clean_name.lower())
+                            if key:
+                                logo_map[key] = logo_url
+    except Exception as e:
+        logger.warning(f"Failed to fetch iptv-org logo map: {e}")
+        
+    # Jika berhasil mendapatkan logo_map, simpan ke file cache
+    if logo_map:
+        try:
+            os.makedirs("playlists", exist_ok=True)
+            with open(cache_path, 'w', encoding='utf-8') as f:
+                json.dump(logo_map, f, indent=2, ensure_ascii=False)
+        except Exception:
+            pass
+            
+    _iptv_org_logo_cache = logo_map
+    return _iptv_org_logo_cache
+
+
 def get_fallback_logo(channel_name: str) -> str:
     """Mendapatkan logo cadangan resmi dari CDN IPTV-org jika logo bawaan kosong."""
     name_clean = channel_name.strip()
@@ -175,18 +234,32 @@ def get_fallback_logo(channel_name: str) -> str:
         "tvri": "https://iptv-org.github.io/iptv/logos/countries/id/TVRI.png",
         "mojitv": "https://iptv-org.github.io/iptv/logos/countries/id/Moji.png",
         "moji": "https://iptv-org.github.io/iptv/logos/countries/id/Moji.png",
+        "magnatv": "https://upload.wikimedia.org/wikipedia/commons/1/1d/MagnaChannel.webp",
+        "magnachannel": "https://upload.wikimedia.org/wikipedia/commons/1/1d/MagnaChannel.webp",
     }
     
     key = slug.lower()
     if key in indo_logos:
         return indo_logos[key]
         
+    # Coba cari dari iptv-org logo map
+    clean_key = re.sub(r'[^a-z0-9]', '', name_clean.lower())
+    logo_map = get_iptv_org_logo_map()
+    if clean_key in logo_map:
+        return logo_map[clean_key]
+        
+    # Cari dengan pencocokan parsial/substring jika tidak ketemu exact
+    for map_k, map_v in logo_map.items():
+        if map_k in clean_key or clean_key in map_k:
+            return map_v
+
     # Jika merupakan TVRI daerah, gunakan logo TVRI Nasional resmi sebagai fallback
     if "tvri" in key:
         return "https://iptv-org.github.io/iptv/logos/countries/id/TVRI.png"
         
     # Fallback default ke CDN global IPTV-org
     return f"https://iptv-org.github.io/iptv/logos/countries/id/{name_clean}.png"
+
 
 
 def download_and_localize_logo(channel_name: str, original_logo_url: str) -> str:
@@ -221,8 +294,9 @@ def download_and_localize_logo(channel_name: str, original_logo_url: str) -> str
     os.makedirs("logo", exist_ok=True)
     if not os.path.exists(local_path):
         try:
-            print(f"📥 Mengunduh logo lokal baru: {filename}...")
-            r = requests.get(original_logo_url, timeout=10, verify=False)
+            print(f"[DOWNLOAD] Mengunduh logo lokal baru: {filename}...")
+            headers = {"User-Agent": USER_AGENT}
+            r = requests.get(original_logo_url, headers=headers, timeout=10, verify=False)
             if r.status_code == 200:
                 with open(local_path, "wb") as img_f:
                     img_f.write(r.content)
