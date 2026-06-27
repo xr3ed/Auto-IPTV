@@ -32,6 +32,9 @@ EPG_ACTIVE_PROGS = {}
 EPG_NAME_TO_ID = {}
 EPG_CHANNEL_NAMES = {}
 
+# Daftar laga World Cup yang sudah selesai hari ini agar disaring keluar
+FINISHED_WC_MATCHES = set()
+
 
 # ====================================================================
 # DAFTAR SUMBER PLAYLIST
@@ -585,6 +588,21 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
     title = attrs["display_name"]
     title_lower = title.lower()
     
+    # Saring keluar jika laga ini sudah selesai hari ini berdasarkan data ESPN
+    cleaned_title_match = clean_match_name(title_lower)
+    if cleaned_title_match:
+        norm_match = cleaned_title_match.lower()
+        if norm_match in FINISHED_WC_MATCHES:
+            print(f"  [FILTER OUT] Mengabaikan laga yang sudah selesai: {title}")
+            return None
+            
+        for finished_match in FINISHED_WC_MATCHES:
+            teams = finished_match.split(" vs ")
+            if len(teams) == 2:
+                if teams[0] in title_lower and teams[1] in title_lower:
+                    print(f"  [FILTER OUT] Mengabaikan laga yang sudah selesai (cadangan): {title}")
+                    return None
+                    
     resolution = entry.get("resolution", "")
     if not resolution:
         resolution = "HD"  # Fallback default agar format nama di IPTV player selalu seragam
@@ -850,19 +868,25 @@ def fetch_live_wc_matches_from_espn() -> list[str]:
             events = data.get("events", [])
             for event in events:
                 status_state = event.get("status", {}).get("type", {}).get("state", "").lower()
-                # Status state "in" berarti in-progress / sedang live
-                if status_state == "in":
-                    competitors = event.get("competitions", [{}])[0].get("competitors", [])
-                    if len(competitors) >= 2:
-                        teams = []
-                        for comp in competitors:
-                            t_name = comp.get("team", {}).get("displayName", "")
-                            t_name_idn = ENG_TO_IDN_MAP.get(t_name.lower(), t_name)
-                            teams.append(t_name_idn)
-                        
-                        laga_live = f"{teams[0]} vs {teams[1]}"
-                        live_matches.append(laga_live)
-                        print(f"  [ESPN LIVE] Terdeteksi sedang berlangsung: {laga_live}")
+                competitors = event.get("competitions", [{}])[0].get("competitors", [])
+                if len(competitors) >= 2:
+                    teams = []
+                    for comp in competitors:
+                        t_name = comp.get("team", {}).get("displayName", "")
+                        t_name_idn = ENG_TO_IDN_MAP.get(t_name.lower(), t_name)
+                        teams.append(t_name_idn)
+                    
+                    laga_name = f"{teams[0]} vs {teams[1]}"
+                    
+                    if status_state == "in":
+                        live_matches.append(laga_name)
+                        print(f"  [ESPN LIVE] Terdeteksi sedang berlangsung: {laga_name}")
+                    elif status_state == "post":
+                        FINISHED_WC_MATCHES.add(laga_name.lower())
+                        # Tambahkan versi terbalik untuk pencarian aman
+                        laga_name_rev = f"{teams[1]} vs {teams[0]}"
+                        FINISHED_WC_MATCHES.add(laga_name_rev.lower())
+                        print(f"  [ESPN POST] Laga sudah selesai: {laga_name}")
         else:
             print(f"  [WARNING] API ESPN mengembalikan HTTP {r.status_code}")
     except Exception as e:
@@ -1167,6 +1191,8 @@ def main():
 
         for res_entry in playable_entries:
             enriched = format_and_enrich_sports_entry(res_entry, name, active_wc_matches)
+            if enriched is None:
+                continue
             if enriched["is_wc"]:
                 all_wc_entries.append(enriched)
             else:
