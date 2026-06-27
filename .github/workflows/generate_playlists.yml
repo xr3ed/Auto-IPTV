@@ -10,6 +10,10 @@ on:
     paths:
       - '.github/workflows/generate_playlists.yml'
       - 'generate_playlists.py'
+      - 'generate_indo_extras.py'
+      - 'merge_playlists.py'
+      - 'check_posters.py'
+      - 'utils.py'
 
 permissions:
   contents: write
