@@ -357,7 +357,7 @@
     "license_type": "org.w3.clearkey",
     "license_key": "436b69f987924fcbbc06d40a69c2799a:c63d5b0d7e52335b61aeba4f6537d54d",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://d84q7nw4qf3j3.cloudfront.net/out/v1/4e5b2a283adf462c8b6b55b2ef059fac/index.mpd": {
     "license_type": "clearkey",
@@ -423,7 +423,7 @@
     "license_type": "com.widevine.alpha",
     "license_key": "https://ratuvidio.adptv.workers.dev/index.mpd?id=204",
     "referrer": "https://m.vidio.com/",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://d3b0v7fggu5zwm.cloudfront.net/out/v1/9041826689ae4f9c9619576d411fa989/index.mpd": {
     "license_type": "org.w3.clearkey",
@@ -675,31 +675,31 @@
     "license_type": "org.w3.clearkey",
     "license_key": "40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://times-ott-live.akamaized.net/mnxhd_wv_drm/index.mpd": {
     "license_type": "org.w3.clearkey",
     "license_key": "40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://times-ott-live.akamaized.net/moviesnow_wv_drm/index.mpd": {
     "license_type": "org.w3.clearkey",
     "license_key": "40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://times-ott-live.akamaized.net/romedynow_wv_drm/index.mpd": {
     "license_type": "org.w3.clearkey",
     "license_key": "40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "http://op-group1-swiftservehd-1.dens.tv/h/h235/02.m3u8": {
     "license_type": "com.widevine.alpha",
     "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
     "referrer": "https://www.dens.tv/",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://d84q7nw4qf3j3.cloudfront.net/out/v1/eb98aca0a1be41f7b9c05dac051a250e/index.mpd": {
     "license_type": "clearkey",
@@ -717,13 +717,13 @@
     "license_type": "clearkey",
     "license_key": "433ffba670963e70857859a9dff4be04:51ede3a821229fe81e71282c8eff80e3",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://c9851ec-rbm-hilv-fsly.cdn.redbee.live/L26/6b640fa2/a765d074.isml/dash/.mpd": {
     "license_type": "clearkey",
     "license_key": "adca25b8779e4168a0cd710f59f61ccf:be5383ed3cd8079f4ffe78ad067f476a",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3ynrpdanq2/out/v1/81fd4c26584044d2b1a1cc5b32fa9af0/cenc.mpd": {
     "license_type": "clearkey",
@@ -753,13 +753,13 @@
     "license_type": "clearkey",
     "license_key": "11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://dash2.antik.sk/stream/nvidia_sport2/playlist_cenc.mpd": {
     "license_type": "clearkey",
     "license_key": "11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/4yiko4it8k/out/v1/b77dd424c745443aba2f3f88d418f797/cenc-sd.mpd": {
     "license_type": "clearkey",
@@ -19327,75 +19327,75 @@
   },
   "https://d84q7nw4qf3j3.cloudfront.net/out/v1/TOKEN/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "ed1723eb360145ccafa1b466130186da:c7c4171e98de14c23be427f6ab16ef72",
-    "referrer": "",
-    "last_scanned": "2026-06-28"
+    "license_key": "6f309276a94e45be89a8860159456e84:3fe2eec12885264556ca4e29aa6c0c40",
+    "referrer": "https://www.visionplus.id/",
+    "last_scanned": "2026-06-27"
   },
   "https://d2xz2v5wuvgur6.cloudfront.net/out/v1/TOKEN/index.mpd": {
-    "license_type": "clearkey",
-    "license_key": "b576e5f5f1bc4cbaa866e5b0face5a30:3377be6c3b5f688ebed687312c9b9d95",
-    "referrer": "https://www.visionplus.id/",
-    "last_scanned": "2026-06-28"
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://terabit.web.id/drmkv.php?id=114",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
   },
   "https://d2tjypxxy769fn.cloudfront.net/out/v1/TOKEN/index.mpd": {
-    "license_type": "clearkey",
-    "license_key": "39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea",
-    "referrer": "https://www.visionplus.id/",
-    "last_scanned": "2026-06-28"
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://colloriptvpro.my.id/vis/sc1.php?id=3",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
   },
   "https://d3b0v7fggu5zwm.cloudfront.net/out/v1/TOKEN/index.mpd": {
-    "license_type": "clearkey",
-    "license_key": "911e72adf36946afbdbb4f80782a8394:08aec548a851ba64b7172ae7f05cb91c",
-    "referrer": "https://visionplus.id/",
-    "last_scanned": "2026-06-28"
+    "license_type": "wwidevine",
+    "license_key": "https://colloriptvpro.my.id/vis/sc1.php?id=113",
+    "referrer": "https://useetvwv.visionplus.id/",
+    "last_scanned": "2026-06-27"
   },
   "https://d6m3sfa7e58z5.cloudfront.net/out/v1/TOKEN/index.mpd": {
     "license_type": "org.w3.clearkey",
     "license_key": "c48c8e48dba24420b5dcef9f5b847b12:daad0aeb165b9a26b706f2a261b8fafe",
     "referrer": "https://www.visionplus.id/",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3ynrpdanq2/out/v1/TOKEN/cenc.mpd": {
     "license_type": "clearkey",
     "license_key": "34475edab991ad5e92548aebd710410a:501b209cccd323ac00bf5ac15b406cb4",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/3ynrpdanq2/out/v1/TOKEN/cenc.mpd": {
     "license_type": "clearkey",
     "license_key": "34475edab991ad5e92548aebd710410a:501b209cccd323ac00bf5ac15b406cb4",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://otte-qw.live.pv-cdn.net/lhr-nitro/live/clients/dash/enc/iayg0kyrof/out/v1/TOKEN/cenc.mpd": {
     "license_type": "clearkey",
     "license_key": "1223d5105392cabf1bb9c2c1fdf6539a:340b409f4b8f78a343e0363a7938df38",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "http://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/dash/enc/ud6bnhthpj/out/v1/TOKEN/cenc.mpd": {
     "license_type": "clearkey",
     "license_key": "83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/4yiko4it8k/out/v1/TOKEN/cenc-sd.mpd": {
     "license_type": "clearkey",
     "license_key": "9009b7189e3e68cc09d17811f2beb55a:dd3f96a94c909da48ff40c92aabf8cf3",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/6otiglnptp/out/v1/TOKEN/cenc.mpd": {
     "license_type": "clearkey",
     "license_key": "902e5ec0e3d05e665daa32fc23f4f59e:7b2322a273843921a43e2c61dac7cae3",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://a83aivottlinear-a.akamaihd.net/OTTB/syd-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/TOKEN/cenc.mpd": {
     "license_type": "clearkey",
     "license_key": "7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e",
     "referrer": "",
-    "last_scanned": "2026-06-28"
+    "last_scanned": "2026-06-27"
   },
   "https://tglmp02.akamaized.net/out/v1/TOKEN/manifest.mpd": {
     "license_type": "clearkey",
