@@ -589,19 +589,20 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
     title_lower = title.lower()
     
     # Saring keluar jika laga ini sudah selesai hari ini berdasarkan data ESPN
+    is_rerun = False
     cleaned_title_match = clean_match_name(title_lower)
     if cleaned_title_match:
         norm_match = cleaned_title_match.lower()
         if norm_match in FINISHED_WC_MATCHES:
-            print(f"  [FILTER OUT] Mengabaikan laga yang sudah selesai: {title}")
-            return None
+            is_rerun = True
             
-        for finished_match in FINISHED_WC_MATCHES:
-            teams = finished_match.split(" vs ")
-            if len(teams) == 2:
-                if teams[0] in title_lower and teams[1] in title_lower:
-                    print(f"  [FILTER OUT] Mengabaikan laga yang sudah selesai (cadangan): {title}")
-                    return None
+        if not is_rerun:
+            for finished_match in FINISHED_WC_MATCHES:
+                teams = finished_match.split(" vs ")
+                if len(teams) == 2:
+                    if teams[0] in title_lower and teams[1] in title_lower:
+                        is_rerun = True
+                        break
                     
     resolution = entry.get("resolution", "")
     if not resolution:
@@ -694,10 +695,12 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
                 # Jika judul asli sudah mengandung laga, gunakan ekstraksi cerdas
                 channel_suffix = extract_channel_suffix(title, source_name)
             
-            display_name = f"{res_label}{actual_match} - {channel_suffix}"
+            rerun_label = " - Rerun" if is_rerun else ""
+            display_name = f"{res_label}{actual_match}{rerun_label} - {channel_suffix}"
         else:
             clean_title = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
-            display_name = f"{res_label}World Cup 2026 - {clean_title}"
+            rerun_label = " - Rerun" if is_rerun else ""
+            display_name = f"{res_label}World Cup 2026{rerun_label} - {clean_title}"
     else:
         group = "Live Events"
         logo = None
@@ -712,11 +715,12 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
             else:
                 logo = "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png"
                 
+        rerun_label = " - Rerun" if is_rerun else ""
         if match_name:
-            display_name = f"{res_label}{match_name}"
+            display_name = f"{res_label}{match_name}{rerun_label}"
         else:
             clean_title = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
-            display_name = f"{res_label}{clean_title}"
+            display_name = f"{res_label}{clean_title}{rerun_label}"
         
     attrs["group-title"] = group
     attrs["tvg-logo"] = logo
@@ -870,23 +874,28 @@ def fetch_live_wc_matches_from_espn() -> list[str]:
                 status_state = event.get("status", {}).get("type", {}).get("state", "").lower()
                 competitors = event.get("competitions", [{}])[0].get("competitors", [])
                 if len(competitors) >= 2:
-                    teams = []
+                    teams_idn = []
+                    teams_eng = []
                     for comp in competitors:
                         t_name = comp.get("team", {}).get("displayName", "")
+                        teams_eng.append(t_name)
                         t_name_idn = ENG_TO_IDN_MAP.get(t_name.lower(), t_name)
-                        teams.append(t_name_idn)
+                        teams_idn.append(t_name_idn)
                     
-                    laga_name = f"{teams[0]} vs {teams[1]}"
+                    laga_name_idn = f"{teams_idn[0]} vs {teams_idn[1]}"
+                    laga_name_eng = f"{teams_eng[0]} vs {teams_eng[1]}"
                     
                     if status_state == "in":
-                        live_matches.append(laga_name)
-                        print(f"  [ESPN LIVE] Terdeteksi sedang berlangsung: {laga_name}")
+                        live_matches.append(laga_name_idn)
+                        print(f"  [ESPN LIVE] Terdeteksi sedang berlangsung: {laga_name_idn}")
                     elif status_state == "post":
-                        FINISHED_WC_MATCHES.add(laga_name.lower())
-                        # Tambahkan versi terbalik untuk pencarian aman
-                        laga_name_rev = f"{teams[1]} vs {teams[0]}"
-                        FINISHED_WC_MATCHES.add(laga_name_rev.lower())
-                        print(f"  [ESPN POST] Laga sudah selesai: {laga_name}")
+                        # Simpan versi Indonesia
+                        FINISHED_WC_MATCHES.add(laga_name_idn.lower())
+                        FINISHED_WC_MATCHES.add(f"{teams_idn[1]} vs {teams_idn[0]}".lower())
+                        # Simpan versi Inggris
+                        FINISHED_WC_MATCHES.add(laga_name_eng.lower())
+                        FINISHED_WC_MATCHES.add(f"{teams_eng[1]} vs {teams_eng[0]}".lower())
+                        print(f"  [ESPN POST] Laga sudah selesai: {laga_name_idn} ({laga_name_eng})")
         else:
             print(f"  [WARNING] API ESPN mengembalikan HTTP {r.status_code}")
     except Exception as e:
