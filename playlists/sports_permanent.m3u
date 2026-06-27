@@ -1,0 +1,122 @@
+#EXTM3U url-tvg="https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/epgs/guide.xml.gz"
+#EXTINF:-1 tvg-name="[HD] Sports Stream" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/sports_stream.png" group-title="Sport",[HD] Sports Stream
+https://cdnbal1.indihometv.com/atm/DASH/indosiar/manifest.mpd
+#EXTINF:-1 tvg-id="beInSports1.id" tvg-name="[HD] beIN Sports 1 Indonesia" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_1_indonesia.png" group-title="Sport",[HD] beIN Sports 1 Indonesia
+# <============================================================== Sports =================================================================================================>
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c48c8e48dba24420b5dcef9f5b847b12:daad0aeb165b9a26b706f2a261b8fafe
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 tvg-id="beInSports3.id" tvg-name="[HD] beIN Sports 3 Indonesia" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_3_indonesia.png" group-title="Sport",[HD] beIN Sports 3 Indonesia
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c48c8e48dba24420b5dcef9f5b847b12:daad0aeb165b9a26b706f2a261b8fafe
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/a265695db5cb461095cbfefc02ad793b/index.mpd
+#EXTINF:-1 tvg-id="beInSports2.id" tvg-name="[HD] beIN Sports 2 Indonesia" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_2_indonesia.png" group-title="Sport",[HD] beIN Sports 2 Indonesia
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c48c8e48dba24420b5dcef9f5b847b12:daad0aeb165b9a26b706f2a261b8fafe
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
+#EXTINF:-1 tvg-id="SPOTV.id" tvg-name="[HD] SpoTV (V+)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/spotv_v.png" group-title="Sport",[HD] SpoTV (V+)
+####EXTINF:-1  tvg-logo="https://i.ibb.co.com/7Md2qy9/fubosp.png" group-title="Sports", FUBO SPORTS 2
+####EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0
+####https://otte.live.fly.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/uiffe4jhf0/out/v1/3534efafca8c4815adbb4d2e9a1fe003/cenc.mpd
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=911e72adf36946afbdbb4f80782a8394:08aec548a851ba64b7172ae7f05cb91c
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+#EXTVLCOPT:http-referrer=https://visionplus.id/
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/b4814ae93ca84dd3bb5b0aff76ca263f/index.mpd
+#EXTINF:-1 tvg-id="SPOTV2.id" tvg-name="[HD] SpoTV 2 (V+)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/spotv_2_v.png" group-title="Sport",[HD] SpoTV 2 (V+)
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2tjypxxy769fn.cloudfront.net/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
+#EXTINF:-1 tvg-id="SPOTV.id" tvg-name="[HD] SpoTV" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/spotv.png" group-title="Sport",[HD] SpoTV
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=ec7ee27d83764e4b845c48cca31c8eef:9c0e4191203fccb0fde34ee29999129e
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+https://qp-pldt-live-bpk-01-prod.akamaized.net/bpk-tv/cg_spotvhd/default/index.mpd
+#EXTINF:-1 tvg-id="auto.spotv.now" tvg-name="[HD] SPOTV NOW" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/spotv_now.png" group-title="Sport",[HD] SPOTV NOW
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=3dd653fc7aa1e3075b7f0233620df68f:8573791fa55bff03a3094ff559fc1407
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+#EXTVLCOPT:http-referrer=https://www.mana2.my/
+https://slive.mana2.my/SpotvNow/index.mpd
+#EXTINF:-1 tvg-id="auto.bein.sports.2" tvg-name="[HD] bEIN SPORTS 2" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_2.jpg" group-title="Sport",[HD] bEIN SPORTS 2
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/101
+#EXTINF:-1 tvg-id="auto.bein.sports.3" tvg-name="[HD] bEIN SPORTS 3" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_3.jpg" group-title="Sport",[HD] bEIN SPORTS 3
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/102
+#EXTINF:-1 tvg-id="auto.bein.sports.5" tvg-name="[HD] bEIN SPORTS 5" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_5.jpg" group-title="Sport",[HD] bEIN SPORTS 5
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/104
+#EXTINF:-1 tvg-id="auto.bein.sports.eng.1" tvg-name="[HD] bEIN SPORTS ENG 1" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_eng_1.jpg" group-title="Sport",[HD] bEIN SPORTS ENG 1
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/110
+#EXTINF:-1 tvg-id="auto.bein.sports.global" tvg-name="[HD] bEIN SPORTS GLOBAL" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_global.jpg" group-title="Sport",[HD] bEIN SPORTS GLOBAL
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/16779
+#EXTINF:-1 tvg-id="auto.bein.sports.max.1" tvg-name="[HD] bEIN SPORTS MAX 1" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_max_1.jpg" group-title="Sport",[HD] bEIN SPORTS MAX 1
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/296991
+#EXTINF:-1 tvg-id="auto.bein.sports.ph.1" tvg-name="[HD] bEIN SPORTS PH 1" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_ph_1.jpg" group-title="Sport",[HD] bEIN SPORTS PH 1
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/282772
+#EXTINF:-1 tvg-id="auto.bein.sports.ph.2" tvg-name="[HD] bEIN SPORTS PH 2" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_ph_2.jpg" group-title="Sport",[HD] bEIN SPORTS PH 2
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/282773
+#EXTINF:-1 tvg-id="auto.bein.sports.fr.2" tvg-name="[HD] bEIN SPORTS FR 2" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_fr_2.jpg" group-title="Sport",[HD] bEIN SPORTS FR 2
+http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/145
+#EXTINF:-1 tvg-id="auto.cbs.sports.hq" tvg-name="[HD] CBS Sports HQ" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/cbs_sports_hq.jpg" group-title="Sport",[HD] CBS Sports HQ
+https://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/5e9f2c05172a0f0007db4786/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&deviceMake=github.com/inspirationlinks&deviceDNT=1
+#EXTINF:-1 tvg-id="auto.cbs.champions" tvg-name="[HD] CBS Champions" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/cbs_champions.jpg" group-title="Sport",[HD] CBS Champions
+https://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/65ea8b928145cb0008509426/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=web&servertSideAds=false&&deviceMake=github.com/inspirationlinks&deviceDNT=1
+#EXTINF:-1 tvg-id="auto.cbs.golazo.network" tvg-name="[HD] CBS Golazo Network" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/cbs_golazo_network.jpg" group-title="Sport",[HD] CBS Golazo Network
+https://stitcher.pluto.tv/stitch/hls/channel/63a0e33a45264d000850ed7e/master.m3u8?deviceType=web&servertSideAds=false&deviceMake=safari&deviceVersion=1&deviceId=spencer&appVersion=1&deviceDNT=0&deviceModel=web&sid=cb5874fc-6948-11ef-b8e3-ea3db3d97a96
+#EXTINF:-1 tvg-name="[HD] SpoTV 2" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/spotv_2.jpg" group-title="Sport",[HD] SpoTV 2
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d2tjypxxy769fn.cloudfront.net/out/v1/46d9cf39b9a84183b8d5022ac8f4bc41/index.mpd
+#EXTINF:-1 tvg-id="beInSports1.id" tvg-name="[HD] BEIN Sports 1" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_1.png" group-title="Sport",[HD] BEIN Sports 1
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c48c8e48dba24420b5dcef9f5b847b12:daad0aeb165b9a26b706f2a261b8fafe
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd
+#EXTINF:-1 tvg-id="beINSports4" tvg-name="[HD] Bein Sports 4" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_4.png" group-title="Sport",[HD] Bein Sports 4
+#http://185.160.192.64:80/mangin15/85784/13678
+#https://raw.githubusercontent.com/DonzCompIndonesia/donztelevision/refs/heads/main/v1/BS3.m3u8
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c48c8e48dba24420b5dcef9f5b847b12:daad0aeb165b9a26b706f2a261b8fafe
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/2e55bc8199044c27b1dbb827af65a04f/index.mpd
+#EXTINF:-1 tvg-name="[HD] Fox Sports 1" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fox_sports_1.png" group-title="Sport",[HD] Fox Sports 1
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=5466ebd70704bdeb657f0abf3c5ca4ef:bdd79b72d8e48ed483aa623cc38a8a16
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36
+https://cors-everywhere-wc8b4.ondigitalocean.app/https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/tmpzbbdj9y/out/v1/962736723a534ba294e7592fef49827b/cenc.mpd
+#EXTINF:-1 tvg-name="[FHD] Bein Sports Extra" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_extra.png" group-title="Sport",[FHD] Bein Sports Extra
+https://amg01334-beinsportsllc-beinxtra-localnow-kcy6r.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-name="[HD] Fox Sports 2" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fox_sports_2.png" group-title="Sport",[HD] Fox Sports 2
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=09453ce820d65fbc675de3185f9e454c:98cff9600995fa381c76fdacf3c7edae
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36
+https://cors-everywhere-wc8b4.ondigitalocean.app/https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/awxnrqkbo5/out/v1/716529a4091947b0877e6cb80dbd6ccb/cenc.mpd
+#EXTINF:-1 tvg-name="[FHD] Barca TV" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/barca_tv.png" group-title="Sport",[FHD] Barca TV
+https://amg17560-fcb-amg17560c1-rakuten-uk-4891.playouts.now.amagi.tv/playlist/amg17560-fcbarcelona-topbarcaenglish-rakutenuk/playlist.m3u8
+#EXTINF:-1 tvg-name="[FHD] Billiard TV" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/billiard_tv.png" group-title="Sport",[FHD] Billiard TV
+https://newidco-billiardstv-1-eu.xiaomi.wurl.tv/playlist.m3u8

@@ -607,6 +607,7 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
     
     # Saring keluar jika laga ini sudah selesai hari ini berdasarkan data ESPN
     is_rerun = False
+    is_permanent = False
     cleaned_title_match = clean_match_name(title_lower)
     if cleaned_title_match:
         norm_match = cleaned_title_match.lower()
@@ -721,18 +722,27 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
             rerun_label = " - Rerun" if is_rerun else ""
             display_name = f"{res_label}World Cup 2026{rerun_label} - {clean_title}"
     else:
-        group = "Live Events"
-        logo = None
-        for sport_key, sport_img in SPORT_POSTER_MAP.items():
-            if sport_key in title_lower:
-                logo = download_and_localize_logo(sport_key, sport_img)
-                break
-        if not logo:
-            orig_logo = attrs.get("tvg-logo", "")
-            if orig_logo and "gyazo" not in orig_logo and "world_cup" not in orig_logo:
-                logo = download_and_localize_logo(title, orig_logo)
-            else:
-                logo = download_and_localize_logo(title, "")
+        # Cek apakah stasiun TV olahraga reguler/permanen
+        from utils import should_bypass_ping
+        url_lower = entry["url"].lower()
+        permanent_domains = [
+            "pluto.tv", "amagi.tv", "wurl.tv", "frequency.stream", "ideonow.com", 
+            "i.mjh.nz", "visionplus.id", "dens.tv", "vidio.com", "indihometv.com", 
+            "telkom", "useetv"
+        ]
+        has_match_separator = any(sep in title_lower for sep in [" vs ", " v ", " at ", " - "])
+        
+        is_permanent = False
+        if any(domain in url_lower for domain in permanent_domains) or should_bypass_ping(entry["url"]):
+            if not has_match_separator:
+                is_permanent = True
+        else:
+            static_keywords = [
+                "bein sports", "spotv", "fox sports", "mutv", "barca tv", "nba tv", 
+                "premier league tv", "golf channel", "ufc tv", "wwe network", "nhl network"
+            ]
+            if any(kw in title_lower for kw in static_keywords) and not has_match_separator:
+                is_permanent = True
                 
         rerun_label = " - Rerun" if is_rerun else ""
         if match_name:
@@ -740,6 +750,28 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
         else:
             clean_title = re.sub(r'\[?(fhd|hd|sd)\]?', '', title, flags=re.IGNORECASE).strip()
             display_name = f"{res_label}{clean_title}{rerun_label}"
+            
+        if is_permanent:
+            group = "Sport"
+            logo = None
+            for sport_key, sport_img in SPORT_POSTER_MAP.items():
+                if sport_key in title_lower:
+                    logo = download_and_localize_logo(sport_key, sport_img)
+                    break
+            if not logo:
+                orig_logo = attrs.get("tvg-logo", "")
+                if orig_logo and "gyazo" not in orig_logo and "world_cup" not in orig_logo:
+                    logo = download_and_localize_logo(title, orig_logo)
+                else:
+                    logo = download_and_localize_logo(title, "")
+        else:
+            group = "Live Events"
+            try:
+                from generate_dynamic_posters import create_event_poster
+                logo = create_event_poster(display_name)
+            except Exception as e:
+                print(f"Error generating dynamic poster: {e}")
+                logo = download_and_localize_logo(title, "")
         
     attrs["group-title"] = group
     attrs["tvg-logo"] = logo
@@ -748,6 +780,7 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
     
     entry["extinf"] = [build_extinf_line(attrs)]
     entry["is_wc"] = is_wc
+    entry["is_permanent_sport"] = is_permanent
     return entry
 
 
@@ -1150,6 +1183,7 @@ def main():
 
     all_wc_entries = []
     all_live_entries = []
+    all_permanent_sports = []
 
     for source in SOURCES:
         name = source["name"]
@@ -1223,7 +1257,9 @@ def main():
             enriched = format_and_enrich_sports_entry(res_entry, name, active_wc_matches)
             if enriched is None:
                 continue
-            if enriched["is_wc"]:
+            if enriched.get("is_permanent_sport"):
+                all_permanent_sports.append(enriched)
+            elif enriched["is_wc"]:
                 all_wc_entries.append(enriched)
             else:
                 all_live_entries.append(enriched)
@@ -1259,11 +1295,24 @@ def main():
     # Dedup antar source jika ada nama/url ganda secara pintar
     unique_wc, wc_dup_removed = dedup_entries_by_name(all_wc_entries)
     unique_live, live_dup_removed = dedup_entries_by_name(all_live_entries)
-    print(f"\nDeduplikasi nama selesai: {wc_dup_removed} duplikat World Cup dibersihkan, {live_dup_removed} duplikat Live Events dibersihkan.")
+    unique_perm, perm_dup_removed = dedup_entries_by_name(all_permanent_sports)
+    print(f"\nDeduplikasi nama selesai: {wc_dup_removed} duplikat World Cup dibersihkan, {live_dup_removed} duplikat Live Events dibersihkan, {perm_dup_removed} duplikat Permanent Sports dibersihkan.")
 
     # Lakukan pengurutan prioritas untuk saluran Piala Dunia
     print("\nSorting World Cup channels by language priority (Indo/English) and resolution...")
     unique_wc = sorted(unique_wc, key=calculate_wc_score, reverse=True)
+
+    # Tulis permanent sports playlist
+    perm_lines = [f'#EXTM3U url-tvg="{EPG_URL}"']
+    for entry in unique_perm:
+        perm_lines.extend(entry["extinf"])
+        perm_lines.extend(entry["other"])
+        perm_lines.extend(entry["vlcopt"])
+        perm_lines.append(entry["url"])
+        
+    perm_path = OUTPUT_DIR / "sports_permanent.m3u"
+    with open(perm_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(perm_lines) + "\n")
 
     # Gabungkan semua ke dalam satu playlist master
     output_lines = [f'#EXTM3U url-tvg="{EPG_URL}"']

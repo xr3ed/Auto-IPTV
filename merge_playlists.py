@@ -33,6 +33,7 @@ PLAYLISTS_TO_MERGE = [
     {"file": "roku.m3u", "section": "ROKU"},
     {"file": "pluto_all.m3u", "section": "PLUTO"},
     {"file": "samsungtvplus_all.m3u", "section": "SAMSUNGTV+"},
+    {"file": "sports_permanent.m3u", "section": "SPORT"},
 ]
 
 
