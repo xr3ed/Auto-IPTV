@@ -10,6 +10,7 @@ on:
     paths:
       - '.github/workflows/generate_liveevents.yml'
       - 'generate_liveevents.py'
+      - 'generate_dynamic_posters.py'
 
 permissions:
   contents: write

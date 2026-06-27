@@ -15,6 +15,7 @@ on:
       - 'merge_playlists.py'
       - 'check_posters.py'
       - 'utils.py'
+      - 'generate_dynamic_posters.py'
 
 permissions:
   contents: write
