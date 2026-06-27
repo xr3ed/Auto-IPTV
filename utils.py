@@ -194,6 +194,10 @@ def download_and_localize_logo(channel_name: str, original_logo_url: str) -> str
     import requests
     import string
     
+    # Langsung arahkan seluruh TVRI regional ke logo TVRI nasional lokal milik user
+    if "tvri" in channel_name.lower():
+        return "https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/tvri.png"
+        
     if not original_logo_url or not original_logo_url.strip():
         # Fallback jika URL kosong
         original_logo_url = get_fallback_logo(channel_name)

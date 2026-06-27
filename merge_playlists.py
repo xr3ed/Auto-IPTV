@@ -244,6 +244,22 @@ def deduplicate_channels_smart(channels: list[dict]) -> list[dict]:
     return final_channels
 
 
+def fix_missing_local_logo(extinf_line: str) -> str:
+    """Jika logo merujuk ke folder logo lokal tapi berkas fisiknya tidak ada, alihkan ke logo default Indihome."""
+    match = re.search(r'tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/([^"]+)"', extinf_line)
+    if match:
+        filename = match.group(1)
+        local_path = os.path.join("logo", filename)
+        if not os.path.exists(local_path):
+            default_logo = "https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/logo-indihome-tsel-og-default.png"
+            extinf_line = re.sub(
+                r'tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/[^"]+"',
+                f'tvg-logo="{default_logo}"',
+                extinf_line
+            )
+    return extinf_line
+
+
 def merge_all_to_indihome():
     print("🔗 Memulai penggabungan dan pembersihan terpadu ke IndihomeTV.m3u...")
     
@@ -352,6 +368,7 @@ def merge_all_to_indihome():
             "https://raw.githubusercontent.com/apistech/project/main/logo/",
             "https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/"
         )
+        extinf_line = fix_missing_local_logo(extinf_line)
         output_content.append(extinf_line)
         output_content.extend(ch["opts"])
         output_content.append(ch["url"])
@@ -388,6 +405,7 @@ def merge_all_to_indihome():
                 "https://raw.githubusercontent.com/apistech/project/main/logo/",
                 "https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/"
             )
+            extinf_line = fix_missing_local_logo(extinf_line)
             section_lines.append(extinf_line)
             section_lines.extend(ch["opts"])
             section_lines.append(ch["url"])
