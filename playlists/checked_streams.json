@@ -182,13 +182,6 @@
     "source": "wc2026"
   },
   {
-    "url": "🕒 Last Updated: 2026-06-10 17:38:24 (BD Time)",
-    "playable": false,
-    "reason": "Connection Failed: InvalidSchema",
-    "resolution": "",
-    "source": "wc2026"
-  },
-  {
     "url": "🖥️ Developed by: Monirul Islam",
     "playable": false,
     "reason": "Connection Failed: InvalidSchema",
@@ -224,9 +217,9 @@
     "source": "wc2026"
   },
   {
-    "url": "http://sm-monirul.top/ott/iscreen/index.m3u8",
+    "url": "https://tc-sg.rockstreamer.com/v1/019ed91616121ea540a8171c8e801f/019ed92ac80315fc600b1796d4ad8b/main.m3u8",
     "playable": false,
-    "reason": "HTTP Error 404",
+    "reason": "HTTP Error 403",
     "resolution": "",
     "source": "wc2026"
   },
@@ -353,7 +346,7 @@
     "url": "https://mainstreams.pro/hls/24SDAZFcsqnj24.m3u8",
     "playable": true,
     "reason": "OK (HEAD Request Success)",
-    "resolution": "",
+    "resolution": "FHD",
     "source": "wc2026"
   },
   {
@@ -402,7 +395,7 @@
     "url": "http://sm-monirul.top/fifa/bioscope/index.m3u8",
     "playable": true,
     "reason": "OK (HEAD Request Success)",
-    "resolution": "FHD",
+    "resolution": "",
     "source": "wc2026"
   },
   {
@@ -980,6 +973,13 @@
     "source": "live_events"
   },
   {
+    "url": "https://khala.skylivehd.com/global/cazetv/index.m3u8?token=17ec88b0f8fbff19b3a110c93b48040f05d32d6c-7d-1782637264-1782583264",
+    "playable": false,
+    "reason": "HTTP Error 403",
+    "resolution": "",
+    "source": "live_events"
+  },
+  {
     "url": "https://wp9xqedt.fubo18.com:443/foxsports1_usa/mono.m3u8?token=f9e64839039fa3a954ff592e91130226d2bcd214-b8-1782603715-1782585715",
     "playable": false,
     "reason": "HTTP Error 403",
@@ -1071,14 +1071,14 @@
     "source": "live_events"
   },
   {
-    "url": "https://x4bnd7lq.fubo18.com:443/tycsports/mono.m3u8?token=6204b134f3e568826820d185a0222a9ec6b4829c-a2-1782603714-1782585714",
+    "url": "http://193.47.62.42/hls/PPPPQ.m3u8",
     "playable": false,
-    "reason": "HTTP Error 403",
+    "reason": "HTTP Error 404",
     "resolution": "",
     "source": "live_events"
   },
   {
-    "url": "https://bmf0aw9u.fubo18.com:443/foxsports1_usa/mono.m3u8?token=906477303d2520e517758d17d23ad867bd670caa-4-1782603714-1782585714",
+    "url": "https://x4bnd7lq.fubo18.com:443/tycsports/mono.m3u8?token=6204b134f3e568826820d185a0222a9ec6b4829c-a2-1782603714-1782585714",
     "playable": false,
     "reason": "HTTP Error 403",
     "resolution": "",
@@ -1171,7 +1171,7 @@
   {
     "url": "https://cdnlivetv.tv/secure/api/v1/6a288d2a81d8192bb76cc387/playlist.m3u8?token=NmEyODhkMmE4MWQ4MTkyYmI3NmNjMzg3OjE3ODI2MDY2NzM5NTY6Y2RubGl2ZXR2LnR2OjMyMmVjYTdjZmVhMjBiZGIuYTI3YzczY2JhMWY3Y2Y3OGU4MWM2ODI1MTc2NGIwNDAzZDU0ZmFjODc5MGViMTliMWFlNTY0ZGRhOThhYmQyZQ",
     "playable": false,
-    "reason": "HTTP Error 502",
+    "reason": "Blocked (Geoblock List)",
     "resolution": "",
     "source": "live_events"
   },
@@ -1374,7 +1374,7 @@
   {
     "url": "https://obstreamx.click/live/x4wzkqvki7.m3u8",
     "playable": false,
-    "reason": "HTTP Error 404",
+    "reason": "HTTP Error 502",
     "resolution": "",
     "source": "live_events"
   },
@@ -1382,6 +1382,13 @@
     "url": "https://602.sman1asjap.my.id/wwe.m3u8",
     "playable": false,
     "reason": "HTTP Error 403",
+    "resolution": "",
+    "source": "live_events"
+  },
+  {
+    "url": "https://602.elugohome.com/ppv.m3u8",
+    "playable": true,
+    "reason": "OK (HEAD Request Success)",
     "resolution": "",
     "source": "live_events"
   },
@@ -1512,7 +1519,28 @@
     "source": "live_events"
   },
   {
-    "url": "https://lb4.wfty.st/secure/FRJzlzAe7xZZrjZjhzaW6A/regular/stade-toulousain-montpellier-herault/1/602865/1782610235/playlist.m3u8",
+    "url": "https://khala.skylivehd.com/global/espn2/index.m3u8?token=9320d726eed379a33a05f7ad1628eeb70d18ce36-1c-1782637270-1782583270",
+    "playable": false,
+    "reason": "HTTP Error 403",
+    "resolution": "",
+    "source": "live_events"
+  },
+  {
+    "url": "https://st.streamtpday1.xyz:443/global/dsports/index.m3u8?token=c035d47b65e9f1ced916e62664a288ed1669863f-b2-1782626441-1782572441",
+    "playable": false,
+    "reason": "HTTP Error 403",
+    "resolution": "",
+    "source": "live_events"
+  },
+  {
+    "url": "https://st.streamtpday1.xyz:443/global/vix3/index.m3u8?token=cd4dc9b4aa7945b834912935db0b23cec052d85f-e6-1782626441-1782572441",
+    "playable": false,
+    "reason": "HTTP Error 403",
+    "resolution": "",
+    "source": "live_events"
+  },
+  {
+    "url": "https://sa.streamtpday1.xyz:443/global/dsports2/index.m3u8?token=501219c9531e7e6d482406cb87479cc5e2d48f84-6c-1782626442-1782572442",
     "playable": false,
     "reason": "HTTP Error 403",
     "resolution": "",
@@ -2415,7 +2443,21 @@
     "source": "live_events"
   },
   {
-    "url": "https://lb5.wfty.st/secure/h_ZrKRJXckFYCnZgRuyxwA/regular/slovenia-brazil/1/4668105/1782612157/playlist.m3u8",
+    "url": "http://193.47.62.42/hls/GFGFGFQQ.m3u8",
+    "playable": false,
+    "reason": "HTTP Error 404",
+    "resolution": "",
+    "source": "live_events"
+  },
+  {
+    "url": "https://bGFuZQ.fubo18.com:443/dsportsplus/mono.m3u8?token=41785b07f0fa754d5e86905d9b2ce827e152b365-ae-1782603714-1782585714",
+    "playable": false,
+    "reason": "Connection Failed: ConnectTimeout",
+    "resolution": "",
+    "source": "live_events"
+  },
+  {
+    "url": "https://lb1.wfty.st/secure/4mIDPq1b1G-mJPRoE01niw/regular/ac-oulu-lahti/1/4636775/1782606678/playlist.m3u8",
     "playable": false,
     "reason": "HTTP Error 403",
     "resolution": "",
@@ -2472,6 +2514,20 @@
   },
   {
     "url": "https://sa.streamtpday1.xyz:443/global/paramount1/index.m3u8?token=5bbb28bf7d832977917835ee3dca6bfeaef0831b-b5-1782626439-1782572439",
+    "playable": false,
+    "reason": "HTTP Error 403",
+    "resolution": "",
+    "source": "live_events"
+  },
+  {
+    "url": "https://lb3.wfty.st/secure/N2afJb2jWihfyQBF2sZwXQ/easy/toronto-tempo-phoenix-mercury/1/4659760/1782606674/playlist.m3u8",
+    "playable": false,
+    "reason": "HTTP Error 403",
+    "resolution": "",
+    "source": "live_events"
+  },
+  {
+    "url": "https://lb2.wfty.st/secure/w8rxKK_1DrAxu8kaXUAelA/regular/turkiye-argentina/1/4668138/1782608455/playlist.m3u8",
     "playable": false,
     "reason": "HTTP Error 403",
     "resolution": "",
@@ -2590,7 +2646,7 @@
     "source": "bittv_sports_local"
   },
   {
-    "url": "http://op-group1-swiftservehd-1.dens.tv/h/h234/02.m3u8",
+    "url": "http://op-group1-swiftservehd-1.dens.tv/h/h40/01.m3u8",
     "playable": false,
     "reason": "Connection Failed: ConnectionError",
     "resolution": "",
@@ -2611,9 +2667,44 @@
     "source": "bittv_sports_local"
   },
   {
-    "url": "http://5bf7b725107e5.streamlock.net/tv9/tv9/chunklist_w475481839.m3u8",
-    "playable": true,
-    "reason": "OK (HEAD Request Success)",
+    "url": "http://live1.pro2cdnlive.com/live/channel82.flv?wsSecret=c4e7127264bc313845aa9c2b0d4104a0&wsABSTime=1780609370",
+    "playable": false,
+    "reason": "HTTP Error 403",
+    "resolution": "",
+    "source": "bittv_sports_local"
+  },
+  {
+    "url": "https://a201aivottlinear-a.akamaihd.net/OTTB/syd-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd",
+    "playable": false,
+    "reason": "DRM Protected (No License Key)",
+    "resolution": "",
+    "source": "bittv_sports_local"
+  },
+  {
+    "url": "https://a151aivottlinear-a.akamaihd.net/OTTB/pdx-nitro/live/clients/dash/enc/hm5nmxzgr4/out/v1/21aca259874c427c9ef9dc808b46f50f/cenc.mpd",
+    "playable": false,
+    "reason": "DRM Protected (No License Key)",
+    "resolution": "",
+    "source": "bittv_sports_local"
+  },
+  {
+    "url": "https://abkv2pxaaaaaaaamms3xu2tu2eynb.ta.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/awxnrqkbo5/out/v1/716529a4091947b0877e6cb80dbd6ccb/cenc.mpd",
+    "playable": false,
+    "reason": "DRM Protected (No License Key)",
+    "resolution": "",
+    "source": "bittv_sports_local"
+  },
+  {
+    "url": "https://a166aivottlinear-a.akamaihd.net/OTTB/dub-nitro/live/clients/dash/enc/k0duzgfejg/out/v1/70a50b1bda944628b8e7e66ab4069419/cenc.mpd",
+    "playable": false,
+    "reason": "HTTP Error 403",
+    "resolution": "",
+    "source": "bittv_sports_local"
+  },
+  {
+    "url": "https://a201aivottlinear-a.akamaihd.net/OTTB/syd-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd",
+    "playable": false,
+    "reason": "DRM Protected (No License Key)",
     "resolution": "",
     "source": "bittv_sports_local"
   },
@@ -2634,7 +2725,7 @@
   {
     "url": "https://atemeshield1-voe.sysln.id/live/eds/CitraMuslimHD/mediampd/CitraMuslimHD.mpd",
     "playable": false,
-    "reason": "DRM Protected (No License Key)",
+    "reason": "HTTP Error 404",
     "resolution": "",
     "source": "bittv_sports_local"
   },
@@ -2676,12 +2767,26 @@
   {
     "url": "https://a166aivottlinear-a.akamaihd.net/OTTB/dub-nitro/live/clients/dash/enc/k0duzgfejg/out/v1/70a50b1bda944628b8e7e66ab4069419/cenc.mpd",
     "playable": false,
-    "reason": "HTTP Error 403",
+    "reason": "DRM Protected (No License Key)",
     "resolution": "",
     "source": "bittv_sports_local"
   },
   {
-    "url": "https://atemecdnbalancer-voe.sysln.id/live/eds/LoveNatureHD/mediampd/LoveNatureHD.mpd",
+    "url": "https://dash2.antik.sk/stream/nvidia_nova_sport2/playlist_cenc.mpd",
+    "playable": true,
+    "reason": "OK (HEAD Request Success)",
+    "resolution": "",
+    "source": "bittv_sports_local"
+  },
+  {
+    "url": "https://atemecdnbalancer-voe.sysln.id/live/eds/JakartaGlobeHD/mediampd/JakartaGlobeHD.mpd",
+    "playable": false,
+    "reason": "DRM Protected (No License Key)",
+    "resolution": "",
+    "source": "bittv_sports_local"
+  },
+  {
+    "url": "https://atemecdnbalancer-voe.sysln.id/live/eds/HitsMoviesHD/mediampd/HitsMoviesHD.mpd",
     "playable": false,
     "reason": "HTTP Error 404",
     "resolution": "",
@@ -2753,7 +2858,7 @@
   {
     "url": "https://cdn.stmify.com/primevideo/stream/ITV3/cenc.mpd",
     "playable": false,
-    "reason": "HTTP Error 403",
+    "reason": "DRM Protected (No License Key)",
     "resolution": "",
     "source": "bittv_sports_local"
   },
@@ -3283,6 +3388,20 @@
     "source": "dhanytv_sports"
   },
   {
+    "url": "https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/ghwcl6hv68/out/v1/83536910d8034e9b9895a20fbe1c1687/cenc.mpd",
+    "playable": true,
+    "reason": "OK (HEAD Request Success)",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "https://otte.live.fly.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/3b7qwiqzk3/out/v1/9f14895badca43e6a716db021dcd0c31/cenc.mpd",
+    "playable": true,
+    "reason": "OK (HEAD Request Success)",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
     "url": "https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd",
     "playable": false,
     "reason": "HTTP Error 400",
@@ -3682,6 +3801,13 @@
     "source": "dhanytv_sports"
   },
   {
+    "url": "https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/510914",
+    "playable": false,
+    "reason": "Connection Failed: ConnectionError",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
     "url": "https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/510916",
     "playable": false,
     "reason": "Connection Failed: ConnectionError",
@@ -3733,19 +3859,75 @@
   {
     "url": "http://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148161",
     "playable": false,
-    "reason": "HTTP Error 401",
+    "reason": "Connection Failed: ConnectionError",
     "resolution": "",
     "source": "dhanytv_sports"
   },
   {
-    "url": "http://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148162",
+    "url": "https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/1641629",
+    "playable": false,
+    "reason": "Connection Failed: ConnectionError",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/1641613",
+    "playable": false,
+    "reason": "Connection Failed: ConnectionError",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/1641615",
+    "playable": false,
+    "reason": "Connection Failed: ConnectionError",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/1641616",
+    "playable": false,
+    "reason": "Connection Failed: ConnectionError",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/1641614",
+    "playable": false,
+    "reason": "Connection Failed: ConnectionError",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/1641617",
+    "playable": false,
+    "reason": "Connection Failed: ConnectionError",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/299259",
+    "playable": false,
+    "reason": "HTTP Error 404",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "http://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148160",
     "playable": false,
     "reason": "HTTP Error 401",
     "resolution": "",
     "source": "dhanytv_sports"
   },
   {
-    "url": "http://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148160",
+    "url": "http://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148158",
+    "playable": false,
+    "reason": "HTTP Error 401",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "http://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148161",
     "playable": false,
     "reason": "HTTP Error 401",
     "resolution": "",
@@ -3768,7 +3950,7 @@
   {
     "url": "http://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148164",
     "playable": false,
-    "reason": "HTTP Error 401",
+    "reason": "Connection Failed: ConnectionError",
     "resolution": "",
     "source": "dhanytv_sports"
   },
@@ -3815,7 +3997,7 @@
     "source": "dhanytv_sports"
   },
   {
-    "url": "http://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148167",
+    "url": "http://dhoomtv.xyz:80/P4B9TB9xR8/humongous2tonight/148168",
     "playable": false,
     "reason": "HTTP Error 401",
     "resolution": "",
@@ -3943,7 +4125,28 @@
   {
     "url": "https://rohan116.ultronx1.cfd/puk1/usergenrx0cir27aq.m3u8",
     "playable": true,
-    "reason": "OK (HEAD Request Success)",
+    "reason": "OK (GET Stream Content-Type Match)",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "https://ultra2.falconx1.cfd/kuk3/usergendx0slfk9QssDx9lgxlsdmqrnd.m3u8",
+    "playable": false,
+    "reason": "Connection Failed: ConnectionError",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "http://sinalprivado.info:80/live/632035/GqGcFV4ntu/22002.ts",
+    "playable": false,
+    "reason": "HTML Block Page (Geoblock/Error)",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "http://sinalprivado.info:80/live/632035/GqGcFV4ntu/22005.ts",
+    "playable": false,
+    "reason": "HTML Block Page (Geoblock/Error)",
     "resolution": "",
     "source": "dhanytv_sports"
   },
@@ -4039,6 +4242,55 @@
     "source": "dhanytv_sports"
   },
   {
+    "url": "https://otte.live.fly.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/v5v9yfn62i/out/v1/0991e33d09da46b2857fcc845db95c40/cenc.mpd",
+    "playable": false,
+    "reason": "HTTP Error 403",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/144",
+    "playable": true,
+    "reason": "OK (GET Stream Content-Type Match)",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/282772",
+    "playable": true,
+    "reason": "OK (GET Stream Content-Type Match)",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/282773",
+    "playable": true,
+    "reason": "OK (GET Stream Content-Type Match)",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "https://otte.live.fly.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/uiffe4jhf0/out/v1/3534efafca8c4815adbb4d2e9a1fe003/cenc.mpd",
+    "playable": true,
+    "reason": "OK (HEAD Request Success)",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "http://sinalprivado.info:80/live/632035/GqGcFV4ntu/22011.ts",
+    "playable": false,
+    "reason": "HTML Block Page (Geoblock/Error)",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "http://sinalprivado.info:80/live/632035/GqGcFV4ntu/22014.ts",
+    "playable": false,
+    "reason": "HTML Block Page (Geoblock/Error)",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
     "url": "https://otte.live.fly.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/irtfdsri14/out/v1/165128c314e944faa3d79e107974b323/cenc.mpd?token=gH6favjoMIy0Ci5tFBoo8AuyzMvw1EMQ",
     "playable": false,
     "reason": "HTTP Error 400",
@@ -4060,9 +4312,16 @@
     "source": "dhanytv_sports"
   },
   {
-    "url": "https://atlan2025.me/Rochdi70sam/d3hm7lsqrh/280827",
-    "playable": false,
-    "reason": "Connection Failed: ConnectionError",
+    "url": "http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/145",
+    "playable": true,
+    "reason": "OK (GET Stream Content-Type Match)",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "http://013tv.com:8080/vtprotonium/CuUWPf5b7jywB68SxZ5/290037",
+    "playable": true,
+    "reason": "OK (GET Stream Content-Type Match)",
     "resolution": "",
     "source": "dhanytv_sports"
   },
@@ -4151,9 +4410,9 @@
     "source": "dhanytv_sports"
   },
   {
-    "url": "https://zap-live1-ott.izzigo.tv/5/out/u/dash/SKYSPORTS24HD/default.mpd",
+    "url": "https://line.trx-ott.com/play/live.php?mac=00:1a:79:bc:D3:35&stream=1955135&extension=ts",
     "playable": false,
-    "reason": "HTTP Error 403",
+    "reason": "Connection Failed: ConnectionError",
     "resolution": "",
     "source": "dhanytv_sports"
   },
@@ -4207,9 +4466,16 @@
     "source": "dhanytv_sports"
   },
   {
-    "url": "https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd",
+    "url": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs21",
     "playable": true,
-    "reason": "OK (HEAD Request Success)",
+    "reason": "OK (GET Stream Content-Type Match)",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs19",
+    "playable": true,
+    "reason": "OK (GET Stream Content-Type Match)",
     "resolution": "",
     "source": "dhanytv_sports"
   },
@@ -4342,7 +4608,28 @@
   {
     "url": "https://rxne77juptdeyke3tytvgqwyh.medya.trt.com.tr/master.m3u8",
     "playable": false,
-    "reason": "Connection Failed: ConnectionError",
+    "reason": "Connection Failed: ReadTimeout",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "https://estreams.tv.nej.cz/dash/CH_TVP_SPORT_Portable.ism/playlist.mpd",
+    "playable": false,
+    "reason": "Connection Failed: ConnectTimeout",
+    "resolution": "",
+    "source": "dhanytv_sports"
+  },
+  {
+    "url": "https://d1211whpimeups.cloudfront.net/smil:rtb2/chunklist_b1120000_sleng.m3u8",
+    "playable": false,
+    "reason": "HTTP Error 403",
+    "resolution": "",
+    "source": "basictv_sports"
+  },
+  {
+    "url": "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hufm7lgnhx/out/v1/5045630288d44123ba85427b2c36f29f/cenc-sd.mpd",
+    "playable": true,
+    "reason": "OK (HEAD Request Success)",
     "resolution": "",
     "source": "basictv_sports"
   },
@@ -4375,9 +4662,9 @@
     "source": "basictv_sports"
   },
   {
-    "url": "https://ott-balancer.tvri.go.id/live/eds/SportHD/hls/SportHD.m3u8",
+    "url": "https://d6m3sfa7e58z5.cloudfront.net/out/v1/3b0660e05eed4d769521eb0275aab3ab/index.mpd",
     "playable": false,
-    "reason": "HTTP Error 404",
+    "reason": "HTTP Error 403",
     "resolution": "",
     "source": "basictv_sports"
   },
@@ -4704,9 +4991,9 @@
     "source": "basictv_sports"
   },
   {
-    "url": "https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/bitrate_3.m3u8",
-    "playable": true,
-    "reason": "OK (HEAD Request Success)",
+    "url": "https://live-pv-ta.amazon.fastly-edge.com/sin-nitro/live/clients/dash/enc/fb6jy4pxts/out/v1/f8fa17f087564f51aa4d5c700be43ec4/cenc.mpd",
+    "playable": false,
+    "reason": "HTTP Error 403",
     "resolution": "",
     "source": "basictv_sports"
   },
@@ -4750,6 +5037,13 @@
     "playable": true,
     "reason": "OK (GET Stream Content-Type Match)",
     "resolution": "FHD",
+    "source": "basictv_sports"
+  },
+  {
+    "url": "https://cdn08jtedge.indihometv.com/dassdvr/133/fightsport/manifest.mpd",
+    "playable": false,
+    "reason": "HTTP Error 404",
+    "resolution": "",
     "source": "basictv_sports"
   },
   {
@@ -4901,8 +5195,8 @@
   },
   {
     "url": "http://93.93.113.95:25461/TV-Berati/XtreamCodes/495",
-    "playable": true,
-    "reason": "OK (GET Stream Content-Type Match)",
+    "playable": false,
+    "reason": "HTTP Error 401",
     "resolution": "",
     "source": "windozalmi_sports"
   },
