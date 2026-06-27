@@ -1,4 +1,5 @@
 import os
+import json
 import gzip
 import re
 import sys
@@ -129,6 +130,17 @@ def ping_stream(url: str, headers: dict = None, opts: list = None) -> tuple[str,
     import random
     
     opts = opts or []
+
+    # Cek blocklist geo-block dinamis
+    blocklist_path = os.path.join("playlists", "geoblock_list.json")
+    if os.path.exists(blocklist_path):
+        try:
+            with open(blocklist_path, 'r', encoding='utf-8') as f:
+                blocklist = json.load(f)
+                if url in blocklist:
+                    return url, False, 999.0
+        except Exception:
+            pass
 
     # Jika stream adalah DASH (.mpd) tapi tidak memiliki license_key di opts, maka otomatis DEAD
     is_dash = ".mpd" in url.lower()
