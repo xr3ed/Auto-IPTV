@@ -32,8 +32,14 @@ DRM_SOURCES = [
 ]
 
 def clean_manifest_url(url: str) -> str:
-    """Membersihkan URL manifest dengan membuang query parameter agar seragam."""
-    return url.split("?")[0].strip()
+    """Membersihkan URL manifest agar seragam dan menormalisasi token path dinamis Amazon Prime Video."""
+    # 1. Buang query parameters di belakang tanda tanya
+    url_clean = url.split("?")[0].strip()
+    
+    # 2. Normalisasi token dinamis di path URL Amazon (mengubah 32 karakter hex acak menjadi 'TOKEN')
+    url_clean = re.sub(r'/out/v1/[a-f0-9]{32}/', '/out/v1/TOKEN/', url_clean, flags=re.IGNORECASE)
+    
+    return url_clean
 
 def parse_m3u_for_drm_keys(content: str) -> dict:
     """Mem-parsing isi berkas M3U dan mengekstrak info kunci DRM untuk setiap URL manifest dasar."""

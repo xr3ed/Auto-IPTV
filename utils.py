@@ -75,9 +75,20 @@ def load_drm_keys_db() -> dict:
     return {}
 
 
+def clean_manifest_url(url: str) -> str:
+    """Membersihkan URL manifest agar seragam dan menormalisasi token path dinamis Amazon Prime Video."""
+    # 1. Buang query parameters di belakang tanda tanya
+    url_clean = url.split("?")[0].strip()
+    
+    # 2. Normalisasi token dinamis di path URL Amazon (mengubah 32 karakter hex acak menjadi 'TOKEN')
+    url_clean = re.sub(r'/out/v1/[a-f0-9]{32}/', '/out/v1/TOKEN/', url_clean, flags=re.IGNORECASE)
+    
+    return url_clean
+
+
 def enrich_stream_with_drm_keys(url: str, opts: list) -> list:
     """Menyuntikkan lisensi ClearKey DRM dari database ke dalam opsi jika ada kecocokan manifest URL."""
-    base_url = url.split("?")[0].strip()
+    base_url = clean_manifest_url(url)
     db = load_drm_keys_db()
     
     if base_url in db:
