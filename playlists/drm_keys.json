@@ -3150,21 +3150,21 @@
     "last_scanned": "2026-06-27"
   },
   "https://cdn01-telkomsel-01.akamaized.net/Content/DASH/Live/channel(92c7b96a-33fc-4899-a032-50ae0fbc9257)/manifest.mpd": {
-    "license_type": "clearkey",
-    "license_key": "39a424d1b79e3b77bf6eaac3f3221f7e:7804e43828e094bd49e3d4df443eea11",
-    "referrer": "",
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://ms.mayvee.workers.dev/hbohd/license-proxy-widevine/cenc/?specConform=true",
+    "referrer": "https://maxstream.tv/",
     "last_scanned": "2026-06-27"
   },
   "https://cdn01-telkomsel-01.akamaized.net/Content/DASH/Live/channel(cec31cdd-d2ff-4c23-8a76-ad1c0ef025e2)/manifest.mpd": {
-    "license_type": "clearkey",
-    "license_key": "3e0b88044bbb3512a3d0027764314783:52843f20db4bbf45d594b6be310f81c1",
-    "referrer": "",
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://ms.mayvee.workers.dev/hbofamily/license-proxy-widevine/cenc/?specConform=true",
+    "referrer": "https://maxstream.tv/",
     "last_scanned": "2026-06-27"
   },
   "https://cdn01-telkomsel-01.akamaized.net/Content/DASH/Live/channel(7e3ac8f2-3380-461a-976b-30bca8d939a0)/manifest.mpd": {
-    "license_type": "clearkey",
-    "license_key": "a1e570be4c63326aa95ea53eb5be2699:f9d709f24054472ab7f53c758cf45c94",
-    "referrer": "",
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://ms.mayvee.workers.dev/hbohits/license-proxy-widevine/cenc/?specConform=true",
+    "referrer": "https://maxstream.tv/",
     "last_scanned": "2026-06-27"
   },
   "https://cdn01-telkomsel-01.akamaized.net/Content/DASH/Live/channel(4b9c9228-73c1-cb85-94a9-7fa84858b877)/manifest.mpd": {
@@ -3175,8 +3175,8 @@
   },
   "https://cdn01-telkomsel-01.akamaized.net/Content/DASH/Live/channel(774b9a1e-aa1a-425b-8f24-f90d48787777)/manifest.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://hbosigp.openwindow040.workers.dev",
-    "referrer": "",
+    "license_key": "https://ms.mayvee.workers.dev/hbosign/license-proxy-widevine/cenc/?specConform=true",
+    "referrer": "https://maxstream.tv/",
     "last_scanned": "2026-06-27"
   },
   "https://d1abp075u76pbq.cloudfront.net/live/eds/Cinemachi-HD/sa_dash_vmx/Cinemachi-HD.mpd|Referer=https://www.visionplus.id/": {
@@ -4368,21 +4368,21 @@
     "last_scanned": "2026-06-27"
   },
   "https://nyanv-live-cdn.mncnow.id/live/eds/tvNMovies/sa_dash_vmx/tvNMovies.mpd": {
-    "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
-    "referrer": "https://visionplus.id",
+    "license_type": "clearkey",
+    "license_key": "45c004003b09719751adb885d28d491f:fe82bc3ffe00477c833812fae74caed7",
+    "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://nyanv-live-cdn.mncnow.id/live/eds/CelestialMovie/sa_dash_vmx/CelestialMovie.mpd": {
-    "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
-    "referrer": "https://visionplus.id",
+    "license_type": "clearkey",
+    "license_key": "13aecb26aeee22bc86920045f22d134d:80aa44d998c7c0cc221c96d26730fe9b",
+    "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://nyanv-live-cdn.mncnow.id/live/eds/CelestialClassic/sa_dash_vmx/CelestialClassic.mpd": {
-    "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
-    "referrer": "https://visionplus.id",
+    "license_type": "clearkey",
+    "license_key": "12da619438b3748da206142216d0943b:6958377109d34561ad20645319cec62c",
+    "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://nyanv-live-cdn.mncnow.id/live/eds/Thrill/sa_dash_vmx/Thrill.mpd": {
@@ -4578,32 +4578,32 @@
     "last_scanned": "2026-06-27"
   },
   "https://nyanv-live-cdn.mncnow.id/live/eds/NatGeoChannel/sa_dash_vmx/NatGeoChannel.mpd": {
-    "license_type": "clearkey",
-    "license_key": "05457a5e16a76fe666a22cc7ae2c6548:626e37901bfb985e994d714e9f9de1b5",
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=MTI3MTQzMjItYjdkNi0zNGVkLThkZjEtNDVkOWFkNDUwZDJh",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://nyanv-live-cdn.mncnow.id/live/eds/NatGeoWild/sa_dash_vmx/NatGeoWild.mpd": {
-    "license_type": "clearkey",
-    "license_key": "c3066eaa0984588f78d12dcdb75ef88b:4e98eb4927941bff51ea526d223fa16d",
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=MTI3MTQzMjItYjdkNi0zNGVkLThkZjEtNDVkOWFkNDUwZDJh",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://nyanv-live-cdn.mncnow.id/live/eds/CGTN_Doc/sa_dash_vmx/CGTN_Doc.mpd": {
-    "license_type": "clearkey",
-    "license_key": "87354c602dcabe0eef472f2a68f6685a:518ecaa33b9f05494f8cfaa7dd56a968",
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=MTI3MTQzMjItYjdkNi0zNGVkLThkZjEtNDVkOWFkNDUwZDJh",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://nyanv-live-cdn.mncnow.id/live/eds/CrimeInvestigation/sa_dash_vmx/CrimeInvestigation.mpd": {
-    "license_type": "clearkey",
-    "license_key": "dc6157edc80fa15e6b6f23e695d461e4:7c068dd99c87e0ab1efc635bb77adcb4",
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=MTI3MTQzMjItYjdkNi0zNGVkLThkZjEtNDVkOWFkNDUwZDJh",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://nyanv-live-cdn.mncnow.id/live/eds/BBCEarth-HD/sa_dash_vmx/BBCEarth-HD.mpd": {
-    "license_type": "clearkey",
-    "license_key": "c154c12b5f8336cc9cbef82fb5cc0ab4:5c365427c75eacf217255effcb5fff3e",
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=MTI3MTQzMjItYjdkNi0zNGVkLThkZjEtNDVkOWFkNDUwZDJh",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -4656,14 +4656,14 @@
     "last_scanned": "2026-06-27"
   },
   "https://nyanv-live-cdn.mncnow.id/live/eds/MNCSports-HD/sa_dash_vmx/MNCSports-HD.mpd": {
-    "license_type": "clearkey",
-    "license_key": "531c6d50e3e9f9ba66446f624f492289:d769d9ae238bdd424f8bcdcdc9a3801f",
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://nyanv-live-cdn.mncnow.id/live/eds/MNCSports2-HD/sa_dash_vmx/MNCSports2-HD.mpd": {
-    "license_type": "clearkey",
-    "license_key": "45fec91ce1f19b6b1f31d69dcfaaf6cd:843e228ab109e9aa6c4822ee4ad05d7d",
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -4692,9 +4692,9 @@
     "last_scanned": "2026-06-27"
   },
   "https://nyanv-live-cdn.mncnow.id/live/eds/SPOTV2-HD/sa_dash_vmx/SPOTV2-HD.mpd": {
-    "license_type": "clearkey",
-    "license_key": "57d2ac9210cfbca3596cc679a01c8b29:d5e35c0f39c76adf24853d7ea18c71e7",
-    "referrer": "",
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
+    "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
   "https://cdnjkt2.transvision.co.id:1001/live/master/4/4028c6856c3db2cc016cf0be98ad73e6/manifest.mpd": {
@@ -4933,7 +4933,7 @@
   },
   "https://dce-fs-live-dazn-cdn.dazn.com/dashdrm/dazn-linear-043/stream.mpd": {
     "license_type": "clearkey",
-    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "license_key": "cfb5e2b73bef4f3c878f25ab86a7451f:0d6712bf2a84edcc93d001a9613f6fec",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -5293,19 +5293,19 @@
   },
   "https://video.beeline.tv/live/d/channel319.isml/manifest-stb.mpd": {
     "license_type": "clearkey",
-    "license_key": "9145a6e0f778e61866f573d4944dd533:d02173d40515fea5c83944f21d0f3114",
+    "license_key": "dbce02ba047a663162cf01a13f72fada:01228427a01cd4f5b11d58fb2f0f70fe",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://video.beeline.tv/live/d/channel320.isml/manifest-stb.mpd": {
     "license_type": "clearkey",
-    "license_key": "ce7cf9b28d1a8d874accebc44d7e1fcd:cda18d4d20abd5cc778315abe277feb9",
+    "license_key": "4ee92db5fec64a759fe0e43f5401ea20:87cecedd78a51865acec7dcf0ecbb7f6",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://video.beeline.tv/live/d/channel321.isml/manifest-stb.mpd": {
     "license_type": "clearkey",
-    "license_key": "6cfb55b12aaa9df1626a8adaa4f26329:84486e2e8e5fdee2ef8240019923078c",
+    "license_key": "5af547ae2dee032b9f0a8d165b03dc37:6c840f523c773f979496228d8b44c028",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -5581,7 +5581,7 @@
   },
   "https://cdn08jtedge.indihometv.com/dassdvr/133/flik/manifest.mpd": {
     "license_type": "org.w3.clearkey",
-    "license_key": "79698301a95740009531b1d53e3ad5fe:7240a4a29a54e6089b108fbcb95cb265",
+    "license_key": "69646b755f3130303030303030303030:e4a2359b05563399f1d9adfce641724a",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -7801,7 +7801,7 @@
   },
   "https://php.946985.filegear-sg.me/mytv265.php": {
     "license_type": "clearkey",
-    "license_key": "56e7f3bf6e1f142a3ac51b2ca83e7919:ba733df582f18b4b9c990a52d61d2fc6",
+    "license_key": "1ba88eacde780c7567255b8b33026ae5:f7df792aab8992b79d72a8d01987ecb5",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -10819,13 +10819,13 @@
   },
   "https://cempedak-live-cdn.mncnow.id/live/eds/Galaxy-HD/sa_dash_vmx/Galaxy-HD.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=ZGZjMjFhNzUtMjY3ZC0zYWQ2LWI1N2ItMjdiNjRkOTBiMzFj",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
     "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
   "https://cempedak-live-cdn.mncnow.id/live/eds/GalaxyPremium-HD/sa_dash_vmx/GalaxyPremium-HD.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=ZGZjMjFhNzUtMjY3ZC0zYWQ2LWI1N2ItMjdiNjRkOTBiMzFj",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
     "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
@@ -12517,7 +12517,7 @@
   },
   "https://linearjitp-playback.astro.com.my/dash-wv/linear/5094/default_ott.mpd": {
     "license_type": "clearkey",
-    "license_key": "{",
+    "license_key": "92d34a84fae8e54de0a829629941be10:2fb39ab3f55333d5fa3e830ebf99ec16",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -12529,7 +12529,7 @@
   },
   "https://linearjitp-playback.astro.com.my/dash-wv/linear/2709/default_ott.mpd": {
     "license_type": "clearkey",
-    "license_key": "{",
+    "license_key": "https://clearkey-base64-2-hex-json.herokuapp.com/results.php?keyid=b732fb1488c37774919ae7b4ab0f8010",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -12541,7 +12541,7 @@
   },
   "https://linearjitp-playback.astro.com.my/dash-wv/linear/500/default_ott.mpd": {
     "license_type": "clearkey",
-    "license_key": "{",
+    "license_key": "346b9f41e2933748c8861f82932e0110:cf0cffb637b81598a27bd6b0d90d65a8",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -16999,8 +16999,8 @@
   },
   "https://cempedak-live-cdn.mncnow.id/live/eds/MNCnews-HDD/sa_dash_vmx/MNCnews-HDD.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=MTI3MTQzMjItYjdkNi0zNGVkLThkZjEtNDVkOWFkNDUwZDJh",
-    "referrer": "https://www.visionplus.id",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
+    "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
   "https://cempedak-live-cdn.mncnow.id/live/eds/NHKWorldTV/sa_dash_vmx/NHKWorldTV.mpd": {
@@ -17047,7 +17047,7 @@
   },
   "https://cempedak-live-cdn.mncnow.id/live/eds/CrimeInvestigation/sa_dash_vmx/CrimeInvestigation.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NWFkYWNhMzctNzc0Yy0zYTBiLWFiOGYtODMxYzM2YWM1MDg4",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
     "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
@@ -17107,7 +17107,7 @@
   },
   "https://cempedak-live-cdn.mncnow.id/live/eds/Rockaction/sa_dash_vmx/Rockaction.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=ZGZjMjFhNzUtMjY3ZC0zYWQ2LWI1N2ItMjdiNjRkOTBiMzFj",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
     "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
@@ -17173,7 +17173,7 @@
   },
   "https://cempedak-live-cdn.mncnow.id/live/eds/Rockentertainment/sa_dash_vmx/Rockentertainment.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=Nzk1MmNjNWYtMDExYy0zMTk3LTk1YWMtNzA3N2E5ODEzZDcy",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
     "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
@@ -19332,21 +19332,21 @@
     "last_scanned": "2026-06-27"
   },
   "https://d2xz2v5wuvgur6.cloudfront.net/out/v1/TOKEN/index.mpd": {
-    "license_type": "com.widevine.alpha",
-    "license_key": "https://terabit.web.id/drmkv.php?id=114",
-    "referrer": "",
+    "license_type": "org.w3.clearkey",
+    "license_key": "736777e5823249849d71a7d41ddc35aa:f831235372e07e24fb70f7336291c549",
+    "referrer": "https://www.visionplustv.id/",
     "last_scanned": "2026-06-27"
   },
   "https://d2tjypxxy769fn.cloudfront.net/out/v1/TOKEN/index.mpd": {
-    "license_type": "com.widevine.alpha",
-    "license_key": "https://colloriptvpro.my.id/vis/sc1.php?id=3",
-    "referrer": "",
+    "license_type": "org.w3.clearkey",
+    "license_key": "676b60c2b84b49b6b316207a590203e4:da9878a96062ea105895f310e052fa7b",
+    "referrer": "https://www.visionplustv.id/",
     "last_scanned": "2026-06-27"
   },
   "https://d3b0v7fggu5zwm.cloudfront.net/out/v1/TOKEN/index.mpd": {
-    "license_type": "wwidevine",
-    "license_key": "https://colloriptvpro.my.id/vis/sc1.php?id=113",
-    "referrer": "https://useetvwv.visionplus.id/",
+    "license_type": "clearkey",
+    "license_key": "ecd651d0872c46d6b75a902f3b796e6b:3915b032de12140475d2696ae734cf58",
+    "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
   "https://d6m3sfa7e58z5.cloudfront.net/out/v1/TOKEN/index.mpd": {
@@ -19398,20 +19398,20 @@
     "last_scanned": "2026-06-27"
   },
   "https://tglmp02.akamaized.net/out/v1/TOKEN/manifest.mpd": {
-    "license_type": "clearkey",
-    "license_key": "60dc08aae52f4c0b806a8e43f24a12c8:30d5b579966d822b215ec51a91d8a271",
+    "license_type": "org.w3.clearkey",
+    "license_key": "a4315e7266024dfc9ddb9667727d9635:485a55859fda05a1e3e8ae1ae63906e8",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://tglmp03.akamaized.net/out/v1/TOKEN/manifest.mpd": {
-    "license_type": "clearkey",
-    "license_key": "0328a153c2994b279ab03ab25102fc59:2cc69eaaa858fed24c5623654daf8d3d",
+    "license_type": "org.w3.clearkey",
+    "license_key": "981fda1d42aa4d81b367d85794447e2a:61f0b7e53768214d4d56917fbcfc2723",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://tglmp04.akamaized.net/out/v1/TOKEN/manifest.mpd": {
-    "license_type": "clearkey",
-    "license_key": "7a9ea6df52044841b0c562766e602610:b9380188b4896b25e8d419dfce938c6e",
+    "license_type": "org.w3.clearkey",
+    "license_key": "db646b3742ba42718a28436a1f401aa8:75a545066954b9b7fafa96d72a844e00",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -20173,7 +20173,7 @@
   },
   "https://linearjitp-playback.astro.com.my/dash-wv/linear/2300/default_ott.mpd": {
     "license_type": "clearkey",
-    "license_key": "{",
+    "license_key": "https://clearkey-base64-2-hex-json.herokuapp.com/results.php?keyid=0845d8900e973747e70c9f61ebed2d10",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -25945,7 +25945,7 @@
   },
   "https://cdnjkt2.transvision.co.id:1001/live/master/2/TOKEN/manifest.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://tinyurl.com/CVBMV-DRM",
+    "license_key": "https://auto.nyolong-lu-y.workers.dev",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -26017,67 +26017,67 @@
   },
   "https://owrcovcrpy.gpcdn.net/bpk-tv/1726/output/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "72e01c29e9585fe885efadb81678d1e9:51986222f026404a21caf8c9a44a87c1",
+    "license_key": "26f214d34f4d56aaae1a8125fd009ae6:d2e97dfc67cb5b5f120761e3585dff06",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://owrcovcrpy.gpcdn.net/bpk-tv/1719/output/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "54ed51fa6c0a5cd98ac4f4c56bfb04c8:ba042e4167b038241308ab5c2c6b679f",
+    "license_key": "eb2385885b0f5e01b2316df7039944f0:10168a46f64d8deff75fb5685950c4a0",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://owrcovcrpy.gpcdn.net/bpk-tv/1717/output/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "b0586ae2a93258b4940b0d18d8ea3420:56f33235dcf7867d3de7d899467b2649",
+    "license_key": "8f1805a8dbe3586987cada2d6bce41aa:17e13329b20b40b93f2ac659ce29a7d9",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://owrcovcrpy.gpcdn.net/bpk-tv/1707/output/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "3ddecb096ab95ce2841879be8f088cf6:d191cb314ba3b35b43fa96182f03992d",
+    "license_key": "0468bc6867935d8fa3095a04ec366d03:1f5bd3a5fff8fbbabd1acd5fc0a0483e",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://owrcovcrpy.gpcdn.net/bpk-tv/1727/output/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "4950ec6e06225b01b0cfa1270e120d18:25f218243a00d21856a7d083bb8ae29b",
+    "license_key": "e7062e7e03b05e6d9337844ba5268325:856b971147334cd71c45e099c6c02f7d",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://owrcovcrpy.gpcdn.net/bpk-tv/1732/output/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "7d0a6f5200f053bf9e6faacf45bffdf4:99f2e29def2fcd1fe1411488164d9803",
+    "license_key": "9f8544fe524056aab99002022b256612:6e76de9413afb5cf6d4825b280bafeb0",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://owrcovcrpy.gpcdn.net/bpk-tv/1718/output/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "040adc4b741e512f83e9bf71c20bbb1c:49e39ce05633a0464468776c8326c9f9",
+    "license_key": "d4db47ff36275cb2859528dfea4e6739:f6eb91ad3a3ce1a2cc6b569019aa8139",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://owrcovcrpy.gpcdn.net/bpk-tv/1714/output/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "e621e1b03b5456eb9c5bdae9ffb82789:52eb12ea248dc1ce15c5eb64b252cf30",
+    "license_key": "509a64180d19522791efe322350872a4:79dca9a7db5f7badd8331eb4674bb2af",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://owrcovcrpy.gpcdn.net/bpk-tv/1712/output/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "6fee51d6ece75a2a94d90dfeaf67deb5:e4a21d47d21f1d94b3fee19fd85c222d",
+    "license_key": "91c98fc6f8ba5afabe0bdf48062e31e5:c53324935987d81debd884590ae0c380",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://owrcovcrpy.gpcdn.net/bpk-tv/1730/output/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "ba127882f8f65bab8cd5a810e3c55133:e8f7b517af8f30c6c0baf91e00dceb99",
+    "license_key": "d9e052872bb95766b152c38be1311a7b:04f7dff259b4a25b037a97b44312c94e",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://owrcovcrpy.gpcdn.net/bpk-tv/1731/output/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "8617b0b458a053bd913d8a3d46048c0f:20dad7c915611c6d139ed5596cfe130f",
+    "license_key": "88d74958cdcc5d999f005dd1f36c1800:8f52eaa721ab1a17bf52c4358b2da6dc",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -26617,7 +26617,7 @@
   },
   "https://ott.zapitv.com/live/eds_c2/blaze/dash_live_enc/blaze.mpd": {
     "license_type": "clearkey",
-    "license_key": "{",
+    "license_key": "15e412a4edd85313233969913072e0ff:5098eafaff2b246ee15e8f9aeb5403fb",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -29592,8 +29592,8 @@
     "last_scanned": "2026-06-27"
   },
   "https://melon-live-cdn.mncnow.id/live/eds/MNCTV-HD/sa_dash_vmx/MNCTV-HD.mpd": {
-    "license_type": "clearkey",
-    "license_key": "828e0aba9825c3546a2831e4c0c36f7f:f85d3dcd38981368ab3da597e97ebdcc",
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
     "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
@@ -29683,7 +29683,7 @@
   },
   "https://melon-live-cdn.mncnow.id/live/eds/MusicChannel/sa_dash_vmx/MusicChannel.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=OTFmNDAwZWEtZjI5OC0zNTAzLWE0NzktZWI2NGIxMjRmMGFm",
     "referrer": "https://visionplus.id",
     "last_scanned": "2026-06-27"
   },
@@ -29743,26 +29743,26 @@
   },
   "https://melon-live-cdn.mncnow.id/live/eds/Cinemachi-HD/sa_dash_vmx/Cinemachi-HD.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=MTI3MTQzMjItYjdkNi0zNGVkLThkZjEtNDVkOWFkNDUwZDJh",
-    "referrer": "https://visionplus.id",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
+    "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
   "https://melon-live-cdn.mncnow.id/live/eds/Cinemachi-Xtra-HD/sa_dash_vmx/Cinemachi-Xtra-HD.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=MTI3MTQzMjItYjdkNi0zNGVkLThkZjEtNDVkOWFkNDUwZDJh",
-    "referrer": "https://visionplus.id",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
+    "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
   "https://melon-live-cdn.mncnow.id/live/eds/Cinemachi-Max-HD/sa_dash_vmx/Cinemachi-Max-HD.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=MTI3MTQzMjItYjdkNi0zNGVkLThkZjEtNDVkOWFkNDUwZDJh",
-    "referrer": "https://visionplus.id",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
+    "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
   "https://melon-live-cdn.mncnow.id/live/eds/Cinemachi-Action/sa_dash_vmx/Cinemachi-Action.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=MTI3MTQzMjItYjdkNi0zNGVkLThkZjEtNDVkOWFkNDUwZDJh",
-    "referrer": "https://visionplus.id",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
+    "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
   "https://melon-live-cdn.mncnow.id/live/eds/tvNMovies/sa_dash_vmx/tvNMovies.mpd": {
@@ -39696,14 +39696,14 @@
     "last_scanned": "2026-06-27"
   },
   "https://cors-proxy.cluster.fun/https://director.streaming.telia.com/tvm-packager-prod/group3/60ae4f5e1522bd739f6959a1/manifest.mpd": {
-    "license_type": "clearkey",
-    "license_key": "bc972382f04c531983b7aab6bf642ad8:ddfd212680eb891b755610eac5becf85",
+    "license_type": "org.w3.clearkey",
+    "license_key": "{\"keys\":[{\"kty\":\"oct\",\"kid\":\"vJcjgvBMUxmDt6q2v2Qq2A\",\"k\":\"3f0hJoDriRt1VhDqxb7PhQ\"}]}",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://cors-proxy.cluster.fun/https://director.streaming.telia.com/tvm-packager-prod/group1/60896dfd47a23d7c065cd68c/manifest.mpd": {
-    "license_type": "clearkey",
-    "license_key": "ce37e20374e55be6bb4d26837af27605:52cc532f748fcbf2b806dad4289bf84c",
+    "license_type": "org.w3.clearkey",
+    "license_key": "{\"keys\":[{\"kty\":\"oct\",\"kid\":\"zjfiA3TlW-a7TSaDevJ2BQ\",\"k\":\"UsxTL3SPy_K4BtrUKJv4TA\"}]}",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -47738,6 +47738,426 @@
   "https://otte.live.fly.ww.aiv-cdn.net/dub-nitro/live/dash/enc/i2pcjr4pe5/out/v1/TOKEN/cenc.mpd": {
     "license_type": "org.w3.clearkey",
     "license_key": "e31a5a81caff5d07ea2411a571fc2e59:96c5ef69479732ae734f962748c19729",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://webtvstream.bhtelecom.ba/hls6/arena1.mpd|user-agent=ExoPlayerLib/2.15.1": {
+    "license_type": "clearkey",
+    "license_key": "c18b6aa739be4c0b774605fcfb5d6b68:e41c3a6f7532b2e3a828d9580124c89d",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://webtvstream.bhtelecom.ba/hls6/arena2.mpd|user-agent=ExoPlayerLib/2.15.1": {
+    "license_type": "clearkey",
+    "license_key": "c18b6aa739be4c0b774605fcfb5d6b68:e41c3a6f7532b2e3a828d9580124c89d",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://webtvstream.bhtelecom.ba/hls6/arena3.mpd|user-agent=ExoPlayerLib/2.15.1": {
+    "license_type": "clearkey",
+    "license_key": "c18b6aa739be4c0b774605fcfb5d6b68:e41c3a6f7532b2e3a828d9580124c89d",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://webtvstream.bhtelecom.ba/hls6/as_premium1.mpd|user-agent=ExoPlayerLib/2.15.1": {
+    "license_type": "clearkey",
+    "license_key": "c18b6aa739be4c0b774605fcfb5d6b68:e41c3a6f7532b2e3a828d9580124c89d",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://webtvstream.bhtelecom.ba/hls6/as_premium2.mpd|user-agent=ExoPlayerLib/2.15.1": {
+    "license_type": "clearkey",
+    "license_key": "c18b6aa739be4c0b774605fcfb5d6b68:e41c3a6f7532b2e3a828d9580124c89d",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://d25tgymtnqzu8s.cloudfront.net/smil:tv6/chunklist_b596000_slENG.m3u8": {
+    "license_type": "clearkey",
+    "license_key": "https://aqfadtv.xyz/clearkey/dash-ck/linear/711/",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://d25tgymtnqzu8s.cloudfront.net/smil:okey/chunklist_b596000_slENG.m3u8": {
+    "license_type": "clearkey",
+    "license_key": "https://aqfadtv.xyz/clearkey/dash-ck/linear/711/",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://nyanv-live-cdn.mncnow.id/live/eds/JTV/sa_dash/JTV.mpd": {
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=MTI3MTQzMjItYjdkNi0zNGVkLThkZjEtNDVkOWFkNDUwZDJh",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://anv-live-cdn-118.mncnow.id/live/eds/JakTV/sa_dash_vmx/JakTV.mpd": {
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=MTI3MTQzMjItYjdkNi0zNGVkLThkZjEtNDVkOWFkNDUwZDJh",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://anv-live-cdn-118.mncnow.id/live/eds/BandungTV/sa_dash_vmx/BandungTV.mpd": {
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=MTI3MTQzMjItYjdkNi0zNGVkLThkZjEtNDVkOWFkNDUwZDJh",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "http://linear037-ie-dash1-prd-ak.cdn.skycdp.com/016a/Content/DASH_003_hd/Live/channel(premier1sports50)/manifest_hd.mpd": {
+    "license_type": "org.w3.clearkey",
+    "license_key": "00059cff7b261aa9b2fcbd57ad1ca332:1872a5a3afb4f369ab339024a09fda25",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "http://linear037-ie-dash1-prd-ak.cdn.skycdp.com/016a/Content/DASH_003_hd/Live/channel(premier2sports50)/manifest_hd.mpd": {
+    "license_type": "org.w3.clearkey",
+    "license_key": "000354713f5113fd49f41f556bdf1add:9a6ca88b3b6c7088c8197a7366f2e7e5",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://rikstv-live2.telenorcdn.net/rikstv/1468/2/dash/TV2_Sport_1/manifest.mpd": {
+    "license_type": "org.w3.clearkey",
+    "license_key": "{",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-033/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-025/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://sange-astro.palat.workers.dev/408/default.mpd|Referer=I_Love_OnlyFans": {
+    "license_type": "org.w3.clearkey",
+    "license_key": "{",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://sange-astro.palat.workers.dev/5066/default.mpd|Referer=I_Love_OnlyFans": {
+    "license_type": "org.w3.clearkey",
+    "license_key": "{",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://sange-astro.palat.workers.dev/2705/default.mpd|Referer=I_Love_OnlyFans": {
+    "license_type": "org.w3.clearkey",
+    "license_key": "{",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://nyanv-live-cdn.mncnow.id/live/eds/SCM/sa_dash_vmx/SCM.mpd": {
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://mrpw.ptmnc01.verspective.net/?deviceId=NDIzMDJhZmUtYWRjMi0zNGJkLTkyN2EtYmE1ZDFlZWIwODEz",
+    "referrer": "https://www.visionplus.id/",
+    "last_scanned": "2026-06-27"
+  },
+  "https://sange-astro.palat.workers.dev/2504/default.mpd|Referer=I_Love_OnlyFans": {
+    "license_type": "org.w3.clearkey",
+    "license_key": "{",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://aws-appeartv-cdn.rikstv.no/rikstv/1474/2/dash/Viasport_1/manifest.mpd": {
+    "license_type": "clearkey",
+    "license_key": "45608e64154b156f6884926c87f6f3ec:c66a1ff7638d0ce1f729f557221de5d7",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://aws-appeartv-cdn.rikstv.no/rikstv/1475/2/dash/Viasport_2/manifest.mpd": {
+    "license_type": "clearkey",
+    "license_key": "ae9eb255000c9ea429c5a077ef9211d4:4aeb818921f4d3a553295b02524bb53d",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://aws-appeartv-cdn.rikstv.no/rikstv/1476/2/dash/Viasport_3/manifest.mpd": {
+    "license_type": "clearkey",
+    "license_key": "c95b184864d5f25f3de9ffbb8b0ec24d:14d6713904b32a72b6859c3316f92cce",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-017/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-037/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-018/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-038/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-024/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-016/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-043/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-022/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-027/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-028/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-029/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-030/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-031/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-032/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-051/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-052/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-053/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://wp-obc5-live-nl-prod.prod.cdn.dmdsdp.com/dash/NL_000107_019441/manifest.mpd": {
+    "license_type": "clearkey",
+    "license_key": "b18766306c8b4446a7431f3664976a5e:064cf3223b9c2bdda24e9f89bf28a6d2",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://wp-obc1-live-nl-prod.prod.cdn.dmdsdp.com/dash/NL_000108_019561/manifest.mpd": {
+    "license_type": "clearkey",
+    "license_key": "b18766306c8b4446a7431f3664976a5e:064cf3223b9c2bdda24e9f89bf28a6d2",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://wp-obc5-live-nl-prod.prod.cdn.dmdsdp.com/dash/NL_000109_019464/manifest.mpd": {
+    "license_type": "clearkey",
+    "license_key": "b18766306c8b4446a7431f3664976a5e:064cf3223b9c2bdda24e9f89bf28a6d2",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://wp-obc1-live-nl-prod.prod.cdn.dmdsdp.com/dash/NL_000110_019562/manifest.mpd": {
+    "license_type": "clearkey",
+    "license_key": "b18766306c8b4446a7431f3664976a5e:064cf3223b9c2bdda24e9f89bf28a6d2",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-054/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-055/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-056/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-057/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-058/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-059/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://dce-ac-live.cdn.indazn.com:443/dash/dazn-linear-049/stream.mpd": {
+    "license_type": "clearkey",
+    "license_key": "82f8e2a17dac44c0a18f660479349c59:1b144f73e6fefe91cd05f850e2b589d0",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://ssc-2-on-prem-ak.akamaized.net/out/v1/TOKEN/index.mpd": {
+    "license_type": "clearkey",
+    "license_key": "b8763ccad3d146c2b15f8a77a4d6d733:ab87f6ae46b2dc187bd94cbb48cfe074",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://ssc-3-on-prem-ak.akamaized.net/out/v1/TOKEN/index.mpd": {
+    "license_type": "clearkey",
+    "license_key": "c3af2aa1da4a41cbb37b1dbe43b46782:b6b74f29f6d1501b989c96aec4dae599",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://ssc-4-on-prem-ak.akamaized.net/out/v1/TOKEN/index.mpd": {
+    "license_type": "clearkey",
+    "license_key": "2c506baa39a74674874ae2ab8bbc792f:1fa11c606eea3ba805f3d2efa537b1fa",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://ssc-5-on-prem-cw-ak.akamaized.net/out/v1/TOKEN/index.mpd": {
+    "license_type": "clearkey",
+    "license_key": "150150f30a8140a2bfda5d1b3fbb2d4b:dad19250368b129f003817b778d65dae",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://ssc-extra1-on-prem-cw-ak.akamaized.net/out/v1/TOKEN/index.mpd": {
+    "license_type": "clearkey",
+    "license_key": "0bf5a32868224a6f9f3a749a9ea20eb2:0ace749c97932aa44434da3a88c1ee69",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://ssc-extra2-on-prem-ak.akamaized.net/out/v1/TOKEN/index.mpd": {
+    "license_type": "clearkey",
+    "license_key": "fc98baf530ac49aea60a7bf50929aa91:f8c40722bb6a0cf822588661740a08bb",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://ssc-extra3-on-prem-cw-ak.akamaized.net/out/v1/TOKEN/index.mpd": {
+    "license_type": "clearkey",
+    "license_key": "9b05d5f11a0b422d86354c34782ed2bc:82aef319b4cfc71fd48cdd495ee79786",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://linear001-gb-dash1-prd-ak.cdn.skycdp.com//100e/Content/DASH_003_sm/Live/channel(skysportsaction)/manifest_sd.mpd": {
+    "license_type": "clearkey",
+    "license_key": "0005fbae047ef478db08e38cdb6152fc:26434f7b66bbb9edcec958759164c2b3",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "http://linear031-gb-dash1-prd-ll.cdn.skycdp.com/Content/DASH_003_hd/Live/channel(sportsarena50)/manifest_hd.mpd": {
+    "license_type": "clearkey",
+    "license_key": "0005a1e33131edc7ed84598bf3f1f170:3133410b54d1c7c5dece75fb165fdeaa",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "http://linear003-gb-dash1-prd-ll.cdn.skycdp.com/Content/DASH_003_hd/Live/channel(sportscricket50)/manifest_hd.mpd": {
+    "license_type": "clearkey",
+    "license_key": "0005df1c2cec030d109e1065494982aa:4a2cc5a8a6a097f8ff4468faeca046f9",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://linear004-gb-dash1-prd-ll.cdn.skycdp.com/016a/Content/DASH_003_hd/Live/channel(sportsf150)/manifest_hd.mpd": {
+    "license_type": "clearkey",
+    "license_key": "0003e68c20290ea35eec1e3bceafa5b5:bc799e40dd3e4e3257d746ebc036c992",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "http://linear005-gb-dash1-prd-ll.cdn.skycdp.com/100e/Content/DASH_003_sd/Live/channel(sportsfootball50)/manifest_mob.mpd": {
+    "license_type": "clearkey",
+    "license_key": "00051ec4671fcd3e8095f1e6118d9052:50304047eb0a462a4ba50add2596b215",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://linear006-gb-dash1-prd-ak.cdn.skycdp.com/100e/Content/DASH_003_sm/Live/channel(skysportsgolf)/manifest_sd.mpd": {
+    "license_type": "clearkey",
+    "license_key": "0003276bbe0b7f5c9c05ec201bddf545:a3546a8bd8d03e6f3ca48629ea45ebb8",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "http://linear011-gb-dash1-prd-ll.cdn.skycdp.com/100e/Content/DASH_003_sd/Live/channel(sportsmainevent50)/manifest_mob.mpd": {
+    "license_type": "clearkey",
+    "license_key": "0003c16cd15b85b5fb9e849c67e7a766:7865ecc481cb767dd4051bc5a5e38095",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://linear032-gb-dash1-prd-ll.cdn.skycdp.com/016a/Content/DASH_003_hd/Live/channel(sportsmix50)/manifest_hd.mpd": {
+    "license_type": "clearkey",
+    "license_key": "0003a6c61c2b2f7f0a9d760ac83c06d8:7305fa96d356316f2d544bfc78a6922c",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "http://linear010-gb-dash1-prd-ll.cdn.skycdp.com/100e/Content/DASH_003_sd/Live/channel(sportspremierleague50)/manifest_mob.mpd": {
+    "license_type": "clearkey",
+    "license_key": "0005588f470d6ffad9dfb866cae14137:47242613834db3b6e3e5bb76a999a26b",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://linear-novi.stvacdn.spectrum.com/LIVE/1131/dash/cenc/WLLOHD_10364/manifest.mpd": {
+    "license_type": "clearkey",
+    "license_key": "6653c05e42fc4fac8f49d7cbf99498fe:3b88f2cff3affef20b265c840bafc0cc",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://content.uplynk.com/channel/2bb01dbf7c9b425db6854a4e45a57af8.mpd": {
+    "license_type": "com.widevine.alpha",
+    "license_key": "https://content.uplynk.com/wv|User-Agent=okhttp%2F4.9.0|R{SSM}|R",
+    "referrer": "",
+    "last_scanned": "2026-06-27"
+  },
+  "https://usher.ttvnw.net/api/channel/hls/balitvnaradha.m3u8": {
+    "license_type": "clearkey",
+    "license_key": "5eaddccd893a47ac8b65f9b31963a3ae:881afa67ea57b41c1822d745d67559e6",
     "referrer": "",
     "last_scanned": "2026-06-27"
   }
