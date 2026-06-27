@@ -120,3 +120,45 @@ def should_bypass_ping(url: str) -> bool:
         "172.16."
     ]
     return any(kw in url_lower for kw in bypass_keywords)
+
+
+def get_fallback_logo(channel_name: str) -> str:
+    """Mendapatkan logo cadangan resmi dari CDN IPTV-org jika logo bawaan kosong."""
+    name_clean = channel_name.strip()
+    # Bersihkan resolusi label seperti [HD], [FHD], dll.
+    name_clean = re.sub(r'\[?(fhd|hd|sd)\]?', '', name_clean, flags=re.IGNORECASE).strip()
+    # Bersihkan akhiran match atau source (misal: "Uruguay vs Spanyol - TVRI" -> "TVRI")
+    if " - " in name_clean:
+        name_clean = name_clean.split(" - ")[-1].strip()
+        
+    # Bersihkan spasi untuk pencocokan slug
+    slug = name_clean.replace(" ", "").replace("TV", "tv").replace("Tv", "tv")
+    
+    # Mapping logo untuk stasiun TV lokal populer Indonesia
+    indo_logos = {
+        "rcti": "https://iptv-org.github.io/iptv/logos/countries/id/RCTI.png",
+        "sctv": "https://iptv-org.github.io/iptv/logos/countries/id/SCTV.png",
+        "indosiar": "https://iptv-org.github.io/iptv/logos/countries/id/Indosiar.png",
+        "trans7": "https://iptv-org.github.io/iptv/logos/countries/id/Trans7.png",
+        "transtv": "https://iptv-org.github.io/iptv/logos/countries/id/TransTV.png",
+        "antv": "https://iptv-org.github.io/iptv/logos/countries/id/ANTV.png",
+        "metrotv": "https://iptv-org.github.io/iptv/logos/countries/id/MetroTV.png",
+        "kompastv": "https://iptv-org.github.io/iptv/logos/countries/id/KompasTV.png",
+        "tvone": "https://iptv-org.github.io/iptv/logos/countries/id/tvOne.png",
+        "rtv": "https://iptv-org.github.io/iptv/logos/countries/id/RTV.png",
+        "net": "https://iptv-org.github.io/iptv/logos/countries/id/NETTV.png",
+        "nettv": "https://iptv-org.github.io/iptv/logos/countries/id/NETTV.png",
+        "mnctv": "https://iptv-org.github.io/iptv/logos/countries/id/MNCTV.png",
+        "gtv": "https://iptv-org.github.io/iptv/logos/countries/id/GTV.png",
+        "inews": "https://iptv-org.github.io/iptv/logos/countries/id/iNews.png",
+        "tvri": "https://iptv-org.github.io/iptv/logos/countries/id/TVRI.png",
+        "mojitv": "https://iptv-org.github.io/iptv/logos/countries/id/Moji.png",
+        "moji": "https://iptv-org.github.io/iptv/logos/countries/id/Moji.png",
+    }
+    
+    key = slug.lower()
+    if key in indo_logos:
+        return indo_logos[key]
+        
+    # Fallback default ke CDN global IPTV-org
+    return f"https://iptv-org.github.io/iptv/logos/countries/id/{name_clean}.png"

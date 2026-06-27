@@ -716,7 +716,8 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
             if orig_logo and "gyazo" not in orig_logo and "world_cup" not in orig_logo:
                 logo = orig_logo
             else:
-                logo = "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/all.png"
+                from utils import get_fallback_logo
+                logo = get_fallback_logo(title)
                 
         rerun_label = " - Rerun" if is_rerun else ""
         if match_name:
