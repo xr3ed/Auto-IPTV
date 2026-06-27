@@ -723,27 +723,9 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
             display_name = f"{res_label}World Cup 2026{rerun_label} - {clean_title}"
     else:
         # Cek apakah stasiun TV olahraga reguler/permanen
-        from utils import should_bypass_ping
-        url_lower = entry["url"].lower()
-        permanent_domains = [
-            "pluto.tv", "amagi.tv", "wurl.tv", "frequency.stream", "ideonow.com", 
-            "i.mjh.nz", "visionplus.id", "dens.tv", "vidio.com", "indihometv.com", 
-            "telkom", "useetv"
-        ]
         has_match_separator = any(sep in title_lower for sep in [" vs ", " v ", " at ", " - "])
+        is_permanent = not has_match_separator
         
-        is_permanent = False
-        if any(domain in url_lower for domain in permanent_domains) or should_bypass_ping(entry["url"]):
-            if not has_match_separator:
-                is_permanent = True
-        else:
-            static_keywords = [
-                "bein sports", "spotv", "fox sports", "mutv", "barca tv", "nba tv", 
-                "premier league tv", "golf channel", "ufc tv", "wwe network", "nhl network"
-            ]
-            if any(kw in title_lower for kw in static_keywords) and not has_match_separator:
-                is_permanent = True
-                
         rerun_label = " - Rerun" if is_rerun else ""
         if match_name:
             display_name = f"{res_label}{match_name}{rerun_label}"
@@ -752,7 +734,7 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
             display_name = f"{res_label}{clean_title}{rerun_label}"
             
         if is_permanent:
-            group = "Sport"
+            group = "Sports"
             logo = None
             for sport_key, sport_img in SPORT_POSTER_MAP.items():
                 if sport_key in title_lower:
@@ -1302,18 +1284,6 @@ def main():
     print("\nSorting World Cup channels by language priority (Indo/English) and resolution...")
     unique_wc = sorted(unique_wc, key=calculate_wc_score, reverse=True)
 
-    # Tulis permanent sports playlist
-    perm_lines = [f'#EXTM3U url-tvg="{EPG_URL}"']
-    for entry in unique_perm:
-        perm_lines.extend(entry["extinf"])
-        perm_lines.extend(entry["other"])
-        perm_lines.extend(entry["vlcopt"])
-        perm_lines.append(entry["url"])
-        
-    perm_path = OUTPUT_DIR / "sports_permanent.m3u"
-    with open(perm_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(perm_lines) + "\n")
-
     # Gabungkan semua ke dalam satu playlist master
     output_lines = [f'#EXTM3U url-tvg="{EPG_URL}"']
 
@@ -1324,7 +1294,14 @@ def main():
         output_lines.extend(entry["vlcopt"])
         output_lines.append(entry["url"])
 
-    # 2. Live Events di bawahnya (hanya jika tidak disembunyikan)
+    # 2. Sports (Permanent Channels) di bawah World Cup
+    for entry in unique_perm:
+        output_lines.extend(entry["extinf"])
+        output_lines.extend(entry["other"])
+        output_lines.extend(entry["vlcopt"])
+        output_lines.append(entry["url"])
+
+    # 3. Live Events di bawahnya (hanya jika tidak disembunyikan)
     if not HIDE_LIVE_EVENTS:
         for entry in unique_live:
             output_lines.extend(entry["extinf"])
@@ -1348,7 +1325,8 @@ def main():
     print("PROSES SELESAI")
     print(f"{'=' * 60}")
     print(f"  Total Saluran Piala Dunia Aktif  : {len(unique_wc)}")
-    print(f"  Total Saluran Olahraga Umum Aktif: {len(unique_live)}")
+    print(f"  Total Saluran TV Olahraga Aktif  : {len(unique_perm)}")
+    print(f"  Total Saluran Laga Langsung Aktif: {len(unique_live)}")
     print(f"  Saved -> {output_path} & {output_path_gz}")
 
 
