@@ -2,7 +2,11 @@ import re
 import os
 import sys
 import requests
+import urllib3
 from concurrent.futures import ThreadPoolExecutor, as_completed
+
+# Bungkam peringatan keamanan SSL/TLS urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def check_logo_url(channel_name, group, logo_url):
     if not logo_url:

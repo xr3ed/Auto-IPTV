@@ -3,12 +3,13 @@ import gzip
 import re
 import sys
 import io
+import time
 import requests
 import urllib3
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Nonaktifkan peringatan SSL tidak aman
+# Bungkam peringatan keamanan SSL/TLS urllib3 secara global
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Pastikan stdout/stderr menggunakan UTF-8 di terminal Windows untuk menghindari UnicodeEncodeError
