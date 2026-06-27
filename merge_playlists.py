@@ -29,6 +29,9 @@ PLAYLISTS_TO_MERGE = [
     {"file": "bittv_indo.m3u", "section": "BITTV_INDO"},
     {"file": "rctiplus.m3u", "section": "RCTI+"},
     {"file": "tcl.m3u", "section": "TCL"},
+    {"file": "roku.m3u", "section": "ROKU"},
+    {"file": "pluto_all.m3u", "section": "PLUTO"},
+    {"file": "samsungtvplus_all.m3u", "section": "SAMSUNGTV+"},
 ]
 
 
@@ -126,9 +129,6 @@ def ping_stream(url: str, headers: dict = None, opts: list = None) -> tuple[str,
     import random
     
     opts = opts or []
-    # Otomatis buang saluran Samsung TV Plus karena geoblock di Indonesia
-    if "samsungcloud.tv" in url.lower() or "jmp2.uk/stvp-" in url.lower() or "stvp-" in url.lower():
-        return url, False, 999.0
 
     # Jika stream adalah DASH (.mpd) tapi tidak memiliki license_key di opts, maka otomatis DEAD
     is_dash = ".mpd" in url.lower()
@@ -357,18 +357,13 @@ def merge_all_to_indihome():
         with open(indihome_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Bersihkan section otomatis lama agar tidak ditumpuk
-        sections_to_clean = ["INDO_EXTRAS", "BITTV_INDO", "RCTI+", "TCL", "ROKU", "PLUTO", "SAMSUNGTV+"]
-        for section_name in sections_to_clean:
-            marker_start = f"# === {section_name} SECTION ==="
-            marker_end = f"# === END {section_name} SECTION ==="
-            if marker_start in content and marker_end in content:
-                pattern = rf'{re.escape(marker_start)}.*?{re.escape(marker_end)}'
-                content = re.sub(pattern, '', content, flags=re.DOTALL)
+        # Bersihkan section otomatis lama agar tidak ditumpuk (mendukung format lama SECTION dan format kategori baru)
+        content = re.sub(r'# === .*? ===.*?# === END .*? ===', '', content, flags=re.DOTALL)
 
         raw_original = extract_streams_from_content(content, "IndihomeTV (Bawaan)")
-        # Saring agar saluran olahraga (World Cup & Live Events) tidak ikut masuk ke master playlist
-        original_channels = [ch for ch in raw_original if ch["group"] not in ("World Cup 2026", "Live Events")]
+        # Saring agar hanya menyimpan saluran bawaan asli Telkom/Indihome
+        from utils import should_bypass_ping
+        original_channels = [ch for ch in raw_original if should_bypass_ping(ch["url"]) and ch["group"] not in ("World Cup 2026", "Live Events")]
         print(f"  -> Memuat {len(original_channels)} saluran bawaan asli (disaring dari {len(raw_original)}).")
     
     # 2. Muat saluran dari seluruh playlist pendukung di folder playlists/
@@ -424,54 +419,47 @@ def merge_all_to_indihome():
                     playable_fast_tv.append(res)
             except Exception:
                 pass
-    # 4. Tulis kembali seluruh saluran yang unik ke IndihomeTV.m3u
-    # Untuk Opsi A (Bebas VPN): Saring keluar saluran internasional yang ter-geoblock (kecuali TCL yang masih bisa)
-    deduped_channels = [ch for ch in deduped_channels if ch["source"] not in ("roku.m3u", "pluto_all.m3u", "samsungtvplus_all.m3u")]
-    
-    # Pisahkan saluran yang lolos filter kembali ke kelompoknya semula
-    deduped_original = [ch for ch in deduped_channels if ch["source"] == "IndihomeTV (Bawaan)"]
-    
-    output_content = [f'#EXTM3U url-tvg="https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/epgs/guide.xml.gz"\n']
-    
-    # Tulis saluran bawaan asli terlebih dahulu
-    for ch in deduped_original:
-        extinf_line = ch["extinf"]
-        extinf_line = re.sub(r'group-title="[Ss]ports"', 'group-title="Sport"', extinf_line)
-        extinf_line = extinf_line.replace(
-            "https://raw.githubusercontent.com/apistech/project/refs/heads/main/logo/",
-            "https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/"
-        ).replace(
-            "https://raw.githubusercontent.com/apistech/project/main/logo/",
-            "https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/"
-        )
-        extinf_line = fix_missing_local_logo(extinf_line)
-        output_content.append(extinf_line)
-        output_content.extend(ch["opts"])
-        output_content.append(format_url_with_headers(ch["url"], ch["opts"]))
-        output_content.append("")
+    # 4. Urutkan dan Kelompokkan Saluran secara Teratur
+    group_priority = {
+        "nasional": 0,
+        "daerah": 1,
+    }
 
-    # Tulis setiap kelompok platform secara terpisah dengan section marker
-    for p_info in PLAYLISTS_TO_MERGE:
-        filename = p_info["file"]
-        section_name = p_info["section"]
-        
-        # Ambil saluran unik yang terpilih yang berasal dari file ini
-        ch_in_section = [ch for ch in deduped_channels if ch["source"] == filename]
-        
-        if not ch_in_section:
-            continue
-            
-        marker_start = f"# === {section_name} SECTION ==="
-        marker_end = f"# === END {section_name} SECTION ==="
+    def get_sort_key(ch):
+        grp = (ch.get("group") or "Lainnya").strip()
+        grp_lower = grp.lower()
+        priority = 99
+        for key, val in group_priority.items():
+            if key in grp_lower:
+                priority = val
+                break
+        return (priority, grp_lower, (ch.get("display_name") or "").lower())
+
+    deduped_channels = sorted(deduped_channels, key=get_sort_key)
+
+    # Kelompokkan saluran berdasarkan nama grupnya
+    from collections import OrderedDict
+    grouped_channels = OrderedDict()
+    for ch in deduped_channels:
+        grp = (ch.get("group") or "Lainnya").strip()
+        if grp not in grouped_channels:
+            grouped_channels[grp] = []
+        grouped_channels[grp].append(ch)
+
+    output_content = [f'#EXTM3U url-tvg="https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/epgs/guide.xml.gz"\n']
+
+    for grp, channels in grouped_channels.items():
+        marker_start = f"# === {grp} ==="
+        marker_end = f"# === END {grp} ==="
         
         section_lines = [
             marker_start,
             f"# Updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
-            f"# Total Saluran: {len(ch_in_section)}",
+            f"# Total Saluran: {len(channels)}",
             ""
         ]
         
-        for ch in ch_in_section:
+        for ch in channels:
             extinf_line = ch["extinf"]
             extinf_line = re.sub(r'group-title="[Ss]ports"', 'group-title="Sport"', extinf_line)
             extinf_line = extinf_line.replace(
@@ -488,7 +476,6 @@ def merge_all_to_indihome():
             section_lines.append("")
             
         section_lines.append(marker_end)
-        
         output_content.append("\n".join(section_lines))
         output_content.append("")
 
