@@ -48,6 +48,9 @@ jobs:
       - name: Generate Live Events
         run: python generate_liveevents.py
 
+      - name: Categorize Channels
+        run: python script/categorize_channels.py
+
       - name: Commit and Push (Keep History Clean)
         run: |
           git config user.name "github-actions[bot]"

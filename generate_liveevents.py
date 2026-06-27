@@ -992,12 +992,8 @@ def check_and_enrich_entry(entry: dict, is_wc: bool) -> dict:
                     chunk = next(r.iter_content(chunk_size=chunk_sz), b"")
                     preview = chunk.decode("utf-8", errors="ignore")
                     
-                    if is_drm_protected_content(preview, url):
-                        has_license = any("license_key" in line.lower() or "license_type" in line.lower() for line in entry.get("other", []) + entry.get("vlcopt", []))
-                        if not has_license:
-                            playable = False
-                    elif is_hevc_stream(preview):
-                        playable = False
+                    # Lupakan optimasi/filter DRM dan HEVC, ambil apa adanya dari penyedia
+                    pass
         except Exception:
             playable = False
             
