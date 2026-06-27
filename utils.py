@@ -355,6 +355,16 @@ def is_stream_playable(url: str, headers: dict = None) -> bool:
                 
             # A. Jika HLS (.m3u8)
             if preview.startswith("#EXTM3U") or preview.startswith("#EXT-X-") or ".m3u8" in url.lower():
+                # Deteksi enkripsi DRM HLS (#EXT-X-KEY)
+                if "#EXT-X-KEY" in preview:
+                    method_match = re.search(r'#EXT-X-KEY:METHOD=([^,\s]+)', preview)
+                    if method_match and method_match.group(1).upper() != "NONE":
+                        base_url = clean_manifest_url(url)
+                        db = load_drm_keys_db()
+                        if base_url not in db:
+                            # Terenkripsi tapi tidak ada kunci lisensi -> TIDAK BISA DIPUTAR
+                            return False
+
                 # Cari sub-playlist atau segmen video pertama (.ts / .m4s / .mp4 / .aac)
                 lines = preview.splitlines()
                 sub_url = ""
@@ -381,6 +391,14 @@ def is_stream_playable(url: str, headers: dict = None) -> bool:
                 
             # B. Jika DASH (.mpd)
             if "<mpd" in preview_lower or ".mpd" in url.lower():
+                # Deteksi proteksi DRM di DASH (<ContentProtection>)
+                if "contentprotection" in preview_lower:
+                    base_url = clean_manifest_url(url)
+                    db = load_drm_keys_db()
+                    if base_url not in db:
+                        # Terenkripsi DRM tapi tidak ada kunci lisensi di database -> TIDAK BISA DIPUTAR
+                        return False
+
                 # Cari segment inisialisasi media
                 init_match = re.search(r'initialization="([^"]+)"', preview)
                 if init_match:
