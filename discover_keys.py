@@ -26,14 +26,9 @@ DRM_SOURCES = [
     "https://raw.githubusercontent.com/dhasap/dhanytv/main/dhanytv.m3u",
     "https://raw.githubusercontent.com/windozalmi/Playlist-IPTV-Indonesia-online-Aktif-2025/refs/heads/m3u/IPTV%20Indonesia%20by%20WINDO%20ZALMI",
     "https://raw.githubusercontent.com/apistech/project/refs/heads/main/playlists/wc2026.m3u",
-    "https://raw.githubusercontent.com/subekti13/IPTV-Indonesia/refs/heads/main/iptv.m3u",
-    "https://raw.githubusercontent.com/Yudha77/IPTV-Indonesia/main/indonesia.m3u",
-    "https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/Toffee_Live.m3u",
-    "https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.m3u",
-    
-    # JSON Key databases
-    "https://raw.githubusercontent.com/apistech/project/main/keys.json",
-    "https://raw.githubusercontent.com/dhasap/dhanytv/main/keys.json",
+    "https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/World_Cup.m3u",
+    "https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Toffee.m3u",
+    "https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Combined_Live_TV.m3u",
 ]
 
 def clean_manifest_url(url: str) -> str:
