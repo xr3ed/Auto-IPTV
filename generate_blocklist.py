@@ -38,16 +38,25 @@ def extract_streams_from_content(content, source_name):
 def generate_blocklist():
     print("🔍 Memulai pemindaian Geo-block lokal...")
     
+    channels = []
+    
     indihome_path = "IndihomeTV.m3u"
-    if not os.path.exists(indihome_path):
-        print(f"❌ Berkas {indihome_path} tidak ditemukan! Silakan jalankan merge_playlists.py terlebih dahulu.")
+    if os.path.exists(indihome_path):
+        with open(indihome_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        channels.extend(extract_streams_from_content(content, "IndihomeTV"))
+        
+    live_events_path = os.path.join("playlists", "live_events.m3u")
+    if os.path.exists(live_events_path):
+        with open(live_events_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        channels.extend(extract_streams_from_content(content, "LiveEvents"))
+        
+    if not channels:
+        print("❌ Tidak ada saluran yang ditemukan untuk diuji!")
         sys.exit(1)
         
-    with open(indihome_path, 'r', encoding='utf-8') as f:
-        content = f.read()
-        
-    channels = extract_streams_from_content(content, "IndihomeTV")
-    print(f"📖 Memuat {len(channels)} saluran dari {indihome_path} untuk diuji...")
+    print(f"📖 Memuat {len(channels)} saluran untuk diuji...")
     
     # Kumpulkan URL unik
     unique_urls = list(set(ch["url"] for ch in channels))
