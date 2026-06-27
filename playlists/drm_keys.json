@@ -421,8 +421,8 @@
   },
   "https://tvratu.my.id/vid/index.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://tvratu.my.id/vid/index.mpd?id=20216",
-    "referrer": "",
+    "license_key": "https://ratuvidio.adptv.workers.dev/index.mpd?id=204",
+    "referrer": "https://m.vidio.com/",
     "last_scanned": "2026-06-27"
   },
   "https://d3b0v7fggu5zwm.cloudfront.net/out/v1/9041826689ae4f9c9619576d411fa989/index.mpd": {
@@ -19410,8 +19410,8 @@
     "last_scanned": "2026-06-27"
   },
   "https://tglmp04.akamaized.net/out/v1/TOKEN/manifest.mpd": {
-    "license_type": "clearkey",
-    "license_key": "7a9ea6df52044841b0c562766e602610:b9380188b4896b25e8d419dfce938c6e",
+    "license_type": "org.w3.clearkey",
+    "license_key": "db646b3742ba42718a28436a1f401aa8:75a545066954b9b7fafa96d72a844e00",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
