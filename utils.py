@@ -181,5 +181,9 @@ def get_fallback_logo(channel_name: str) -> str:
     if key in indo_logos:
         return indo_logos[key]
         
+    # Jika merupakan TVRI daerah, gunakan logo TVRI Nasional resmi sebagai fallback
+    if "tvri" in key:
+        return "https://iptv-org.github.io/iptv/logos/countries/id/TVRI.png"
+        
     # Fallback default ke CDN global IPTV-org
     return f"https://iptv-org.github.io/iptv/logos/countries/id/{name_clean}.png"
