@@ -125,7 +125,7 @@ def sanitize_url_protocol(url: str) -> str:
     return url
 
 
-def is_stream_playable(url: str, headers: dict = None) -> bool:
+def is_stream_playable(url: str, headers: dict = None) -> tuple[bool, str]:
     headers = headers or {}
     url = sanitize_url_protocol(url)
 
@@ -137,7 +137,7 @@ def is_stream_playable(url: str, headers: dict = None) -> bool:
             with open(blocklist_path, 'r', encoding='utf-8') as f:
                 blocklist = json.load(f)
                 if url in blocklist:
-                    return False
+                    return False, "Blocked (Geoblock List)"
         except Exception:
             pass
 
@@ -149,12 +149,12 @@ def is_stream_playable(url: str, headers: dict = None) -> bool:
         if response.status_code < 400:
             content_type = response.headers.get("Content-Type", "").split(";")[0].strip().lower()
             if content_type in VALID_CONTENT_TYPES or not content_type:
-                return True
+                return True, "OK (HEAD Request Success)"
     except requests.exceptions.SSLError:
         if url.startswith("https://"):
             return is_stream_playable(url.replace("https://", "http://", 1), headers)
-    except requests.RequestException:
-        pass
+    except requests.RequestException as e:
+        return False, f"Connection Failed: {type(e).__name__}"
 
     # 2. Fallback ke GET stream, body-sniff untuk validasi konten - bypass SSL verify
     try:
@@ -164,47 +164,47 @@ def is_stream_playable(url: str, headers: dict = None) -> bool:
             )
         ) as response:
             if response.status_code >= 400:
-                return False
+                return False, f"HTTP Error {response.status_code}"
 
             content_type = response.headers.get("Content-Type", "").split(";")[0].strip().lower()
             if content_type in VALID_CONTENT_TYPES:
-                return True
+                return True, "OK (GET Stream Content-Type Match)"
 
             # Body-sniff: baca chunk pertama, cek apakah manifest/stream valid
             try:
                 chunk = next(response.iter_content(chunk_size=2048), b"")
             except (StopIteration, requests.RequestException):
-                return False
+                return False, "Empty/Interrupted Stream"
 
             if not chunk:
-                return False
+                return False, "Empty Response Body"
 
             preview = chunk.decode("utf-8", errors="ignore").lstrip()
             preview_lower = preview.lower()
 
             # HTML page (error/geo-block) -> not playable
             if preview_lower.startswith("<html") or "<html" in preview_lower[:200]:
-                return False
+                return False, "HTML Block Page (Geoblock/Error)"
 
             # Valid M3U8 manifest
             if preview.startswith("#EXTM3U") or preview.startswith("#EXT-X-"):
-                return True
+                return True, "OK (M3U8 Manifest Signature)"
 
             # Binary stream signatures (MPEG-TS sync byte, MP4 ftyp box, ID3 tag)
             if chunk[:1] == b"\x47":  # MPEG-TS sync byte
-                return True
+                return True, "OK (MPEG-TS Signature)"
             if b"ftyp" in chunk[:32]:  # MP4 container
-                return True
+                return True, "OK (MP4 Signature)"
             if chunk[:3] == b"ID3" or chunk[:2] == b"\xff\xff" or chunk[:2] == b"\xff\xfb":  # MP3/ID3
-                return True
+                return True, "OK (Audio Signature)"
 
-            return False
+            return False, "Unrecognized Stream Content Signature"
 
     except requests.exceptions.SSLError:
         if url.startswith("https://"):
             return is_stream_playable(url.replace("https://", "http://", 1), headers)
-    except requests.RequestException:
-        return False
+    except requests.RequestException as e:
+        return False, f"Connection Failed: {type(e).__name__}"
 
 
 def detect_stream_resolution(url: str, headers: dict = None) -> str:
@@ -976,28 +976,29 @@ def check_and_enrich_entry(entry: dict, is_wc: bool) -> dict:
     # 1. Cek token kedaluwarsa terlebih dahulu
     if is_token_expired(entry["url"]):
         entry["playable"] = False
+        entry["reason"] = "Expired Token"
         entry["is_wc"] = is_wc
         entry["resolution"] = ""
         return entry
 
-    playable = is_stream_playable(entry["url"], entry["headers"])
+    playable, reason = is_stream_playable(entry["url"], entry["headers"])
     if playable:
         # Lakukan body-sniffing tunggal untuk DRM dan HEVC
         url = sanitize_url_protocol(entry["url"])
         try:
             with closing(requests.get(url, headers=entry["headers"], timeout=5, stream=True, verify=False)) as r:
                 if r.status_code == 200:
-                    is_manifest = any(ext in url.lower() for ext in [".mpd", "mpd", ".m3u8", "m3u8", "cenc", "manifest"])
-                    chunk_sz = 102400 if is_manifest else 10240
-                    chunk = next(r.iter_content(chunk_size=chunk_sz), b"")
-                    preview = chunk.decode("utf-8", errors="ignore")
-                    
                     # Lupakan optimasi/filter DRM dan HEVC, ambil apa adanya dari penyedia
                     pass
-        except Exception:
+                else:
+                    playable = False
+                    reason = f"HTTP Error {r.status_code}"
+        except Exception as e:
             playable = False
+            reason = f"Get Failed: {type(e).__name__}"
             
     entry["playable"] = playable
+    entry["reason"] = reason
     entry["is_wc"] = is_wc
     
     if playable:
@@ -1162,6 +1163,7 @@ def main():
     all_wc_entries = []
     all_live_entries = []
     all_permanent_sports = []
+    all_checked_entries = []
 
     for source in SOURCES:
         name = source["name"]
@@ -1225,6 +1227,14 @@ def main():
                     status = "OK " if res_entry["playable"] else "DEAD"
                     res_lbl = f"[{res_entry['resolution']}]" if res_entry["resolution"] else ""
                     print(f"[{done}/{total}] {status} {res_lbl} {res_entry['url']}")
+                    
+                    all_checked_entries.append({
+                        "url": res_entry["url"],
+                        "playable": res_entry["playable"],
+                        "reason": res_entry.get("reason", "Unknown Status"),
+                        "resolution": res_entry.get("resolution", ""),
+                        "source": name
+                    })
                     
                     if res_entry["playable"]:
                         playable_entries.append(res_entry)
@@ -1316,6 +1326,13 @@ def main():
     output_path_gz = OUTPUT_DIR / "live_events.m3u.gz"
     with gzip.open(output_path_gz, 'wb') as f_gz:
         f_gz.write(playlist_content.encode('utf-8'))
+
+    import json
+    try:
+        with open(OUTPUT_DIR / "checked_streams.json", "w", encoding="utf-8") as f_json:
+            json.dump(all_checked_entries, f_json, indent=2, ensure_ascii=False)
+    except Exception as e:
+        print(f"Error dumping checked streams: {e}")
 
     print(f"\n{'=' * 60}")
     print("PROSES SELESAI")

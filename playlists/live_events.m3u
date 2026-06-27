@@ -73,6 +73,11 @@ https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/6otiglnptp/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://webtv.sk/tv/
 https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
+#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] World Cup 2026 - Toffee 1" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] World Cup 2026 - Toffee 1
+#====== Toffee World Cup ============
+http://sm-monirul.top/tof/live/toffee1/index.m3u8
+#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] World Cup 2026 - Toffee 3" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] World Cup 2026 - Toffee 3
+http://sm-monirul.top/tof/live/toffee3/index.m3u8
 #EXTINF:-1 tvg-name="[HD] World Cup 2026 - SPORT 2 🇸🇰" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] World Cup 2026 - SPORT 2 🇸🇰
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -108,18 +113,11 @@ https://qp-pldt-live-bpk-ucd-prod.akamaized.net/bpk-tv/fifa_ppv1/default/index.m
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://webtv.sk/tv/
 https://dash2.antik.sk/stream/nvidia_ct_sport/playlist_cbcs.mpd
-#EXTINF:-1 tvg-name="[HD] World Cup 2026 - FIFA World Cup 2026 3" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] World Cup 2026 - FIFA World Cup 2026 3
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={"b770d5b4bb6b594daf985845aae9aa5f":"b0cb46d2d31cf044bc73db71e9865f6f","45bbd582f220f438f896450d8306a3f2":"582c6ba7f64bbc0f2d91c6b0c265760c"}
-https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hubonmgf5k/out/v1/10560d92577e4917973aa4624124ecd6/cenc-sd.mpd
-#EXTINF:-1 tvg-name="[HD] World Cup 2026 - FIFA World Cup 2026 4" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] World Cup 2026 - FIFA World Cup 2026 4
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=8afa490e1640be969729fb459182e4ec:6f129820cdd5b6978a98c604c72cf05b
-https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/kp7qfx2tly/out/v1/bbfb730b45b74d4ea875d75786ea3f13/cenc-sd.mpd
-#EXTINF:-1 tvg-name="[HD] World Cup 2026 - FIFA World Cup 2026 5" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] World Cup 2026 - FIFA World Cup 2026 5
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=18044a84b7e6c1bbf852591797e53a2c:38b3b6f8810917d89636927bddb79294
-https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hufm7lgnhx/out/v1/5045630288d44123ba85427b2c36f29f/cenc-sd.mpd
+#EXTINF:-1 tvg-chno="6" tvg-id="Live.Event.us" tvg-name="[HD] [CWFC] Cage Warriors 208 (iSTRMEAST)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/cwfc_cage_warriors_208_istrmeast.png" group-title="Sports",[HD] [CWFC] Cage Warriors 208 (iSTRMEAST)
+#EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/52605?ad=111
+#EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/52605?ad=111
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://chatgpt.hereisman.net/playlist/52605/load-playlist
 #EXTINF:-1 tvg-chno="3" tvg-id="Live.Event.us" tvg-name="[HD] [Austrian Grand Prix] Austrian Grand Prix Qualifying 1 (FUTBOLX)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/austrian_grand_prix_austrian_grand_prix_qualifying_1_futbolx.png" group-title="Sports",[HD] [Austrian Grand Prix] Austrian Grand Prix Qualifying 1 (FUTBOLX)
 #EXTVLCOPT:http-referrer=https://futbol-x.xyz
 #EXTVLCOPT:http-origin=https://futbol-x.xyz
@@ -245,11 +243,15 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nelfyucw9a/out/v1
 #EXTINF:-1 tvg-id="beInSports2.id" tvg-name="[HD] beIN Sports 2 Australia" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_2_australia.png" group-title="Sports",[HD] beIN Sports 2 Australia
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone14,6; U; CPU iPhone OS 15_4 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/19E241 Safari/602.1
-https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd
-#EXTINF:-1 tvg-id="beInSports1.id" tvg-name="[HD] beIN Sports 1 Australia" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_1_australia.png" group-title="Sports",[HD] beIN Sports 1 Australia
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c48c8e48dba24420b5dcef9f5b847b12:daad0aeb165b9a26b706f2a261b8fafe
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+https://d6m3sfa7e58z5.cloudfront.net/out/v1/cfca527d0f16403396a71b2d3d54c32f/index.mpd
+#EXTINF:-1 tvg-id="Trans7.id" tvg-name="[HD] Trans7" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/trans7_hd.png" group-title="Sports",[HD] Trans7
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0
+https://video.detik.com/trans7/smil:trans7.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="beInSports3.id" tvg-name="[HD] beIN Sports 3 Indonesia" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/bein_sports_3_indonesia.png" group-title="Sports",[HD] beIN Sports 3 Indonesia
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -573,6 +575,10 @@ https://wahyu1ptv.pages.dev/SkySportMotoGP-HD.m3u8
 https://ac-003.live.p7s1video.net/63f8995e/t_003/dazn-fast-hd/cenc-default.mpd
 #EXTINF:-1 tvg-name="[HD] Real Madrid" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/real_madrid.png" group-title="Sports",[HD] Real Madrid
 https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/bitrate_3.m3u8
+#EXTINF:-1 tvg-name="[FHD] Billiard TV" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/billiard_tv.png" group-title="Sports",[FHD] Billiard TV
+https://newidco-billiardstv-1-eu.xiaomi.wurl.tv/playlist.m3u8
+#EXTINF:-1 tvg-name="[FHD] Barca TV" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/barca_tv.png" group-title="Sports",[FHD] Barca TV
+https://amg17560-fcb-amg17560c1-rakuten-uk-4891.playouts.now.amagi.tv/playlist/amg17560-fcbarcelona-topbarcaenglish-rakutenuk/playlist.m3u8
 #EXTINF:-1 tvg-name="[FHD] Motorvision TV" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/motorvision_tv.png" group-title="Sports",[FHD] Motorvision TV
 #EXTVLCOPT:http-user-agent=OTTNavigator/1.7.1.6 (Linux;Android 15.0.0;) ExoPlayerLib/2.19.1
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=535

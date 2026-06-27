@@ -51,6 +51,9 @@ jobs:
       - name: Categorize Channels
         run: python script/categorize_channels.py
 
+      - name: Generate Playability Report
+        run: python script/generate_playability_report.py
+
       - name: Commit and Push (Keep History Clean)
         run: |
           git config user.name "github-actions[bot]"
