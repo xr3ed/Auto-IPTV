@@ -149,9 +149,23 @@ def ping_stream(url: str, headers: dict = None, opts: list = None) -> tuple[str,
                     chunk = next(r.iter_content(chunk_size=chunk_sz), b"")
                     preview = chunk.decode("utf-8", errors="ignore")
                     
+                    # 1. Pastikan respons bukan berupa halaman web HTML (seperti Internet Positif atau portal iklan)
+                    preview_lower = preview.lower().strip()
+                    if "<html" in preview_lower or "<!doctype html" in preview_lower:
+                        return url, False, 999.0
+                        
+                    # 2. Validasi format manifes untuk menghindari link palsu
+                    if ".m3u8" in url_lower:
+                        if "#EXTM3U" not in preview:
+                            return url, False, 999.0
+                    elif ".mpd" in url_lower:
+                        if "<MPD" not in preview and "<mpd" not in preview:
+                            return url, False, 999.0
+                            
+                    # 3. Validasi perlindungan DRM
                     if is_drm_protected_content(preview, url):
                         # Cek apakah ada opsi lisensi DRM di opts
-                        has_license = any("license_key" in opt.lower() or "license_type" in opt.lower() for opt in opts)
+                        has_license = any("license_key" in opt.lower() or "license_type" in opt.lower() for opt in opts) if opts else False
                         if not has_license:
                             return url, False, 999.0
                             
