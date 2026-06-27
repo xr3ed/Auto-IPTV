@@ -175,15 +175,16 @@ def standardize_extinf(extinf_line: str, display_name: str, mapped_group: str) -
     else:
         extinf_line = extinf_line.replace('#EXTINF:-1 ', f'#EXTINF:-1 group-title="{mapped_group}" ')
         
-    # 4. Update/Suntikkan tvg-logo cadangan jika kosong atau tidak ada
+    # 4. Update/Suntikkan tvg-logo cadangan secara lokal
+    from utils import download_and_localize_logo
     m_logo = re.search(r'tvg-logo="([^"]*)"', extinf_line)
-    if not m_logo or not m_logo.group(1).strip():
-        from utils import get_fallback_logo
-        logo_url = get_fallback_logo(display_name)
-        if 'tvg-logo="' in extinf_line:
-            extinf_line = re.sub(r'tvg-logo="[^"]*"', f'tvg-logo="{logo_url}"', extinf_line)
-        else:
-            extinf_line = extinf_line.replace('#EXTINF:-1 ', f'#EXTINF:-1 tvg-logo="{logo_url}" ')
+    orig_logo_url = m_logo.group(1).strip() if m_logo else ""
+    
+    logo_url = download_and_localize_logo(display_name, orig_logo_url)
+    if 'tvg-logo="' in extinf_line:
+        extinf_line = re.sub(r'tvg-logo="[^"]*"', f'tvg-logo="{logo_url}"', extinf_line)
+    else:
+        extinf_line = extinf_line.replace('#EXTINF:-1 ', f'#EXTINF:-1 tvg-logo="{logo_url}" ')
             
     return extinf_line
 

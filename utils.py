@@ -187,3 +187,49 @@ def get_fallback_logo(channel_name: str) -> str:
         
     # Fallback default ke CDN global IPTV-org
     return f"https://iptv-org.github.io/iptv/logos/countries/id/{name_clean}.png"
+
+
+def download_and_localize_logo(channel_name: str, original_logo_url: str) -> str:
+    """Mengunduh logo dari URL eksternal ke folder logo lokal jika belum ada, dan mengembalikan URL repositori GitHub."""
+    import requests
+    import string
+    
+    if not original_logo_url or not original_logo_url.strip():
+        # Fallback jika URL kosong
+        original_logo_url = get_fallback_logo(channel_name)
+        
+    # Buat nama berkas slug yang aman (misal: "TRANS TV" -> "trans_tv.png")
+    valid_chars = f"-_.{string.ascii_letters}{string.digits}"
+    slug = channel_name.strip().lower().replace(" ", "_")
+    slug = "".join(c for c in slug if c in valid_chars)
+    if not slug:
+        slug = "channel"
+        
+    # Cek ekstensi file logo (default .png)
+    ext = ".png"
+    if ".jpg" in original_logo_url.lower() or ".jpeg" in original_logo_url.lower():
+        ext = ".jpg"
+        
+    filename = f"{slug}{ext}"
+    local_path = os.path.join("logo", filename)
+    
+    # 1. Jika gambar belum ada secara lokal, unduh gambarnya
+    os.makedirs("logo", exist_ok=True)
+    if not os.path.exists(local_path):
+        try:
+            print(f"📥 Mengunduh logo lokal baru: {filename}...")
+            r = requests.get(original_logo_url, timeout=10, verify=False)
+            if r.status_code == 200:
+                with open(local_path, "wb") as img_f:
+                    img_f.write(r.content)
+            else:
+                # Jika gagal unduh, pakai default fallback get_fallback_logo
+                fallback_url = get_fallback_logo(channel_name)
+                if fallback_url != original_logo_url:
+                    return download_and_localize_logo(channel_name, fallback_url)
+        except Exception as e:
+            print(f"   [WARNING] Gagal mengunduh logo untuk {channel_name}: {e}")
+            
+    # 2. Kembalikan URL Raw GitHub milik user sendiri
+    # Jika file terbukti berhasil ada di lokal (atau setidaknya kita asumsikan akan dipush)
+    return f"https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/{filename}"

@@ -664,9 +664,11 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
             
     FIFA_LOGO = "https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png"
     
+    from utils import download_and_localize_logo
+    
     if is_wc:
         group = "World Cup 2026"
-        logo = FIFA_LOGO
+        logo = download_and_localize_logo("world_cup", FIFA_LOGO)
         
         # Format nama: [Kualitas] Team A vs Team B - Channel/Source
         cleaned_title_match = clean_match_name(title)
@@ -709,15 +711,14 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
         logo = None
         for sport_key, sport_img in SPORT_POSTER_MAP.items():
             if sport_key in title_lower:
-                logo = sport_img
+                logo = download_and_localize_logo(sport_key, sport_img)
                 break
         if not logo:
             orig_logo = attrs.get("tvg-logo", "")
             if orig_logo and "gyazo" not in orig_logo and "world_cup" not in orig_logo:
-                logo = orig_logo
+                logo = download_and_localize_logo(title, orig_logo)
             else:
-                from utils import get_fallback_logo
-                logo = get_fallback_logo(title)
+                logo = download_and_localize_logo(title, "")
                 
         rerun_label = " - Rerun" if is_rerun else ""
         if match_name:
