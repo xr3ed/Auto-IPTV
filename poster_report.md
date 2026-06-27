@@ -1,7 +1,7 @@
 # Laporan Hasil Pemeriksaan Poster / Logo IPTV
 
-- **Total Saluran Diuji:** 393
-- **Logo Aktif (OK):** 392
+- **Total Saluran Diuji:** 392
+- **Logo Aktif (OK):** 391
 - **Logo Kosong (Belum Ada):** 1
 - **Logo Mati (Error/404):** 0
 
