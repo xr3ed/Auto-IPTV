@@ -421,7 +421,7 @@
   },
   "https://tvratu.my.id/vid/index.mpd": {
     "license_type": "com.widevine.alpha",
-    "license_key": "https://ratuvidio.adptv.workers.dev/index.mpd?id=206",
+    "license_key": "https://ratuvidio.adptv.workers.dev/index.mpd?id=204",
     "referrer": "https://m.vidio.com/",
     "last_scanned": "2026-06-27"
   },
@@ -672,20 +672,20 @@
     "last_scanned": "2026-06-27"
   },
   "https://times-ott-live.akamaized.net/mnplus_wv_drm/index.mpd": {
-    "license_type": "clearkey",
-    "license_key": "{",
+    "license_type": "org.w3.clearkey",
+    "license_key": "40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://times-ott-live.akamaized.net/mnxhd_wv_drm/index.mpd": {
-    "license_type": "clearkey",
-    "license_key": "{",
+    "license_type": "org.w3.clearkey",
+    "license_key": "40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://times-ott-live.akamaized.net/moviesnow_wv_drm/index.mpd": {
-    "license_type": "clearkey",
-    "license_key": "{",
+    "license_type": "org.w3.clearkey",
+    "license_key": "40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -19327,7 +19327,7 @@
   },
   "https://d84q7nw4qf3j3.cloudfront.net/out/v1/TOKEN/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "c1d5f77cd96049f78b6b253540b31722:ba8d0801fe81187d35633e1d3b3855d5",
+    "license_key": "ed1723eb360145ccafa1b466130186da:c7c4171e98de14c23be427f6ab16ef72",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -19346,13 +19346,13 @@
   "https://d3b0v7fggu5zwm.cloudfront.net/out/v1/TOKEN/index.mpd": {
     "license_type": "clearkey",
     "license_key": "911e72adf36946afbdbb4f80782a8394:08aec548a851ba64b7172ae7f05cb91c",
-    "referrer": "https://www.visionplus.id/",
+    "referrer": "https://visionplus.id/",
     "last_scanned": "2026-06-27"
   },
   "https://d6m3sfa7e58z5.cloudfront.net/out/v1/TOKEN/index.mpd": {
-    "license_type": "clearkey",
-    "license_key": "344d320ca45641a88cf002db351ed9a4:246cc6ee7ab235cb824ed3b904b7040b",
-    "referrer": "",
+    "license_type": "org.w3.clearkey",
+    "license_key": "c48c8e48dba24420b5dcef9f5b847b12:daad0aeb165b9a26b706f2a261b8fafe",
+    "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },
   "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3ynrpdanq2/out/v1/TOKEN/cenc.mpd": {
