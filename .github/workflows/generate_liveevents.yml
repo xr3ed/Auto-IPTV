@@ -62,13 +62,15 @@ jobs:
           TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M UTC')
           IS_AMEND=false
 
+          python script/generate_commit_msg.py
+
           if [ "$LAST_AUTHOR" = "$BOT_EMAIL" ]; then
             echo "Last commit by bot. Amending..."
-            git commit --amend --no-edit --date="$TIMESTAMP"
+            git commit --amend -F commit_msg.txt --date="$TIMESTAMP"
             IS_AMEND=true
           else
             echo "Last commit by user. Creating new commit..."
-            git commit -m "Auto-Update $TIMESTAMP"
+            git commit -F commit_msg.txt
           fi
 
           for i in 1 2 3; do

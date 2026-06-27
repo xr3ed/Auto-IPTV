@@ -8,3 +8,4 @@ __pycache__/
 *.log
 *.apk
 *.har
+commit_msg.txt
