@@ -672,14 +672,14 @@
     "last_scanned": "2026-06-27"
   },
   "https://times-ott-live.akamaized.net/mnplus_wv_drm/index.mpd": {
-    "license_type": "clearkey",
-    "license_key": "{",
+    "license_type": "org.w3.clearkey",
+    "license_key": "40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://times-ott-live.akamaized.net/mnxhd_wv_drm/index.mpd": {
-    "license_type": "clearkey",
-    "license_key": "{",
+    "license_type": "org.w3.clearkey",
+    "license_key": "40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e",
     "referrer": "",
     "last_scanned": "2026-06-27"
   },
@@ -19327,8 +19327,8 @@
   },
   "https://d84q7nw4qf3j3.cloudfront.net/out/v1/TOKEN/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "251c384e846841abafa1f7c723d57e66:e45b06a38cd261b74c5160f0912c042f",
-    "referrer": "https://www.visionplus.id/",
+    "license_key": "ed1723eb360145ccafa1b466130186da:c7c4171e98de14c23be427f6ab16ef72",
+    "referrer": "",
     "last_scanned": "2026-06-27"
   },
   "https://d2xz2v5wuvgur6.cloudfront.net/out/v1/TOKEN/index.mpd": {
@@ -19339,7 +19339,7 @@
   },
   "https://d2tjypxxy769fn.cloudfront.net/out/v1/TOKEN/index.mpd": {
     "license_type": "clearkey",
-    "license_key": "78477d2156944b7cb35762a47973aa9c:31805b3c0d03080f9ed33411258e5baf",
+    "license_key": "39c4dc6704cf4ceea2fd4863b88d8a7d:4e9d7954c2ff46759289da4fc9f018ea",
     "referrer": "https://www.visionplus.id/",
     "last_scanned": "2026-06-27"
   },

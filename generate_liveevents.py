@@ -36,7 +36,7 @@ EPG_CHANNEL_NAMES = {}
 FINISHED_WC_MATCHES = set()
 
 # Konfigurasi sembunyikan kategori Live Events (hanya sisakan World Cup)
-HIDE_LIVE_EVENTS = True
+HIDE_LIVE_EVENTS = False
 
 
 # ====================================================================
@@ -586,6 +586,8 @@ def extract_channel_suffix(title: str, source_name: str) -> str:
 
 
 def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matches: list[str] = None) -> dict:
+    if not entry.get("extinf"):
+        return None
     extinf_line = entry["extinf"][0]
     attrs = parse_extinf_attributes(extinf_line)
     title = attrs["display_name"]
