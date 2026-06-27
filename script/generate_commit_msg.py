@@ -3,6 +3,9 @@ import re
 import sys
 from datetime import datetime, timezone
 
+# Atur encoding stdout agar mendukung emoji di terminal Windows
+sys.stdout.reconfigure(encoding='utf-8')
+
 def get_git_diff():
     try:
         # Jalankan git diff HEAD untuk file playlist utama

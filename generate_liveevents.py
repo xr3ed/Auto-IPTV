@@ -50,7 +50,7 @@ SOURCES = [
     {
         "name": "buddy_sport",
         "url": "https://github.com/BuddyChewChew/storage/raw/main/sport.m3u",
-        "is_wc": True
+        "is_wc": False
     },
     {
         "name": "live_events",
@@ -597,7 +597,8 @@ def format_and_enrich_sports_entry(entry: dict, source_name: str, active_wc_matc
         "f1", "formula 1", "tennis", "badminton", "ufc", "wwe", "nhl", "hockey", 
         "rugby", "cricket", "golf", "darts", "snooker", "nascar", "indycar", "superbike",
         "cfl", "nfl", "afl", "american football", "ncaa", "athletics", "boxing", "mma",
-        "billiard", "pool", "snooker", "darts"
+        "billiard", "pool", "snooker", "darts", "rally", "wrc", "racing", "cycling",
+        "one championship", "one fight night", "one friday fights", "bellator", "pfl"
     ])
     
     # 1. Deteksi pencocokan nama laga dinamis dari URL
