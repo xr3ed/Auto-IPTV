@@ -4,25 +4,24 @@
 # <============================================== Bola Indonesia (HLS - bisa diputar di semua player) ===========================================================>
 #EXTVLCOPT:http-referrer=https://tvri.go.id/
 https://ott-balancer.tvri.go.id/live/eds/Nasional/hls/Nasional.m3u8
-#EXTINF:-1 tvg-name="[FHD] Uruguay vs Spanyol - Rerun - Caze TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Uruguay vs Spanyol - Rerun - Caze TV
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1223d5105392cabf1bb9c2c1fdf6539a:340b409f4b8f78a343e0363a7938df38
-https://otte-qw.live.pv-cdn.net/lhr-nitro/live/clients/dash/enc/iayg0kyrof/out/v1/91dc04907f56415b897faccfa9d252da/cenc.mpd
-#EXTINF:-1 tvg-name="[FHD] Uruguay vs Spanyol - Rerun - Unite8 Sports 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Uruguay vs Spanyol - Rerun - Unite8 Sports 2
-http://212.102.34.8:9080/AndFlixHD/video.m3u8
 #EXTINF:-1 tvg-name="[FHD] Uruguay vs Spanyol - Rerun - DSPORTS+" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Uruguay vs Spanyol - Rerun - DSPORTS+
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f
 http://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd
+#EXTINF:-1 tvg-name="[FHD] Uruguay vs Spanyol - Rerun - Unite8 Sports 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Uruguay vs Spanyol - Rerun - Unite8 Sports 2
+http://212.102.34.8:9080/AndFlixHD/video.m3u8
+#EXTINF:-1 tvg-name="[FHD] Uruguay vs Spanyol - Rerun - Caze TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Uruguay vs Spanyol - Rerun - Caze TV
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1223d5105392cabf1bb9c2c1fdf6539a:340b409f4b8f78a343e0363a7938df38
+https://otte-qw.live.pv-cdn.net/lhr-nitro/live/clients/dash/enc/iayg0kyrof/out/v1/91dc04907f56415b897faccfa9d252da/cenc.mpd
 #EXTINF:-1 tvg-name="[FHD] Uruguay vs Spanyol - Rerun - Somoy TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Uruguay vs Spanyol - Rerun - Somoy TV
 http://ubuntu.moonplex.net:8080/Somoy_TV/index.m3u8
 #EXTINF:-1 tvg-name="[FHD] Uruguay vs Spanyol - Rerun - Bioscope" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Uruguay vs Spanyol - Rerun - Bioscope
-#====== Bioscope World Cup ============
-http://sm-monirul.top/ott/bioscope/index.m3u8
+http://sm-monirul.top/ott/bioscope1/index.m3u8
 #EXTINF:-1 tvg-name="[HD] Uruguay vs Spanyol - Rerun - M6 Direct TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - M6 Direct TV
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -31,7 +30,7 @@ http://sm-monirul.top/ott/bioscope/index.m3u8
 https://origin-m6web.live.6cloud.fr/out/v1/6play/6play-m6/cmaf_cenc00/dash-short-hd.mpd
 #EXTINF:-1 tvg-name="[HD] Uruguay vs Spanyol - Rerun - APISTECH_WC" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - APISTECH_WC
 https://a62dad94.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZJRkFQbHVzRW5nbGlzaF9ITFM/playlist.m3u8
-#EXTINF:-1 tvg-name="[HD] Uruguay vs Spanyol - Rerun - BEIN SPORTS 3" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - BEIN SPORTS 3
+#EXTINF:-1 tvg-name="[HD] Argentina vs AS - BEIN SPORTS 3" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Argentina vs AS - BEIN SPORTS 3
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -119,21 +118,21 @@ https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://webtv.sk/tv/
 https://dash2.antik.sk/stream/nvidia_sport2/playlist_cenc.mpd
+#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Uruguay vs Spanyol - Rerun - Toffee 3" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - Toffee 3
+http://sm-monirul.top/tof/live/toffee3/index.m3u8
 #EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Uruguay vs Spanyol - Rerun - Toffee 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - Toffee 2
 http://sm-monirul.top/tof/live/toffee2/index.m3u8
+#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Uruguay vs Spanyol - Rerun - Toffee 5" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - Toffee 5
+https://sm-monirul.top/tof/live/toffee5/index.m3u8
+#EXTINF:-1 tvg-name="[HD] Uruguay vs Spanyol - Rerun - i screen" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - i screen
+http://sm-monirul.top/ott/iscreen/index.m3u8
 #EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Uruguay vs Spanyol - Rerun - Toffee 1" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - Toffee 1
 #====== Toffee World Cup ============
 http://sm-monirul.top/tof/live/toffee1/index.m3u8
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Uruguay vs Spanyol - Rerun - Toffee 3" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - Toffee 3
-http://sm-monirul.top/tof/live/toffee3/index.m3u8
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Uruguay vs Spanyol - Rerun - Toffee 6" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - Toffee 6
-https://sm-monirul.top/tof/live/toffee6/index.m3u8
 #EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Uruguay vs Spanyol - Rerun - Toffee 4" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - Toffee 4
 https://sm-monirul.top/tof/live/toffee4/index.m3u8
-#EXTINF:-1 tvg-name="[HD] Uruguay vs Spanyol - Rerun - i screen" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - i screen
-http://sm-monirul.top/ott/iscreen/index.m3u8
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Uruguay vs Spanyol - Rerun - Toffee 5" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - Toffee 5
-https://sm-monirul.top/tof/live/toffee5/index.m3u8
+#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Uruguay vs Spanyol - Rerun - Toffee 6" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - Toffee 6
+https://sm-monirul.top/tof/live/toffee6/index.m3u8
 #EXTINF:-1 tvg-chno="10" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Uruguay vs Spanyol - Rerun - XYZSTRM" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - XYZSTRM
 #EXTVLCOPT:http-referrer=https://xyzstreams.st
 #EXTVLCOPT:http-origin=https://xyzstreams.st
@@ -154,16 +153,16 @@ https://obstreamx.click/live/pj2xunzfkx.m3u8
 #EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=yq97gcrutx
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://obstreamx.click/live/yq97gcrutx.m3u8
-#EXTINF:-1 tvg-chno="213" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Cape Verde vs Saudi Arabia 3 - FUTBOLX" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Cape Verde vs Saudi Arabia 3 - FUTBOLX
-#EXTVLCOPT:http-referrer=https://futbol-x.xyz
-#EXTVLCOPT:http-origin=https://futbol-x.xyz
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://futbolx4-live.hf.space/live/fs1.m3u8
 #EXTINF:-1 tvg-chno="218" tvg-id="Soccer.Dummy.us" tvg-name="[HD] New Zealand vs Belgium 3 - FUTBOLX" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] New Zealand vs Belgium 3 - FUTBOLX
 #EXTVLCOPT:http-referrer=https://futbol-x.xyz
 #EXTVLCOPT:http-origin=https://futbol-x.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://futbolx5-live.hf.space/live/tsn4.m3u8
+#EXTINF:-1 tvg-chno="213" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Cape Verde vs Saudi Arabia 3 - FUTBOLX" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Cape Verde vs Saudi Arabia 3 - FUTBOLX
+#EXTVLCOPT:http-referrer=https://futbol-x.xyz
+#EXTVLCOPT:http-origin=https://futbol-x.xyz
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://futbolx4-live.hf.space/live/fs1.m3u8
 #EXTINF:-1 tvg-chno="216" tvg-id="Soccer.Dummy.us" tvg-name="[HD] New Zealand vs Belgium 1 - FUTBOLX" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] New Zealand vs Belgium 1 - FUTBOLX
 #EXTVLCOPT:http-referrer=https://futbol-x.xyz
 #EXTVLCOPT:http-origin=https://futbol-x.xyz
@@ -179,8 +178,6 @@ https://futbolx6-live.hf.space/live/tsn2.m3u8
 #EXTVLCOPT:http-origin=https://futbol-x.xyz
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://futbolx-live.hf.space/live/fr.m3u8
-#EXTINF:-1 tvg-name="[HD] Uruguay vs Spanyol - Rerun - BITTV_LOCAL" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - BITTV_LOCAL
-https://qp-pldt-live-bpk-ucd-prod.akamaized.net/bpk-tv/fifa_ppv1/default/index.mpd
 #EXTINF:-1 tvg-id="auto.ct.sport" tvg-name="[HD] Uruguay vs Spanyol - Rerun - CT SPORT" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Uruguay vs Spanyol - Rerun - CT SPORT
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
