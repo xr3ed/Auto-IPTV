@@ -76,6 +76,13 @@ GROUP_MAPPING = {
     "news tv": "News",
     "news": "News",
     
+    # Sport
+    "sport": "Sport",
+    "sports": "Sport",
+    "bein sports": "Sport",
+    "bein sport": "Sport",
+    "sport group": "Sport",
+    
     # Music
     "music tv": "Music",
     "music": "Music",

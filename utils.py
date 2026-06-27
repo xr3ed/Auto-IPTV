@@ -233,3 +233,100 @@ def download_and_localize_logo(channel_name: str, original_logo_url: str) -> str
     # 2. Kembalikan URL Raw GitHub milik user sendiri
     # Jika file terbukti berhasil ada di lokal (atau setidaknya kita asumsikan akan dipush)
     return f"https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/{filename}"
+
+
+def sanitize_url_protocol(url: str) -> str:
+    """Mengubah https ke http untuk port non-standar untuk menghindari jabat tangan SSL gagal."""
+    import re
+    match = re.search(r'https://([^:/]+):(\d+)', url)
+    if match:
+        port = int(match.group(2))
+        if port in (8080, 8000, 8070, 25461, 9080, 9090, 80, 3000, 19360):
+            url = url.replace("https://", "http://", 1)
+    return url
+
+
+def is_stream_playable(url: str, headers: dict = None) -> bool:
+    """Menguji keaktifan manifest stream HLS/DASH dan mendeteksi geoblocking dengan mem-ping segmen medianya."""
+    import requests
+    from contextlib import closing
+    import re
+    
+    headers = headers or {}
+    url = sanitize_url_protocol(url)
+    
+    try:
+        # Coba GET manifest utama secara stream=True
+        with closing(requests.get(url, headers=headers, timeout=8, stream=True, verify=False)) as response:
+            if response.status_code >= 400:
+                return False
+                
+            content_type = response.headers.get("Content-Type", "").split(";")[0].strip().lower()
+            
+            # Baca chunk awal manifest untuk dianalisis
+            chunk = next(response.iter_content(chunk_size=15360), b"")
+            if not chunk:
+                return False
+                
+            preview = chunk.decode("utf-8", errors="ignore").lstrip()
+            preview_lower = preview.lower()
+            
+            # HTML page (halaman blokir / error CDN) -> DEAD
+            if preview_lower.startswith("<html") or "<html" in preview_lower[:300]:
+                return False
+                
+            # A. Jika HLS (.m3u8)
+            if preview.startswith("#EXTM3U") or preview.startswith("#EXT-X-") or ".m3u8" in url.lower():
+                # Cari sub-playlist atau segmen video pertama (.ts / .m4s / .mp4 / .aac)
+                lines = preview.splitlines()
+                sub_url = ""
+                for line in lines:
+                    line_str = line.strip()
+                    if line_str and not line_str.startswith("#"):
+                        sub_url = line_str
+                        break
+                
+                if sub_url:
+                    if not sub_url.startswith("http"):
+                        base_path = response.url.rsplit("/", 1)[0]
+                        sub_url = base_path + "/" + sub_url
+                    
+                    try:
+                        # Uji sub-playlist / segmen medianya
+                        r_sub = requests.head(sub_url, headers=headers, timeout=5, verify=False)
+                        if r_sub.status_code >= 400:
+                            # Jika diblokir oleh CDN (HTTP 403 / 401)
+                            return False
+                    except Exception:
+                        pass
+                return True
+                
+            # B. Jika DASH (.mpd)
+            if "<mpd" in preview_lower or ".mpd" in url.lower():
+                # Cari segment inisialisasi media
+                init_match = re.search(r'initialization="([^"]+)"', preview)
+                if init_match:
+                    init_segment = init_match.group(1)
+                    if not init_segment.startswith("http"):
+                        base_path = response.url.rsplit("/", 1)[0]
+                        test_seg_url = base_path + "/" + init_segment
+                    else:
+                        test_seg_url = init_segment
+                        
+                    try:
+                        # Uji keaktifan segmen video DASH (apakah diblokir geoblock oleh CDN)
+                        r_seg = requests.head(test_seg_url, headers=headers, timeout=5, verify=False)
+                        if r_seg.status_code >= 400:
+                            return False
+                    except Exception:
+                        pass
+                return True
+                
+            # C. Raw Stream (MPEG-TS, MP4)
+            if chunk[:1] == b"\x47" or b"ftyp" in chunk[:32] or chunk[:3] == b"ID3":
+                return True
+                
+            return False
+            
+    except Exception:
+        return False
