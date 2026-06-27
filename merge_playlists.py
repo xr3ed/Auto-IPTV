@@ -29,9 +29,6 @@ PLAYLISTS_TO_MERGE = [
     {"file": "bittv_indo.m3u", "section": "BITTV_INDO"},
     {"file": "rctiplus.m3u", "section": "RCTI+"},
     {"file": "tcl.m3u", "section": "TCL"},
-    {"file": "roku.m3u", "section": "ROKU"},
-    {"file": "pluto_all.m3u", "section": "PLUTO"},
-    {"file": "samsungtvplus_all.m3u", "section": "SAMSUNGTV+"},
 ]
 
 
@@ -361,8 +358,8 @@ def merge_all_to_indihome():
             content = f.read()
         
         # Bersihkan section otomatis lama agar tidak ditumpuk
-        for p_info in PLAYLISTS_TO_MERGE:
-            section_name = p_info["section"]
+        sections_to_clean = ["INDO_EXTRAS", "BITTV_INDO", "RCTI+", "TCL", "ROKU", "PLUTO", "SAMSUNGTV+"]
+        for section_name in sections_to_clean:
             marker_start = f"# === {section_name} SECTION ==="
             marker_end = f"# === END {section_name} SECTION ==="
             if marker_start in content and marker_end in content:
@@ -427,11 +424,10 @@ def merge_all_to_indihome():
                     playable_fast_tv.append(res)
             except Exception:
                 pass
-                
-    print(f"✅ Selesai! {len(playable_fast_tv)} dari {len(fast_tv_channels)} saluran FAST TV aktif.")
-    deduped_channels = other_channels + playable_fast_tv
-
     # 4. Tulis kembali seluruh saluran yang unik ke IndihomeTV.m3u
+    # Untuk Opsi A (Bebas VPN): Saring keluar saluran internasional yang ter-geoblock (kecuali TCL yang masih bisa)
+    deduped_channels = [ch for ch in deduped_channels if ch["source"] not in ("roku.m3u", "pluto_all.m3u", "samsungtvplus_all.m3u")]
+    
     # Pisahkan saluran yang lolos filter kembali ke kelompoknya semula
     deduped_original = [ch for ch in deduped_channels if ch["source"] == "IndihomeTV (Bawaan)"]
     
