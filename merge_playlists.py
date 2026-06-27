@@ -304,6 +304,37 @@ def merge_all_to_indihome():
     # Jalankan deduplikasi pintar
     deduped_channels = deduplicate_channels_smart(all_channels_to_dedup)
 
+    # Jalankan pengujian playability paralel hanya untuk saluran FAST TV yang digabungkan
+    print("⚡ Memverifikasi keaktifan saluran FAST TV gabungan secara paralel...")
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    from utils import is_stream_playable
+    
+    fast_tv_channels = [ch for ch in deduped_channels if ch["source"] in ("tcl.m3u", "roku.m3u", "pluto_all.m3u", "samsungtvplus_all.m3u")]
+    other_channels = [ch for ch in deduped_channels if ch["source"] not in ("tcl.m3u", "roku.m3u", "pluto_all.m3u", "samsungtvplus_all.m3u")]
+    
+    playable_fast_tv = []
+    
+    def test_fast_channel(ch):
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        }
+        if is_stream_playable(ch["url"], headers):
+            return ch
+        return None
+        
+    with ThreadPoolExecutor(max_workers=30) as executor:
+        futures = {executor.submit(test_fast_channel, ch): ch for ch in fast_tv_channels}
+        for future in as_completed(futures):
+            try:
+                res = future.result()
+                if res:
+                    playable_fast_tv.append(res)
+            except Exception:
+                pass
+                
+    print(f"✅ Selesai! {len(playable_fast_tv)} dari {len(fast_tv_channels)} saluran FAST TV aktif.")
+    deduped_channels = other_channels + playable_fast_tv
+
     # 4. Tulis kembali seluruh saluran yang unik ke IndihomeTV.m3u
     # Pisahkan saluran yang lolos filter kembali ke kelompoknya semula
     deduped_original = [ch for ch in deduped_channels if ch["source"] == "IndihomeTV (Bawaan)"]
