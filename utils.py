@@ -76,12 +76,22 @@ def load_drm_keys_db() -> dict:
 
 
 def clean_manifest_url(url: str) -> str:
-    """Membersihkan URL manifest agar seragam dan menormalisasi token path dinamis Amazon Prime Video."""
+    """Membersihkan URL manifest agar seragam dan menormalisasi semua tipe token path dinamis global."""
     # 1. Buang query parameters di belakang tanda tanya
     url_clean = url.split("?")[0].strip()
     
-    # 2. Normalisasi token dinamis di path URL Amazon (mengubah 32 karakter hex acak menjadi 'TOKEN')
-    url_clean = re.sub(r'/out/v1/[a-f0-9]{32}/', '/out/v1/TOKEN/', url_clean, flags=re.IGNORECASE)
+    # 2. Normalisasi token dinamis UUID 36-karakter (misal: 376c96cd-193f-46d1-a2b6-7c2b78cb0aa5)
+    url_clean = re.sub(r'/[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}/', '/TOKEN/', url_clean, flags=re.IGNORECASE)
+    
+    # 3. Normalisasi semua segmen path berukuran 32 karakter hex murni secara global
+    parts = url_clean.split('/')
+    new_parts = []
+    for part in parts:
+        if re.match(r'^[a-f0-9]{32}$', part, re.IGNORECASE):
+            new_parts.append('TOKEN')
+        else:
+            new_parts.append(part)
+    url_clean = '/'.join(new_parts)
     
     return url_clean
 
