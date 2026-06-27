@@ -343,7 +343,16 @@ def merge_all_to_indihome():
     
     # Tulis saluran bawaan asli terlebih dahulu
     for ch in deduped_original:
-        output_content.append(ch["extinf"])
+        extinf_line = ch["extinf"]
+        extinf_line = re.sub(r'group-title="[Ss]ports"', 'group-title="Sport"', extinf_line)
+        extinf_line = extinf_line.replace(
+            "https://raw.githubusercontent.com/apistech/project/refs/heads/main/logo/",
+            "https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/"
+        ).replace(
+            "https://raw.githubusercontent.com/apistech/project/main/logo/",
+            "https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/"
+        )
+        output_content.append(extinf_line)
         output_content.extend(ch["opts"])
         output_content.append(ch["url"])
         output_content.append("")
@@ -370,7 +379,16 @@ def merge_all_to_indihome():
         ]
         
         for ch in ch_in_section:
-            section_lines.append(ch["extinf"])
+            extinf_line = ch["extinf"]
+            extinf_line = re.sub(r'group-title="[Ss]ports"', 'group-title="Sport"', extinf_line)
+            extinf_line = extinf_line.replace(
+                "https://raw.githubusercontent.com/apistech/project/refs/heads/main/logo/",
+                "https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/"
+            ).replace(
+                "https://raw.githubusercontent.com/apistech/project/main/logo/",
+                "https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/"
+            )
+            section_lines.append(extinf_line)
             section_lines.extend(ch["opts"])
             section_lines.append(ch["url"])
             section_lines.append("")
