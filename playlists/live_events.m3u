@@ -1,125 +1,110 @@
 #EXTM3U url-tvg="https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/epgs/guide.xml.gz"
-#EXTINF:-1 tvg-id="TVRI.id" tvg-name="[FHD] Panama vs Inggris - TVRI" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[FHD] Panama vs Inggris - TVRI
+#EXTINF:-1 tvg-id="TVRI.id" tvg-name="[FHD] Kolombia vs Portugal - TVRI" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[FHD] Kolombia vs Portugal - TVRI
 # <============================================== WorldCup 2026 ===========================================================>
 # <============================================== Bola Indonesia (HLS - bisa diputar di semua player) ===========================================================>
 #EXTVLCOPT:http-referrer=https://tvri.go.id/
 https://ott-balancer.tvri.go.id/live/eds/Nasional/hls/Nasional.m3u8
-#EXTINF:-1 tvg-id="bingeplus" tvg-name="[FHD] Kroasia vs Ghana - Binge+" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Kroasia vs Ghana - Binge+
+#EXTINF:-1 tvg-id="bingeplus" tvg-name="[FHD] Kolombia vs Portugal - Binge+" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Kolombia vs Portugal - Binge+
 #EXTVLCOPT:http-referrer=https://iscreen.com.bd/
 https://m3u-tvb.pages.dev/ics.m3u8
-#EXTINF:-1 tvg-name="[FHD] Kroasia vs Ghana - Unite8 Sports 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Kroasia vs Ghana - Unite8 Sports 2
+#EXTINF:-1 tvg-name="[FHD] Congo DR vs Uzbekistan - Unite8 Sports 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Congo DR vs Uzbekistan - Unite8 Sports 2
 http://212.102.34.8:9080/AndFlixHD/video.m3u8
-#EXTINF:-1 tvg-name="[FHD] Panama vs Inggris - Bioscope" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Panama vs Inggris - Bioscope
-#====== Bioscope World Cup ============
-http://sm-monirul.top/fifa/bioscope/index.m3u8
-#EXTINF:-1 tvg-name="[FHD] Kroasia vs Ghana - Bioscope" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Kroasia vs Ghana - Bioscope
+#EXTINF:-1 tvg-name="[FHD] Kolombia vs Portugal - Bioscope" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Kolombia vs Portugal - Bioscope
 http://sm-monirul.top/fifa/bioscope1/index.m3u8
-#EXTINF:-1 tvg-name="[FHD] Panama vs Inggris - Unite8 Sports 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Panama vs Inggris - Unite8 Sports 2
+#EXTINF:-1 tvg-id="bingeplus" tvg-name="[FHD] Congo DR vs Uzbekistan - Binge+" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Congo DR vs Uzbekistan - Binge+
+#EXTVLCOPT:http-referrer=https://iscreen.com.bd/
+https://m3u-tvb.pages.dev/ics.m3u8
+#EXTINF:-1 tvg-name="[FHD] Kolombia vs Portugal - Unite8 Sports 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Kolombia vs Portugal - Unite8 Sports 2
 http://212.102.34.8:9080/AndFlixHD/video.m3u8
-#EXTINF:-1 tvg-chno="108" tvg-id="Soccer.Dummy.us" tvg-name="[FHD] Kroasia vs Ghana 1 - [FIFA World Cup] Croatia vs Ghana 1 (FAWA)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[FHD] Kroasia vs Ghana 1 - [FIFA World Cup] Croatia vs Ghana 1 (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://play.gzxdby.com/live/183334344568_254762755p_1080p.m3u8
-#EXTINF:-1 tvg-chno="132" tvg-id="Soccer.Dummy.us" tvg-name="[FHD] Panama vs England 1 - [FIFA World Cup] Panama vs England 1 (FAWA)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[FHD] Panama vs England 1 - [FIFA World Cup] Panama vs England 1 (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://play.gzxdby.com/live/183334344568_2547627555_1080p.m3u8
-#EXTINF:-1 tvg-name="[HD] Panama vs Inggris - M6 Direct TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - M6 Direct TV
+#EXTINF:-1 tvg-name="[FHD] Congo DR vs Uzbekistan - Bioscope" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Congo DR vs Uzbekistan - Bioscope
+http://sm-monirul.top/fifa/bioscope1/index.m3u8
+#EXTINF:-1 tvg-name="[HD] Kolombia vs Portugal - M6 Direct TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal - M6 Direct TV
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=433ffba670963e70857859a9dff4be04:51ede3a821229fe81e71282c8eff80e3
 https://origin-m6web.live.6cloud.fr/out/v1/6play/6play-m6/cmaf_cenc00/dash-short-hd.mpd
-#EXTINF:-1 tvg-name="[HD] Panama vs Inggris - Caze TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Caze TV
+#EXTINF:-1 tvg-name="[HD] Congo DR vs Uzbekistan - Caze TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Congo DR vs Uzbekistan - Caze TV
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=34475edab991ad5e92548aebd710410a:501b209cccd323ac00bf5ac15b406cb4
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3ynrpdanq2/out/v1/81fd4c26584044d2b1a1cc5b32fa9af0/cenc.mpd
+#EXTINF:-1 tvg-name="[HD] Kolombia vs Portugal - Caze TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal - Caze TV
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=34475edab991ad5e92548aebd710410a:501b209cccd323ac00bf5ac15b406cb4
 https://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/3ynrpdanq2/out/v1/81fd4c26584044d2b1a1cc5b32fa9af0/cenc.mpd
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - APISTECH_WC" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - APISTECH_WC
+#EXTINF:-1 tvg-name="[HD] Congo DR vs Uzbekistan - APISTECH_WC" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Congo DR vs Uzbekistan - APISTECH_WC
 https://a62dad94.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZJRkFQbHVzRW5nbGlzaF9ITFM/playlist.m3u8
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - Caze TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Caze TV
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=34475edab991ad5e92548aebd710410a:501b209cccd323ac00bf5ac15b406cb4
-https://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/3ynrpdanq2/out/v1/81fd4c26584044d2b1a1cc5b32fa9af0/cenc.mpd
-#EXTINF:-1 tvg-id="t sports" tvg-name="[HD] Panama vs Inggris - SM-TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - SM-TV
-http://114.130.57.233:8080/BTV/video.m3u8?token=SkQuhAXZxgBan1
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - SM-TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - SM-TV
-https://a62dad94.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZJRkFQbHVzRW5nbGlzaF9ITFM/playlist.m3u8
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - TELEMUNDO" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - TELEMUNDO
+#EXTINF:-1 tvg-name="[HD] Kolombia vs Portugal - TELEMUNDO" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal - TELEMUNDO
 #======  World Cup 1 ============
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 #EXTVLCOPT:http-referrer=https://streamcenter.xyz
 https://edge2caster.pro/hls/eJmauBDCIf.m3u8
-#EXTINF:-1 tvg-chno="109" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana HD - [FIFA World Cup] Croatia vs Ghana  (FAWA)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana HD - [FIFA World Cup] Croatia vs Ghana  (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTINF:-1 tvg-name="[HD] Congo DR vs Uzbekistan - M6 Direct TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Congo DR vs Uzbekistan - M6 Direct TV
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=433ffba670963e70857859a9dff4be04:51ede3a821229fe81e71282c8eff80e3
+https://origin-m6web.live.6cloud.fr/out/v1/6play/6play-m6/cmaf_cenc00/dash-short-hd.mpd
+#EXTINF:-1 tvg-name="[HD] Congo DR vs Uzbekistan - SM-TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Congo DR vs Uzbekistan - SM-TV
+https://a62dad94.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZJRkFQbHVzRW5nbGlzaF9ITFM/playlist.m3u8
+#EXTINF:-1 tvg-id="t sports" tvg-name="[HD] Kolombia vs Portugal - SM-TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal - SM-TV
+http://114.130.57.233:8080/BTV/video.m3u8?token=SkQuhAXZxgBan1
+#EXTINF:-1 tvg-chno="104" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kolombia vs Portugal - [FIFA World Cup] Colombia vs Portugal (iSTRMEAST)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal - [FIFA World Cup] Colombia vs Portugal (iSTRMEAST)
+#EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/52624?ad=111
+#EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/52624?ad=111
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://pul-tenm.nbs3g.com/live/hd-en-1-4460978.m3u8?txSecret=973b8c7f8babbd47fd6f49f0dbdb00c4&txTime=6A4189E8
-#EXTINF:-1 tvg-chno="101" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Argentina vs Jordan - STRMSGATE" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Argentina vs Jordan - STRMSGATE
-#EXTVLCOPT:http-referrer=https://instream.click/jwp-eu.php?stream=HDWC1
-#EXTVLCOPT:http-origin=https://instream.click/jwp-eu.php?stream=HDWC1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://instreams.pro/EU/HDWC1/index.m3u8
-#EXTINF:-1 tvg-chno="102" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Austria vs Algeria - STRMSGATE" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Austria vs Algeria - STRMSGATE
-#EXTVLCOPT:http-referrer=https://instream.click/jwp-eu.php?stream=HDWC3
-#EXTVLCOPT:http-origin=https://instream.click/jwp-eu.php?stream=HDWC3
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://instreams.pro/EU/HDWC3/index.m3u8
-#EXTINF:-1 tvg-chno="107" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana - [FIFA World Cup] Croatia vs Ghana (iSTRMEAST)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - [FIFA World Cup] Croatia vs Ghana (iSTRMEAST)
+https://chatgpt.hereisman.net/playlist/52624/load-playlist
+#EXTINF:-1 tvg-chno="110" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana - Rerun - [FIFA World Cup] Croatia vs Ghana (iSTRMEAST)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Rerun - [FIFA World Cup] Croatia vs Ghana (iSTRMEAST)
 #EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/52619?ad=111
 #EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/52619?ad=111
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://chatgpt.hereisman.net/playlist/52619/load-playlist
-#EXTINF:-1 tvg-chno="131" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs Inggris - [FIFA World Cup] Panama vs England (iSTRMEAST)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - [FIFA World Cup] Panama vs England (iSTRMEAST)
+#EXTINF:-1 tvg-chno="115" tvg-id="Soccer.Dummy.us" tvg-name="[HD] DR Congo vs Uzbekistan - [FIFA World Cup] DR Congo vs Uzbekistan (iSTRMEAST)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] DR Congo vs Uzbekistan - [FIFA World Cup] DR Congo vs Uzbekistan (iSTRMEAST)
+#EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/52627?ad=111
+#EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/52627?ad=111
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://chatgpt.hereisman.net/playlist/52627/load-playlist
+#EXTINF:-1 tvg-chno="100" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Austria vs Algeria - STRMSGATE" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Austria vs Algeria - STRMSGATE
+#EXTVLCOPT:http-referrer=https://instream.click/jwp-eu.php?stream=HDWC3
+#EXTVLCOPT:http-origin=https://instream.click/jwp-eu.php?stream=HDWC3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://instreams.pro/EU/HDWC3/index.m3u8
+#EXTINF:-1 tvg-chno="112" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana HD - Rerun - FAWA" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana HD - Rerun - FAWA
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://pullsgp.yyzb456.top/live/stream-956896_lhd.m3u8
+#EXTINF:-1 tvg-chno="106" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kolombia vs Portugal HD - FAWA" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal HD - FAWA
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://pullsgp.yyzb456.top/live/stream-698168_lhd.m3u8
+#EXTINF:-1 tvg-chno="144" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs Inggris - Rerun - [FIFA World Cup] Panama vs England (iSTRMEAST)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Rerun - [FIFA World Cup] Panama vs England (iSTRMEAST)
 #EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/52621?ad=111
 #EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/52621?ad=111
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://chatgpt.hereisman.net/playlist/52621/load-playlist
-#EXTINF:-1 tvg-chno="133" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs England HD - [FIFA World Cup] Panama vs England  (FAWA)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Panama vs England HD - [FIFA World Cup] Panama vs England  (FAWA)
-#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
-#EXTVLCOPT:http-origin=http://www.fawanews.sc/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://pul-tenm.nbs3g.com/live/hd-en-1-4460937.m3u8?txSecret=086264a13fa7d34034882acb7502cb22&txTime=6A418970
-#EXTINF:-1 tvg-name="[HD] Panama vs Inggris - FOX ONE" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - FOX ONE
+#EXTINF:-1 tvg-name="[HD] Congo DR vs Uzbekistan - FOX ONE" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Congo DR vs Uzbekistan - FOX ONE
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 #EXTVLCOPT:http-referrer=https://streamcenter.xyz
 https://mainstreams.pro/hls/24SDAZFcsqnj24.m3u8
-#EXTINF:-1 tvg-chno="115" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs Inggris - [FIFA World Cup] English Feed 1 (STRMHUB)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - [FIFA World Cup] English Feed 1 (STRMHUB)
-#EXTVLCOPT:http-referrer=https://getembed.live/embed-player?stream=esx51jdn9y
-#EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=esx51jdn9y
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://obstreamx.click/live/esx51jdn9y.m3u8
-#EXTINF:-1 tvg-name="[HD] Panama vs Inggris - Tipik Direct" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Tipik Direct
+#EXTINF:-1 tvg-name="[HD] Congo DR vs Uzbekistan - Tipik Direct" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Congo DR vs Uzbekistan - Tipik Direct
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=adca25b8779e4168a0cd710f59f61ccf:be5383ed3cd8079f4ffe78ad067f476a
 https://c9851ec-rbm-hilv-fsly.cdn.redbee.live/L26/6b640fa2/a765d074.isml/dash/.mpd
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - SportTV 3" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - SportTV 3
+#EXTINF:-1 tvg-name="[HD] Kolombia vs Portugal - SportTV 3" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal - SportTV 3
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=902e5ec0e3d05e665daa32fc23f4f59e:7b2322a273843921a43e2c61dac7cae3
 https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/6otiglnptp/out/v1/add7499679b0422cb6791f7701f95ecc/cenc.mpd
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Panama vs Inggris - Toffee 3" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Toffee 3
-http://sm-monirul.top/tof/live/toffee3/index.m3u8
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - SPORT 1 🇸🇰" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - SPORT 1 🇸🇰
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referer=https://webtv.sk/tv/
-https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Panama vs Inggris - Toffee 1" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Toffee 1
-#====== Toffee World Cup ============
-http://sm-monirul.top/tof/live/toffee1/index.m3u8
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - SPORT 2 🇸🇰" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - SPORT 2 🇸🇰
+#EXTINF:-1 tvg-name="[HD] Congo DR vs Uzbekistan - SPORT 2 🇸🇰" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Congo DR vs Uzbekistan - SPORT 2 🇸🇰
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -127,29 +112,7 @@ http://sm-monirul.top/tof/live/toffee1/index.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://webtv.sk/tv/
 https://dash2.antik.sk/stream/nvidia_sport2/playlist_cenc.mpd
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Panama vs Inggris - Toffee 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Toffee 2
-http://sm-monirul.top/tof/live/toffee2/index.m3u8
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Kroasia vs Ghana - Toffee 6" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Toffee 6
-https://sm-monirul.top/tof/live/toffee6/index.m3u8
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Panama vs Inggris - Toffee 4" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Toffee 4
-https://sm-monirul.top/tof/live/toffee4/index.m3u8
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Kroasia vs Ghana - Toffee 5" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Toffee 5
-https://sm-monirul.top/tof/live/toffee5/index.m3u8
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - Tipik Direct" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Tipik Direct
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=adca25b8779e4168a0cd710f59f61ccf:be5383ed3cd8079f4ffe78ad067f476a
-https://c9851ec-rbm-hilv-fsly.cdn.redbee.live/L26/6b640fa2/a765d074.isml/dash/.mpd
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Kroasia vs Ghana - Toffee 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Toffee 2
-http://sm-monirul.top/tof/live/toffee2/index.m3u8
-#EXTINF:-1 tvg-name="[HD] Panama vs Inggris - SportTV 3" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - SportTV 3
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=902e5ec0e3d05e665daa32fc23f4f59e:7b2322a273843921a43e2c61dac7cae3
-https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/6otiglnptp/out/v1/add7499679b0422cb6791f7701f95ecc/cenc.mpd
-#EXTINF:-1 tvg-name="[HD] Panama vs Inggris - SPORT 1 🇸🇰" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - SPORT 1 🇸🇰
+#EXTINF:-1 tvg-name="[HD] Kolombia vs Portugal - SPORT 1 🇸🇰" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal - SPORT 1 🇸🇰
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -157,46 +120,108 @@ https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/6otiglnptp/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://webtv.sk/tv/
 https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Kroasia vs Ghana - Toffee 4" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Toffee 4
-https://sm-monirul.top/tof/live/toffee4/index.m3u8
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Panama vs Inggris - Toffee 5" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Toffee 5
-https://sm-monirul.top/tof/live/toffee5/index.m3u8
-#EXTINF:-1 tvg-chno="99" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs Inggris - STRMCNTR" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - STRMCNTR
-#EXTVLCOPT:http-referrer=https://streams.center
-#EXTVLCOPT:http-origin=https://streams.center
+#EXTINF:-1 tvg-name="[HD] Kolombia vs Portugal - SPORT 2 🇸🇰" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal - SPORT 2 🇸🇰
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referer=https://webtv.sk/tv/
+https://dash2.antik.sk/stream/nvidia_sport2/playlist_cenc.mpd
+#EXTINF:-1 tvg-name="[HD] Congo DR vs Uzbekistan - SPORT 1 🇸🇰" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Congo DR vs Uzbekistan - SPORT 1 🇸🇰
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referer=https://webtv.sk/tv/
+https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
+#EXTINF:-1 tvg-chno="105" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kolombia vs Portugal 1 - FAWA" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal 1 - FAWA
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edgestreams.pro/hls/eJmauBDCIf.m3u8
-#EXTINF:-1 tvg-chno="100" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana - STRMCNTR" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - STRMCNTR
+https://play.gzxdby.com/live/183334344568_2547627555.m3u8
+#EXTINF:-1 tvg-chno="98" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kolombia vs Portugal - STRMCNTR" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal - STRMCNTR
 #EXTVLCOPT:http-referrer=https://streams.center
 #EXTVLCOPT:http-origin=https://streams.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestreams.pro/hls/sqdahach1ax.m3u8
-#EXTINF:-1 tvg-chno="98" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs Inggris - XYZSTRM" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - XYZSTRM
-#EXTVLCOPT:http-referrer=https://xyzstreams.st
-#EXTVLCOPT:http-origin=https://xyzstreams.st
+#EXTINF:-1 tvg-chno="97" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Congo DR vs Uzbekistan - STRMCNTR" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Congo DR vs Uzbekistan - STRMCNTR
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://lb.xyzcloud3.xyz/bein/index.m3u8
-#EXTINF:-1 tvg-chno="116" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana - XYZSTRM" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - XYZSTRM
-#EXTVLCOPT:http-referrer=https://xyzstreams.st
-#EXTVLCOPT:http-origin=https://xyzstreams.st
+https://edgestreams.pro/hls/eJmauBDCIf.m3u8
+#EXTINF:-1 tvg-chno="107" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana - Rerun - [FIFA World Cup] Croatia vs Ghana (FAWA)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Rerun - [FIFA World Cup] Croatia vs Ghana (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://lb.xyzcloud3.xyz/FOX/index.m3u8
-#EXTINF:-1 tvg-chno="105" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana - [FIFA World Cup] Croatia vs Ghana (STRMHUB)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - [FIFA World Cup] Croatia vs Ghana (STRMHUB)
+http://193.47.62.47/hls/CMMMM.m3u8
+#EXTINF:-1 tvg-chno="103" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kolombia vs Portugal - STRMHUB" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal - STRMHUB
+#EXTVLCOPT:http-referrer=https://getembed.live/embed-player?stream=esx51jdn9y
+#EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=esx51jdn9y
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://obstreamx.click/live/esx51jdn9y.m3u8
+#EXTINF:-1 tvg-chno="111" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana 1 - Rerun - FAWA" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana 1 - Rerun - FAWA
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://play.gzxdby.com/live/183334344568_254762755p.m3u8
+#EXTINF:-1 tvg-chno="108" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana - Rerun - [FIFA World Cup] Croatia vs Ghana (STRMHUB)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Rerun - [FIFA World Cup] Croatia vs Ghana (STRMHUB)
 #EXTVLCOPT:http-referrer=https://getembed.live/embed-player?stream=pj2xunzfkx
 #EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=pj2xunzfkx
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://obstreamx.click/live/pj2xunzfkx.m3u8
-#EXTINF:-1 tvg-chno="110" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs Inggris - STRMHUB" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - STRMHUB
-#EXTVLCOPT:http-referrer=https://getembed.live/embed-player?stream=hcicvcycw2
-#EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=hcicvcycw2
+#EXTINF:-1 tvg-chno="114" tvg-id="Soccer.Dummy.us" tvg-name="[HD] DR Congo vs Uzbekistan - [FIFA World Cup] DR Congo vs Uzbekistan (FAWA)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] DR Congo vs Uzbekistan - [FIFA World Cup] DR Congo vs Uzbekistan (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://obstreamx.click/live/hcicvcycw2.m3u8
-#EXTINF:-1 tvg-chno="118" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana - STRMHUB" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - STRMHUB
+http://193.47.62.47/hls/HCCCCE.m3u8
+#EXTINF:-1 tvg-chno="118" tvg-id="Soccer.Dummy.us" tvg-name="[HD] DR Congo vs UzbekistanILI - FAWA" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] DR Congo vs UzbekistanILI - FAWA
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.47/hls/skkkkqqq.m3u8
+#EXTINF:-1 tvg-chno="120" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Inggris vs Panama - Rerun - [FIFA World Cup] England vs Panama (CDNTV)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Inggris vs Panama - Rerun - [FIFA World Cup] England vs Panama (CDNTV)
+#EXTVLCOPT:http-referrer=https://cdnlivetv.tv/api/v1/channels/player/?name=ITV%201%20FHD%20UK&code=gb&user=cdnlivetv&plan=free
+#EXTVLCOPT:http-origin=https://cdnlivetv.tv/api/v1/channels/player/?name=ITV%201%20FHD%20UK&code=gb&user=cdnlivetv&plan=free
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://cdnlivetv.tv/secure/api/v1/6a288d2a81d8192bb76cc387/playlist.m3u8?token=NmEyODhkMmE4MWQ4MTkyYmI3NmNjMzg3OjE3ODI2MDY2NzM5NTY6Y2RubGl2ZXR2LnR2OjMyMmVjYTdjZmVhMjBiZGIuYTI3YzczY2JhMWY3Y2Y3OGU4MWM2ODI1MTc2NGIwNDAzZDU0ZmFjODc5MGViMTliMWFlNTY0ZGRhOThhYmQyZQ
+#EXTINF:-1 tvg-chno="126" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Congo DR vs Uzbekistan - STRMHUB" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Congo DR vs Uzbekistan - STRMHUB
 #EXTVLCOPT:http-referrer=https://getembed.live/embed-player?stream=yq97gcrutx
 #EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=yq97gcrutx
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://obstreamx.click/live/yq97gcrutx.m3u8
-#EXTINF:-1 tvg-id="auto.ct.sport" tvg-name="[HD] Kroasia vs Ghana - CT SPORT" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - CT SPORT
+#EXTINF:-1 tvg-chno="141" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs Inggris - Rerun - [FIFA World Cup] Panama vs England (FAWA)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Rerun - [FIFA World Cup] Panama vs England (FAWA)
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.47/hls/skkkkq.m3u8
+#EXTINF:-1 tvg-chno="138" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Ghana vs Kroasia - Rerun - CDNTV" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Ghana vs Kroasia - Rerun - CDNTV
+#EXTVLCOPT:http-referrer=https://cdnlivetv.tv/api/v1/channels/player/?name=Fox%20Sports%201%20FHD%20US&code=us&user=cdnlivetv&plan=free
+#EXTVLCOPT:http-origin=https://cdnlivetv.tv/api/v1/channels/player/?name=Fox%20Sports%201%20FHD%20US&code=us&user=cdnlivetv&plan=free
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://cdnlivetv.tv/secure/api/v1/6a288d2881d8192bb76cb5c3/playlist.m3u8?token=NmEyODhkMjg4MWQ4MTkyYmI3NmNiNWMzOjE3ODI2MDY2NzMxOTQ6Y2RubGl2ZXR2LnR2OjU5NzhhZTIzYjNiZWM1MTUuNWQ0YTQ5ZDAyZjgzMmRlYWY2ODMzYjQzY2VkMTQ1MGMxOThiNDA4YTY5NGRjZDNjMzMwMTJhNThiNDc4ZmQ4Nw
+#EXTINF:-1 tvg-chno="149" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Portugal vs Kolombia - [FIFA World Cup] Portugal vs Colombia (CDNTV)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Portugal vs Kolombia - [FIFA World Cup] Portugal vs Colombia (CDNTV)
+#EXTVLCOPT:http-referrer=https://cdnlivetv.tv/api/v1/channels/player/?name=BBC%20One%20FHD%20UK&code=gb&user=cdnlivetv&plan=free
+#EXTVLCOPT:http-origin=https://cdnlivetv.tv/api/v1/channels/player/?name=BBC%20One%20FHD%20UK&code=gb&user=cdnlivetv&plan=free
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://cdnlivetv.tv/secure/api/v1/6a288d2a81d8192bb76cc379/playlist.m3u8?token=NmEyODhkMmE4MWQ4MTkyYmI3NmNjMzc5OjE3ODI2MTU2MzMyMTE6Y2RubGl2ZXR2LnR2OmFjOTRjYjQyMTMzMjFhZWQuZTM2YWM0MDY0MjYzYmU3MjZkNjcwNDIyNmI2MGY4NjExNTMxZDk5MzY1ZGQ3MmZiMGI2NWJmNjQxODBkYmY1Mg
+#EXTINF:-1 tvg-chno="161" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Uzbekistan vs DR Congo - CDNTV" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Uzbekistan vs DR Congo - CDNTV
+#EXTVLCOPT:http-referrer=https://cdnlivetv.tv/api/v1/channels/player/?name=Fox%20Sports%201%20FHD%20US&code=us&user=cdnlivetv&plan=free
+#EXTVLCOPT:http-origin=https://cdnlivetv.tv/api/v1/channels/player/?name=Fox%20Sports%201%20FHD%20US&code=us&user=cdnlivetv&plan=free
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://cdnlivetv.tv/secure/api/v1/6a288d2881d8192bb76cb5c3/playlist.m3u8?token=NmEyODhkMjg4MWQ4MTkyYmI3NmNiNWMzOjE3ODI2MTU2MzQxMjE6Y2RubGl2ZXR2LnR2OjA3OTM4MmZhMjEyMjAxODguYjk5Y2YxZWYxODkwNTg4ZDlhZTAwM2Y5NjRjNjMwZTQwNDVjNTRkMWRlNWQ4ZDdjMDAwZDdkMThiMzJiOWY5Mw
+#EXTINF:-1 tvg-chno="153" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kolombia vs Portugal - XYZSTRM" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal - XYZSTRM
+#EXTVLCOPT:http-referrer=https://xyzstreams.st
+#EXTVLCOPT:http-origin=https://xyzstreams.st
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://lb.xyzcloud3.xyz/Telemundo/index.m3u8
+#EXTINF:-1 tvg-chno="124" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Congo DR vs Uzbekistan - XYZSTRM" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Congo DR vs Uzbekistan - XYZSTRM
+#EXTVLCOPT:http-referrer=https://xyzstreams.st
+#EXTVLCOPT:http-origin=https://xyzstreams.st
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://lb.xyzcloud3.xyz/FOX/index.m3u8
+#EXTINF:-1 tvg-id="auto.ct.sport" tvg-name="[HD] Kolombia vs Portugal - CT SPORT" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kolombia vs Portugal - CT SPORT
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
@@ -204,6 +229,6 @@ https://obstreamx.click/live/yq97gcrutx.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://webtv.sk/tv/
 https://dash2.antik.sk/stream/nvidia_ct_sport/playlist_cbcs.mpd
-#EXTINF:-1 tvg-name="[HD] Panama vs Inggris - ALB" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - ALB
+#EXTINF:-1 tvg-name="[HD] Congo DR vs Uzbekistan - ALB" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Congo DR vs Uzbekistan - ALB
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36 http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://93.93.113.95:25461/TV-Berati/XtreamCodes/495
