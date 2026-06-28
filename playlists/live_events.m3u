@@ -1,190 +1,973 @@
-#EXTM3U url-tvg="https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/epgs/guide.xml.gz"
-#EXTINF:-1 tvg-id="TVRI.id" tvg-name="[FHD] Panama vs Inggris - TVRI" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[FHD] Panama vs Inggris - TVRI
-# <============================================== WorldCup 2026 ===========================================================>
-# <============================================== Bola Indonesia (HLS - bisa diputar di semua player) ===========================================================>
-#EXTVLCOPT:http-referrer=https://tvri.go.id/
-https://ott-balancer.tvri.go.id/live/eds/Nasional/hls/Nasional.m3u8
-#EXTINF:-1 tvg-id="bingeplus" tvg-name="[FHD] Panama vs Inggris - Binge+" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Panama vs Inggris - Binge+
-#EXTVLCOPT:http-referrer=https://iscreen.com.bd/
-https://m3u-tvb.pages.dev/ics.m3u8
-#EXTINF:-1 tvg-name="[FHD] Kroasia vs Ghana - Unite8 Sports 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Kroasia vs Ghana - Unite8 Sports 2
-http://212.102.34.8:9080/AndFlixHD/video.m3u8
-#EXTINF:-1 tvg-name="[FHD] Panama vs Inggris - Bioscope" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Panama vs Inggris - Bioscope
-#====== Bioscope World Cup ============
-http://sm-monirul.top/fifa/bioscope/index.m3u8
-#EXTINF:-1 tvg-name="[FHD] Kroasia vs Ghana - Bioscope" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Kroasia vs Ghana - Bioscope
-http://sm-monirul.top/fifa/bioscope1/index.m3u8
-#EXTINF:-1 tvg-id="bingeplus" tvg-name="[FHD] Kroasia vs Ghana - Binge+" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[FHD] Kroasia vs Ghana - Binge+
-#EXTVLCOPT:http-referrer=https://iscreen.com.bd/
-https://m3u-tvb.pages.dev/ics.m3u8
-#EXTINF:-1 tvg-chno="108" tvg-id="Soccer.Dummy.us" tvg-name="[FHD] Kroasia vs Ghana 1 - [FIFA World Cup] Croatia vs Ghana 1 (FAWA)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[FHD] Kroasia vs Ghana 1 - [FIFA World Cup] Croatia vs Ghana 1 (FAWA)
+#EXTM3U
+
+# ===== SOURCE 1 =====
+##EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://iili.io/KxLFPLJ.md.png",001  - 28 JUNI 2026
+#https://drive.google.com/uc?export=download&id=1GXT2ntc4zPZPQtiotFTTvhkwrdHVrQMy&usp
+##EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://iili.io/KxLFPLJ.md.png",001  - 29 JUNI 2026
+#https://drive.google.com/uc?export=download&id=1GXT2ntc4zPZPQtiotFTTvhkwrdHVrQMy&usp
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", 04:00 WIB - 28 JUNI 2026 Kroasia vs Ghana
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+http://193.47.62.51/hls/KRRRR.m3u8
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", 04:00 WIB - 28 JUNI 2026 Panama vs Inggris
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+http://193.47.62.42/hls/JCCCC.m3u8
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", 06:30 WIB - 28 JUNI 2026 Kolombia vs Portugal
+https://drive.google.com/uc?export=download&id=14oMEit0QyJY5u5bGXRz9nMeFmcpnPlP-&usp
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", 06:30 WIB - 28 JUNI 2026 Republik Demokratik Kongo vs Uzbekistan
+https://drive.google.com/uc?export=download&id=14oMEit0QyJY5u5bGXRz9nMeFmcpnPlP-&usp
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", 09:00 WIB - 28 JUNI 2026 Aljazair vs Austria
+https://drive.google.com/uc?export=download&id=14oMEit0QyJY5u5bGXRz9nMeFmcpnPlP-&usp
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", 09:00 WIB - 28 JUNI 2026 Jordania vs Argentina
+https://drive.google.com/uc?export=download&id=14oMEit0QyJY5u5bGXRz9nMeFmcpnPlP-&usp
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", FIFA World Cup 2026 02 - CADANGAN
+https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", FIFA World Cup 2026 05 - CADANGAN
+https://trs1.aynaott.com/tsports/tracks-v1a1/mono.ts.m3u8?nocache=1782338424207
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", FIFA World Cup 2026 07 - CADANGAN
+http://myxpanel.pro/live/13579/13579/838102.ts
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", FIFA World Cup 2026 08 - CADANGAN
+http://myxpanel.pro/live/13579/13579/838103.ts
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", FIFA World Cup 2026 09 - CADANGAN
+http://107.150.60.122/live/cctv5hd.m3u8
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", FIFA World Cup 2026 10 - CADANGAN
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone14,6; U; CPU iPhone OS 15_4 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/19E241 Safari/602.1
+http://107.150.60.122/live/cctv5p.m3u8
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", FIFA World Cup 2026 11 - CADANGAN
+http://93.93.113.95:25461/TV-Berati/XtreamCodes/494
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", FIFA World Cup 2026 12 - CADANGAN
+http://myxpanel.pro/live/13579/13579/838116.ts
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjIV5SKCpFyJPoqsF3fJSchtJbxyJ6Pgl4qkNpaL_wA&s=10", FIFA World Cup 2026 13 - CADANGAN
+http://myxpanel.pro/live/13579/13579/838115.ts
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxI2dCwajkVK0v51uHFazLrZUqy1IfdcWd9NB5SI6M2g&s", 002 Yonex US Open 2026 1 - CADANGAN
+https://tfqv3gr5dgmttgha1hcto8yzdncbafisg17ufgrz8yhuxgjtse5ucpf5gk.100ycdn.com/live1.pro2cdnlive.com/live/channel60.m3u8
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxI2dCwajkVK0v51uHFazLrZUqy1IfdcWd9NB5SI6M2g&s", 002 Yonex US Open 2026 2 - CADANGAN
+https://tfqv3gr5dgmttgha1hcto8yzdncbafisg17ufgrz8yhuxgjtse5ucpf5gk.100ycdn.com/live1.pro2cdnlive.com/live/channel61.m3u8
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxI2dCwajkVK0v51uHFazLrZUqy1IfdcWd9NB5SI6M2g&s", 002 Yonex US Open 2026 3 - CADANGAN
+https://tfqv3gr5dgmttgha1hcto8yzdncbafisg17ufgrz8yhuxgjtse5ucpf5gk.100ycdn.com/live1.pro2cdnlive.com/live/channel62.m3u8
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQO9dsOgy9cDyf6U3Tu2n2KsKJhUhV7WhxQ&s", 01:30 WIB - 28 JUNI 2026 France v Serbia | Week 2 | Men's VNL 2026
+https://tfqv3gr5dgmttgha1hcto8yzdncbafisg17ufgrz8yhuxgjtse5ucpf5gk.100ycdn.com/live1.pro2cdnlive.com/live/channel82.m3u8
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQO9dsOgy9cDyf6U3Tu2n2KsKJhUhV7WhxQ&s", 01:30 WIB - 28 JUNI 2026 Slovenia v Brazil | Week 2 | Men's VNL 2026
+https://tfqv3gr5dgmttgha1hcto8yzdncbafisg17ufgrz8yhuxgjtse5ucpf5gk.100ycdn.com/live1.pro2cdnlive.com/live/channel81.m3u8
+#EXTINF:-1 group-title="LIVE EVENT: MANUAL" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQO9dsOgy9cDyf6U3Tu2n2KsKJhUhV7WhxQ&s", 01:30 WIB - 28 JUNI 2026 Türkiye v Argentina | Week 2 | Men's VNL 2026
+https://tfqv3gr5dgmttgha1hcto8yzdncbafisg17ufgrz8yhuxgjtse5ucpf5gk.100ycdn.com/live1.pro2cdnlive.com/live/channel80.m3u8
+
+# ===== SOURCE 2 =====
+#EXTINF:0 group-title="Live Event: Colalive" tvg-logo="https://img.gvapi.cc/football/team/a54769d9dca7f2ac5a2e1b261c868993.png!w80",09:00 28/06 Jordan vs Argentina Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://live05.meung.app/live/08552895.m3u8
+#EXTINF:0 group-title="Live Event: Colalive" tvg-logo="https://img.gvapi.cc/football/team/694edc2479b949e4a7a78d00275ced1e.png!w80",09:00 28/06 Algeria vs Áo Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://live05.meung.app/live/02456966.m3u8
+#EXTINF:0 group-title="Live Event: Colalive" tvg-logo="https://img.gvapi.cc/basketball/team/256e715800fb8321f7cf1dacce3aa35e.png!w80",10:00 28/06 Canterbury Rams vs Bay Hawks Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://live05.meung.app/live/82054853.m3u8
+
+# ===== SOURCE 4 =====
+
+
+
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F16330_165018769444.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria  NGƯỜI THÉP m3u Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/NGUOITHEP/index.m3u8?expire=2556118740&sign=6d80f4e33c3761371f29a8ca0645fee5
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F16330_165018769444.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria  NGƯỜI THÉP flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/NGUOITHEP.flv?expire=2556118740&sign=6d80f4e33c3761371f29a8ca0645fee5
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F16330_165018769444.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria  TRIỆU TỬ LONG m3u Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/TRIEUTULONG/index.m3u8?expire=1788427256&sign=45e4fdc4bdb8472f513ccc78f57f6070
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F16330_165018769444.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria  TRIỆU TỬ LONG flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/TRIEUTULONG.flv?expire=1788427256&sign=45e4fdc4bdb8472f513ccc78f57f6070
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F766_165018997867.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina  LỮ BỐ m3u Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/LUBO/index.m3u8?expire=1788427256&sign=fa2834495401eb5d1dc40ba2f3bd21c1
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F766_165018997867.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina  LỮ BỐ flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/LUBO.flv?expire=1788427256&sign=fa2834495401eb5d1dc40ba2f3bd21c1
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F766_165018997867.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina  MÃ SIÊU m3u Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/MASIEU/index.m3u8?expire=1788427256&sign=b91fcfc36fe72375e8f8cc813de0220b
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F766_165018997867.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina  MÃ SIÊU flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/MASIEU.flv?expire=1788427256&sign=b91fcfc36fe72375e8f8cc813de0220b
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F766_165018997867.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina  LƯU BỊ m3u Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/LUUBI/index.m3u8?expire=1788427256&sign=e15f8b184dc9c61cc5dacfd962841ae1
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F766_165018997867.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina  LƯU BỊ flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/LUUBI.flv?expire=1788427256&sign=e15f8b184dc9c61cc5dacfd962841ae1
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F766_165018997867.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina  KAKA m3u Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/KAKA/index.m3u8?expire=1788427256&sign=c34e1c9b22c9ced94eca7e7bf7a81ae6
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F766_165018997867.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina  KAKA flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/KAKA.flv?expire=1788427256&sign=c34e1c9b22c9ced94eca7e7bf7a81ae6
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F766_165018997867.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina  PHI HỔ m3u Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/PHIHO/index.m3u8?expire=2556118740&sign=ebc20a588b7a62eb65d12f7372d39a3f
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F766_165018997867.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina  PHI HỔ flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/PHIHO.flv?expire=2556118740&sign=ebc20a588b7a62eb65d12f7372d39a3f
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F766_165018997867.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina  LEO m3u Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/LEO/index.m3u8?expire=1923642660&sign=58990a132e2f8d3f764c947b95b28af6
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F766_165018997867.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina  LEO flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/LEO.flv?expire=1923642660&sign=58990a132e2f8d3f764c947b95b28af6
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F16330_165018769444.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria  LÃO HẠC m3u Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/LAOHAC/index.m3u8?expire=2556118740&sign=d7e003f1201f61166a559ac474dc7491
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F16330_165018769444.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria  LÃO HẠC flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/LAOHAC.flv?expire=2556118740&sign=d7e003f1201f61166a559ac474dc7491
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F16330_165018769444.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria  YẾN THANH m3u Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/YENTHANH1/index.m3u8?expire=1788427256&sign=a79cc8d996707223a0011d33d04d4582
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F16330_165018769444.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria  YẾN THANH flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/YENTHANH1.flv?expire=1788427256&sign=a79cc8d996707223a0011d33d04d4582
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F16330_165018769444.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria  TÂY MÔN KHÁNH m3u Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/TAYMONKHANH/index.m3u8?expire=1788427256&sign=b79b5be508185d24f76a0b1effca53da
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F16330_165018769444.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria  TÂY MÔN KHÁNH flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/TAYMONKHANH.flv?expire=1788427256&sign=b79b5be508185d24f76a0b1effca53da
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F16330_165018769444.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria  VÕ TÒNG m3u Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/VOTONG/index.m3u8?expire=1891347600&sign=cbb47d2000b9576a7b34114624ff8299
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fcdn-img.cdnokvip.com%2Flogos%2F16330_165018769444.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria  VÕ TÒNG flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/VOTONG.flv?expire=1891347600&sign=cbb47d2000b9576a7b34114624ff8299
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fupload-img.cdnokvip.com%2Fuploads%2Fteam_logo%2F1782593785.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",10:00   28/06 Canterbury Rams vs Bay Hawks  LÝ QUỲ m3u Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://hls.cdnfaster-a.live/live/LYQUY/index.m3u8?expire=1891408380&sign=4eb9451ad0178fa8207d583db7d469e3
+#EXTINF:0 group-title="Live Event: Lương sơn" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fupload-img.cdnokvip.com%2Fuploads%2Fteam_logo%2F1782593785.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",10:00   28/06 Canterbury Rams vs Bay Hawks  LÝ QUỲ flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+https://flv.cdnfaster-a.live/live/LYQUY.flv?expire=1891408380&sign=4eb9451ad0178fa8207d583db7d469e3
+#EXTINF:0 group-title="Live Event: Khán đài a" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fimg.sports-data.online%2Ffootball%2Fteam%2F1a8729f6837d72a8092aaabd02695c2b.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",07:30   23/05 FC Tulsa vs Hartford Athletic Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+#EXTVLCOPT:http-referrer=https://khandaia3.me/
+https://www3.f2k3.shop/live/235c29178801ef36a970731709755e2a/playlist.m3u8
+#EXTINF:0 group-title="Live Event: Khán đài a" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fimg.sports-data.online%2Ffootball%2Fteam%2F75bf136c336015d3adb291a238ea039e.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   23/05 UNSW FC Women vs University of Sydney Women Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+#EXTVLCOPT:http-referrer=https://khandaia3.me/
+https://www3.f2k3.shop/live/8988f3aa5ce2f85d4c50a0bc65d9d998/playlist.m3u8
+#EXTINF:0 group-title="Live Event: Khán đài a" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fimg.sports-data.online%2Ffootball%2Fteam%2Fc15d35c692bbc81249bbf8dc1755b42a.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   23/05 Newcastle Olympic FC Reserves vs Charlestown Azzurri Reserves Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+#EXTVLCOPT:http-referrer=https://khandaia3.me/
+https://www3.f2k3.shop/live/6f115b2fe383bc3710a61f46cc1b22f9/playlist.m3u8
+#EXTINF:0 group-title="Live Event: Khán đài a" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fimg.sports-data.online%2Ffootball%2Fteam%2Fbcd699518dceed7a5399ad506c0efe25.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",07:10   23/05 Boston Legacy W vs Seattle Reign Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+#EXTVLCOPT:http-referrer=https://khandaia3.me/
+https://www3.f2k3.shop/live/87b8a02016610052ff23e50744f98f77/playlist.m3u8
+#EXTINF:0 group-title="Live Event: Khán đài a" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fimg.sports-data.online%2Ffootball%2Fteam%2Fe399c54b84794822f6e5e3c02c7f3b6e.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   23/05 Mexico vs Ghana Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+#EXTVLCOPT:http-referrer=https://khandaia3.me/
+https://www3.f2k3.shop/live/e699af6f4692703a8c718f285b40deb2/playlist.m3u8
+#EXTINF:0 group-title="Live Event: Chuối chiên" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fmedia.chuoichientv.net%2Fmedia%2Fuploads%2F20250623_132805_8b1f6bab.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria HD2 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
+https://gckc0525.edgemaxcdn.org/live/angao.flv
+#EXTINF:0 group-title="Live Event: Chuối chiên" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fmedia.chuoichientv.net%2Fmedia%2Fuploads%2F20250623_132805_8b1f6bab.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Algeria vs Austria FHD2 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
+https://gckc0525.edgemaxcdn.org/live/angaohd.flv
+#EXTINF:0 group-title="Live Event: Chuối chiên" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fmedia.chuoichientv.net%2Fmedia%2Fuploads%2F20250623_134312_327f1324.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina HD2 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
+https://gckc0525.edgemaxcdn.org/live/troctru.flv
+#EXTINF:0 group-title="Live Event: Chuối chiên" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fmedia.chuoichientv.net%2Fmedia%2Fuploads%2F20250623_134312_327f1324.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina FHD2 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
+https://gckc0525.edgemaxcdn.org/live/troctruhd.flv
+#EXTINF:0 group-title="Live Event: Chuối chiên" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fmedia.chuoichientv.net%2Fmedia%2Fuploads%2F20250623_134312_327f1324.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina HD2 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
+https://gckc0525.edgemaxcdn.org/live/chuoichao.flv
+#EXTINF:0 group-title="Live Event: Chuối chiên" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fmedia.chuoichientv.net%2Fmedia%2Fuploads%2F20250623_134312_327f1324.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   28/06 Jordan vs Argentina FHD2 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
+https://gckc0525.edgemaxcdn.org/live/chuoichaohd.flv
+#EXTINF:0 group-title="Live Event: Chuối chiên" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fmedia.chuoichientv.net%2Fmedia%2F20251115_123043_e3391af2.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",01:30   29/06 Slovenia vs Italy HD2 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
+https://gckc0525.edgemaxcdn.org/live/chuoibo.flv
+#EXTINF:0 group-title="Live Event: Chuối chiên" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fmedia.chuoichientv.net%2Fmedia%2F20251115_123043_e3391af2.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",01:30   29/06 Slovenia vs Italy FHD2 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
+https://gckc0525.edgemaxcdn.org/live/chuoibohd.flv
+#EXTINF:0 group-title="Live Event: Chuối chiên" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fmedia.chuoichientv.net%2Fmedia%2Fuploads%2F20250623_132805_2c5424f2.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",02:00   29/06 South Africa vs Canada HD2 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
+https://gckc0525.edgemaxcdn.org/live/angao.flv
+#EXTINF:0 group-title="Live Event: Chuối chiên" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fmedia.chuoichientv.net%2Fmedia%2Fuploads%2F20250623_132805_2c5424f2.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",02:00   29/06 South Africa vs Canada FHD2 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
+https://gckc0525.edgemaxcdn.org/live/angaohd.flv
+#EXTINF:0 group-title="Live Event: Chuối chiên" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fmedia.chuoichientv.net%2Fmedia%2Fuploads%2F20250623_132805_2c5424f2.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",02:00   29/06 South Africa vs Canada HD2 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
+https://gckc0525.edgemaxcdn.org/live/chuoichao.flv
+#EXTINF:0 group-title="Live Event: Chuối chiên" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fmedia.chuoichientv.net%2Fmedia%2Fuploads%2F20250623_132805_2c5424f2.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",02:00   29/06 South Africa vs Canada FHD2 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
+https://gckc0525.edgemaxcdn.org/live/chuoichaohd.flv
+#EXTINF:0 group-title="Live Event: Gà vàng" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fimg.sports-data.online%2Ffootball%2Fteam%2F75bf136c336015d3adb291a238ea039e.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   23/05 UNSW FC Women vs University of Sydney Women Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+#EXTVLCOPT:http-referrer=https://xem2.gv08.live/
+https://www3.f2k3.shop/live/8988f3aa5ce2f85d4c50a0bc65d9d998/playlist.m3u8
+#EXTINF:0 group-title="Live Event: Gà vàng" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fimg.sports-data.online%2Ffootball%2Fteam%2Fc15d35c692bbc81249bbf8dc1755b42a.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   23/05 Newcastle Olympic FC Reserves vs Charlestown Azzurri Reserves Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+#EXTVLCOPT:http-referrer=https://xem2.gv08.live/
+https://www3.f2k3.shop/live/6f115b2fe383bc3710a61f46cc1b22f9/playlist.m3u8
+#EXTINF:0 group-title="Live Event: Gà vàng" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fimg.sports-data.online%2Ffootball%2Fteam%2Fbcd699518dceed7a5399ad506c0efe25.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",07:10   23/05 Boston Legacy W vs Seattle Reign Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+#EXTVLCOPT:http-referrer=https://xem2.gv08.live/
+https://www3.f2k3.shop/live/87b8a02016610052ff23e50744f98f77/playlist.m3u8
+#EXTINF:0 group-title="Live Event: Gà vàng" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fimg.sports-data.online%2Ffootball%2Fteam%2Fff0d0739c041ad09fdc99db4c355a932.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   23/05 Tacoma Defiance vs Ventura County FC Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+#EXTVLCOPT:http-referrer=https://xem2.gv08.live/
+https://www3.f2k3.shop/live/821d54abadb12c6c15edba538ab20ad1/playlist.m3u8
+#EXTINF:0 group-title="Live Event: Gà vàng" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fimg.sports-data.online%2Ffootball%2Fteam%2Fa3c5593b106980072677a648800a11d8.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",07:00   23/05 Sporting Kansas CityReserves vs Austin FC II Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+#EXTVLCOPT:http-referrer=https://xem2.gv08.live/
+https://www3.f2k3.shop/live/a60cdd817beb680017f46a5c111202f7/playlist.m3u8
+#EXTINF:0 group-title="Live Event: Gà vàng" tvg-logo="https://wsrv.nl/?url=https%3A%2F%2Fimg.sports-data.online%2Ffootball%2Fteam%2F4f7090cc3dd92dfefdcddf743908cf94.png&w=250&h=250&fit=contain&bg=ffffff&output=webp&q=85",09:00   23/05 Canberra Olympic U23 vs Belconnen United U23 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 AppleWebKit/537.36 Chrome/81.0.4044.138 Safari/537.36
+#EXTVLCOPT:http-referrer=https://xem2.gv08.live/
+https://www3.f2k3.shop/live/829f44b193d50a1f8dcb948fab6a0983/playlist.m3u8
+
+# ===== SOURCE 5 =====
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ FIREMAN] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-991140_lsd.flv?txSecret=29f4b395689bd05e1b7acb3227c25e40&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ FIREMAN] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-991140_lhd.flv?txSecret=e7597810b8d5eafbd5f6254ff6866993&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ FIREMAN] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-991140_lsd.m3u8?txSecret=29f4b395689bd05e1b7acb3227c25e40&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ FIREMAN] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-991140_lhd.m3u8?txSecret=e7597810b8d5eafbd5f6254ff6866993&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [CR Bưởi] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-387694_lsd.flv?txSecret=469b5a958cb2740dd54e9cc33a4e1730&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [CR Bưởi] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-387694_lhd.flv?txSecret=5176d4086452197d56609325f06a8dca&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [CR Bưởi] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-387694_lsd.m3u8?txSecret=469b5a958cb2740dd54e9cc33a4e1730&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [CR Bưởi] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-387694_lhd.m3u8?txSecret=5176d4086452197d56609325f06a8dca&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [TẠ BIÊN GIỚI] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912108_lsd.flv?auth_key=1782619882-0-0-895793b506bbd4200ad94b8642c73530
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [TẠ BIÊN GIỚI] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912108_lhd.flv?auth_key=1782619882-0-0-484ba13928e846c69fafb2f635cc1dfb
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [TẠ BIÊN GIỚI] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912108_lsd.m3u8?auth_key=1782619882-0-0-6efc70d5adfd776e77fa88f6ed004452
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [TẠ BIÊN GIỚI] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912108_lhd.m3u8?auth_key=1782619882-0-0-73899560c804df33ada7363e008d4917
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ COCA] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-327159_lsd.flv?auth_key=1782619882-0-0-5e165e16730b51f86f32517be8ae231b
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ COCA] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-327159_lhd.flv?auth_key=1782619882-0-0-7775eb0482ec42e05a91e1a3cd25dfac
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ COCA] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-327159_lsd.m3u8?auth_key=1782619882-0-0-171f916d51f09f9d1ef40cccbeb53c23
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ COCA] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-327159_lhd.m3u8?auth_key=1782619882-0-0-909f82ad292a6e9fdbcc22c0d45c0b23
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ CUỘI] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-256080_lsd.flv?auth_key=1782619882-0-0-1ac3de647e417eb5bcfd0f6cf5a5a240
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ CUỘI] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-256080_lhd.flv?auth_key=1782619882-0-0-438222d64fd5a2222e7932f5cca4488e
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ CUỘI] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-256080_lsd.m3u8?auth_key=1782619882-0-0-afbe339fe9c3347bc5c3808f187ac241
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ CUỘI] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-256080_lhd.m3u8?auth_key=1782619882-0-0-3714e22cf623c7416c80bfc08a917d8a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ PEWPEW] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-9912015_lsd.flv?txSecret=cf59225c8af6ca1928c81e171d874226&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ PEWPEW] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-9912015_lhd.flv?txSecret=4616409a8203ba9be3001529e7fecb8c&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ PEWPEW] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-9912015_lsd.m3u8?txSecret=cf59225c8af6ca1928c81e171d874226&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ PEWPEW] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-9912015_lhd.m3u8?txSecret=4616409a8203ba9be3001529e7fecb8c&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [SAO LA] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-462413_lsd.flv?txSecret=ec693fd928ca755bc77bb2d5825046ce&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [SAO LA] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-462413_lhd.flv?txSecret=4823431bf0536064e4ed87d18f29d9f4&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [SAO LA] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-462413_lsd.m3u8?txSecret=ec693fd928ca755bc77bb2d5825046ce&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [SAO LA] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-462413_lhd.m3u8?txSecret=4823431bf0536064e4ed87d18f29d9f4&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ KEM] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-513394_lsd.flv?txSecret=1af1cae72fbd3b94c0d82eedf5855668&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ KEM] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-513394_lhd.flv?txSecret=5678d4de7a9bba76bee4b64bd7126333&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ KEM] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-513394_lsd.m3u8?txSecret=1af1cae72fbd3b94c0d82eedf5855668&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ KEM] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-513394_lhd.m3u8?txSecret=5678d4de7a9bba76bee4b64bd7126333&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ CÒ] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-582342_lsd.flv?txSecret=c492a3e768c38f979f4332145d23a065&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ CÒ] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-582342_lhd.flv?txSecret=2da011f5af6bea94a366a60396746989&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ CÒ] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-582342_lsd.m3u8?txSecret=c492a3e768c38f979f4332145d23a065&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ CÒ] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-582342_lhd.m3u8?txSecret=2da011f5af6bea94a366a60396746989&txTime=6a40e53a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ ĐỐM] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912110_lsd.flv?auth_key=1782620242-0-0-4c83a38b9dacc1e7bb07a8cc328d1435
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ ĐỐM] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912110_lhd.flv?auth_key=1782620242-0-0-0e951e9e7c1d2068d989d60816358099
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ ĐỐM] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912110_lsd.m3u8?auth_key=1782620242-0-0-269f4f07c098596cb702a089dc983b58
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ ĐỐM] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912110_lhd.m3u8?auth_key=1782620242-0-0-428935726a91c7151962f9fddd2dd7b4
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ MESSI] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-494201_lsd.flv?txSecret=d7b51ab02289fdb0fc467dd05d2597a5&txTime=6a40e6a2
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ MESSI] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-494201_lhd.flv?txSecret=112e500f971f7e5c605e245828b1891f&txTime=6a40e6a2
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ MESSI] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-494201_lsd.m3u8?txSecret=d7b51ab02289fdb0fc467dd05d2597a5&txTime=6a40e6a2
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ MESSI] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-494201_lhd.m3u8?txSecret=112e500f971f7e5c605e245828b1891f&txTime=6a40e6a2
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ ENZO] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-380460_lsd.flv?auth_key=1782620242-0-0-559b3625ff7f66cd63eb18c29c0c227c
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ ENZO] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-380460_lhd.flv?auth_key=1782620242-0-0-0b84a35c37e4c88c436454e05041463a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ ENZO] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-380460_lsd.m3u8?auth_key=1782620242-0-0-ee92a09e9e4255162b9dcd9ee0403d6b
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ ENZO] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-380460_lhd.m3u8?auth_key=1782620242-0-0-5daecfc53c037207c450383125a7392b
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ A TÚ] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-557845_lsd.flv?auth_key=1782620242-0-0-4acfd63ced4730af2325cec3343c2d75
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ A TÚ] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-557845_lhd.flv?auth_key=1782620242-0-0-c17e3bc88468c720ef351de5bb2794d0
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ A TÚ] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-557845_lsd.m3u8?auth_key=1782620242-0-0-a117681b1559fc1c92aececf89e96417
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ A TÚ] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-557845_lhd.m3u8?auth_key=1782620242-0-0-d5a5aa6b569d016b9f9faf3684418ed4
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [A CHÈ] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-356042_lsd.flv?auth_key=1782620242-0-0-092858db37f483bbbb4f5474146bbbe6
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [A CHÈ] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-356042_lhd.flv?auth_key=1782620242-0-0-395e8a09613e5cea7de29023f2a773c6
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [A CHÈ] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-356042_lsd.m3u8?auth_key=1782620242-0-0-2db7bb61df68df2beced5911a3180ba5
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [A CHÈ] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-356042_lhd.m3u8?auth_key=1782620242-0-0-5f07a5b51c7c5ede153ae857635e2961
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [CHAN SENA] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912115_lsd.flv?auth_key=1782620242-0-0-3a8d684c9063386bf06672e33d21a374
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [CHAN SENA] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912115_lhd.flv?auth_key=1782620242-0-0-860881795335463185d913a8eb6c8837
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [CHAN SENA] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912115_lsd.m3u8?auth_key=1782620242-0-0-cc8ec68529f9e664233131c569a45623
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [CHAN SENA] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912115_lhd.m3u8?auth_key=1782620242-0-0-d96aa0fa886b5fc336a8d497d2bee922
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [DECO] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912060_lsd.flv?auth_key=1782620602-0-0-3c02d91d1b2dc950e67227dcffc34027
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [DECO] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912060_lhd.flv?auth_key=1782620602-0-0-d18ffa23263b82e7be8455997c18e629
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [DECO] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912060_lsd.m3u8?auth_key=1782620602-0-0-f8e2df3e72f482c7a3af271fd1187bdb
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [DECO] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912060_lhd.m3u8?auth_key=1782620602-0-0-7b80f9767eda7ee4069abcbb1ef01508
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ TOMMY] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-414317_lsd.flv?auth_key=1782620602-0-0-06670136f98f33141a32233cc2d1e17e
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ TOMMY] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-414317_lhd.flv?auth_key=1782620602-0-0-1fc9d178a95412a4d28a4e555f910b09
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ TOMMY] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-414317_lsd.m3u8?auth_key=1782620602-0-0-3d2b5965006e98d97b9db219d6cbd4a8
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ TOMMY] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-414317_lhd.m3u8?auth_key=1782620602-0-0-d7b85a6976f363f52e796dd1bdbd40ef
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ TAP] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-9912041_lsd.flv?txSecret=c3d8a027d1db14ac8aa0a0b0cfa4e2fd&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ TAP] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-9912041_lhd.flv?txSecret=04b951eaa98ed155a54eef17f2418997&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ TAP] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-9912041_lsd.m3u8?txSecret=c3d8a027d1db14ac8aa0a0b0cfa4e2fd&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ TAP] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-9912041_lhd.m3u8?txSecret=04b951eaa98ed155a54eef17f2418997&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [RICKHANTER] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912122_lsd.flv?auth_key=1782620602-0-0-54cb947cadf7b54bd82c9814cce1c77b
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [RICKHANTER] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912122_lhd.flv?auth_key=1782620602-0-0-6426ae6ade3c171e322642a87b5ba620
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [RICKHANTER] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912122_lsd.m3u8?auth_key=1782620602-0-0-bb1726f2709bbc4b6a209dd9c57f3fa8
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [RICKHANTER] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912122_lhd.m3u8?auth_key=1782620602-0-0-1c3fa852751b0bad1acd1765b605270c
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ 7UP] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-534219_lsd.flv?auth_key=1782620602-0-0-ab717577ecd3ef688a688bfbc8c3e8b7
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ 7UP] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-534219_lhd.flv?auth_key=1782620602-0-0-e9535414b8684b9608af9c044f9e7019
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ 7UP] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-534219_lsd.m3u8?auth_key=1782620602-0-0-03f94cc1258e6b082e4845b6b4934da7
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ 7UP] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-534219_lhd.m3u8?auth_key=1782620602-0-0-e6cdbf160f604ab69c08edc650608528
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ Củ Cải] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-9912091_lsd.flv?txSecret=71bdf939118168c8a9545de7af9c708c&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ Củ Cải] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-9912091_lhd.flv?txSecret=205fef13d97ed4db13ba010fc163de4d&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ Củ Cải] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-9912091_lsd.m3u8?txSecret=71bdf939118168c8a9545de7af9c708c&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ Củ Cải] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-9912091_lhd.m3u8?txSecret=205fef13d97ed4db13ba010fc163de4d&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ COZY] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-531989_lsd.flv?txSecret=bf0b5461e64a0a3df3b2efcc89d14381&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ COZY] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-531989_lhd.flv?txSecret=d0decc6789cc2ab7f2bda9a4ab3ade1b&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ COZY] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-531989_lsd.m3u8?txSecret=bf0b5461e64a0a3df3b2efcc89d14381&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/859d960f462cc06c7dc12e73a25b7eef.png",09:00 ngày 28/06 Jordan vs Argentina [ COZY] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-531989_lhd.m3u8?txSecret=d0decc6789cc2ab7f2bda9a4ab3ade1b&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ TOMIA] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912008_lsd.flv?auth_key=1782620602-0-0-11cd0d6fced4522e340ef1a15acc8df5
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ TOMIA] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912008_lhd.flv?auth_key=1782620602-0-0-0a255685be605055339efa14d72c52ed
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ TOMIA] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912008_lsd.m3u8?auth_key=1782620602-0-0-270b1a0904ce9fb81c026ec8e92eab74
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ TOMIA] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912008_lhd.m3u8?auth_key=1782620602-0-0-ce857fce4ecd413c53b0d5dadcaa06a4
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [LÃO LÂM] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-527384_lsd.flv?auth_key=1782620602-0-0-587a261583a2f7e9b98d44ef5c1f567e
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [LÃO LÂM] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-527384_lhd.flv?auth_key=1782620602-0-0-6dca2fb2ec47971755590aba98d81dd0
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [LÃO LÂM] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-527384_lsd.m3u8?auth_key=1782620602-0-0-e7d0ab5b1b01d88f869bdc2f5e07ff33
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [LÃO LÂM] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-527384_lhd.m3u8?auth_key=1782620602-0-0-1607f62f7895d5ef8a11969cfec0e396
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ ROBBEN] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-527383_lsd.flv?txSecret=6e1a991c2766d17819b3c1d9d1eb9b22&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ ROBBEN] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-527383_lhd.flv?txSecret=0eb508f187f2d59b8de41ce91a8d2932&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ ROBBEN] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-527383_lsd.m3u8?txSecret=6e1a991c2766d17819b3c1d9d1eb9b22&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260621/6d1eff1f4e35760b779750cff13331db.png",09:00 ngày 28/06 Algeria vs Austria [ ROBBEN] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niur.live/live/stream-527383_lhd.m3u8?txSecret=0eb508f187f2d59b8de41ce91a8d2932&txTime=6a40e80a
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [KING] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912099_lsd.flv?auth_key=1782620602-0-0-f011fd0ca53424f0b62f7c64b4289239
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [KING] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-9912099_lhd.flv?auth_key=1782620602-0-0-ca9e5e7de5a4c6dede10007a805c93d2
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [KING] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912099_lsd.m3u8?auth_key=1782620602-0-0-64345ffc24fde50ee89845a8166474bb
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [KING] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-9912099_lhd.m3u8?auth_key=1782620602-0-0-1d6431986f87b58e0a925a9f5369f6a5
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [HUNTER] flv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-558264_lsd.flv?auth_key=1782620602-0-0-4d222d765919f8bb7aa378b8bcd67455
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [HUNTER] hdFlv Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull06.scstream.net/live/stream-558264_lhd.flv?auth_key=1782620602-0-0-3a4595502347c16603eef8f33fdd9e34
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [HUNTER] m3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-558264_lsd.m3u8?auth_key=1782620602-0-0-0627842d138101fc195a8207bf3e94c9
+#EXTINF:0 group-title="Live Event: socolive" tvg-logo="https://sta.vnres.co/file/common/20260626/a41b3e34dae3fbcaf7d21f9d0b04217b.png",10:00 ngày 28/06 Canterbury Rams vs Bay Hawks [HUNTER] hdM3u8 Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+https://pull.niues.live/live/stream-558264_lhd.m3u8?auth_key=1782620602-0-0-422d9be292463c49bb1c05d558a05aef
+#EXTINF:0 group-title="Live Event: Hội quán" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/1280px-Flag_of_Algeria.svg.png",09:00 28/06 Algeria vs Austria FHD Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://sv2.hoiquan.live/
+https://hqlive.yarncdn.live/live/hqtv_blv_phanquay/playlist.m3u8
+#EXTINF:0 group-title="Live Event: Hội quán" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/1280px-Flag_of_Algeria.svg.png",09:00 28/06 Algeria vs Austria HD Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://sv2.hoiquan.live/
+https://alive.yarncdn.live/hqtv_blv_phanquay/tracks-v2a1/mono.m3u8
+#EXTINF:0 group-title="Live Event: Hội quán" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/1280px-Flag_of_Algeria.svg.png",09:00 28/06 Algeria vs Austria SD Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://sv2.hoiquan.live/
+https://alive.yarncdn.live/hqtv_blv_phanquay/tracks-v1a1/mono.m3u8
+#EXTINF:0 group-title="Live Event: Hội quán" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/960px-Flag_of_Jordan.svg.png",09:00 28/06 Jordan vs Argentina FHD Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://sv2.hoiquan.live/
+https://hqlive.yarncdn.live/live/hqtv_blv_phanma/playlist.m3u8
+#EXTINF:0 group-title="Live Event: Hội quán" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/960px-Flag_of_Jordan.svg.png",09:00 28/06 Jordan vs Argentina HD Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://sv2.hoiquan.live/
+https://alive.yarncdn.live/hqtv_blv_phanma/tracks-v2a1/mono.m3u8
+#EXTINF:0 group-title="Live Event: Hội quán" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/960px-Flag_of_Jordan.svg.png",09:00 28/06 Jordan vs Argentina SD Gvision TV
+#EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
+#EXTVLCOPT:http-referrer=https://sv2.hoiquan.live/
+https://alive.yarncdn.live/hqtv_blv_phanma/tracks-v1a1/mono.m3u8
+
+# ===== SOURCE 6 =====
+#EXTINF:-1 tvg-chno="151" tvg-id="Live.Event.us" tvg-name="[Boxing] Boxing BKB 55 Carnage in Cardiff " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[Boxing] Boxing BKB 55 Carnage in Cardiff Gvision TV
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://play.gzxdby.com/live/183334344568_254762755p_1080p.m3u8
-#EXTINF:-1 tvg-chno="132" tvg-id="Soccer.Dummy.us" tvg-name="[FHD] Panama vs England 1 - [FIFA World Cup] Panama vs England 1 (FAWA)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[FHD] Panama vs England 1 - [FIFA World Cup] Panama vs England 1 (FAWA)
+http://193.47.62.42/hls/ZUIIIQq.m3u8
+#EXTINF:-1 tvg-chno="153" tvg-id="Live.Event.us" tvg-name="[Brazil Serie B] Criciuma vs Sao Bernardo " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[Brazil Serie B] Criciuma vs Sao Bernardo Gvision TV
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://play.gzxdby.com/live/183334344568_2547627555_1080p.m3u8
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - APISTECH_WC" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - APISTECH_WC
-https://a62dad94.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZJRkFQbHVzRW5nbGlzaF9ITFM/playlist.m3u8
-#EXTINF:-1 tvg-name="[HD] Panama vs Inggris - M6 Direct TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - M6 Direct TV
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=433ffba670963e70857859a9dff4be04:51ede3a821229fe81e71282c8eff80e3
-https://origin-m6web.live.6cloud.fr/out/v1/6play/6play-m6/cmaf_cenc00/dash-short-hd.mpd
-#EXTINF:-1 tvg-id="t sports" tvg-name="[HD] Panama vs Inggris - SM-TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - SM-TV
-http://114.130.57.233:8080/BTV/video.m3u8?token=SkQuhAXZxgBan1
-#EXTINF:-1 tvg-name="[HD] Panama vs Inggris - TELEMUNDO" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - TELEMUNDO
-#======  World Cup 1 ============
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-#EXTVLCOPT:http-referrer=https://streamcenter.xyz
-https://edge2caster.pro/hls/eJmauBDCIf.m3u8
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - M6 Direct TV" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - M6 Direct TV
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=433ffba670963e70857859a9dff4be04:51ede3a821229fe81e71282c8eff80e3
-https://origin-m6web.live.6cloud.fr/out/v1/6play/6play-m6/cmaf_cenc00/dash-short-hd.mpd
-#EXTINF:-1 tvg-chno="109" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana HD - [FIFA World Cup] Croatia vs Ghana  (FAWA)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana HD - [FIFA World Cup] Croatia vs Ghana  (FAWA)
+http://193.47.62.42/hls/GFGFGFQQQQQQQ.m3u8
+#EXTINF:-1 tvg-chno="156" tvg-id="Live.Event.us" tvg-name="[Chile Copa] CD Santa Cruz vs Palestino " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[Chile Copa] CD Santa Cruz vs Palestino Gvision TV
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://pul-tenm.nbs3g.com/live/hd-en-1-4460978.m3u8?txSecret=973b8c7f8babbd47fd6f49f0dbdb00c4&txTime=6A4189E8
-#EXTINF:-1 tvg-chno="102" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Austria vs Algeria - STRMSGATE" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Austria vs Algeria - STRMSGATE
-#EXTVLCOPT:http-referrer=https://instream.click/jwp-eu.php?stream=HDWC3
-#EXTVLCOPT:http-origin=https://instream.click/jwp-eu.php?stream=HDWC3
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://instreams.pro/EU/HDWC3/index.m3u8
-#EXTINF:-1 tvg-chno="101" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Argentina vs Jordan - STRMSGATE" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Argentina vs Jordan - STRMSGATE
-#EXTVLCOPT:http-referrer=https://instream.click/jwp-eu.php?stream=HDWC1
-#EXTVLCOPT:http-origin=https://instream.click/jwp-eu.php?stream=HDWC1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://instreams.pro/EU/HDWC1/index.m3u8
-#EXTINF:-1 tvg-chno="107" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana - [FIFA World Cup] Croatia vs Ghana (iSTRMEAST)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - [FIFA World Cup] Croatia vs Ghana (iSTRMEAST)
-#EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/52619?ad=111
-#EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/52619?ad=111
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://chatgpt.hereisman.net/playlist/52619/load-playlist
-#EXTINF:-1 tvg-chno="133" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs England HD - [FIFA World Cup] Panama vs England  (FAWA)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Panama vs England HD - [FIFA World Cup] Panama vs England  (FAWA)
+http://193.47.62.42/hls/EFFFQQ.m3u8
+#EXTINF:-1 tvg-chno="157" tvg-id="Live.Event.us" tvg-name="[Chile Copa] San Marcos de Arica vs Coquimbo " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[Chile Copa] San Marcos de Arica vs Coquimbo Gvision TV
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://pul-tenm.nbs3g.com/live/hd-en-1-4460937.m3u8?txSecret=086264a13fa7d34034882acb7502cb22&txTime=6A418970
-#EXTINF:-1 tvg-chno="131" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs Inggris - [FIFA World Cup] Panama vs England (iSTRMEAST)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - [FIFA World Cup] Panama vs England (iSTRMEAST)
-#EXTVLCOPT:http-referrer=https://gooz.aapmains.net/new-stream-embed/52621?ad=111
-#EXTVLCOPT:http-origin=https://gooz.aapmains.net/new-stream-embed/52621?ad=111
+http://193.47.62.42/hls/EFFFQQQQ.m3u8
+#EXTINF:-1 tvg-chno="158" tvg-id="Live.Event.us" tvg-name="[Chile Copa] U Catolica vs San Luis " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[Chile Copa] U Catolica vs San Luis Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://chatgpt.hereisman.net/playlist/52621/load-playlist
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - FOX ONE" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - FOX ONE
+http://193.47.62.42/hls/ZUIII.m3u8
+#EXTINF:-1 tvg-chno="245" tvg-id="Live.Event.us" tvg-name="[English Rugby Super League] Bradford vs St Helens " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[English Rugby Super League] Bradford vs St Helens Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-#EXTVLCOPT:http-referrer=https://streamcenter.xyz
-https://mainstreams.pro/hls/24SDAZFcsqnj24.m3u8
-#EXTINF:-1 tvg-chno="115" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs Inggris - [FIFA World Cup] English Feed 1 (STRMHUB)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - [FIFA World Cup] English Feed 1 (STRMHUB)
-#EXTVLCOPT:http-referrer=https://getembed.live/embed-player?stream=esx51jdn9y
-#EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=esx51jdn9y
+http://193.47.62.42/hls/GFGFGFQQQQQ.m3u8
+#EXTINF:-1 tvg-chno="252" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Colombia vs Portugal " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] Colombia vs Portugal Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://obstreamx.click/live/esx51jdn9y.m3u8
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - Tipik Direct" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Tipik Direct
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=adca25b8779e4168a0cd710f59f61ccf:be5383ed3cd8079f4ffe78ad067f476a
-https://c9851ec-rbm-hilv-fsly.cdn.redbee.live/L26/6b640fa2/a765d074.isml/dash/.mpd
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Panama vs Inggris - Toffee 6" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Toffee 6
-https://sm-monirul.top/tof/live/toffee6/index.m3u8
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Panama vs Inggris - Toffee 1" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Toffee 1
-#====== Toffee World Cup ============
-http://sm-monirul.top/tof/live/toffee1/index.m3u8
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - SPORT 2 🇸🇰" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - SPORT 2 🇸🇰
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referer=https://webtv.sk/tv/
-https://dash2.antik.sk/stream/nvidia_sport2/playlist_cenc.mpd
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Panama vs Inggris - Toffee 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Toffee 2
-http://sm-monirul.top/tof/live/toffee2/index.m3u8
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Panama vs Inggris - Toffee 3" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Toffee 3
-http://sm-monirul.top/tof/live/toffee3/index.m3u8
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Kroasia vs Ghana - Toffee 4" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Toffee 4
-https://sm-monirul.top/tof/live/toffee4/index.m3u8
-#EXTINF:-1 tvg-name="[HD] Panama vs Inggris - SPORT 1 🇸🇰" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - SPORT 1 🇸🇰
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referer=https://webtv.sk/tv/
-https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Kroasia vs Ghana - Toffee 5" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Toffee 5
-https://sm-monirul.top/tof/live/toffee5/index.m3u8
-#EXTINF:-1 tvg-name="[HD] Panama vs Inggris - Tipik Direct" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Tipik Direct
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=adca25b8779e4168a0cd710f59f61ccf:be5383ed3cd8079f4ffe78ad067f476a
-https://c9851ec-rbm-hilv-fsly.cdn.redbee.live/L26/6b640fa2/a765d074.isml/dash/.mpd
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Kroasia vs Ghana - Toffee 2" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Toffee 2
-http://sm-monirul.top/tof/live/toffee2/index.m3u8
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - SPORT 1 🇸🇰" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - SPORT 1 🇸🇰
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referer=https://webtv.sk/tv/
-https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Kroasia vs Ghana - Toffee 6" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - Toffee 6
-https://sm-monirul.top/tof/live/toffee6/index.m3u8
-#EXTINF:-1 tvg-id="toffee" tvg-name="[HD] Panama vs Inggris - Toffee 5" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - Toffee 5
-https://sm-monirul.top/tof/live/toffee5/index.m3u8
-#EXTINF:-1 tvg-chno="100" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana - STRMCNTR" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - STRMCNTR
-#EXTVLCOPT:http-referrer=https://streams.center
-#EXTVLCOPT:http-origin=https://streams.center
+http://193.47.62.47/hls/skkkkq.m3u8
+#EXTINF:-1 tvg-chno="256" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Colombia vs Portugal 1 " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] Colombia vs Portugal 1 Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://edgestreams.pro/hls/sqdahach1ax.m3u8
-#EXTINF:-1 tvg-chno="99" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs Inggris - STRMCNTR" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - STRMCNTR
+https://play.gzxdby.com/live/183334344568_2547627555.m3u8
+#EXTINF:-1 tvg-chno="257" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Colombia vs Portugal HD " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] Colombia vs Portugal HD Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://pul-tenm.nbs3g.com/live/hd-en-1-4460934.m3u8?txSecret=fed96adf833d77e2bae570a6b37844d0&txTime=6A41AD88
+#EXTINF:-1 tvg-chno="259" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Croatia vs Ghana " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] Croatia vs Ghana Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.47/hls/CMMMM.m3u8
+#EXTINF:-1 tvg-chno="262" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Croatia vs Ghana 1 " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] Croatia vs Ghana 1 Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://play.gzxdby.com/live/183334344568_254762755p.m3u8
+#EXTINF:-1 tvg-chno="263" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Croatia vs Ghana HD " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] Croatia vs Ghana HD Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://pullsgp.yyzb456.top/live/stream-956896_lhd.m3u8
+#EXTINF:-1 tvg-chno="265" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] DR Congo vs Uzbekistan " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] DR Congo vs Uzbekistan Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.47/hls/DIIIII.m3u8
+#EXTINF:-1 tvg-chno="267" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] DR Congo vs Uzbekistan 1 " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] DR Congo vs Uzbekistan 1 Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://play.gzxdby.com/live/183334344568_254762755p.m3u8
+#EXTINF:-1 tvg-chno="268" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] DR Congo vs Uzbekistan HD " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] DR Congo vs Uzbekistan HD Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://pul-tenm.nbs3g.com/live/hd-en-1-4460975.m3u8?txSecret=035f07dbff038feb3829d989996e070e&txTime=6A41AD88
+#EXTINF:-1 tvg-chno="269" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] DR Congo vs UzbekistanILI " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] DR Congo vs UzbekistanILI Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.47/hls/skkkkqqq.m3u8
+#EXTINF:-1 tvg-chno="290" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Panama vs England " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] Panama vs England Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.47/hls/skkkkq.m3u8
+#EXTINF:-1 tvg-chno="293" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Panama vs England 1 " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] Panama vs England 1 Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://play.gzxdby.com/live/183334344568_2547627555.m3u8
+#EXTINF:-1 tvg-chno="294" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Panama vs England HD " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] Panama vs England HD Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://pullsgp.yyzb456.top/live/stream-698168_lhd.m3u8
+#EXTINF:-1 tvg-chno="295" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Panama vs EnglandILI " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: fawa",[FIFA World Cup] Panama vs EnglandILI Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.47/hls/skkkkqqq.m3u8
+#EXTINF:-1 tvg-chno="345" tvg-id="Live.Event.us" tvg-name="[Golf LPGA] Golf LPGA Women Golf Open " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[Golf LPGA] Golf LPGA Women Golf Open Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/ZPPPQQQ.m3u8
+#EXTINF:-1 tvg-chno="346" tvg-id="Live.Event.us" tvg-name="[Ireland Premier Division] Sligo Rovers vs Shelbourne " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[Ireland Premier Division] Sligo Rovers vs Shelbourne Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/GFGFGFQQQQ.m3u8
+#EXTINF:-1 tvg-chno="347" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB Baseball] Baltimore Orioles vs Washington Nationals " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: fawa",[MLB Baseball] Baltimore Orioles vs Washington Nationals Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/ZOOO.m3u8
+#EXTINF:-1 tvg-chno="348" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB Baseball] Chicago White Sox vs Kansas City Royals " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: fawa",[MLB Baseball] Chicago White Sox vs Kansas City Royals Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/VGVGVGQQ.m3u8
+#EXTINF:-1 tvg-chno="349" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB Baseball] Cleveland Guardians vs Seattle Mariners " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: fawa",[MLB Baseball] Cleveland Guardians vs Seattle Mariners Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/ZOOOQ.m3u8
+#EXTINF:-1 tvg-chno="350" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB Baseball] Los Angeles Angels vs Athletics " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: fawa",[MLB Baseball] Los Angeles Angels vs Athletics Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/ZZZZQQQ.m3u8
+#EXTINF:-1 tvg-chno="351" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB Baseball] Milwaukee Brewers vs Chicago Cubs " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: fawa",[MLB Baseball] Milwaukee Brewers vs Chicago Cubs Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/ZOOOQQ.m3u8
+#EXTINF:-1 tvg-chno="352" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB Baseball] Minnesota Twins vs Colorado Rockies " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: fawa",[MLB Baseball] Minnesota Twins vs Colorado Rockies Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/ZOOOQQQ.m3u8
+#EXTINF:-1 tvg-chno="353" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB Baseball] New York Mets vs Philadelphia Phillies " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: fawa",[MLB Baseball] New York Mets vs Philadelphia Phillies Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/VGVGVGQQQ.m3u8
+#EXTINF:-1 tvg-chno="354" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB Baseball] Pittsburgh Pirates vs Cincinnati Reds " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: fawa",[MLB Baseball] Pittsburgh Pirates vs Cincinnati Reds Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/VGVGVGQ.m3u8
+#EXTINF:-1 tvg-chno="355" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB Baseball] San Diego Padres vs Los Angeles Dodgers " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: fawa",[MLB Baseball] San Diego Padres vs Los Angeles Dodgers Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/ZZZZ.m3u8
+#EXTINF:-1 tvg-chno="356" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB Baseball] San Francisco Giants vs Atlanta Braves " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: fawa",[MLB Baseball] San Francisco Giants vs Atlanta Braves Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/ZZZZQQ.m3u8
+#EXTINF:-1 tvg-chno="357" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB Baseball] St Louis Cardinals vs Miami Marlins " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: fawa",[MLB Baseball] St Louis Cardinals vs Miami Marlins Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/ZOOOQQQQ.m3u8
+#EXTINF:-1 tvg-chno="358" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB Baseball] Tampa Bay Rays vs Arizona Diamondbacks " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: fawa",[MLB Baseball] Tampa Bay Rays vs Arizona Diamondbacks Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/VGVGVGQQQQ.m3u8
+#EXTINF:-1 tvg-chno="359" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB Baseball] Toronto Blue Jays vs Texas Rangers " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: fawa",[MLB Baseball] Toronto Blue Jays vs Texas Rangers Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/VGVGVG.m3u8
+#EXTINF:-1 tvg-chno="425" tvg-id="Live.Event.us" tvg-name="[MMA PFL] MMA PFL : McKee vs Isbulaev " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[MMA PFL] MMA PFL : McKee vs Isbulaev Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/ZUIIIQqQ.m3u8
+#EXTINF:-1 tvg-chno="445" tvg-id="Live.Event.us" tvg-name="[Peru Copa] Comerciantes vs Estudiantil CNI " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[Peru Copa] Comerciantes vs Estudiantil CNI Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/EFFFQ.m3u8
+#EXTINF:-1 tvg-chno="446" tvg-id="Live.Event.us" tvg-name="[Peru Copa] Sport Boys vs AD Cantolao " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[Peru Copa] Sport Boys vs AD Cantolao Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/ZUIIIQ.m3u8
+#EXTINF:-1 tvg-chno="453" tvg-id="Live.Event.us" tvg-name="[Rugby Top 14] Stade Toulousain vs Montpellier " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[Rugby Top 14] Stade Toulousain vs Montpellier Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/GFGFGFQQQQQQ.m3u8
+#EXTINF:-1 tvg-chno="481" tvg-id="Live.Event.us" tvg-name="[Volleyball Nations League] Turkey vs Argentina " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[Volleyball Nations League] Turkey vs Argentina Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/GFGFGFQQQ.m3u8
+#EXTINF:-1 tvg-chno="482" tvg-id="Live.Event.us" tvg-name="[WNBA Basketball] Indiana Fever W vs Los Angeles Sparks W " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[WNBA Basketball] Indiana Fever W vs Los Angeles Sparks W Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/ZOOOQQQQQ.m3u8
+#EXTINF:-1 tvg-chno="483" tvg-id="Live.Event.us" tvg-name="[WNBA Basketball] Seattle Storm W vs Atlanta Dream W " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: fawa",[WNBA Basketball] Seattle Storm W vs Atlanta Dream W Gvision TV
+#EXTVLCOPT:http-referrer=http://www.fawanews.sc/
+#EXTVLCOPT:http-origin=http://www.fawanews.sc/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+http://193.47.62.42/hls/ZZZZQ.m3u8
+
+# ===== SOURCE 7 =====
+#EXTINF:-1 tvg-chno="247" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Arabic Feed 1 " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: STRMCNTR",[FIFA World Cup] Arabic Feed 1 Gvision TV
 #EXTVLCOPT:http-referrer=https://streams.center
 #EXTVLCOPT:http-origin=https://streams.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestreams.pro/hls/eJmauBDCIf.m3u8
-#EXTINF:-1 tvg-chno="105" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana - [FIFA World Cup] Croatia vs Ghana (STRMHUB)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - [FIFA World Cup] Croatia vs Ghana (STRMHUB)
-#EXTVLCOPT:http-referrer=https://getembed.live/embed-player?stream=pj2xunzfkx
-#EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=pj2xunzfkx
+#EXTINF:-1 tvg-chno="248" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Arabic Feed 2 " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: STRMCNTR",[FIFA World Cup] Arabic Feed 2 Gvision TV
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://obstreamx.click/live/pj2xunzfkx.m3u8
-#EXTINF:-1 tvg-chno="110" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs Inggris - STRMHUB" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - STRMHUB
-#EXTVLCOPT:http-referrer=https://getembed.live/embed-player?stream=hcicvcycw2
-#EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=hcicvcycw2
+https://edgestreams.pro/hls/sqdahach1ax.m3u8
+#EXTINF:-1 tvg-chno="272" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] English Feed 1 " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: STRMCNTR",[FIFA World Cup] English Feed 1 Gvision TV
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://obstreamx.click/live/hcicvcycw2.m3u8
-#EXTINF:-1 tvg-chno="116" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana - XYZSTRM" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - XYZSTRM
-#EXTVLCOPT:http-referrer=https://xyzstreams.st
-#EXTVLCOPT:http-origin=https://xyzstreams.st
+https://edge2caster.pro/hls/24SDAZFcsqnj24.m3u8
+#EXTINF:-1 tvg-chno="275" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] English Feed 2 " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png" group-title="live event: STRMCNTR",[FIFA World Cup] English Feed 2 Gvision TV
+#EXTVLCOPT:http-referrer=https://streams.center
+#EXTVLCOPT:http-origin=https://streams.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://lb.xyzcloud3.xyz/FOX/index.m3u8
-#EXTINF:-1 tvg-chno="98" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Panama vs Inggris - XYZSTRM" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - XYZSTRM
-#EXTVLCOPT:http-referrer=https://xyzstreams.st
-#EXTVLCOPT:http-origin=https://xyzstreams.st
+https://edge2caster.pro/hls/b0h5fNwDKH.m3u8
+
+# ===== SOURCE 8 =====
+#EXTINF:-1 tvg-chno="314" tvg-id="Live.Event.us" tvg-name="[Fighting] UFC Fight Night: Fiziev vs. Torres " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: Roxie",[Fighting] UFC Fight Night: Fiziev vs. Torres Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://lb.xyzcloud3.xyz/bein/index.m3u8
-#EXTINF:-1 tvg-chno="122" tvg-id="Soccer.Dummy.us" tvg-name="[HD] Kroasia vs Ghana - STRMHUB" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - STRMHUB
-#EXTVLCOPT:http-referrer=https://getembed.live/embed-player?stream=thjmdciaen
-#EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=thjmdciaen
+https://602.elugohome.com/happybirthdayabb.m3u8
+#EXTINF:-1 tvg-chno="315" tvg-id="Live.Event.us" tvg-name="[Fighting] WWE Night of Champions " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: Roxie",[Fighting] WWE Night of Champions Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
-https://obstreamx.click/live/thjmdciaen.m3u8
-#EXTINF:-1 tvg-id="auto.ct.sport" tvg-name="[HD] Panama vs Inggris - CT SPORT" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Panama vs Inggris - CT SPORT
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://drm.antik.sk/widevine/key
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
-#EXTVLCOPT:http-referer=https://webtv.sk/tv/
-https://dash2.antik.sk/stream/nvidia_ct_sport/playlist_cbcs.mpd
-#EXTINF:-1 tvg-name="[HD] Kroasia vs Ghana - ALB" tvg-logo="https://raw.githubusercontent.com/sm-monirulislam/SM-Live-TV/main/Script/world_cup.png" group-title="World Cup 2026",[HD] Kroasia vs Ghana - ALB
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36 http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
-http://93.93.113.95:25461/TV-Berati/XtreamCodes/495
+https://602.sman1asjap.my.id/wwe.m3u8
+#EXTINF:-1 tvg-chno="316" tvg-id="Live.Event.us" tvg-name="[Fighting] ZAYAS vs BOOTS " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: Roxie",[Fighting] ZAYAS vs BOOTS Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.elugohome.com/ppv.m3u8
+#EXTINF:-1 tvg-chno="362" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Arizona Diamondbacks vs Tampa Bay Rays " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Arizona Diamondbacks vs Tampa Bay Rays Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/mlb7.m3u8
+#EXTINF:-1 tvg-chno="365" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Athletics vs Los Angeles Angels " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Athletics vs Los Angeles Angels Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/mlb15.m3u8
+#EXTINF:-1 tvg-chno="366" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Atlanta Braves vs San Francisco Giants " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Atlanta Braves vs San Francisco Giants Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/mlb14.m3u8
+#EXTINF:-1 tvg-chno="373" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Chicago Cubs vs Milwaukee Brewers " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Chicago Cubs vs Milwaukee Brewers Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/mlb11.m3u8
+#EXTINF:-1 tvg-chno="376" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Cincinnati Reds vs Pittsburgh Pirates " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Cincinnati Reds vs Pittsburgh Pirates Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.mercadodavoz.com.br/mlb4.m3u8
+#EXTINF:-1 tvg-chno="381" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Colorado Rockies vs Minnesota Twins " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Colorado Rockies vs Minnesota Twins Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/mlb10.m3u8
+#EXTINF:-1 tvg-chno="385" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Houston Astros vs Detroit Tigers " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Houston Astros vs Detroit Tigers Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.elugohome.com/mlb.m3u8
+#EXTINF:-1 tvg-chno="386" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Kansas City Royals vs Chicago White Sox " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Kansas City Royals vs Chicago White Sox Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/mlb6.m3u8
+#EXTINF:-1 tvg-chno="387" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Los Angeles Dodgers vs San Diego Padres " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Los Angeles Dodgers vs San Diego Padres Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/mlb13.m3u8
+#EXTINF:-1 tvg-chno="392" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Miami Marlins vs St. Louis Cardinals " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Miami Marlins vs St. Louis Cardinals Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/mlb12.m3u8
+#EXTINF:-1 tvg-chno="401" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] New York Yankees vs Boston Red Sox " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] New York Yankees vs Boston Red Sox Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/mlb2.m3u8
+#EXTINF:-1 tvg-chno="403" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Philadelphia Phillies vs New York Mets " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Philadelphia Phillies vs New York Mets Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/mlb5.m3u8
+#EXTINF:-1 tvg-chno="412" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Seattle Mariners vs Cleveland Guardians " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Seattle Mariners vs Cleveland Guardians Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/mlb9.m3u8
+#EXTINF:-1 tvg-chno="418" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Texas Rangers vs Toronto Blue Jays " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Texas Rangers vs Toronto Blue Jays Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/mlb3.m3u8
+#EXTINF:-1 tvg-chno="423" tvg-id="MLB.Baseball.Dummy.us" tvg-name="[MLB] Washington Nationals vs Baltimore Orioles " tvg-logo="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/mlb.png" group-title="live event: Roxie",[MLB] Washington Nationals vs Baltimore Orioles Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/mlb8.m3u8
+#EXTINF:-1 tvg-chno="448" tvg-id="Racing.Dummy.us" tvg-name="[Racing] ARCA Menards Series - Race " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: Roxie",[Racing] ARCA Menards Series - Race Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.mercadodavoz.com.br/arca.m3u8
+#EXTINF:-1 tvg-chno="449" tvg-id="Racing.Dummy.us" tvg-name="[Racing] Formula 1 - Free Practice 3 " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: Roxie",[Racing] Formula 1 - Free Practice 3 Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.mercadodavoz.com.br/f1.m3u8
+#EXTINF:-1 tvg-chno="450" tvg-id="Racing.Dummy.us" tvg-name="[Racing] Formula 1 - Qualifying " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: Roxie",[Racing] Formula 1 - Qualifying Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.sman1asjap.my.id/f1.m3u8
+#EXTINF:-1 tvg-chno="451" tvg-id="Racing.Dummy.us" tvg-name="[Racing] MotoGP - Coverage " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: Roxie",[Racing] MotoGP - Coverage Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/tnt2.m3u8
+#EXTINF:-1 tvg-chno="452" tvg-id="Racing.Dummy.us" tvg-name="[Racing] NASCAR O'Reilly Auto Parts - Race " tvg-logo="https://i.ibb.co.com/C3xgxDS0/20260128-001838.jpg" group-title="live event: Roxie",[Racing] NASCAR O'Reilly Auto Parts - Race Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://602.formaturamaxi.com.br/nas.m3u8
+#EXTINF:-1 tvg-chno="457" tvg-id="Soccer.Dummy.us" tvg-name="[Soccer] Algeria vs Austria " tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="live event: Roxie",[Soccer] Algeria vs Austria Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://ataide0.sman1asjap.my.id/tsn.m3u8
+#EXTINF:-1 tvg-chno="458" tvg-id="Soccer.Dummy.us" tvg-name="[Soccer] Colombia vs Portugal " tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="live event: Roxie",[Soccer] Colombia vs Portugal Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://ataide0.sman1asjap.my.id/tsn.m3u8
+#EXTINF:-1 tvg-chno="460" tvg-id="Soccer.Dummy.us" tvg-name="[Soccer] Congo DR vs Uzbekistan " tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="live event: Roxie",[Soccer] Congo DR vs Uzbekistan Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://ataide0.sman1asjap.my.id/tsn.m3u8
+#EXTINF:-1 tvg-chno="462" tvg-id="Soccer.Dummy.us" tvg-name="[Soccer] Croatia vs Ghana " tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="live event: Roxie",[Soccer] Croatia vs Ghana Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://ataide0.sman1asjap.my.id/tsn.m3u8
+#EXTINF:-1 tvg-chno="463" tvg-id="Soccer.Dummy.us" tvg-name="[Soccer] Jordan vs Argentina " tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="live event: Roxie",[Soccer] Jordan vs Argentina Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://ataide0.sman1asjap.my.id/tsn.m3u8
+#EXTINF:-1 tvg-chno="464" tvg-id="Soccer.Dummy.us" tvg-name="[Soccer] Panama vs England " tvg-logo="https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png" group-title="live event: Roxie",[Soccer] Panama vs England Gvision TV
+#EXTVLCOPT:http-referrer=https://roxiestreams.info
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
+https://ataide0.sman1asjap.my.id/tsn.m3u8

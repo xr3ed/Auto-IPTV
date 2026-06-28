@@ -10,7 +10,6 @@ on:
     paths:
       - '.github/workflows/generate_liveevents.yml'
       - 'generate_liveevents.py'
-      - 'generate_dynamic_posters.py'
 
 permissions:
   contents: write
@@ -48,19 +47,12 @@ jobs:
       - name: Generate Live Events
         run: python generate_liveevents.py
 
-      - name: Categorize Channels
-        run: python script/categorize_channels.py
-
-      - name: Generate Playability Report
-        run: python script/generate_playability_report.py
-
       - name: Commit and Push (Keep History Clean)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add -A playlists/
-          git add logo/
 
           if git diff-index --quiet HEAD --; then
             echo "No changes detected. Skipping commit."
@@ -72,23 +64,19 @@ jobs:
           TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M UTC')
           IS_AMEND=false
 
-          python script/generate_commit_msg.py
-
           if [ "$LAST_AUTHOR" = "$BOT_EMAIL" ]; then
             echo "Last commit by bot. Amending..."
-            git commit --amend -F commit_msg.txt --date="$TIMESTAMP"
+            git commit --amend -m "chore: auto sync gcikar playlist ($TIMESTAMP)" --date="$TIMESTAMP"
             IS_AMEND=true
           else
             echo "Last commit by user. Creating new commit..."
-            git commit -F commit_msg.txt
+            git commit -m "chore: auto sync gcikar playlist ($TIMESTAMP)"
           fi
 
           for i in 1 2 3; do
             echo "Syncing with remote (Attempt $i/3)..."
             git fetch origin main
 
-            # NOTE: -Xtheirs sengaja dipilih supaya commit manual user di epgs/
-            # tidak ditimpa oleh hasil auto-generate kalau terjadi conflict.
             if ! git rebase origin/main -Xtheirs; then
               echo "Rebase failed. Aborting."
               git rebase --abort
