@@ -8,44 +8,44 @@ https://d1jzu95oc8fgt3.cloudfront.net/FOX_Sports.m3u8
 #http://200.77.176.130:8000/udp/224.0.0.1:49152
 #https://hplay.tv/augetv/12396547488/10.m3u8
 http://hls1.sua.tv/live/globotvbahiafhdbr2/s.m3u8
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[hd] World Cup - Feed 1 [Mungkin Bermasalah]
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - Feed 1
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-179093_lhd.flv?auth_key=1782669982-0-0-23c86fb399efff3dca5ad5a56f08131c
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[hd] World Cup - Feed 2 [Mungkin Bermasalah]
+https://pull06.scstream.net/live/stream-179093_lhd.flv?auth_key=1782671002-0-0-5aed7129807ecd2da5dd7b6c8e3043b4
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - Feed 2
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-179093_lhd.m3u8?auth_key=1782669982-0-0-07e885a96564f01944406ccf45a17d30
+https://pull.niues.live/live/stream-179093_lhd.m3u8?auth_key=1782671002-0-0-00b03d8b19696ae2882e17b755fa27eb
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - CCTV5 1
 http://107.150.60.122/live/cctv5hd.m3u8
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[hd] World Cup - Feed 1 [Mungkin Bermasalah]
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - Feed 1
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-343500_lhd.flv?auth_key=1782669982-0-0-62f20f1649cbc6e4df8231d5c04565f5
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[hd] World Cup - Feed 2 [Mungkin Bermasalah]
+https://pull06.scstream.net/live/stream-343500_lhd.flv?auth_key=1782671002-0-0-0f2d9a0d793fb3493c95e57562146976
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - Feed 2
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-343500_lhd.m3u8?auth_key=1782669982-0-0-70ca41906d14091487439fb9a6dd1717
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[hd] World Cup - Feed 3 [Mungkin Bermasalah]
+https://pull.niues.live/live/stream-343500_lhd.m3u8?auth_key=1782671002-0-0-fb041dd5182dc0d75daea7c0f3fc130a
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - Feed 3
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-152898_lhd.flv?auth_key=1782669982-0-0-e617b17341fe92b3638163f18469e482
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[hd] World Cup - Feed 4 [Mungkin Bermasalah]
+https://pull06.scstream.net/live/stream-133277_lhd.flv?auth_key=1782671002-0-0-ccfefbd0b40f9ff1e335d58835374f66
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - Feed 4
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-152898_lhd.m3u8?auth_key=1782669982-0-0-960679b37360f6ae172a0f957d6d45fa
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[hd] World Cup - Feed 5 [Mungkin Bermasalah]
+https://pull.niues.live/live/stream-133277_lhd.m3u8?auth_key=1782671002-0-0-79977c943495b6a6a20d403eee8f9d33
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - Feed 5
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-9912079_lhd.flv?auth_key=1782669982-0-0-58886644df4f790d349ecda16b047afb
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[hd] World Cup - Feed 6 [Mungkin Bermasalah]
+https://pull06.scstream.net/live/stream-133824_lhd.flv?auth_key=1782671002-0-0-80f89c15c59d5c871804a9d8e4f969e3
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - Feed 6
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-9912079_lhd.m3u8?auth_key=1782669982-0-0-56a2da898354c8aca875721282f8d7f6
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[hd] World Cup - Feed 7 [Mungkin Bermasalah]
+https://pull.niues.live/live/stream-133824_lhd.m3u8?auth_key=1782671002-0-0-a6b6187ac32fe6369262cd36ebb8ccff
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - Feed 7
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-133824_lhd.flv?auth_key=1782669982-0-0-baac8bb0a174c76967d917a2cae1023c
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[hd] World Cup - Feed 8 [Mungkin Bermasalah]
+https://pull06.scstream.net/live/stream-9912079_lhd.flv?auth_key=1782671062-0-0-bfaec5dfd264b94389f16d5125f1bd0f
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - Feed 8
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-133824_lhd.m3u8?auth_key=1782669982-0-0-94794a23490c61bfd477733862c8d8a5
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[hd] World Cup - Feed 9 [Mungkin Bermasalah]
+https://pull.niues.live/live/stream-9912079_lhd.m3u8?auth_key=1782671062-0-0-f4a5cff577cfc2c8a920849dfb827c4e
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - Feed 9
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-133277_lhd.flv?auth_key=1782669982-0-0-46f9fb8d5f1a3087f7895f010d100176
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[hd] World Cup - Feed 10 [Mungkin Bermasalah]
+https://pull06.scstream.net/live/stream-152898_lhd.flv?auth_key=1782671062-0-0-147e989763d05126c458eac72b468c14
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - Feed 10
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-133277_lhd.m3u8?auth_key=1782669982-0-0-6a1aa6c602d02b886c728e268bbc4760
+https://pull.niues.live/live/stream-152898_lhd.m3u8?auth_key=1782671062-0-0-df09daf7b6c2c009879efb29937f1e5d
 #EXTINF:-1 tvg-chno="53" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Canada vs South Africa (STRMSGATE)" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[hd] World Cup - Feed 11
 #EXTVLCOPT:http-referrer=https://instream.click/jwp-eu.php?stream=HDWC3
 #EXTVLCOPT:http-origin=https://instream.click/jwp-eu.php?stream=HDWC3
@@ -58,12 +58,12 @@ https://jmp2.uk/plu-65ea8b928145cb0008509426.m3u8
 #EXTINF:-1 tvg-name="FIFA" tvg-id="itzreisa.id" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[hd] World Cup - Matcay (SCTV Digital) 1 [Mungkin Bermasalah]
 #
 __________________________________________Asean U19_________________________________________
-#EXTINF:-1 tvg-chno="205" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] English Feed 1 " tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - English Feed 1 [Mungkin Bermasalah]
+#EXTINF:-1 tvg-chno="205" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] English Feed 1 " tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - English Feed 1
 #EXTVLCOPT:http-referrer=https://streams.center
 #EXTVLCOPT:http-origin=https://streams.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edge2caster.pro/hls/24SDAZFcsqnj24.m3u8
-#EXTINF:-1 tvg-chno="208" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] English Feed 2 " tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - English Feed 2 [Mungkin Bermasalah]
+#EXTINF:-1 tvg-chno="208" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] English Feed 2 " tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - English Feed 2
 #EXTVLCOPT:http-referrer=https://streams.center
 #EXTVLCOPT:http-origin=https://streams.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
@@ -88,12 +88,12 @@ https://lb.xyzcloud3.xyz/FS1/index.m3u8
 #EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=pj2xunzfkx
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://obstreamx.click/live/pj2xunzfkx.m3u8
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Feed 1 [Mungkin Bermasalah]
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Feed 1
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-179093_lsd.flv?auth_key=1782669982-0-0-0cc04e13fe664a37b29b60d81db357ea
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Feed 2 [Mungkin Bermasalah]
+https://pull06.scstream.net/live/stream-179093_lsd.flv?auth_key=1782671002-0-0-9059f6415ceb34a52c381de338dfe236
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Feed 2
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-179093_lsd.m3u8?auth_key=1782669982-0-0-59406f007b1b5f0341fc964003e81c2c
+https://pull.niues.live/live/stream-179093_lsd.m3u8?auth_key=1782671002-0-0-bc20f7c4c20660387df315b2a287d6f2
 #EXTINF:-1 tvg-id="FIFAPlus.uk@English" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - English Feed 7
 https://jmp2.uk/plu-660c29b5aec9680008f5b4a4.m3u8
 #EXTINF:-1 tvg-id="FIFAPlusWomen.uk@English" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - English Feed 8
@@ -113,12 +113,12 @@ http://93.93.113.95:25461/TV-Berati/XtreamCodes/494
 http://myxpanel.pro/live/13579/13579/838116.ts
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - WC Feed 13 1
 http://myxpanel.pro/live/13579/13579/838115.ts
-#EXTINF:-1 tvg-chno="199" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Arabic Feed 1 " tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Arabic Feed 1 [Mungkin Bermasalah]
+#EXTINF:-1 tvg-chno="199" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Arabic Feed 1 " tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Arabic Feed 1
 #EXTVLCOPT:http-referrer=https://streams.center
 #EXTVLCOPT:http-origin=https://streams.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://edgestreams.pro/hls/eJmauBDCIf.m3u8
-#EXTINF:-1 tvg-chno="200" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Arabic Feed 2 " tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Arabic Feed 2 [Mungkin Bermasalah]
+#EXTINF:-1 tvg-chno="200" tvg-id="Soccer.Dummy.us" tvg-name="[FIFA World Cup] Arabic Feed 2 " tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Arabic Feed 2
 #EXTVLCOPT:http-referrer=https://streams.center
 #EXTVLCOPT:http-origin=https://streams.center
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
@@ -153,36 +153,36 @@ https://lb.xyzcloud3.xyz/Telemundo/index.m3u8
 #EXTVLCOPT:http-origin=https://getembed.live/embed-player?stream=ifibecaaqs
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0
 https://obstreamx.click/live/ifibecaaqs.m3u8
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Feed 1 [Mungkin Bermasalah]
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Feed 1
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-343500_lsd.flv?auth_key=1782669982-0-0-dd6dd33a15879db5678c56b9111ca54e
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Feed 2 [Mungkin Bermasalah]
+https://pull06.scstream.net/live/stream-343500_lsd.flv?auth_key=1782671002-0-0-8437a59b2c527d067862d55568250312
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Feed 2
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-343500_lsd.m3u8?auth_key=1782669982-0-0-c2dc694a97c7b98c8ec8abfa2c4035c3
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Feed 3 [Mungkin Bermasalah]
+https://pull.niues.live/live/stream-343500_lsd.m3u8?auth_key=1782671002-0-0-5873c51d97549be4c05f0c078be6c1e8
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Feed 3
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-152898_lsd.flv?auth_key=1782669982-0-0-26eef2edc2de6439a88bb079ba778fa2
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Feed 4 [Mungkin Bermasalah]
+https://pull06.scstream.net/live/stream-133277_lsd.flv?auth_key=1782671002-0-0-b2642ca8bb50ecdd963f38c54e9308de
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Feed 4
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-152898_lsd.m3u8?auth_key=1782669982-0-0-072edb4dae20f7dd74e9aa4c04de6c5d
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Feed 5 [Mungkin Bermasalah]
+https://pull.niues.live/live/stream-133277_lsd.m3u8?auth_key=1782671002-0-0-f55e91c32e194be49ed57a7a42ab818f
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Feed 5
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-9912079_lsd.flv?auth_key=1782669982-0-0-37a83a48f2c749a1094cc1cef3369f95
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Feed 6 [Mungkin Bermasalah]
+https://pull06.scstream.net/live/stream-133824_lsd.flv?auth_key=1782671002-0-0-5fe2e9bc5ed9256867f1e0749f39094f
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Feed 6
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-9912079_lsd.m3u8?auth_key=1782669982-0-0-16a8befec6befb1e476842882a6e9375
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Feed 7 [Mungkin Bermasalah]
+https://pull.niues.live/live/stream-133824_lsd.m3u8?auth_key=1782671002-0-0-174dce8a275b0eca95b7b31bc0dc0ee1
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Feed 7
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-133824_lsd.flv?auth_key=1782669982-0-0-7517b113fc7c0fa0816dc43bd1f16aa8
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Feed 8 [Mungkin Bermasalah]
+https://pull06.scstream.net/live/stream-9912079_lsd.flv?auth_key=1782671062-0-0-004fb2ed7a5d33758b24aff9beb75b80
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Feed 8
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-133824_lsd.m3u8?auth_key=1782669982-0-0-37236e8ab96a060824e644d229d7ee26
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Feed 9 [Mungkin Bermasalah]
+https://pull.niues.live/live/stream-9912079_lsd.m3u8?auth_key=1782671062-0-0-5ec6d419ee65bb14de66a9ee2e67451f
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Feed 9
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull06.scstream.net/live/stream-133277_lsd.flv?auth_key=1782669982-0-0-5da72387471c7ac7c15981582c923a2b
-#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Feed 10 [Mungkin Bermasalah]
+https://pull06.scstream.net/live/stream-152898_lsd.flv?auth_key=1782671062-0-0-d87e8a096e62ac815ec5fda89ab9acba
+#EXTINF:0 tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Feed 10
 #EXTVLCOPT:http-user-agent=Mozilla AppleWebKit Chrome Safari
-https://pull.niues.live/live/stream-133277_lsd.m3u8?auth_key=1782669982-0-0-9ede57a6f2c11b8d4a45ae26e5c00f49
+https://pull.niues.live/live/stream-152898_lsd.m3u8?auth_key=1782671062-0-0-abeb31bc42c1a7c8ff63f64c5a00ece8
 #EXTINF:-1 tvg-chno="190" tvg-id="Live.Event.us" tvg-name="[Cricket T20 World Cup] Australia W vs India W " tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Feed 11
 #EXTVLCOPT:http-referrer=http://www.fawanews.sc/
 #EXTVLCOPT:http-origin=http://www.fawanews.sc/
@@ -287,19 +287,19 @@ http://cdn.tv-rds.workers.dev/TYCSPT.m3u8
 #EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - (Tyc Sports Fan Argentina) 1
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 https://amg26268-amg26268c14-freelivesports-emea-10267.playouts.now.amagi.tv/ts-us-e2-n2/playlist/amg26268-sportsstudio-tycsports-freelivesportsemea/playlist.m3u8
-#EXTINF:-1 tvg-name="Tsn" tvg-id="itzreisa.id" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Tsn 1
+#EXTINF:-1 tvg-name="Tsn" tvg-id="itzreisa.id" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Tsn 1 [Mungkin Bermasalah]
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://opplextv.cyou:8080/nasir6160/nasir/349014
-#EXTINF:-1 tvg-name="Tsn" tvg-id="itzreisa.id" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Tsn 2
+#EXTINF:-1 tvg-name="Tsn" tvg-id="itzreisa.id" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Tsn 2 [Mungkin Bermasalah]
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://opplextv.cyou:8080/nasir6160/nasir/349015
-#EXTINF:-1 tvg-name="Tsn" tvg-id="itzreisa.id" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Tsn 3
+#EXTINF:-1 tvg-name="Tsn" tvg-id="itzreisa.id" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Tsn 3 [Mungkin Bermasalah]
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://opplextv.cyou:8080/nasir6160/nasir/349016
-#EXTINF:-1 tvg-name="Tsn" tvg-id="itzreisa.id" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Tsn 4
+#EXTINF:-1 tvg-name="Tsn" tvg-id="itzreisa.id" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Tsn 4 [Mungkin Bermasalah]
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://opplextv.cyou:8080/nasir6160/nasir/349017
-#EXTINF:-1 tvg-name="Tsn" tvg-id="itzreisa.id" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - Tsn 5
+#EXTINF:-1 tvg-name="Tsn" tvg-id="itzreisa.id" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - Tsn 5 [Mungkin Bermasalah]
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://opplextv.cyou:8080/nasir6160/nasir/349018
 #EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - (Mono 29 Thai) 1
@@ -331,25 +331,25 @@ http://d029dcec.kazmazpaz.ru/iptv/D6F3GPB9FFSHNY/2500/index.m3u8
 #EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - (Somoy TV Bangladesh) 1
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 https://bozztv.com/rongo/rongo-somoy/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - (beIN Sports Qatar 1) 1
+#EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - (beIN Sports Qatar 1) 1 [Mungkin Bermasalah]
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://opplextv.cyou:8080/nasir6160/nasir/353014
 #EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - (beIN Sports Qatar 2) 1 [Mungkin Bermasalah]
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://opplextv.cyou:8080/nasir6160/nasir/353015
-#EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - (beIN Sports Qatar 3) 1
+#EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - (beIN Sports Qatar 3) 1 [Mungkin Bermasalah]
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://opplextv.cyou:8080/nasir6160/nasir/353016
 #EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - (beIN Sports Qatar 4) 1 [Mungkin Bermasalah]
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://opplextv.cyou:8080/nasir6160/nasir/353017
-#EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - (beIN Sports Qatar 5) 1
+#EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - (beIN Sports Qatar 5) 1 [Mungkin Bermasalah]
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://opplextv.cyou:8080/nasir6160/nasir/353018
 #EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - (beIN Sports Qatar 6) 1 [Mungkin Bermasalah]
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://opplextv.cyou:8080/nasir6160/nasir/353019
-#EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png" group-title="World Cup 2026",[sd] World Cup - (beIN Sports Qatar 7) 1
+#EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - (beIN Sports Qatar 7) 1 [Mungkin Bermasalah]
 #EXTVLCOPT:http-user-agent=ExoPlayerDemo/2.15.1 (Linux; Android 13) ExoPlayerLib/2.15.1
 http://opplextv.cyou:8080/nasir6160/nasir/353020
 #EXTINF:-1 tvg-name="FIFA World Cup" tvg-id=" fifaworldcup.com" tvg-logo="https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" group-title="World Cup 2026",[sd] World Cup - (Elta Sports 1) 1 [Mungkin Bermasalah]
