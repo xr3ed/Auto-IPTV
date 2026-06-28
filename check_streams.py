@@ -72,9 +72,9 @@ def parse_worldcup_streams(raw_m3u_list):
                             group_title = group_match.group(1).lower()
                             
                         is_wc_name = any(kw in channel_name.lower() for kw in wc_keywords)
-                        is_sports_group = any(g_kw in group_title for g_kw in ["sports", "worldcup"])
+                        is_wc_group = any(g_kw in group_title for g_kw in ["world cup", "worldcup", "piala dunia", "fifa", "2026"])
                         
-                        if is_wc_name or is_sports_group:
+                        if is_wc_name or is_wc_group:
                             seen_urls.add(line_str)
                             entries.append({
                                 "name": channel_name,
