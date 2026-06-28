@@ -1,308 +1,332 @@
 {
-  "https://pull06.scstream.net/live/stream-133277_lsd.flv?auth_key=1782663142-0-0-ea3147f8507359566f362c5fd15df705": {
-    "name": "Tường thuật: WORLD CUP - Democratic Republic of the Congo vs Uzbekistan [Sóc Nhó Nhịu Nhô Nhùng] flv Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:26:57.290466Z"
-  },
-  "https://pull06.scstream.net/live/stream-133277_lhd.flv?auth_key=1782663142-0-0-03b7af542a916e542d6dcc793c51db77": {
-    "name": "Tường thuật: WORLD CUP - Democratic Republic of the Congo vs Uzbekistan [Sóc Nhó Nhịu Nhô Nhùng] hdFlv Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:27:07.296155Z"
-  },
-  "https://pull.niues.live/live/stream-133277_lsd.m3u8?auth_key=1782663142-0-0-5d1a4cf4b48aff1b3fd9062d15db7ca5": {
-    "name": "Tường thuật: WORLD CUP - Democratic Republic of the Congo vs Uzbekistan [Sóc Nhó Nhịu Nhô Nhùng] m3u8 Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:27:17.307535Z"
-  },
-  "https://pull.niues.live/live/stream-133277_lhd.m3u8?auth_key=1782663142-0-0-d3b96564bf3f10a6c7c9320ba4666c56": {
-    "name": "Tường thuật: WORLD CUP - Democratic Republic of the Congo vs Uzbekistan [Sóc Nhó Nhịu Nhô Nhùng] hdM3u8 Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:27:27.314707Z"
-  },
-  "https://pull06.scstream.net/live/stream-179093_lsd.flv?auth_key=1782663142-0-0-14dbf153ca189b304f793cf469394af9": {
+  "https://pull06.scstream.net/live/stream-179093_lsd.flv?auth_key=1782669982-0-0-0cc04e13fe664a37b29b60d81db357ea": {
     "name": "Tường thuật: WORLD CUP - Panama vs England [Sóc đau cổ vai gáy] flv Gvision TV",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T15:27:37.325047Z"
+    "timestamp": "2026-06-28T17:16:29.574165Z"
   },
-  "https://pull06.scstream.net/live/stream-179093_lhd.flv?auth_key=1782663142-0-0-0cde45971503ca7307a6a17fedbec6b0": {
+  "https://pull06.scstream.net/live/stream-179093_lhd.flv?auth_key=1782669982-0-0-23c86fb399efff3dca5ad5a56f08131c": {
     "name": "Tường thuật: WORLD CUP - Panama vs England [Sóc đau cổ vai gáy] hdFlv Gvision TV",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T15:27:47.329920Z"
+    "timestamp": "2026-06-28T17:16:39.583371Z"
   },
-  "https://pull.niues.live/live/stream-179093_lsd.m3u8?auth_key=1782663142-0-0-b949b649a7fed82c3fe9cf2fba909359": {
+  "https://pull.niues.live/live/stream-179093_lsd.m3u8?auth_key=1782669982-0-0-59406f007b1b5f0341fc964003e81c2c": {
     "name": "Tường thuật: WORLD CUP - Panama vs England [Sóc đau cổ vai gáy] m3u8 Gvision TV",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T15:27:57.339446Z"
+    "timestamp": "2026-06-28T17:16:49.609034Z"
   },
-  "https://pull.niues.live/live/stream-179093_lhd.m3u8?auth_key=1782663142-0-0-b781acfe9123bdd7ba29089f2d3de1a7": {
+  "https://pull.niues.live/live/stream-179093_lhd.m3u8?auth_key=1782669982-0-0-07e885a96564f01944406ccf45a17d30": {
     "name": "Tường thuật: WORLD CUP - Panama vs England [Sóc đau cổ vai gáy] hdM3u8 Gvision TV",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T15:28:07.345710Z"
+    "timestamp": "2026-06-28T17:16:59.618390Z"
   },
-  "https://pull06.scstream.net/live/stream-133824_lsd.flv?auth_key=1782663142-0-0-fec58ce20caddf31f269869b9c04c648": {
-    "name": "Tường thuật: WORLD CUP - Colombia vs Portugal [Sóc trèo cây ngô đồng] flv Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:28:17.350904Z"
-  },
-  "https://pull06.scstream.net/live/stream-133824_lhd.flv?auth_key=1782663142-0-0-11689916078de6187b5e7b1c8c37f43b": {
-    "name": "Tường thuật: WORLD CUP - Colombia vs Portugal [Sóc trèo cây ngô đồng] hdFlv Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:28:27.357219Z"
-  },
-  "https://pull.niues.live/live/stream-133824_lsd.m3u8?auth_key=1782663142-0-0-a89e85f2805311ede0c739e2d8932ec2": {
-    "name": "Tường thuật: WORLD CUP - Colombia vs Portugal [Sóc trèo cây ngô đồng] m3u8 Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:28:37.364429Z"
-  },
-  "https://pull.niues.live/live/stream-133824_lhd.m3u8?auth_key=1782663142-0-0-1d2b808f069b0954c9253b6dec0ae830": {
-    "name": "Tường thuật: WORLD CUP - Colombia vs Portugal [Sóc trèo cây ngô đồng] hdM3u8 Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:28:47.370502Z"
-  },
-  "https://pull06.scstream.net/live/stream-152898_lsd.flv?auth_key=1782663142-0-0-386371341129f6029ffa41edbb9818cf": {
-    "name": "Tường thuật: WORLD CUP - Croatia vs Ghana [Sóc nhàm nhang nhồ] flv Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:28:57.379573Z"
-  },
-  "https://pull06.scstream.net/live/stream-152898_lhd.flv?auth_key=1782663142-0-0-92f3cfbae01ef0c56ae20e4f9dc9e0d7": {
-    "name": "Tường thuật: WORLD CUP - Croatia vs Ghana [Sóc nhàm nhang nhồ] hdFlv Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:29:07.385831Z"
-  },
-  "https://pull.niues.live/live/stream-152898_lsd.m3u8?auth_key=1782663142-0-0-7d7b5f9c0f5b29a8ee1553618f10552f": {
-    "name": "Tường thuật: WORLD CUP - Croatia vs Ghana [Sóc nhàm nhang nhồ] m3u8 Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:29:17.429235Z"
-  },
-  "https://pull.niues.live/live/stream-152898_lhd.m3u8?auth_key=1782663142-0-0-c3205b8b90dbbce7c5ed5f036e912d58": {
-    "name": "Tường thuật: WORLD CUP - Croatia vs Ghana [Sóc nhàm nhang nhồ] hdM3u8 Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:29:27.435818Z"
-  },
-  "https://pull06.scstream.net/live/stream-9912079_lsd.flv?auth_key=1782663142-0-0-5ddfc483b77f48798d255c76fefde713": {
-    "name": "Tường thuật: WORLD CUP - Jordan vs Argentina [Sóc trong rừng xà nu] flv Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:29:37.445336Z"
-  },
-  "https://pull06.scstream.net/live/stream-9912079_lhd.flv?auth_key=1782663142-0-0-d3855f764ab4d5c6e9b5b257133dbc83": {
-    "name": "Tường thuật: WORLD CUP - Jordan vs Argentina [Sóc trong rừng xà nu] hdFlv Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:29:47.451589Z"
-  },
-  "https://pull.niues.live/live/stream-9912079_lsd.m3u8?auth_key=1782663142-0-0-e001215d4cbf4077e26f0bee1e255553": {
-    "name": "Tường thuật: WORLD CUP - Jordan vs Argentina [Sóc trong rừng xà nu] m3u8 Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:29:57.458617Z"
-  },
-  "https://pull.niues.live/live/stream-9912079_lhd.m3u8?auth_key=1782663142-0-0-d4136401fd4afe49d6be507f212759a6": {
-    "name": "Tường thuật: WORLD CUP - Jordan vs Argentina [Sóc trong rừng xà nu] hdM3u8 Gvision TV",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:30:07.464842Z"
-  },
-  "https://pull06.scstream.net/live/stream-343500_lsd.flv?auth_key=1782663142-0-0-484ee8e9ba891b390c91491aad0b13a9": {
+  "https://pull06.scstream.net/live/stream-343500_lsd.flv?auth_key=1782669982-0-0-dd6dd33a15879db5678c56b9111ca54e": {
     "name": "Tường thuật: WORLD CUP - Algeria vs Austria [Sóc mèo méo meo] flv Gvision TV",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T15:30:17.470597Z"
+    "timestamp": "2026-06-28T17:17:09.634402Z"
   },
-  "https://pull06.scstream.net/live/stream-343500_lhd.flv?auth_key=1782663142-0-0-5db0cf670c1ba74f9fb4bded6eaa95f9": {
+  "https://pull06.scstream.net/live/stream-343500_lhd.flv?auth_key=1782669982-0-0-62f20f1649cbc6e4df8231d5c04565f5": {
     "name": "Tường thuật: WORLD CUP - Algeria vs Austria [Sóc mèo méo meo] hdFlv Gvision TV",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T15:30:27.476515Z"
+    "timestamp": "2026-06-28T17:17:19.652253Z"
   },
-  "https://pull.niues.live/live/stream-343500_lsd.m3u8?auth_key=1782663142-0-0-92a7fdcbb43c8c9f6fdf091f7f603955": {
+  "https://pull.niues.live/live/stream-343500_lsd.m3u8?auth_key=1782669982-0-0-c2dc694a97c7b98c8ec8abfa2c4035c3": {
     "name": "Tường thuật: WORLD CUP - Algeria vs Austria [Sóc mèo méo meo] m3u8 Gvision TV",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T15:30:37.487186Z"
+    "timestamp": "2026-06-28T17:17:29.673287Z"
   },
-  "https://pull.niues.live/live/stream-343500_lhd.m3u8?auth_key=1782663142-0-0-eb62de18d3254d2ab7e69491657725e2": {
+  "https://pull.niues.live/live/stream-343500_lhd.m3u8?auth_key=1782669982-0-0-70ca41906d14091487439fb9a6dd1717": {
     "name": "Tường thuật: WORLD CUP - Algeria vs Austria [Sóc mèo méo meo] hdM3u8 Gvision TV",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T15:30:47.491045Z"
+    "timestamp": "2026-06-28T17:17:39.684692Z"
+  },
+  "https://pull06.scstream.net/live/stream-152898_lsd.flv?auth_key=1782669982-0-0-26eef2edc2de6439a88bb079ba778fa2": {
+    "name": "Tường thuật: WORLD CUP - Croatia vs Ghana [Sóc nhàm nhang nhồ] flv Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:17:49.704974Z"
+  },
+  "https://pull06.scstream.net/live/stream-152898_lhd.flv?auth_key=1782669982-0-0-e617b17341fe92b3638163f18469e482": {
+    "name": "Tường thuật: WORLD CUP - Croatia vs Ghana [Sóc nhàm nhang nhồ] hdFlv Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:17:59.724508Z"
+  },
+  "https://pull.niues.live/live/stream-152898_lsd.m3u8?auth_key=1782669982-0-0-072edb4dae20f7dd74e9aa4c04de6c5d": {
+    "name": "Tường thuật: WORLD CUP - Croatia vs Ghana [Sóc nhàm nhang nhồ] m3u8 Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:18:09.731679Z"
+  },
+  "https://pull.niues.live/live/stream-152898_lhd.m3u8?auth_key=1782669982-0-0-960679b37360f6ae172a0f957d6d45fa": {
+    "name": "Tường thuật: WORLD CUP - Croatia vs Ghana [Sóc nhàm nhang nhồ] hdM3u8 Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:18:19.737898Z"
+  },
+  "https://pull06.scstream.net/live/stream-9912079_lsd.flv?auth_key=1782669982-0-0-37a83a48f2c749a1094cc1cef3369f95": {
+    "name": "Tường thuật: WORLD CUP - Jordan vs Argentina [Sóc trong rừng xà nu] flv Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:18:29.752291Z"
+  },
+  "https://pull06.scstream.net/live/stream-9912079_lhd.flv?auth_key=1782669982-0-0-58886644df4f790d349ecda16b047afb": {
+    "name": "Tường thuật: WORLD CUP - Jordan vs Argentina [Sóc trong rừng xà nu] hdFlv Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:18:39.772706Z"
+  },
+  "https://pull.niues.live/live/stream-9912079_lsd.m3u8?auth_key=1782669982-0-0-16a8befec6befb1e476842882a6e9375": {
+    "name": "Tường thuật: WORLD CUP - Jordan vs Argentina [Sóc trong rừng xà nu] m3u8 Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:18:49.788524Z"
+  },
+  "https://pull.niues.live/live/stream-9912079_lhd.m3u8?auth_key=1782669982-0-0-56a2da898354c8aca875721282f8d7f6": {
+    "name": "Tường thuật: WORLD CUP - Jordan vs Argentina [Sóc trong rừng xà nu] hdM3u8 Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:18:59.798586Z"
+  },
+  "https://pull06.scstream.net/live/stream-133824_lsd.flv?auth_key=1782669982-0-0-7517b113fc7c0fa0816dc43bd1f16aa8": {
+    "name": "Tường thuật: WORLD CUP - Colombia vs Portugal [Sóc trèo cây ngô đồng] flv Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:19:09.819303Z"
+  },
+  "https://pull06.scstream.net/live/stream-133824_lhd.flv?auth_key=1782669982-0-0-baac8bb0a174c76967d917a2cae1023c": {
+    "name": "Tường thuật: WORLD CUP - Colombia vs Portugal [Sóc trèo cây ngô đồng] hdFlv Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:19:19.828229Z"
+  },
+  "https://pull.niues.live/live/stream-133824_lsd.m3u8?auth_key=1782669982-0-0-37236e8ab96a060824e644d229d7ee26": {
+    "name": "Tường thuật: WORLD CUP - Colombia vs Portugal [Sóc trèo cây ngô đồng] m3u8 Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:19:29.840996Z"
+  },
+  "https://pull.niues.live/live/stream-133824_lhd.m3u8?auth_key=1782669982-0-0-94794a23490c61bfd477733862c8d8a5": {
+    "name": "Tường thuật: WORLD CUP - Colombia vs Portugal [Sóc trèo cây ngô đồng] hdM3u8 Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:19:39.849916Z"
+  },
+  "https://pull06.scstream.net/live/stream-133277_lsd.flv?auth_key=1782669982-0-0-5da72387471c7ac7c15981582c923a2b": {
+    "name": "Tường thuật: WORLD CUP - Democratic Republic of the Congo vs Uzbekistan [Sóc Nhó Nhịu Nhô Nhùng] flv Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:19:49.863959Z"
+  },
+  "https://pull06.scstream.net/live/stream-133277_lhd.flv?auth_key=1782669982-0-0-46f9fb8d5f1a3087f7895f010d100176": {
+    "name": "Tường thuật: WORLD CUP - Democratic Republic of the Congo vs Uzbekistan [Sóc Nhó Nhịu Nhô Nhùng] hdFlv Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:19:59.887829Z"
+  },
+  "https://pull.niues.live/live/stream-133277_lsd.m3u8?auth_key=1782669982-0-0-9ede57a6f2c11b8d4a45ae26e5c00f49": {
+    "name": "Tường thuật: WORLD CUP - Democratic Republic of the Congo vs Uzbekistan [Sóc Nhó Nhịu Nhô Nhùng] m3u8 Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:20:09.906202Z"
+  },
+  "https://pull.niues.live/live/stream-133277_lhd.m3u8?auth_key=1782669982-0-0-6a1aa6c602d02b886c728e268bbc4760": {
+    "name": "Tường thuật: WORLD CUP - Democratic Republic of the Congo vs Uzbekistan [Sóc Nhó Nhịu Nhô Nhùng] hdM3u8 Gvision TV",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:20:19.917938Z"
   },
   "https://edgestreams.pro/hls/eJmauBDCIf.m3u8": {
     "name": "[FIFA World Cup] Arabic Feed 1 Gvision TV",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T15:30:48.423723Z"
+    "timestamp": "2026-06-28T17:20:20.919129Z"
   },
   "https://edgestreams.pro/hls/sqdahach1ax.m3u8": {
     "name": "[FIFA World Cup] Arabic Feed 2 Gvision TV",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T15:30:48.952019Z"
+    "timestamp": "2026-06-28T17:20:21.450051Z"
   },
   "https://edge2caster.pro/hls/24SDAZFcsqnj24.m3u8": {
     "name": "[FIFA World Cup] English Feed 1 Gvision TV",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T15:30:49.494462Z"
+    "timestamp": "2026-06-28T17:20:22.024126Z"
   },
   "https://edge2caster.pro/hls/b0h5fNwDKH.m3u8": {
     "name": "[FIFA World Cup] English Feed 2 Gvision TV",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T15:30:50.028126Z"
+    "timestamp": "2026-06-28T17:20:22.542693Z"
+  },
+  "https://cdnlivetv.tv/secure/api/v1/6a288d2881d8192bb76cb537/playlist.m3u8?token=NmEyODhkMjg4MWQ4MTkyYmI3NmNiNTM3OjE3ODI2NjYwNDIyNjM6Y2RubGl2ZXR2LnR2OmM0MWRkMmRhYzdhMTNmZDAuZWQ3ZjNjZjZlMzQzNGQ5MzMxY2U0ZWZlOTkyZTAyN2ZkNTZlNjVmZWY0YThjZDMzOWU1OTNkZWMyMzA3ZTQ1MA": {
+    "name": "[ICC Womens T20 World Cup] India Cricket Women vs Australia Cricket Women (CDNTV)",
+    "status_code": 403,
+    "reason": "HTTP Error 403",
+    "timestamp": "2026-06-28T17:20:33.108108Z"
   },
   "https://jmp2.uk/stvp-INBA5100009V3": {
     "name": "FIFA+ 🇮🇳",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T15:31:17.742264Z"
+    "timestamp": "2026-06-28T17:20:53.757565Z"
   },
   "https://jmp2.uk/stvp-KRBD1900001Y2": {
     "name": "FIFA+ 🇰🇷",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T15:31:19.185169Z"
+    "timestamp": "2026-06-28T17:20:55.886629Z"
   },
   "https://jmp2.uk/stvp-USBD12000255BLIVE": {
     "name": "FIFA+ 🇺🇸",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T15:31:19.722232Z"
+    "timestamp": "2026-06-28T17:20:56.855708Z"
   },
   "(Play)": {
     "name": "FIFA World Cup",
     "status_code": null,
     "reason": "Invalid URL '(Play)': No scheme supplied. Perhaps you meant https://(Play)?",
-    "timestamp": "2026-06-28T15:31:19.723234Z"
+    "timestamp": "2026-06-28T17:20:56.856822Z"
   },
   "EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 Firefox/151.0": {
     "name": "FIFA World Cup (Tipik 1)",
     "status_code": null,
     "reason": "No connection adapters were found for 'EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 Firefox/151.0'",
-    "timestamp": "2026-06-28T15:31:25.608687Z"
+    "timestamp": "2026-06-28T17:21:03.276260Z"
   },
   "KODIPROP:inputstream.adaptive.license_type=clearkey": {
     "name": "FIFA World Cup (Tipik 2)",
     "status_code": null,
     "reason": "No connection adapters were found for 'KODIPROP:inputstream.adaptive.license_type=clearkey'",
-    "timestamp": "2026-06-28T15:31:25.608687Z"
+    "timestamp": "2026-06-28T17:21:03.276260Z"
   },
   "http://cdn.tv-rds.workers.dev/TYCSPT.m3u8": {
     "name": "FIFA World Cup (Tyc Sports Argentina)",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T15:31:25.843190Z"
-  },
-  "http://opplextv.cyou:8080/nasir6160/nasir/349016": {
-    "name": "FIFA World Cup (Tsn 3)",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T15:31:40.880655Z"
+    "timestamp": "2026-06-28T17:21:03.375773Z"
   },
   "https://d1211whpimeups.cloudfront.net/smil:rtb2/chunklist.m3u8": {
     "name": "FIFA World Cup (RTB Aneka)",
     "status_code": 403,
     "reason": "HTTP Error 403",
-    "timestamp": "2026-06-28T15:31:44.597681Z"
+    "timestamp": "2026-06-28T17:21:13.480117Z"
   },
   "https://d1211whpimeups.cloudfront.net/smil:rtbgo/chunklist.m3u8": {
     "name": "FIFA World Cup (RTB Go Live)",
     "status_code": 403,
     "reason": "HTTP Error 403",
-    "timestamp": "2026-06-28T15:31:44.701966Z"
+    "timestamp": "2026-06-28T17:21:13.563524Z"
   },
   "https://amitomar.bdixbd.net/hoichoi.pro1/tracks-v1/index.m3u8": {
     "name": "FIFA World Cup (T Sports)",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T15:31:45.015220Z"
+    "timestamp": "2026-06-28T17:21:13.904518Z"
+  },
+  "http://opplextv.cyou:8080/nasir6160/nasir/353015": {
+    "name": "FIFA World Cup (beIN Sports Qatar 2)",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:21:30.813470Z"
+  },
+  "http://opplextv.cyou:8080/nasir6160/nasir/353017": {
+    "name": "FIFA World Cup (beIN Sports Qatar 4)",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:21:44.257111Z"
+  },
+  "http://opplextv.cyou:8080/nasir6160/nasir/353019": {
+    "name": "FIFA World Cup (beIN Sports Qatar 6)",
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T17:21:57.736511Z"
   },
   "http://106.107.177.247:5678/live/stream-14760d6c-b244-42de-8ae4-88233185ada2/index.m3u8?u=admin&p=d9a1eafbc7b8ea9b863320e4416d79b2a038db0b0c580a8d093a3c4d565ddec5": {
     "name": "FIFA World Cup (Elta Sports 1)",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T15:32:11.843543Z"
+    "timestamp": "2026-06-28T17:22:10.079937Z"
   },
   "http://106.107.177.247:5678/live/stream-75ae3a1c-49a7-4972-932b-73ae6b796569/index.m3u8?u=admin&p=d9a1eafbc7b8ea9b863320e4416d79b2a038db0b0c580a8d093a3c4d565ddec5": {
     "name": "FIFA World Cup (Elta Sports 2)",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T15:32:21.846709Z"
+    "timestamp": "2026-06-28T17:22:20.086318Z"
   },
   "http://106.107.177.247:5678/live/stream-0ec229ac-84d8-4ce8-a04b-d12c0c5343ff/index.m3u8?u=admin&p=d9a1eafbc7b8ea9b863320e4416d79b2a038db0b0c580a8d093a3c4d565ddec5": {
     "name": "FIFA World Cup (Elta Sports 3)",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T15:32:31.849929Z"
+    "timestamp": "2026-06-28T17:22:30.091543Z"
   },
   "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/3ynrpdanq2/out/v1/81fd4c26584044d2b1a1cc5b32fa9af0/cenc.mpd?amznDtid=AOAGZA014O5RE&encoding=segmentBase": {
     "name": "FIFA World Cup (Cazé TV 2)",
     "status_code": 400,
     "reason": "HTTP Error 400",
-    "timestamp": "2026-06-28T15:32:31.944963Z"
+    "timestamp": "2026-06-28T17:22:30.751194Z"
   },
   "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/epg9sw6owc/out/v1/e50aecefcb294fae85d6b343e0a6f1cc/cenc.mpd?amznDtid=AOAGZA014O5RE&encoding=segmentBase": {
     "name": "FIFA World Cup (Cazé TV 3)",
     "status_code": 403,
     "reason": "HTTP Error 403",
-    "timestamp": "2026-06-28T15:32:32.393976Z"
+    "timestamp": "2026-06-28T17:22:31.740669Z"
   },
   "EXTVLCOPT:http-referrer=http://www.dens.tv/": {
     "name": "FIFA World Cup (TVRI Nasional Digital 2)",
     "status_code": null,
     "reason": "No connection adapters were found for 'EXTVLCOPT:http-referrer=http://www.dens.tv/'",
-    "timestamp": "2026-06-28T15:32:35.577339Z"
+    "timestamp": "2026-06-28T17:22:33.003266Z"
   },
   "https://estreams.tv.nej.cz/dash/CH_TVP_SPORT_Portable.ism/playlist.mpd": {
     "name": "FIFA World Cup (TVP Sport)",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T15:32:56.882776Z"
+    "timestamp": "2026-06-28T17:22:54.349752Z"
+  },
+  "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/x0srg3jjpz/out/v1/f779c49314394d61886d63f58d9d52e4/cenc.mpd": {
+    "name": "FIFA World Cup (DSports 1)",
+    "status_code": 400,
+    "reason": "HTTP Error 400",
+    "timestamp": "2026-06-28T17:22:54.552195Z"
   },
   "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hufm7lgnhx/out/v1/5045630288d44123ba85427b2c36f29f/cenc-sd.mpd": {
     "name": "FIFA World Cup (DSports 2)",
     "status_code": 400,
     "reason": "HTTP Error 400",
-    "timestamp": "2026-06-28T15:32:57.674254Z"
+    "timestamp": "2026-06-28T17:22:55.143379Z"
   },
   "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/kp7qfx2tly/out/v1/bbfb730b45b74d4ea875d75786ea3f13/cenc-sd.mpd": {
     "name": "FIFA World Cup (DSports+)",
     "status_code": 400,
     "reason": "HTTP Error 400",
-    "timestamp": "2026-06-28T15:32:57.763059Z"
+    "timestamp": "2026-06-28T17:22:55.735686Z"
   },
   "EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1": {
     "name": "FIFA World Cup (Fox Sports 1)",
     "status_code": null,
     "reason": "No connection adapters were found for 'EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1'",
-    "timestamp": "2026-06-28T15:32:57.763059Z"
+    "timestamp": "2026-06-28T17:22:55.736745Z"
   },
   "http://s.rocketdns.info:8080/live/Z3nXfkOnf0/Madt8rUvmN/3646.ts": {
     "name": "FIFA World Cup (Fox Sports 2)",
     "status_code": 401,
     "reason": "HTTP Error 401",
-    "timestamp": "2026-06-28T15:32:58.394117Z"
+    "timestamp": "2026-06-28T17:22:56.393385Z"
   },
   "__________________________________________Asean U19_________________________________________": {
     "name": "FIFA Matchday (SCTV Digital)",
     "status_code": null,
     "reason": "Invalid URL '__________________________________________Asean U19_________________________________________': No scheme supplied. Perhaps you meant https://__________________________________________Asean U19_________________________________________?",
-    "timestamp": "2026-06-28T15:32:59.595135Z"
+    "timestamp": "2026-06-28T17:22:57.665810Z"
   }
 }
