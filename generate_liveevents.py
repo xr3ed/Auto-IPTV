@@ -214,25 +214,16 @@ def parse_and_filter_worldcup(raw_m3u_list, blocklist=None):
             standardized_name += " [Mungkin Bermasalah]"
             
         extinf_raw = entry["extinf_base"]
-        
-        # Logo warning kustom jika bermasalah, atau logo default
         logo_url = "https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" if is_blocked else DEFAULT_LOGO
         
-        # Ganti logo dengan logo seragam FIFA / Warning
-        if 'tvg-logo="' in extinf_raw:
-            extinf_raw = re.sub(r'tvg-logo="[^"]+"', f'tvg-logo="{logo_url}"', extinf_raw)
-        else:
-            extinf_raw = extinf_raw.replace(",", f' tvg-logo="{logo_url}",', 1)
-            
-        # Ganti group-title
-        if 'group-title="' in extinf_raw:
-            extinf_raw = re.sub(r'group-title="[^"]+"', 'group-title="World Cup 2026"', extinf_raw)
-        else:
-            extinf_raw = extinf_raw.replace(",", ' group-title="World Cup 2026",', 1)
-            
-        # Ganti nama di akhir EXTINF
-        parts_extinf = extinf_raw.split(",", 1)
-        new_extinf = f"{parts_extinf[0]},{standardized_name}"
+        # Pisahkan bagian atribut (sebelum koma pertama) dan bersihkan logo/group lama
+        extinf_attrs = extinf_raw.split(",", 1)[0]
+        extinf_attrs = re.sub(r'\s*tvg-logo="[^"]*"', '', extinf_attrs)
+        extinf_attrs = re.sub(r'\s*group-title="[^"]*"', '', extinf_attrs)
+        
+        # Tambahkan atribut baru dengan seragam
+        extinf_attrs += f' tvg-logo="{logo_url}" group-title="World Cup 2026"'
+        new_extinf = f"{extinf_attrs},{standardized_name}"
         
         output_lines.append(new_extinf + "\n")
         for opt in entry["options"]:
