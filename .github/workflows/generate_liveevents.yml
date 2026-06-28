@@ -45,6 +45,8 @@ jobs:
           mkdir -p playlists
 
       - name: Generate Live Events
+        env:
+          GCIKAR_URL: ${{ vars.GCIKAR_URL }}
         run: python generate_liveevents.py
 
       - name: Commit and Push (Keep History Clean)

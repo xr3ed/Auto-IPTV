@@ -4,7 +4,7 @@ import requests
 import gzip
 from pathlib import Path
 
-URL_GCIKAR = "https://gcikar.bigsentinel.biz.id/cs/cs.m3u8"
+URL_GCIKAR = os.environ.get("GCIKAR_URL", "https://gcikar.bigsentinel.biz.id/cs/cs.m3u8")
 OUTPUT_DIR = Path("playlists")
 M3U_PATH = OUTPUT_DIR / "live_events.m3u"
 M3U_GZ_PATH = OUTPUT_DIR / "live_events.m3u.gz"
