@@ -48,8 +48,11 @@ def parse_and_filter_worldcup(raw_m3u):
                 current_extinf = ""
                 current_options = []
                 
-    # Proses pengurutan dan penyeragaman
     processed_entries = []
+    
+    # Counter untuk memberikan nomor unik pada cadangan/feed
+    feed_counters = {}
+    
     for entry in entries:
         name = entry["name"]
         
@@ -68,25 +71,23 @@ def parse_and_filter_worldcup(raw_m3u):
         elif "hd" in name_lower or "720p" in name_lower:
             quality = "HD"
             
-        # 3. Ekstrak Detail Pertandingan (Tim A vs Tim B atau Nama Feed)
-        # Menghapus tag bracket seperti [FIFA World Cup], [HD]
-        clean_name = re.sub(r'\[[^\]]+\]', '', name).strip()
-        clean_name = re.sub(r'\s+(HD|FHD|SD|Gvision TV|Gvision)\b', '', clean_name, flags=re.IGNORECASE).strip()
-        
-        # 4. Deteksi apakah laga sedang berlangsung (Live Match)
-        # Laga live biasanya memiliki pola jam hari ini seperti "04:00 WIB", "06:30 WIB"
+        # 3. Ekstrak nama laga untuk diidentifikasi pemicu live match
         is_live_match = 0
-        if re.search(r'\d{2}:\d{2}\s*WIB', clean_name, re.IGNORECASE):
-            is_live_match = 2 # Prioritas sangat tinggi karena terjadwal hari ini
-        elif "feed" in clean_name.lower() or "cadangan" in clean_name.lower():
-            is_live_match = 1 # Feed cadangan/aktif kontinyu
+        if re.search(r'\d{2}:\d{2}\s*WIB', name, re.IGNORECASE):
+            is_live_match = 2
+        elif "feed" in name_lower or "cadangan" in name_lower:
+            is_live_match = 1
             
-        # 5. Penyeragaman Nama Saluran
-        # Format: World Cup 2026 - [Nama Laga/Feed] ([Resolusi] - [Bahasa])
-        standardized_name = f"World Cup 2026 - {clean_name} ({quality} - {lang})"
+        # 4. Berikan nomor urut dinamis per grup Kualitas + Bahasa agar nama tetap unik
+        key_group = f"{quality}_{lang}"
+        feed_counters[key_group] = feed_counters.get(key_group, 0) + 1
+        num_suffix = feed_counters[key_group]
         
-        # 6. Penyeragaman Logo
-        # Modifikasi EXTINF asli untuk memasukkan nama baru, group-title seragam, dan logo seragam
+        # 5. Penyeragaman Nama Baru Tanpa Nama Tim Yang Bertanding
+        # Format Baru: [Resolusi] World Cup 2026 - [Bahasa] [Nomor]
+        standardized_name = f"[{quality}] World Cup 2026 - {lang} {num_suffix}"
+        
+        # 6. Modifikasi EXTINF
         extinf_raw = entry["extinf"]
         
         # Ganti logo dengan logo seragam FIFA
