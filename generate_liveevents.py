@@ -60,11 +60,6 @@ def parse_and_filter_worldcup(raw_m3u_list, blocklist=None):
                     # Deduplikasi berdasarkan URL stream
                     if line not in seen_urls:
                         # Abaikan format FLV karena tidak didukung secara native oleh pemutar Cloudstream
-                        if ".flv" in line.lower() or "flv" in line.lower():
-                            current_extinf = ""
-                            current_options = []
-                            continue
-                            
                         # Cek filter berdasarkan nama channel atau kategori (group-title)
                         group_title = ""
                         group_match = re.search(r'group-title="([^"]+)"', current_extinf, re.IGNORECASE)
