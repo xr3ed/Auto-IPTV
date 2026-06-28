@@ -1,39 +1,30 @@
-# 📺 Auto-IPTV & EPG Streamer Pipeline
+# 📺 Auto-IPTV & Sports Pipeline
 
-Otomasi penyaringan, deduplikasi cerdas, dan generator EPG terpadu untuk playlist IPTV FAST Channels, RCTI+, and Live Sports (Piala Dunia) secara berkala menggunakan GitHub Actions.
+Otomasi penyaringan, penyelarasan, dan optimalisasi playlist IPTV khusus siaran olahraga dan Piala Dunia 2026 secara berkala menggunakan GitHub Actions.
 
 > [!IMPORTANT]
 > **DISCLAIMER:** Proyek ini ditujukan untuk keperluan informasi dan edukasi pribadi. Tidak ada jaminan ketersediaan, akurasi, atau kesesuaian untuk tujuan tertentu. Gunakan dengan risiko Anda sendiri.
 
 ---
 
-## 🔗 Daftar Playlist & EPG Utama
+## 🔗 Daftar Playlist Utama
 
-Untuk memutar saluran, salin tautan raw di bawah ini dan tempelkan langsung ke aplikasi IPTV Player favorit Anda (seperti **TiviMate, Kodi, OTT Navigator, Televizo, atau Perfect Player**).
+Untuk memutar siaran, salin tautan raw di bawah ini dan tempelkan langsung ke aplikasi IPTV Player favorit Anda (seperti **Cloudstream, TiviMate, Kodi, OTT Navigator, Televizo, atau Perfect Player**).
 
-| Jenis Playlist / EPG | Deskripsi | Tautan URL Raw |
+| Jenis Playlist | Deskripsi | Tautan URL Raw |
 | :--- | :--- | :--- |
-| **Master Playlist** | Saluran TV Indonesia, Regional, dan Hiburan umum (bebas duplikat & aktif). | `https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/IndihomeTV.m3u` |
-| **Sports & Live Events** | Khusus siaran olahraga langsung dengan prioritas Piala Dunia 2026 di baris paling atas. | `https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/playlists/live_events.m3u` |
-| **EPG Guide (Jadwal TV)** | EPG XML TV terintegrasi dan dikompresi agar loading lebih cepat. | `https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/epgs/guide.xml.gz` |
+| **Sports & Live Events** | Siaran olahraga dan laga live terintegrasi, tersaring, dan diurutkan berdasarkan kualitas terbaik di baris teratas. | `https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/playlists/live_events.m3u` |
+| **Sports (Gzipped)** | Versi terkompresi dari playlist utama agar loading di perangkat memori rendah lebih cepat. | `https://github.com/xr3ed/Auto-IPTV/raw/refs/heads/main/playlists/live_events.m3u.gz` |
 
 ---
 
-## 🌟 Fitur Unggulan
+## 🌟 Fitur Unggulan Proyek Saat Ini
 
-* **Deduplikasi Pintar (Smart Deduplication)**: Skrip secara otomatis mendeteksi saluran dengan nama yang sama, menguji latensi server stream secara real-time via ping paralel, dan hanya memilih saluran dengan respons tercepat dan teraktif.
-* **World Cup & Sports Priority**: Mengurutkan saluran olahraga berdasarkan ketersediaan bahasa (Bahasa Indonesia & Inggris diutamakan) serta resolusi video (HD/FHD).
-* **Paralel EPG Builder**: Generator EPG menggabungkan data dari berbagai sumber penyedia jadwal acara secara paralel serta melakukan pembersihan (pruning) program kedaluwarsa secara otomatis.
-* **Bebas Konflik Push (Concurrency Lock)**: Dikonfigurasi menggunakan kunci concurrency GitHub Actions agar proses update otomatis terjadwal berjalan berurutan tanpa risiko bentrok commit.
-
----
-
-## 📡 Sumber Playlist & EPG
-
-Saluran dan jadwal acara TV di dalam proyek ini didapatkan dari berbagai sumber publik:
-- **Layanan Lokal**: Indihome TV (DASH Stream), RCTI+
-- **FAST Channels**: TCL Channel, Pluto TV, Roku Channel, Samsung TV Plus
-- **Penyedia EPG**: i.mjh.nz, BuddyChewChew, iptv-org
+* **Optimalisasi Format Namaan**: Menyeragamkan format penulisan agar rapi dan informatif di pemutar IPTV: `[resolusi] World Cup - [Nama Channel] [Bahasa] [Nomor]`.
+* **Dukungan Logo Premium**: Menyematkan poster logo premium khusus bertema World Cup 2026 di seluruh saluran secara seragam.
+* **Sortir Kualitas Otomatis**: Memindai manifest resolusi stream (FHD, HD, SD) dan mengurutkan secara berurutan agar kualitas tertinggi (FHD & HD) tampil di baris teratas.
+* **Prioritas Bahasa**: Mengelompokkan saluran berdasarkan bahasa dengan prioritas utama Bahasa Inggris, disusul Bahasa Indonesia dan bahasa feed alternatif lainnya.
+* **Sinkronisasi Otomatis**: Sinkronisasi berkala terjadwal setiap jam menggunakan GitHub Actions untuk menjaga keaktifan tautan.
 
 ---
 

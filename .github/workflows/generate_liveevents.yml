@@ -68,11 +68,11 @@ jobs:
 
           if [ "$LAST_AUTHOR" = "$BOT_EMAIL" ]; then
             echo "Last commit by bot. Amending..."
-            git commit --amend -m "chore: auto sync gcikar playlist ($TIMESTAMP)" --date="$TIMESTAMP"
+            git commit --amend -m "chore: auto sync live events playlist ($TIMESTAMP)" --date="$TIMESTAMP"
             IS_AMEND=true
           else
             echo "Last commit by user. Creating new commit..."
-            git commit -m "chore: auto sync gcikar playlist ($TIMESTAMP)"
+            git commit -m "chore: auto sync live events playlist ($TIMESTAMP)"
           fi
 
           for i in 1 2 3; do
