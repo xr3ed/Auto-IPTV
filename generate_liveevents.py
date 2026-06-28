@@ -3,8 +3,30 @@ import re
 import requests
 import gzip
 from pathlib import Path
+from dotenv import load_dotenv
 
-URL_GCIKAR = os.environ.get("GCIKAR_URL", "https://gcikar.bigsentinel.biz.id/cs/cs.m3u8")
+load_dotenv()
+
+def to_raw_github_url(url):
+    if "github.com" in url and "/blob/" in url:
+        url = url.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/")
+    return url
+
+URL_GCIKAR = os.environ.get("GCIKAR_URL", "")
+ADDITIONAL_URLS_RAW = os.environ.get("ADDITIONAL_M3U_URLS", "")
+ADDITIONAL_URLS = []
+if ADDITIONAL_URLS_RAW:
+    ADDITIONAL_URLS = [
+        to_raw_github_url(url.strip())
+        for url in ADDITIONAL_URLS_RAW.split(",")
+        if url.strip()
+    ]
+else:
+    ADDITIONAL_URLS = [
+        to_raw_github_url("https://github.com/apistech/project/blob/main/playlists/wc2026.m3u"),
+        to_raw_github_url("https://github.com/apistech/project/blob/main/playlists/live_events.m3u"),
+        to_raw_github_url("https://raw.githubusercontent.com/dhasap/dhanytv/main/dhanytv.m3u")
+    ]
 OUTPUT_DIR = Path("playlists")
 M3U_PATH = OUTPUT_DIR / "live_events.m3u"
 M3U_GZ_PATH = OUTPUT_DIR / "live_events.m3u.gz"
@@ -12,41 +34,47 @@ M3U_GZ_PATH = OUTPUT_DIR / "live_events.m3u.gz"
 # Logo default FIFA World Cup 2026 seragam
 DEFAULT_LOGO = "https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/fifa.png"
 
-def parse_and_filter_worldcup(raw_m3u):
-    lines = raw_m3u.splitlines()
+def parse_and_filter_worldcup(raw_m3u_list, blocklist=None):
     wc_keywords = ["world cup", "worldcup", "piala dunia", "fifa"]
     
     entries = []
-    current_extinf = ""
-    current_options = []
+    seen_urls = set()
     
-    for line in lines:
-        line_str = line.strip()
-        if not line_str:
-            continue
-        if line_str.startswith("#EXTM3U"):
-            continue
-            
-        if line_str.startswith("#EXTINF:"):
-            current_extinf = line_str
-            current_options = []
-        elif line_str.startswith("#"):
-            current_options.append(line)
-        else:
-            if current_extinf:
-                parts = current_extinf.split(",", 1)
-                channel_name = parts[1].strip() if len(parts) >= 2 else ""
+    for raw_m3u in raw_m3u_list:
+        lines = raw_m3u.splitlines()
+        current_extinf = ""
+        current_options = []
+        
+        for line in lines:
+            line_str = line.strip()
+            if not line_str:
+                continue
+            if line_str.startswith("#EXTM3U"):
+                continue
                 
-                # Cek filter World Cup
-                if any(kw in channel_name.lower() for kw in wc_keywords):
-                    entries.append({
-                        "extinf": current_extinf,
-                        "options": current_options,
-                        "url": line,
-                        "name": channel_name
-                    })
-                current_extinf = ""
+            if line_str.startswith("#EXTINF:"):
+                current_extinf = line_str
                 current_options = []
+            elif line_str.startswith("#"):
+                current_options.append(line)
+            else:
+                if current_extinf:
+                    parts = current_extinf.split(",", 1)
+                    channel_name = parts[1].strip() if len(parts) >= 2 else ""
+                    
+                    # Deduplikasi berdasarkan URL stream
+                    if line not in seen_urls:
+                        # Cek filter World Cup
+                        if any(kw in channel_name.lower() for kw in wc_keywords):
+                            seen_urls.add(line)
+                            entries.append({
+                                "extinf": current_extinf,
+                                "options": current_options,
+                                "url": line,
+                                "name": channel_name
+                            })
+                    current_extinf = ""
+                    current_options = []
                 
     processed_entries = []
     
@@ -165,23 +193,33 @@ def parse_and_filter_worldcup(raw_m3u):
         q = entry["quality"]
         l = entry["lang"]
         src = entry["source_channel"]
+        url = entry["url"]
         
         # Berikan nomor urut dinamis per grup
         key_group = f"{q}_{l}_{src}"
         feed_counters[key_group] = feed_counters.get(key_group, 0) + 1
         num_suffix = feed_counters[key_group]
         
-        # Format Baru: [resolusi] World Cup - [Nama Channel] [Bahasa] [Nomor]
+
+        # Format Baru: [resolusi] World Cup - [Nama Channel] [Nomor]
         q_lower = q.lower()
-        standardized_name = f"[{q_lower}] World Cup - {src} {l} {num_suffix}"
+        standardized_name = f"[{q_lower}] World Cup - {src} {num_suffix}"
         
+        # Cek jika URL terdaftar di blocklist
+        is_blocked = blocklist and url in blocklist
+        if is_blocked:
+            standardized_name += " [Mungkin Bermasalah]"
+            
         extinf_raw = entry["extinf_base"]
         
-        # Ganti logo dengan logo seragam FIFA
+        # Logo warning kustom jika bermasalah, atau logo default
+        logo_url = "https://raw.githubusercontent.com/xr3ed/Auto-IPTV/main/logo/warning_wc.png" if is_blocked else DEFAULT_LOGO
+        
+        # Ganti logo dengan logo seragam FIFA / Warning
         if 'tvg-logo="' in extinf_raw:
-            extinf_raw = re.sub(r'tvg-logo="[^"]+"', f'tvg-logo="{DEFAULT_LOGO}"', extinf_raw)
+            extinf_raw = re.sub(r'tvg-logo="[^"]+"', f'tvg-logo="{logo_url}"', extinf_raw)
         else:
-            extinf_raw = extinf_raw.replace(",", f' tvg-logo="{DEFAULT_LOGO}",', 1)
+            extinf_raw = extinf_raw.replace(",", f' tvg-logo="{logo_url}",', 1)
             
         # Ganti group-title
         if 'group-title="' in extinf_raw:
@@ -201,6 +239,9 @@ def parse_and_filter_worldcup(raw_m3u):
     return "".join(output_lines)
 
 def main():
+    if not URL_GCIKAR:
+        print("Error: GCIKAR_URL tidak didefinisikan di environment variables (.env / GitHub secrets).")
+        exit(1)
     print(f"Mengunduh playlist dari {URL_GCIKAR}...")
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -211,8 +252,32 @@ def main():
         response.raise_for_status()
         raw_content = response.text
         
+        # Muat blocklist jika ada
+        blocklist = []
+        blocklist_path = Path("playlists/blocklist.json")
+        if blocklist_path.exists():
+            try:
+                import json
+                with open(blocklist_path, "r", encoding="utf-8") as f:
+                    blocklist_data = json.load(f)
+                    blocklist = list(blocklist_data.keys())
+                print(f"Memuat {len(blocklist)} URL ke dalam blocklist.")
+            except Exception as e:
+                print(f"Gagal memuat blocklist: {e}")
+                
+        # Unduh playlist tambahan
+        raw_contents = [raw_content]
+        for idx, url in enumerate(ADDITIONAL_URLS):
+            try:
+                print(f"Mengunduh playlist tambahan {idx+1}: {url}...")
+                resp = requests.get(url, headers=headers, timeout=30, verify=False)
+                resp.raise_for_status()
+                raw_contents.append(resp.text)
+            except Exception as e:
+                print(f"Gagal mengunduh playlist tambahan {url}: {e}")
+                
         print("Menyaring, menstandarkan nama/logo, serta mengurutkan saluran...")
-        filtered_content = parse_and_filter_worldcup(raw_content)
+        filtered_content = parse_and_filter_worldcup(raw_contents, blocklist)
         
         # Pastikan output folder ada
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)

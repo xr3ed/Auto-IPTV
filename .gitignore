@@ -9,3 +9,4 @@ __pycache__/
 *.apk
 *.har
 commit_msg.txt
+.env

@@ -10,6 +10,7 @@ on:
     paths:
       - '.github/workflows/generate_liveevents.yml'
       - 'generate_liveevents.py'
+      - 'playlists/blocklist.json'
 
 permissions:
   contents: write
@@ -47,6 +48,7 @@ jobs:
       - name: Generate Live Events
         env:
           GCIKAR_URL: ${{ vars.GCIKAR_URL }}
+          ADDITIONAL_M3U_URLS: ${{ vars.ADDITIONAL_M3U_URLS }}
         run: python generate_liveevents.py
 
       - name: Commit and Push (Keep History Clean)
