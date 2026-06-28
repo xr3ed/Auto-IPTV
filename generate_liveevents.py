@@ -50,9 +50,6 @@ def parse_and_filter_worldcup(raw_m3u):
                 
     processed_entries = []
     
-    # Counter untuk memberikan nomor unik pada cadangan/feed
-    feed_counters = {}
-    
     for entry in entries:
         name = entry["name"]
         
@@ -65,11 +62,17 @@ def parse_and_filter_worldcup(raw_m3u):
             lang = "Indonesia"
             
         # 2. Deteksi Resolusi / Kualitas
+        # Cek resolusi baik dari string nama maupun dari URL
         quality = "SD"
-        if "fhd" in name_lower or "1080p" in name_lower:
+        url_lower = entry["url"].lower()
+        
+        # Cari resolusi (fhd, 1080p, hd, 720p, sd, lhd, lsd, mono, uhd)
+        if any(q in name_lower or q in url_lower for q in ["fhd", "1080p", "uhd"]):
             quality = "FHD"
-        elif "hd" in name_lower or "720p" in name_lower:
+        elif any(q in name_lower or q in url_lower for q in ["hd", "720p", "lhd"]):
             quality = "HD"
+        elif any(q in name_lower or q in url_lower for q in ["sd", "lsd", "mono"]):
+            quality = "SD"
             
         # 3. Ekstrak nama laga untuk diidentifikasi pemicu live match
         is_live_match = 0
@@ -78,17 +81,66 @@ def parse_and_filter_worldcup(raw_m3u):
         elif "feed" in name_lower or "cadangan" in name_lower:
             is_live_match = 1
             
-        # 4. Berikan nomor urut dinamis per grup Kualitas + Bahasa agar nama tetap unik
-        key_group = f"{quality}_{lang}"
+        # 4. Deteksi Sumber Asli (Nama Channel Asal, misal: Caze TV, T Sports, CCTV 5, dll)
+        # Menghapus tag bracket dan keterangan resolusi/laga untuk mencari nama stasiun TV
+        source_channel = "Feed"
+        
+        # Pola umum mendeteksi nama channel
+        if "caze" in name_lower:
+            source_channel = "Caze TV"
+        elif "tsports" in name_lower or "t sports" in name_lower:
+            source_channel = "T Sports"
+        elif "cctv" in name_lower:
+            # Cari apakah cctv 5 atau cctv 5+
+            match_cctv = re.search(r'cctv\s*\d+\+?', name_lower)
+            source_channel = match_cctv.group(0).upper() if match_cctv else "CCTV"
+        elif "tv-berati" in name_lower or "berati" in name_lower:
+            source_channel = "TV Berati"
+        elif "arabic" in name_lower:
+            source_channel = "Arabic Feed"
+        elif "english" in name_lower:
+            source_channel = "English Feed"
+            
+        processed_entries.append({
+            "extinf_base": entry["extinf"],
+            "options": entry["options"],
+            "url": entry["url"],
+            "is_live": is_live_match,
+            "quality": quality,
+            "lang": lang,
+            "source_channel": source_channel,
+            "quality_score": {"FHD": 3, "HD": 2, "SD": 1}.get(quality, 0),
+            "lang_score": {"Inggris": 3, "Indonesia": 2, "Lainnya": 1}.get(lang, 0)
+        })
+        
+    # Urutkan berdasarkan:
+    # 1. Kualitas Resolusi (quality_score DESC) -> FHD lalu HD lalu SD
+    # 2. Prioritas Bahasa Inggris Utama (lang_score DESC) -> Inggris lalu Indonesia lalu Lainnya
+    # 3. Live Match Terjadwal Utama (is_live DESC)
+    processed_entries.sort(key=lambda x: (-x["quality_score"], -x["lang_score"], -x["is_live"]))
+    
+    # Counter untuk memberikan nomor unik pada kombinasi Kualitas + Bahasa + Nama Channel Asal
+    feed_counters = {}
+    
+    # Rakit kembali menjadi format M3U
+    output_lines = ["#EXTM3U\n"]
+    for entry in processed_entries:
+        q = entry["quality"]
+        l = entry["lang"]
+        src = entry["source_channel"]
+        
+        # Berikan nomor urut dinamis per grup
+        key_group = f"{q}_{l}_{src}"
         feed_counters[key_group] = feed_counters.get(key_group, 0) + 1
         num_suffix = feed_counters[key_group]
         
-        # 5. Penyeragaman Nama Baru Tanpa Nama Tim Yang Bertanding
-        # Format Baru: [Resolusi] World Cup 2026 - [Bahasa] [Nomor]
-        standardized_name = f"[{quality}] World Cup 2026 - {lang} {num_suffix}"
+        # Format Baru yang diminta: [Resolusi] World Cup - [Nama Channel] [Bahasa] [Nomor]
+        # Contoh: [HD] World Cup - Caze TV Inggris 1
+        # Mengubah case resolusi menjadi huruf kecil jika berada di dalam bracket (misal: [hd], [fhd], [sd])
+        q_lower = q.lower()
+        standardized_name = f"[{q_lower}] World Cup - {src} {l} {num_suffix}"
         
-        # 6. Modifikasi EXTINF
-        extinf_raw = entry["extinf"]
+        extinf_raw = entry["extinf_base"]
         
         # Ganti logo dengan logo seragam FIFA
         if 'tvg-logo="' in extinf_raw:
@@ -106,25 +158,7 @@ def parse_and_filter_worldcup(raw_m3u):
         parts_extinf = extinf_raw.split(",", 1)
         new_extinf = f"{parts_extinf[0]},{standardized_name}"
         
-        processed_entries.append({
-            "extinf": new_extinf,
-            "options": entry["options"],
-            "url": entry["url"],
-            "is_live": is_live_match,
-            "quality_score": {"FHD": 3, "HD": 2, "SD": 1}.get(quality, 0),
-            "lang_score": {"Inggris": 3, "Indonesia": 2, "Lainnya": 1}.get(lang, 0)
-        })
-        
-    # Urutkan berdasarkan:
-    # 1. Live Match Terjadwal Utama (is_live DESC)
-    # 2. Prioritas Bahasa Inggris Utama (lang_score DESC)
-    # 3. Kualitas Resolusi (quality_score DESC)
-    processed_entries.sort(key=lambda x: (-x["is_live"], -x["lang_score"], -x["quality_score"]))
-    
-    # Rakit kembali menjadi format M3U
-    output_lines = ["#EXTM3U\n"]
-    for entry in processed_entries:
-        output_lines.append(entry["extinf"] + "\n")
+        output_lines.append(new_extinf + "\n")
         for opt in entry["options"]:
             output_lines.append(opt + "\n")
         output_lines.append(entry["url"] + "\n")
