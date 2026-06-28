@@ -237,7 +237,7 @@ def main():
     if not URL_GCIKAR:
         print("Error: GCIKAR_URL tidak didefinisikan di environment variables (.env / GitHub secrets).")
         exit(1)
-    print(f"Mengunduh playlist dari {URL_GCIKAR}...")
+    print("Mengunduh playlist utama...")
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
@@ -264,12 +264,12 @@ def main():
         raw_contents = [raw_content]
         for idx, url in enumerate(ADDITIONAL_URLS):
             try:
-                print(f"Mengunduh playlist tambahan {idx+1}: {url}...")
+                print(f"Mengunduh playlist tambahan {idx+1}...")
                 resp = requests.get(url, headers=headers, timeout=30, verify=False)
                 resp.raise_for_status()
                 raw_contents.append(resp.text)
             except Exception as e:
-                print(f"Gagal mengunduh playlist tambahan {url}: {e}")
+                print(f"Gagal mengunduh playlist tambahan {idx+1}: {e}")
                 
         print("Menyaring, menstandarkan nama/logo, serta mengurutkan saluran...")
         filtered_content = parse_and_filter_worldcup(raw_contents, blocklist)

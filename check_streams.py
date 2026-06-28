@@ -99,7 +99,7 @@ def check_stream(entry):
             headers["User-Agent"] = ua_match.group(1).strip()
             
     print(f"Menguji: {name}")
-    print(f"  URL: {url}")
+    print("  URL: [HIDDEN]")
     if "Referer" in headers:
         print(f"  Referer: {headers['Referer']}")
         
@@ -127,7 +127,7 @@ def main():
     if not URL_GCIKAR:
         print("Error: GCIKAR_URL tidak didefinisikan di environment variables (.env / GitHub secrets).")
         return
-    print(f"Mengunduh playlist GCIKAR dari {URL_GCIKAR}...")
+    print("Mengunduh playlist utama...")
     headers = {
         "User-Agent": DEFAULT_UA
     }
@@ -141,12 +141,12 @@ def main():
 
     for idx, url in enumerate(ADDITIONAL_URLS):
         try:
-            print(f"Mengunduh playlist tambahan {idx+1}: {url}...")
+            print(f"Mengunduh playlist tambahan {idx+1}...")
             resp = requests.get(url, headers=headers, timeout=30, verify=False)
             resp.raise_for_status()
             raw_contents.append(resp.text)
         except Exception as e:
-            print(f"Gagal mengunduh playlist tambahan {url}: {e}")
+            print(f"Gagal mengunduh playlist tambahan {idx+1}: {e}")
 
     if not raw_contents:
         print("Tidak ada konten playlist yang berhasil diunduh.")
