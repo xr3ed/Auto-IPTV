@@ -397,21 +397,21 @@
   },
   "https://obstreamx.click/live/thjmdciaen.m3u8": {
     "name": "[FIFA World Cup] French Feed 1 (STRMHUB)",
-    "status_code": 404,
-    "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T12:46:49.786526Z"
+    "status_code": null,
+    "reason": "Timeout",
+    "timestamp": "2026-06-28T13:14:11.853759Z"
   },
   "https://pradeepklmsu.s3.us-east-1.amazonaws.com/sportsnet.m3u8": {
     "name": "2026 FIFA World Cup, Group Stage (SPRTSPASS)\" tvg-logo=\"https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png\" group-title=\"Live Events\",[Soccer] Algeria vs Austria, 2026 FIFA World Cup, Group Stage (SPRTSPASS)",
     "status_code": 403,
     "reason": "HTTP Error 403",
-    "timestamp": "2026-06-28T12:46:59.711030Z"
+    "timestamp": "2026-06-28T13:14:21.343197Z"
   },
   "https://pradeepklmsu.s3.us-east-1.amazonaws.com/astros.m3u8": {
     "name": "2026 FIFA World Cup, Group Stage (SPRTSPASS)\" tvg-logo=\"https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png\" group-title=\"Live Events\",[Soccer] Jordan vs Argentina, 2026 FIFA World Cup, Group Stage (SPRTSPASS)",
     "status_code": 403,
     "reason": "HTTP Error 403",
-    "timestamp": "2026-06-28T12:47:00.524518Z"
+    "timestamp": "2026-06-28T13:14:22.107133Z"
   },
   "https://pull06.scstream.net/live/stream-179093_lsd.flv?auth_key=1782653422-0-0-31e7f9407101d5b45e457341fc00d7f0": {
     "name": "Tường thuật: WORLD CUP - Panama vs England [Sóc đau cổ vai gáy] flv Gvision TV",
@@ -508,11 +508,5 @@
     "status_code": null,
     "reason": "Timeout",
     "timestamp": "2026-06-28T12:45:49.410159Z"
-  },
-  "https://obstreamx.click/live/pj2xunzfkx.m3u8": {
-    "name": "[FIFA World Cup] Algeria vs Austria (STRMHUB)",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T12:46:25.883159Z"
   }
 }
