@@ -98,8 +98,16 @@ def parse_and_filter_worldcup(raw_m3u_list, blocklist=None):
         quality = "SD"
         url_lower = entry["url"].lower()
         
-        # Cari resolusi (fhd, 1080p, hd, 720p, sd, lhd, lsd, mono, uhd)
-        if any(q in name_lower or q in url_lower for q in ["fhd", "1080p", "uhd"]):
+        # Force FHD untuk channel tertentu sesuai permintaan user
+        fhd_keywords = [
+            "fussball", "cctv 5", "cctv5", "tyc sport", 
+            "unite 8 sport", "unite8 sport", "bein sport france", 
+            "bein sports france", "feed 16", "globo tv 2"
+        ]
+        
+        if any(kw in name_lower for kw in fhd_keywords):
+            quality = "FHD"
+        elif any(q in name_lower or q in url_lower for q in ["fhd", "1080p", "uhd"]):
             quality = "FHD"
         elif any(q in name_lower or q in url_lower for q in ["hd", "720p", "lhd"]):
             quality = "HD"
