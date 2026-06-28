@@ -84,11 +84,14 @@ def parse_and_filter_worldcup(raw_m3u_list, blocklist=None):
     
     for entry in entries:
         name = entry["name"]
+        url_lower = entry["url"].lower()
         
         # 1. Deteksi Bahasa
         lang = "Lainnya"
         name_lower = name.lower()
-        if "english" in name_lower or "eng" in name_lower:
+        if "caze" in name_lower or "caze" in url_lower:
+            lang = "Lainnya"
+        elif "english" in name_lower or "eng" in name_lower:
             lang = "Inggris"
         elif "indo" in name_lower or "laga" in name_lower or "wib" in name_lower:
             lang = "Indonesia"
@@ -96,7 +99,7 @@ def parse_and_filter_worldcup(raw_m3u_list, blocklist=None):
         # 2. Deteksi Resolusi / Kualitas
         # Cek resolusi baik dari string nama maupun dari URL
         quality = "SD"
-        url_lower = entry["url"].lower()
+        combined_text = (name_lower + " " + url_lower)
         
         # Force FHD untuk channel tertentu sesuai permintaan user
         fhd_keywords = [
@@ -105,7 +108,7 @@ def parse_and_filter_worldcup(raw_m3u_list, blocklist=None):
             "bein sports france", "feed 16", "globo tv 2"
         ]
         
-        if any(kw in name_lower for kw in fhd_keywords):
+        if any(kw in name_lower for kw in fhd_keywords) or "caze" in combined_text:
             quality = "FHD"
         elif any(q in name_lower or q in url_lower for q in ["fhd", "1080p", "uhd"]):
             quality = "FHD"
