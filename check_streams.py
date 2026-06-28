@@ -25,6 +25,33 @@ def to_raw_github_url(url):
         url = url.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/")
     return url
 
+def convert_xtream_to_hls(url):
+    parts = url.split("?")
+    base_part = parts[0]
+    query_part = "?" + parts[1] if len(parts) > 1 else ""
+    
+    # Cek format raw TS Xtream Codes: http://domain:port/username/password/stream_id
+    if not (base_part.endswith(".m3u8") or base_part.endswith(".mpd") or base_part.endswith(".ts")):
+        match = re.match(r'^(https?://[^/]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/(\d+)$', base_part)
+        if match:
+            host_proto, user, password, stream_id = match.groups()
+            return f"{host_proto}/live/{user}/{password}/{stream_id}.m3u8{query_part}"
+            
+        # Cek format dengan /live/: http://domain:port/live/username/password/stream_id
+        match_live = re.match(r'^(https?://[^/]+)/live/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/(\d+)$', base_part)
+        if match_live:
+            host_proto, user, password, stream_id = match_live.groups()
+            return f"{host_proto}/live/{user}/{password}/{stream_id}.m3u8{query_part}"
+            
+    # Cek format Xtream Codes dengan ekstensi .ts (ubah ke .m3u8)
+    if base_part.endswith(".ts"):
+        match_ts = re.match(r'^(https?://[^/]+)/(?:live/)?([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/(\d+)\.ts$', base_part)
+        if match_ts:
+            host_proto, user, password, stream_id = match_ts.groups()
+            return f"{host_proto}/live/{user}/{password}/{stream_id}.m3u8{query_part}"
+
+    return url
+
 URL_GCIKAR = os.environ.get("GCIKAR_URL", "")
 ADDITIONAL_URLS_RAW = os.environ.get("ADDITIONAL_M3U_URLS", "")
 ADDITIONAL_URLS = []
@@ -87,7 +114,7 @@ def parse_worldcup_streams(raw_m3u_list):
     return entries
 
 def check_stream(entry):
-    url = entry["url"]
+    url = convert_xtream_to_hls(entry["url"])
     name = entry["name"]
     options = entry["options"]
     
