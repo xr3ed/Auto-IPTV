@@ -238,7 +238,15 @@ def parse_and_filter_worldcup(raw_m3u_list, blocklist=None):
         new_extinf = f"{extinf_attrs},{standardized_name}"
         
         output_lines.append(new_extinf + "\n")
-        for opt in entry["options"]:
+        
+        # Suntikkan User-Agent browser untuk myxpanel.pro agar tidak terjadi Connection Reset (Error 3002) di player
+        options_to_write = list(entry["options"])
+        if "myxpanel.pro" in url:
+            has_ua = any("http-user-agent" in opt.lower() for opt in options_to_write)
+            if not has_ua:
+                options_to_write.append("#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+                
+        for opt in options_to_write:
             output_lines.append(opt + "\n")
         output_lines.append(entry["url"] + "\n")
         
