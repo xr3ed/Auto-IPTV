@@ -21,12 +21,7 @@ if ADDITIONAL_URLS_RAW:
         for url in ADDITIONAL_URLS_RAW.split(",")
         if url.strip()
     ]
-else:
-    ADDITIONAL_URLS = [
-        to_raw_github_url("https://github.com/apistech/project/blob/main/playlists/wc2026.m3u"),
-        to_raw_github_url("https://github.com/apistech/project/blob/main/playlists/live_events.m3u"),
-        to_raw_github_url("https://raw.githubusercontent.com/dhasap/dhanytv/main/dhanytv.m3u")
-    ]
+# URL tambahan hanya dimuat jika didefinisikan secara eksplisit di env
 OUTPUT_DIR = Path("playlists")
 M3U_PATH = OUTPUT_DIR / "live_events.m3u"
 M3U_GZ_PATH = OUTPUT_DIR / "live_events.m3u.gz"
