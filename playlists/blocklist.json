@@ -147,61 +147,61 @@
     "name": "[FIFA World Cup] Algeria vs Austria Gvision TV",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T12:45:49.821650Z"
+    "timestamp": "2026-06-28T13:19:34.379361Z"
   },
   "https://pul-tenm.nbs3g.com/live/hd-en-1-4460972.m3u8?txSecret=28c780e08b488597021b346d2647d770&txTime=6A41D0B0": {
     "name": "[FIFA World Cup] Algeria vs Austria HD Gvision TV",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T12:46:00.280515Z"
+    "timestamp": "2026-06-28T13:19:45.243216Z"
   },
   "http://193.47.62.47/hls/skkkkqqq.m3u8": {
     "name": "[FIFA World Cup] Algeria vs AustriaILI Gvision TV",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T12:46:00.662181Z"
+    "timestamp": "2026-06-28T13:19:45.639745Z"
   },
   "http://193.47.62.47/hls/skkkkqq.m3u8": {
     "name": "[FIFA World Cup] Colombia vs Portugal Gvision TV",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T12:46:01.036204Z"
+    "timestamp": "2026-06-28T13:19:46.058199Z"
   },
   "http://193.47.62.47/hls/skkkkq.m3u8": {
     "name": "[FIFA World Cup] Jordan vs Argentina Gvision TV",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T12:46:01.957101Z"
+    "timestamp": "2026-06-28T13:19:47.359259Z"
   },
   "https://pul-tenm.nbs3g.com/live/hd-en-1-4460931.m3u8?txSecret=b4189c7a56bf6f71bfb6972d2395ede4&txTime=6A41D0B0": {
     "name": "[FIFA World Cup] Jordan vs Argentina HD Gvision TV",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T12:46:12.207449Z"
+    "timestamp": "2026-06-28T13:19:57.635798Z"
   },
   "https://edgestreams.pro/hls/eJmauBDCIf.m3u8": {
     "name": "[FIFA World Cup] Arabic Feed 1 Gvision TV",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T12:46:12.750223Z"
+    "timestamp": "2026-06-28T13:19:58.179819Z"
   },
   "https://edgestreams.pro/hls/sqdahach1ax.m3u8": {
     "name": "[FIFA World Cup] Arabic Feed 2 Gvision TV",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T12:46:13.279605Z"
+    "timestamp": "2026-06-28T13:19:58.713111Z"
   },
   "https://edge2caster.pro/hls/24SDAZFcsqnj24.m3u8": {
     "name": "[FIFA World Cup] English Feed 1 Gvision TV",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T12:46:13.814101Z"
+    "timestamp": "2026-06-28T13:19:59.292907Z"
   },
   "https://edge2caster.pro/hls/b0h5fNwDKH.m3u8": {
     "name": "[FIFA World Cup] English Feed 2 Gvision TV",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T12:46:14.346257Z"
+    "timestamp": "2026-06-28T13:19:59.836543Z"
   },
   "https://pull06.scstream.net/live/stream-9912079_lsd.flv?auth_key=1782651982-0-0-904014e22872dbb7689bcfac01b5dfdb": {
     "name": "Tường thuật: WORLD CUP - Jordan vs Argentina [Sóc trong rừng xà nu] flv Gvision TV",
@@ -395,23 +395,17 @@
     "reason": "Timeout",
     "timestamp": "2026-06-28T12:43:09.314004Z"
   },
-  "https://obstreamx.click/live/thjmdciaen.m3u8": {
-    "name": "[FIFA World Cup] French Feed 1 (STRMHUB)",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T13:14:11.853759Z"
-  },
   "https://pradeepklmsu.s3.us-east-1.amazonaws.com/sportsnet.m3u8": {
     "name": "2026 FIFA World Cup, Group Stage (SPRTSPASS)\" tvg-logo=\"https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png\" group-title=\"Live Events\",[Soccer] Algeria vs Austria, 2026 FIFA World Cup, Group Stage (SPRTSPASS)",
     "status_code": 403,
     "reason": "HTTP Error 403",
-    "timestamp": "2026-06-28T13:14:21.343197Z"
+    "timestamp": "2026-06-28T13:20:14.238178Z"
   },
   "https://pradeepklmsu.s3.us-east-1.amazonaws.com/astros.m3u8": {
     "name": "2026 FIFA World Cup, Group Stage (SPRTSPASS)\" tvg-logo=\"https://i.gyazo.com/1c4aa937f5ea01b0f29bb27adb59884c.png\" group-title=\"Live Events\",[Soccer] Jordan vs Argentina, 2026 FIFA World Cup, Group Stage (SPRTSPASS)",
     "status_code": 403,
     "reason": "HTTP Error 403",
-    "timestamp": "2026-06-28T13:14:22.107133Z"
+    "timestamp": "2026-06-28T13:20:15.057673Z"
   },
   "https://pull06.scstream.net/live/stream-179093_lsd.flv?auth_key=1782653422-0-0-31e7f9407101d5b45e457341fc00d7f0": {
     "name": "Tường thuật: WORLD CUP - Panama vs England [Sóc đau cổ vai gáy] flv Gvision TV",
