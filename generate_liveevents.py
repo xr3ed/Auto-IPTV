@@ -85,21 +85,58 @@ def parse_and_filter_worldcup(raw_m3u):
         # Menghapus tag bracket dan keterangan resolusi/laga untuk mencari nama stasiun TV
         source_channel = "Feed"
         
-        # Pola umum mendeteksi nama channel
-        if "caze" in name_lower:
+        # Cari kata kunci di nama asal atau URL
+        combined_text = (name_lower + " " + url_lower)
+        if "caze" in combined_text:
             source_channel = "Caze TV"
-        elif "tsports" in name_lower or "t sports" in name_lower:
+        elif "tsports" in combined_text or "t sports" in combined_text:
             source_channel = "T Sports"
-        elif "cctv" in name_lower:
-            # Cari apakah cctv 5 atau cctv 5+
-            match_cctv = re.search(r'cctv\s*\d+\+?', name_lower)
+        elif "cctv" in combined_text:
+            match_cctv = re.search(r'cctv\s*\d+\+?', combined_text)
             source_channel = match_cctv.group(0).upper() if match_cctv else "CCTV"
-        elif "tv-berati" in name_lower or "berati" in name_lower:
+        elif "tv-berati" in combined_text or "berati" in combined_text:
             source_channel = "TV Berati"
-        elif "arabic" in name_lower:
+        elif "arabic" in combined_text:
             source_channel = "Arabic Feed"
-        elif "english" in name_lower:
+        elif "english" in combined_text:
             source_channel = "English Feed"
+        # Tambahan deteksi channel lain dari URL
+        elif "f2k3.shop" in combined_text:
+            source_channel = "Khandaia Feed"
+        elif "meung.app" in combined_text:
+            source_channel = "Meung TV"
+        elif "100ycdn.com" in combined_text or "cdnfaster" in combined_text:
+            source_channel = "CDN Feed"
+        elif "myxpanel.pro" in combined_text:
+            match_wc_num = re.search(r'world\s*cup\s*\d{4}\s*(\d+)', name_lower)
+            if match_wc_num:
+                source_channel = f"WC Feed {match_wc_num.group(1)}"
+            else:
+                source_channel = "Panel Feed"
+        # Jika tidak cocok dengan penentu di atas, coba bersihkan name bawaan
+        else:
+            tvg_name_match = re.search(r'tvg-name="([^"]+)"', entry["extinf"])
+            if tvg_name_match:
+                tvg_val = tvg_name_match.group(1)
+                tvg_clean = re.sub(r'\[[^\]]+\]', '', tvg_val).strip()
+                tvg_clean = re.sub(r'(fifa|world\s*cup|2026|hd|fhd|sd|feed|cadangan|live|event)', '', tvg_clean, flags=re.IGNORECASE).strip()
+                if tvg_clean and len(tvg_clean) > 2:
+                    source_channel = tvg_clean
+            
+            if source_channel == "Feed":
+                name_clean = re.sub(r'\[[^\]]+\]', '', name).strip()
+                name_clean = re.sub(r'(fifa|world\s*cup|2026|hd|fhd|sd|feed|cadangan|live|event|gvision\s*tv|gvision)', '', name_clean, flags=re.IGNORECASE).strip()
+                name_clean = re.sub(r'\s+\d+$', '', name_clean).strip()
+                if name_clean and len(name_clean) > 2:
+                    source_channel = name_clean
+                    
+        # --- PERBAIKAN: JIKA NAMA CHANNEL MASIH MENGANDUNG NAMA TIM BERTANDING, KITA HAPUS ---
+        # Bersihkan kata penanda laga seperti "vs", "v", "tường thuật" dari nama channel
+        # Hal ini mencegah timbulnya nama duel panjang (misal: "Tường thuật:  - Panama vs England  Flv") di nama channel.
+        source_channel_lower = source_channel.lower()
+        if "vs" in source_channel_lower or " v " in source_channel_lower or "tường thuật" in source_channel_lower or "versus" in source_channel_lower:
+            # Jika merupakan duel tim, potong atau ubah menjadi label default "Feed"
+            source_channel = "Feed"
             
         processed_entries.append({
             "extinf_base": entry["extinf"],
@@ -134,9 +171,7 @@ def parse_and_filter_worldcup(raw_m3u):
         feed_counters[key_group] = feed_counters.get(key_group, 0) + 1
         num_suffix = feed_counters[key_group]
         
-        # Format Baru yang diminta: [Resolusi] World Cup - [Nama Channel] [Bahasa] [Nomor]
-        # Contoh: [HD] World Cup - Caze TV Inggris 1
-        # Mengubah case resolusi menjadi huruf kecil jika berada di dalam bracket (misal: [hd], [fhd], [sd])
+        # Format Baru: [resolusi] World Cup - [Nama Channel] [Bahasa] [Nomor]
         q_lower = q.lower()
         standardized_name = f"[{q_lower}] World Cup - {src} {l} {num_suffix}"
         
