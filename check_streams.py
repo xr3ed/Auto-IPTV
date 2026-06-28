@@ -113,6 +113,13 @@ def check_stream(entry):
         print(f"  Referer: {headers['Referer']}")
         
     try:
+        # Khusus untuk Samsung TV Plus (jmp2.uk / stvp-), uji apakah terenkripsi DRM Widevine tanpa kunci lisensi
+        if "jmp2.uk" in url.lower() or "stvp-" in url.lower():
+            from utils import is_stream_playable
+            if not is_stream_playable(url, headers):
+                print("  [FAIL] Terenkripsi DRM Widevine (Tanpa Kunci)")
+                return False, None, "DRM Protected (No Keys)"
+                
         # Lakukan request GET dengan timeout 10 detik.
         # Meniru player Kodi/Tivimate dengan verifikasi SSL dimatikan agar bypass error sertifikat lokal.
         response = requests.get(url, headers=headers, timeout=10, verify=False, stream=True)
