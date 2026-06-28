@@ -164,14 +164,15 @@ def main():
     wc_entries = parse_worldcup_streams(raw_contents)
     print(f"Menemukan {len(wc_entries)} channel World Cup untuk diuji.\n")
     
-    # Load blocklist yang sudah ada
-    blocklist = {}
+    # Hapus blocklist lama agar memulai pemindaian bersih (clean scan) dari nol
     if os.path.exists(BLOCKLIST_PATH):
         try:
-            with open(BLOCKLIST_PATH, "r", encoding="utf-8") as f:
-                blocklist = json.load(f)
-        except Exception:
-            pass
+            os.remove(BLOCKLIST_PATH)
+            print("Blocklist lama dihapus. Memulai pemindaian bersih (clean scan)...")
+        except Exception as e:
+            print(f"Gagal menghapus blocklist lama: {e}")
+            
+    blocklist = {}
             
     failed_count = 0
     passed_count = 0
