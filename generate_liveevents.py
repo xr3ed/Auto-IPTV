@@ -289,35 +289,45 @@ def main():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
+    raw_contents = []
+    
     try:
+        print("Mengunduh playlist utama...")
         response = requests.get(URL_GCIKAR, headers=headers, timeout=30, verify=False)
         response.raise_for_status()
-        raw_content = response.text
+        raw_contents.append(response.text)
+        print("Playlist utama berhasil diunduh.")
+    except Exception as e:
+        print(f"Peringatan: Gagal mengambil/memproses playlist utama ({e}). Mencoba fallback ke playlist tambahan...")
         
-        # Muat blocklist jika ada
-        blocklist = []
-        blocklist_path = Path("playlists/blocklist.json")
-        if blocklist_path.exists():
-            try:
-                import json
-                with open(blocklist_path, "r", encoding="utf-8") as f:
-                    blocklist_data = json.load(f)
-                    blocklist = list(blocklist_data.keys())
-                print(f"Memuat {len(blocklist)} URL ke dalam blocklist.")
-            except Exception as e:
-                print(f"Gagal memuat blocklist: {e}")
-                
-        # Unduh playlist tambahan
-        raw_contents = [raw_content]
-        for idx, url in enumerate(ADDITIONAL_URLS):
-            try:
-                print(f"Mengunduh playlist tambahan {idx+1}...")
-                resp = requests.get(url, headers=headers, timeout=30, verify=False)
-                resp.raise_for_status()
-                raw_contents.append(resp.text)
-            except Exception as e:
-                print(f"Gagal mengunduh playlist tambahan {idx+1}: {e}")
-                
+    # Muat blocklist jika ada
+    blocklist = []
+    blocklist_path = Path("playlists/blocklist.json")
+    if blocklist_path.exists():
+        try:
+            import json
+            with open(blocklist_path, "r", encoding="utf-8") as f:
+                blocklist_data = json.load(f)
+                blocklist = list(blocklist_data.keys())
+            print(f"Memuat {len(blocklist)} URL ke dalam blocklist.")
+        except Exception as e:
+            print(f"Gagal memuat blocklist: {e}")
+            
+    # Unduh playlist tambahan
+    for idx, url in enumerate(ADDITIONAL_URLS):
+        try:
+            print(f"Mengunduh playlist tambahan {idx+1}...")
+            resp = requests.get(url, headers=headers, timeout=30, verify=False)
+            resp.raise_for_status()
+            raw_contents.append(resp.text)
+        except Exception as e:
+            print(f"Gagal mengunduh playlist tambahan {idx+1}: {e}")
+            
+    if not raw_contents:
+        print("Error: Tidak ada playlist (utama maupun tambahan) yang berhasil diunduh.")
+        exit(1)
+        
+    try:
         print("Menyaring, menstandarkan nama/logo, serta mengurutkan saluran...")
         filtered_content = parse_and_filter_worldcup(raw_contents, blocklist)
         
@@ -335,7 +345,7 @@ def main():
         print(f"File terkompresi berhasil disimpan di: {M3U_GZ_PATH}")
         
     except Exception as e:
-        print(f"Gagal mengambil/memproses playlist: {e}")
+        print(f"Gagal memproses playlist: {e}")
         exit(1)
 
 if __name__ == "__main__":
