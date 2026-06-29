@@ -1,278 +1,242 @@
 {
-  "http://193.47.62.42/hls/AAAAA.m3u8": {
-    "name": "[Cricket T20 World Cup] Australia W vs India W Gvision TV",
-    "status_code": 404,
-    "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T18:30:45.833875Z"
-  },
-  "https://cdnlivetv.tv/secure/api/v1/6a288d2881d8192bb76cb537/playlist.m3u8?token=NmEyODhkMjg4MWQ4MTkyYmI3NmNiNTM3OjE3ODI2NjYwNDIyNjM6Y2RubGl2ZXR2LnR2OmM0MWRkMmRhYzdhMTNmZDAuZWQ3ZjNjZjZlMzQzNGQ5MzMxY2U0ZWZlOTkyZTAyN2ZkNTZlNjVmZWY0YThjZDMzOWU1OTNkZWMyMzA3ZTQ1MA": {
-    "name": "[ICC Womens T20 World Cup] India Cricket Women vs Australia Cricket Women (CDNTV)",
-    "status_code": 403,
-    "reason": "HTTP Error 403",
-    "timestamp": "2026-06-28T18:30:58.072140Z"
-  },
-  "https://jmp2.uk/plu-65ea8b928145cb0008509426.m3u8": {
-    "name": "UEFA Champions League (720p)",
-    "status_code": null,
-    "reason": "DRM Protected (No Keys)",
-    "timestamp": "2026-06-28T18:31:02.867568Z"
-  },
-  "https://jmp2.uk/plu-660c29b5aec9680008f5b4a4.m3u8": {
-    "name": "FIFA+ (English)",
-    "status_code": null,
-    "reason": "DRM Protected (No Keys)",
-    "timestamp": "2026-06-28T18:31:04.272779Z"
-  },
   "https://jmp2.uk/stvp-ATBA3300007PT": {
     "name": "FIFA+ 🇦🇹",
     "status_code": null,
     "reason": "DRM Protected (No Keys)",
-    "timestamp": "2026-06-28T18:31:10.161977Z"
+    "timestamp": "2026-06-29T11:38:06.635497Z"
   },
   "https://jmp2.uk/stvp-CABD1200008JG": {
     "name": "FIFA+ 🇨🇦",
     "status_code": null,
     "reason": "DRM Protected (No Keys)",
-    "timestamp": "2026-06-28T18:31:11.855637Z"
+    "timestamp": "2026-06-29T11:38:08.614407Z"
   },
   "https://jmp2.uk/stvp-DEBA3300019EB": {
     "name": "FIFA+ 🇩🇪",
     "status_code": null,
     "reason": "DRM Protected (No Keys)",
-    "timestamp": "2026-06-28T18:31:16.433092Z"
+    "timestamp": "2026-06-29T11:38:14.403150Z"
   },
   "https://jmp2.uk/stvp-ESBC2700009B4": {
     "name": "FIFA+ 🇪🇸",
     "status_code": null,
     "reason": "DRM Protected (No Keys)",
-    "timestamp": "2026-06-28T18:31:18.501728Z"
+    "timestamp": "2026-06-29T11:38:16.801062Z"
   },
   "https://jmp2.uk/stvp-FRBA3300037Y7": {
     "name": "FIFA+ 🇫🇷",
     "status_code": null,
     "reason": "DRM Protected (No Keys)",
-    "timestamp": "2026-06-28T18:31:20.421407Z"
+    "timestamp": "2026-06-29T11:38:19.236774Z"
   },
   "https://jmp2.uk/stvp-GBBD1100008YW": {
     "name": "FIFA+ 🇬🇧",
     "status_code": null,
     "reason": "DRM Protected (No Keys)",
-    "timestamp": "2026-06-28T18:31:22.368067Z"
+    "timestamp": "2026-06-29T11:38:21.283198Z"
   },
   "https://jmp2.uk/stvp-INBA5100009V3": {
     "name": "FIFA+ 🇮🇳",
     "status_code": null,
     "reason": "DRM Protected (No Keys)",
-    "timestamp": "2026-06-28T18:31:22.640217Z"
+    "timestamp": "2026-06-29T11:38:21.777838Z"
   },
   "https://jmp2.uk/stvp-ITBD1000002HF": {
     "name": "FIFA+ 🇮🇹",
     "status_code": null,
     "reason": "DRM Protected (No Keys)",
-    "timestamp": "2026-06-28T18:31:24.805515Z"
+    "timestamp": "2026-06-29T11:38:24.242114Z"
   },
   "https://jmp2.uk/stvp-KRBD1900001Y2": {
     "name": "FIFA+ 🇰🇷",
     "status_code": null,
     "reason": "DRM Protected (No Keys)",
-    "timestamp": "2026-06-28T18:31:25.069922Z"
+    "timestamp": "2026-06-29T11:38:24.525256Z"
   },
   "https://jmp2.uk/stvp-USBD12000255BLIVE": {
     "name": "FIFA+ 🇺🇸",
     "status_code": null,
     "reason": "DRM Protected (No Keys)",
-    "timestamp": "2026-06-28T18:31:25.348550Z"
+    "timestamp": "2026-06-29T11:38:24.823731Z"
   },
   "(Play)": {
     "name": "FIFA World Cup",
     "status_code": null,
     "reason": "Invalid URL '(Play)': No scheme supplied. Perhaps you meant https://(Play)?",
-    "timestamp": "2026-06-28T18:31:25.348550Z"
+    "timestamp": "2026-06-29T11:38:24.824770Z"
   },
   "EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 Firefox/151.0": {
     "name": "FIFA World Cup (Tipik 1)",
     "status_code": null,
     "reason": "No connection adapters were found for 'EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 Firefox/151.0'",
-    "timestamp": "2026-06-28T18:31:31.488018Z"
+    "timestamp": "2026-06-29T11:38:30.979693Z"
   },
   "KODIPROP:inputstream.adaptive.license_type=clearkey": {
     "name": "FIFA World Cup (Tipik 2)",
     "status_code": null,
     "reason": "No connection adapters were found for 'KODIPROP:inputstream.adaptive.license_type=clearkey'",
-    "timestamp": "2026-06-28T18:31:31.488018Z"
+    "timestamp": "2026-06-29T11:38:30.979693Z"
   },
   "http://cdn.tv-rds.workers.dev/TYCSPT.m3u8": {
     "name": "FIFA World Cup (Tyc Sports Argentina)",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T18:31:31.565322Z"
+    "timestamp": "2026-06-29T11:38:31.035804Z"
   },
   "http://opplextv.cyou:8080/nasir6160/nasir/349014": {
     "name": "FIFA World Cup (Tsn 1)",
-    "status_code": null,
-    "reason": "HTTPConnectionPool(host='ddown.xtvplus.vip', port=80): Max retries exceeded with url: /OPPLEX@TVVV/yhbhfgtfdt6fcr/624888 (Caused by NameResolutionError(\"HTTPConnection(host='ddown.xtvplus.vip', port=80): Failed to resolve 'ddown.xtvplus.vip' ([Errno 11001] getaddrinfo failed)\"))",
-    "timestamp": "2026-06-28T18:31:32.702979Z"
+    "status_code": 513,
+    "reason": "HTTP Error 513",
+    "timestamp": "2026-06-29T11:38:32.054341Z"
   },
   "http://opplextv.cyou:8080/nasir6160/nasir/349015": {
     "name": "FIFA World Cup (Tsn 2)",
-    "status_code": null,
-    "reason": "HTTPConnectionPool(host='ddown.xtvplus.vip', port=80): Max retries exceeded with url: /OPPLEX@TVVV/yhbhfgtfdt6fcr/624888 (Caused by NameResolutionError(\"HTTPConnection(host='ddown.xtvplus.vip', port=80): Failed to resolve 'ddown.xtvplus.vip' ([Errno 11001] getaddrinfo failed)\"))",
-    "timestamp": "2026-06-28T18:31:33.279067Z"
+    "status_code": 513,
+    "reason": "HTTP Error 513",
+    "timestamp": "2026-06-29T11:38:32.676828Z"
   },
   "http://opplextv.cyou:8080/nasir6160/nasir/349016": {
     "name": "FIFA World Cup (Tsn 3)",
-    "status_code": null,
-    "reason": "HTTPConnectionPool(host='ddown.xtvplus.vip', port=80): Max retries exceeded with url: /OPPLEX@TVVV/yhbhfgtfdt6fcr/624888 (Caused by NameResolutionError(\"HTTPConnection(host='ddown.xtvplus.vip', port=80): Failed to resolve 'ddown.xtvplus.vip' ([Errno 11001] getaddrinfo failed)\"))",
-    "timestamp": "2026-06-28T18:31:33.858336Z"
+    "status_code": 513,
+    "reason": "HTTP Error 513",
+    "timestamp": "2026-06-29T11:38:33.312824Z"
   },
   "http://opplextv.cyou:8080/nasir6160/nasir/349017": {
     "name": "FIFA World Cup (Tsn 4)",
-    "status_code": null,
-    "reason": "HTTPConnectionPool(host='ddown.xtvplus.vip', port=80): Max retries exceeded with url: /OPPLEX@TVVV/yhbhfgtfdt6fcr/624888 (Caused by NameResolutionError(\"HTTPConnection(host='ddown.xtvplus.vip', port=80): Failed to resolve 'ddown.xtvplus.vip' ([Errno 11001] getaddrinfo failed)\"))",
-    "timestamp": "2026-06-28T18:31:34.439394Z"
+    "status_code": 513,
+    "reason": "HTTP Error 513",
+    "timestamp": "2026-06-29T11:38:33.928733Z"
   },
   "http://opplextv.cyou:8080/nasir6160/nasir/349018": {
     "name": "FIFA World Cup (Tsn 5)",
-    "status_code": null,
-    "reason": "HTTPConnectionPool(host='ddown.xtvplus.vip', port=80): Max retries exceeded with url: /OPPLEX@TVVV/yhbhfgtfdt6fcr/624888 (Caused by NameResolutionError(\"HTTPConnection(host='ddown.xtvplus.vip', port=80): Failed to resolve 'ddown.xtvplus.vip' ([Errno 11001] getaddrinfo failed)\"))",
-    "timestamp": "2026-06-28T18:31:35.019833Z"
+    "status_code": 513,
+    "reason": "HTTP Error 513",
+    "timestamp": "2026-06-29T11:38:34.576716Z"
   },
   "https://d1211whpimeups.cloudfront.net/smil:rtb2/chunklist.m3u8": {
     "name": "FIFA World Cup (RTB Aneka)",
     "status_code": 403,
     "reason": "HTTP Error 403",
-    "timestamp": "2026-06-28T18:31:35.363877Z"
+    "timestamp": "2026-06-29T11:38:34.855739Z"
   },
   "https://d1211whpimeups.cloudfront.net/smil:rtbgo/chunklist.m3u8": {
     "name": "FIFA World Cup (RTB Go Live)",
     "status_code": 403,
     "reason": "HTTP Error 403",
-    "timestamp": "2026-06-28T18:31:35.455963Z"
+    "timestamp": "2026-06-29T11:38:34.943417Z"
   },
   "https://amitomar.bdixbd.net/hoichoi.pro1/tracks-v1/index.m3u8": {
     "name": "FIFA World Cup (T Sports)",
     "status_code": 404,
     "reason": "HTTP Error 404",
-    "timestamp": "2026-06-28T18:31:35.792753Z"
+    "timestamp": "2026-06-29T11:38:35.294158Z"
   },
   "http://starhub.pro/live/farhat-3379/67897-913379/741567.ts": {
     "name": "FIFA World Cup (Unite8 Sports 1 India)",
-    "status_code": null,
-    "reason": "Timeout",
-    "timestamp": "2026-06-28T18:31:46.861581Z"
+    "status_code": 405,
+    "reason": "HTTP Error 405",
+    "timestamp": "2026-06-29T11:38:36.089711Z"
+  },
+  "https://bozztv.com/rongo/rongo-somoy/tracks-v1a1/mono.m3u8": {
+    "name": "FIFA World Cup (Somoy TV Bangladesh)",
+    "status_code": 502,
+    "reason": "HTTP Error 502",
+    "timestamp": "2026-06-29T11:38:39.367903Z"
   },
   "http://opplextv.cyou:8080/nasir6160/nasir/353014": {
     "name": "FIFA World Cup (beIN Sports Qatar 1)",
-    "status_code": null,
-    "reason": "HTTPConnectionPool(host='ddown.xtvplus.vip', port=80): Max retries exceeded with url: /OPPLEX@TVVV/yhbhfgtfdt6fcr/624888 (Caused by NameResolutionError(\"HTTPConnection(host='ddown.xtvplus.vip', port=80): Failed to resolve 'ddown.xtvplus.vip' ([Errno 11001] getaddrinfo failed)\"))",
-    "timestamp": "2026-06-28T18:31:50.724030Z"
+    "status_code": 513,
+    "reason": "HTTP Error 513",
+    "timestamp": "2026-06-29T11:38:40.004859Z"
   },
   "http://opplextv.cyou:8080/nasir6160/nasir/353015": {
     "name": "FIFA World Cup (beIN Sports Qatar 2)",
-    "status_code": null,
-    "reason": "HTTPConnectionPool(host='ddown.xtvplus.vip', port=80): Max retries exceeded with url: /OPPLEX@TVVV/yhbhfgtfdt6fcr/624888 (Caused by NameResolutionError(\"HTTPConnection(host='ddown.xtvplus.vip', port=80): Failed to resolve 'ddown.xtvplus.vip' ([Errno 11001] getaddrinfo failed)\"))",
-    "timestamp": "2026-06-28T18:31:51.295559Z"
+    "status_code": 513,
+    "reason": "HTTP Error 513",
+    "timestamp": "2026-06-29T11:38:40.619762Z"
   },
   "http://opplextv.cyou:8080/nasir6160/nasir/353016": {
     "name": "FIFA World Cup (beIN Sports Qatar 3)",
-    "status_code": null,
-    "reason": "HTTPConnectionPool(host='ddown.xtvplus.vip', port=80): Max retries exceeded with url: /OPPLEX@TVVV/yhbhfgtfdt6fcr/624888 (Caused by NameResolutionError(\"HTTPConnection(host='ddown.xtvplus.vip', port=80): Failed to resolve 'ddown.xtvplus.vip' ([Errno 11001] getaddrinfo failed)\"))",
-    "timestamp": "2026-06-28T18:31:51.873465Z"
+    "status_code": 513,
+    "reason": "HTTP Error 513",
+    "timestamp": "2026-06-29T11:38:41.228423Z"
   },
   "http://opplextv.cyou:8080/nasir6160/nasir/353017": {
     "name": "FIFA World Cup (beIN Sports Qatar 4)",
-    "status_code": null,
-    "reason": "HTTPConnectionPool(host='ddown.xtvplus.vip', port=80): Max retries exceeded with url: /OPPLEX@TVVV/yhbhfgtfdt6fcr/624888 (Caused by NameResolutionError(\"HTTPConnection(host='ddown.xtvplus.vip', port=80): Failed to resolve 'ddown.xtvplus.vip' ([Errno 11001] getaddrinfo failed)\"))",
-    "timestamp": "2026-06-28T18:31:52.455656Z"
+    "status_code": 513,
+    "reason": "HTTP Error 513",
+    "timestamp": "2026-06-29T11:38:41.870124Z"
   },
   "http://opplextv.cyou:8080/nasir6160/nasir/353018": {
     "name": "FIFA World Cup (beIN Sports Qatar 5)",
-    "status_code": null,
-    "reason": "HTTPConnectionPool(host='ddown.xtvplus.vip', port=80): Max retries exceeded with url: /OPPLEX@TVVV/yhbhfgtfdt6fcr/624888 (Caused by NameResolutionError(\"HTTPConnection(host='ddown.xtvplus.vip', port=80): Failed to resolve 'ddown.xtvplus.vip' ([Errno 11001] getaddrinfo failed)\"))",
-    "timestamp": "2026-06-28T18:31:53.027767Z"
+    "status_code": 513,
+    "reason": "HTTP Error 513",
+    "timestamp": "2026-06-29T11:38:42.463630Z"
   },
   "http://opplextv.cyou:8080/nasir6160/nasir/353019": {
     "name": "FIFA World Cup (beIN Sports Qatar 6)",
-    "status_code": null,
-    "reason": "HTTPConnectionPool(host='ddown.xtvplus.vip', port=80): Max retries exceeded with url: /OPPLEX@TVVV/yhbhfgtfdt6fcr/624888 (Caused by NameResolutionError(\"HTTPConnection(host='ddown.xtvplus.vip', port=80): Failed to resolve 'ddown.xtvplus.vip' ([Errno 11001] getaddrinfo failed)\"))",
-    "timestamp": "2026-06-28T18:31:53.617460Z"
+    "status_code": 513,
+    "reason": "HTTP Error 513",
+    "timestamp": "2026-06-29T11:38:44.124034Z"
   },
   "http://opplextv.cyou:8080/nasir6160/nasir/353020": {
     "name": "FIFA World Cup (beIN Sports Qatar 7)",
-    "status_code": null,
-    "reason": "HTTPConnectionPool(host='ddown.xtvplus.vip', port=80): Max retries exceeded with url: /OPPLEX@TVVV/yhbhfgtfdt6fcr/624888 (Caused by NameResolutionError(\"HTTPConnection(host='ddown.xtvplus.vip', port=80): Failed to resolve 'ddown.xtvplus.vip' ([Errno 11001] getaddrinfo failed)\"))",
-    "timestamp": "2026-06-28T18:31:54.186649Z"
+    "status_code": 513,
+    "reason": "HTTP Error 513",
+    "timestamp": "2026-06-29T11:38:44.715399Z"
   },
   "http://106.107.177.247:5678/live/stream-14760d6c-b244-42de-8ae4-88233185ada2/index.m3u8?u=admin&p=d9a1eafbc7b8ea9b863320e4416d79b2a038db0b0c580a8d093a3c4d565ddec5": {
     "name": "FIFA World Cup (Elta Sports 1)",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T18:32:04.189146Z"
+    "timestamp": "2026-06-29T11:38:54.718127Z"
   },
   "http://106.107.177.247:5678/live/stream-75ae3a1c-49a7-4972-932b-73ae6b796569/index.m3u8?u=admin&p=d9a1eafbc7b8ea9b863320e4416d79b2a038db0b0c580a8d093a3c4d565ddec5": {
     "name": "FIFA World Cup (Elta Sports 2)",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T18:32:14.190548Z"
+    "timestamp": "2026-06-29T11:39:04.720983Z"
   },
   "http://106.107.177.247:5678/live/stream-0ec229ac-84d8-4ce8-a04b-d12c0c5343ff/index.m3u8?u=admin&p=d9a1eafbc7b8ea9b863320e4416d79b2a038db0b0c580a8d093a3c4d565ddec5": {
     "name": "FIFA World Cup (Elta Sports 3)",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T18:32:24.192561Z"
-  },
-  "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/3ynrpdanq2/out/v1/81fd4c26584044d2b1a1cc5b32fa9af0/cenc.mpd?amznDtid=AOAGZA014O5RE&encoding=segmentBase": {
-    "name": "FIFA World Cup (Cazé TV 2)",
-    "status_code": 400,
-    "reason": "HTTP Error 400",
-    "timestamp": "2026-06-28T18:32:24.286868Z"
+    "timestamp": "2026-06-29T11:39:14.723501Z"
   },
   "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/epg9sw6owc/out/v1/e50aecefcb294fae85d6b343e0a6f1cc/cenc.mpd?amznDtid=AOAGZA014O5RE&encoding=segmentBase": {
     "name": "FIFA World Cup (Cazé TV 3)",
     "status_code": 403,
     "reason": "HTTP Error 403",
-    "timestamp": "2026-06-28T18:32:24.774276Z"
+    "timestamp": "2026-06-29T11:39:15.273144Z"
   },
   "EXTVLCOPT:http-referrer=http://www.dens.tv/": {
     "name": "FIFA World Cup (TVRI Nasional Digital 2)",
     "status_code": null,
     "reason": "No connection adapters were found for 'EXTVLCOPT:http-referrer=http://www.dens.tv/'",
-    "timestamp": "2026-06-28T18:32:26.133098Z"
+    "timestamp": "2026-06-29T11:39:16.731423Z"
   },
-  "https://estreams.tv.nej.cz/dash/CH_TVP_SPORT_Portable.ism/playlist.mpd": {
-    "name": "FIFA World Cup (TVP Sport)",
+  "http://190.117.20.39:8000/play/a08d/index.m3u8": {
+    "name": "FIFA World Cup (DSports 1)",
     "status_code": null,
     "reason": "Timeout",
-    "timestamp": "2026-06-28T18:32:47.606736Z"
-  },
-  "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hufm7lgnhx/out/v1/5045630288d44123ba85427b2c36f29f/cenc-sd.mpd": {
-    "name": "FIFA World Cup (DSports 2)",
-    "status_code": 400,
-    "reason": "HTTP Error 400",
-    "timestamp": "2026-06-28T18:32:48.179487Z"
-  },
-  "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/kp7qfx2tly/out/v1/bbfb730b45b74d4ea875d75786ea3f13/cenc-sd.mpd": {
-    "name": "FIFA World Cup (DSports+)",
-    "status_code": 400,
-    "reason": "HTTP Error 400",
-    "timestamp": "2026-06-28T18:32:48.692403Z"
+    "timestamp": "2026-06-29T11:39:30.858344Z"
   },
   "EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1": {
     "name": "FIFA World Cup (Fox Sports 1)",
     "status_code": null,
     "reason": "No connection adapters were found for 'EXTVLCOPT:http-user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1'",
-    "timestamp": "2026-06-28T18:32:48.692403Z"
+    "timestamp": "2026-06-29T11:39:31.921472Z"
   },
   "http://s.rocketdns.info:8080/live/Z3nXfkOnf0/Madt8rUvmN/3646.ts": {
     "name": "FIFA World Cup (Fox Sports 2)",
     "status_code": 401,
     "reason": "HTTP Error 401",
-    "timestamp": "2026-06-28T18:32:49.314541Z"
+    "timestamp": "2026-06-29T11:39:32.511454Z"
   },
   "__________________________________________Asean U19_________________________________________": {
     "name": "FIFA Matchday (SCTV Digital)",
     "status_code": null,
     "reason": "Invalid URL '__________________________________________Asean U19_________________________________________': No scheme supplied. Perhaps you meant https://__________________________________________Asean U19_________________________________________?",
-    "timestamp": "2026-06-28T18:32:50.559107Z"
+    "timestamp": "2026-06-29T11:39:33.758667Z"
   }
 }
